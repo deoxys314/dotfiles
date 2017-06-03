@@ -57,10 +57,13 @@ set lines=48 columns=160
 set backspace=indent,eol,start
 set nowrap
 
-" tabs
+" whitespace chars
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
+
+set listchars=eol:$,tab:>-,nbsp:#,trail:_,extends:>,precedes:<
+set list
 
 
 " split navigations
