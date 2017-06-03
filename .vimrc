@@ -1,29 +1,89 @@
 " Cameron Rossington .vimrc
 " created 170420
 
-"###MISC###
-set backspace=2                      "make backspace work like most other apps
+"###VUNDLE PLUGINS###
+"
+set nocompatible              " be iMproved, required
+filetype off                  " required
 
-"###CODING###
-filetype plugin on
-syntax on                            "syntax highlighting
+" set the runtime path to include Vundle and initialize
+set rtp+=~/vimfiles/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
 
-set number                           "line numbers on side
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
 
-set tabstop=4                        "tabs = 4 spaces when using '>'
-set shiftwidth=4                     "tabs = 4 spaces when typing
-set expandtab                        "replace tabs with spaces as you type
+" Airline, a nicer statusline
+Plugin 'vim-airline/vim-airline'
 
-"###WHITESPACE###
+" adds a new verb
+Plugin 'tpope/vim-surround'
 
-set listchars=eol:¬,tab:»\ ,extends:>,precedes:<,space:·,nbsp:#,trail:_
+" more motions, activated by <leader><leader>w
+Plugin 'easymotion/vim-easymotion'
 
-"###STATUSLINE###
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
 
-set laststatus=2                     "required to make statusline always visible
 
-set statusline=
 
-set statusline +=[col:%3c\ lin:%3l]  "column and line number
-set statusline +=[%f]                "file name, relative path to cwd
-set statusline +=[%B]                "value under cursor in hex (in case of unicode)
+
+
+
+
+
+
+
+"### TEMP OPTIONS ###
+
+set number
+syntax on
+set visualbell
+set lines=48 columns=160
+set backspace=indent,eol,start
+set nowrap
+
+" tabs
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+
+
+" split navigations
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" Enable folding with spacebar
+set foldmethod=indent
+set foldlevel=99
+nnoremap <space> za
+
+" UTF-8
+set encoding=utf-8
+
+" remove trailing whitespace on save, thanks Scolby
+fun! TrimWhitespace()
+    let l:save = winsaveview()
+    %s/\s\+$//e
+    call winrestview(l:save)
+endfun
+nnoremap <Leader>w :call TrimWhitespace()<CR>
+
+" airline
+set laststatus=2
