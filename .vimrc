@@ -1,12 +1,18 @@
 " Cameron Rossington .vimrc
 " created 170420
 
-"###VUNDLE PLUGINS###
-"
+
+"##### Vundle Plugins #####
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
+if &shell =~# 'fish$'
+    set shell=sh
+endif
+
+
 " set the runtime path to include Vundle and initialize
+" Includes possible paths for win and *nix
 set rtp+=~/vimfiles/bundle/Vundle.vim
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -25,6 +31,9 @@ Plugin 'tpope/vim-surround'
 " more motions, activated by <leader><leader>w
 Plugin 'easymotion/vim-easymotion'
 
+" nice colorscheme, if possible
+Plugin 'altercation/vim-colors-solarized'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -41,30 +50,19 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 
+"##### Plugin Settings #####
+
+" airline
+set laststatus=2
+
+" solarized
+
+set background=dark
+silent! colorscheme solarized
 
 
+"##### Whitespace Options #####
 
-
-
-
-
-
-"### TEMP OPTIONS ###
-
-set number
-syntax on
-set visualbell
-
-set backspace=indent,eol,start
-set nowrap
-
-" only relevant on windows
-if has("win32") || has("win16")
-	set lines=48 columns=160
-endif
-
-
-" whitespace chars
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
@@ -73,21 +71,37 @@ set listchars=eol:$,tab:>\ ,nbsp:#,trail:_,extends:>,precedes:<
 set list
 
 
+"##### Display Options #####
+
+set number     " line numbers
+syntax on      " syntax hilighting
+set visualbell " no sound, just flash the screen
+
+set showcmd    " show incomplete commands
+
+set nowrap     " don't wrap lines
+
+" ##### Navigation options #####
+
 " split navigations
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+" scrolling
+set scrolloff=4
+set sidescrolloff=8
+set sidescroll=1
+
 " Enable folding with spacebar
 set foldmethod=indent
 set foldlevel=99
 nnoremap <space> za
 
-" UTF-8
-set encoding=utf-8
+"##### Function Definitions #####
 
-" remove trailing whitespace on save, thanks Scolby
+" remove trailing whitespace on <leader>w, thanks Scolby
 fun! TrimWhitespace()
 	let l:save = winsaveview()
 	%s/\s\+$//e
@@ -95,5 +109,20 @@ fun! TrimWhitespace()
 endfun
 nnoremap <Leader>w :call TrimWhitespace()<CR>
 
-" airline
-set laststatus=2
+
+" ##### Misc Options #####
+
+" make backspace work the way it dos in most editors
+set backspace=indent,eol,start
+
+" UTF-8
+set encoding=utf-8
+
+" store a lot of history
+set history=1000
+
+"##### Windows Compatability #####
+if has("win32") || has("win16")
+	set lines=48 columns=160
+endif
+
