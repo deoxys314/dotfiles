@@ -34,6 +34,9 @@ Plugin 'easymotion/vim-easymotion'
 " nice colorscheme, if possible
 Plugin 'altercation/vim-colors-solarized'
 
+" filesystem navigation
+Plugin 'scrooloose/nerdtree'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -56,10 +59,11 @@ filetype plugin indent on    " required
 set laststatus=2
 
 " solarized
-
 set background=dark
 silent! colorscheme solarized
 
+" NERDTree
+map <C-n> :NERDTreeToggle<CR>
 
 "##### Whitespace Options #####
 
