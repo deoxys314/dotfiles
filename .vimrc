@@ -54,16 +54,22 @@ filetype plugin indent on    " required
 set number
 syntax on
 set visualbell
-set lines=48 columns=160
+
 set backspace=indent,eol,start
 set nowrap
+
+" only relevant on windows
+if has("win32") || has("win16")
+	set lines=48 columns=160
+endif
+
 
 " whitespace chars
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 
-set listchars=eol:$,tab:>-,nbsp:#,trail:_,extends:>,precedes:<
+set listchars=eol:$,tab:>\ ,nbsp:#,trail:_,extends:>,precedes:<
 set list
 
 
@@ -83,9 +89,9 @@ set encoding=utf-8
 
 " remove trailing whitespace on save, thanks Scolby
 fun! TrimWhitespace()
-    let l:save = winsaveview()
-    %s/\s\+$//e
-    call winrestview(l:save)
+	let l:save = winsaveview()
+	%s/\s\+$//e
+	call winrestview(l:save)
 endfun
 nnoremap <Leader>w :call TrimWhitespace()<CR>
 
