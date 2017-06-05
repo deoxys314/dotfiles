@@ -84,6 +84,7 @@ set visualbell " no sound, just flash the screen
 set showcmd    " show incomplete commands
 
 set nowrap     " don't wrap lines
+set linebreak  " if I do turn on wrap, work breaks
 
 " ##### Navigation options #####
 
