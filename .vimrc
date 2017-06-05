@@ -37,6 +37,8 @@ Plugin 'altercation/vim-colors-solarized'
 " filesystem navigation
 Plugin 'scrooloose/nerdtree'
 
+" git integration
+Plugin 'tpope/vim-fugitive'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -65,6 +67,9 @@ silent! colorscheme solarized
 " NERDTree
 map <C-n> :NERDTreeToggle<CR>
 
+" easymotion
+let g:EasyMotion_keys = 'asdfghjklqwertyuiopzxcvbnm;ASDFGHJKLQWERTYUIOPZXCVBNM'
+
 "##### Whitespace Options #####
 
 set tabstop=4
@@ -79,7 +84,6 @@ set list
 
 set number     " line numbers
 syntax on      " syntax hilighting
-set visualbell " no sound, just flash the screen
 
 set showcmd    " show incomplete commands
 
@@ -129,6 +133,8 @@ set history=1000
 " unix line endings
 set fileformat=unix
 
+" no sound, just flash the screen
+set visualbell
 
 "##### Filetype Options #####
 source ~/deoxys314_dotfiles/files.vim
@@ -136,4 +142,5 @@ source ~/deoxys314_dotfiles/files.vim
 "##### Windows Compatability #####
 if has("win32") || has("win16")
 	set lines=48 columns=160
+	colorscheme industry
 endif

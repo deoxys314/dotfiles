@@ -10,6 +10,7 @@ au BufNewFile,BufRead *.py,*.pyw     "PEP8 style settings
   \ set expandtab
   \ set autoindent
   \ set fileformat=unix
+  \ setlocal colorcolumn=100
 
 
 " PEP8
