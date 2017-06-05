@@ -126,8 +126,14 @@ set encoding=utf-8
 " store a lot of history
 set history=1000
 
+" unix line endings
+set fileformat=unix
+
+
+"##### Filetype Options #####
+source ~/deoxys314_dotfiles/files.vim
+
 "##### Windows Compatability #####
 if has("win32") || has("win16")
 	set lines=48 columns=160
 endif
-
