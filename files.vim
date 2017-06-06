@@ -19,7 +19,6 @@ au BufNewFile,BufRead *.js,*.css,*.htm,*.html,*.php
   \ set softtabstop=2
   \ set shiftwidth=2
   \ set noexpandtab
-  \ set autoindent
   \ set fileformat=unix
 
 
