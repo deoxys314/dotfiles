@@ -39,6 +39,7 @@ Plugin 'scrooloose/nerdtree'
 
 " git integration
 Plugin 'tpope/vim-fugitive'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -59,6 +60,7 @@ filetype plugin indent on    " required
 
 " airline
 set laststatus=2
+let g:airline_section_error = ''
 
 " solarized
 set background=dark

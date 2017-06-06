@@ -13,12 +13,6 @@ au BufNewFile,BufRead *.py,*.pyw     "PEP8 style settings
   \ setlocal colorcolumn=100
 
 
-" PEP8
-"augroup vimrc_autocmds
-"  autocmd BufEnter * highlight OverLength ctermbg=darkgrey guibg=#592929
-"  autocmd BufEnter * match OverLength /\%100v.*/
-"augroup END
-
 " ##### Web Files #####
 au BufNewFile,BufRead *.js,*.css,*.htm,*.html,*.php
   \ set tabstop=2
@@ -27,6 +21,7 @@ au BufNewFile,BufRead *.js,*.css,*.htm,*.html,*.php
   \ set noexpandtab
   \ set autoindent
   \ set fileformat=unix
+
 
 " ##### journal files #####
 au BufNewFile,BufRead *.jo set wrap
