@@ -58,6 +58,9 @@ filetype plugin indent on    " required
 
 "##### Plugin Settings #####
 
+"Vundle
+map <leader>U :PluginUpdate<CR>
+
 " airline
 set laststatus=2
 let g:airline_section_error = ''
@@ -91,6 +94,9 @@ set showcmd    " show incomplete commands
 
 set nowrap     " don't wrap lines
 set linebreak  " if I do turn on wrap, work breaks
+
+" to check line lengths
+set colorcolumn=100
 
 " ##### Navigation options #####
 
