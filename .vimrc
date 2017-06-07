@@ -63,7 +63,9 @@ map <leader>U :PluginUpdate<CR>
 
 " airline
 set laststatus=2
-let g:airline_section_error = ''
+autocmd VimEnter * AirlineToggleWhitespace
+let g:airline_powerline_fonts = 0
+let g:airline_symbols_ascii = 1 " I don;t always have unicode available
 
 " solarized
 set background=dark
