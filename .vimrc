@@ -19,6 +19,10 @@ call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 
+
+"let g:vundle#bundle_dir=
+
+
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
@@ -66,6 +70,7 @@ set laststatus=2
 autocmd VimEnter * AirlineToggleWhitespace
 let g:airline_powerline_fonts = 0
 let g:airline_symbols_ascii = 1 " I don;t always have unicode available
+nnoremap <Leader>a :AirlineToggleWhitespace<CR>
 
 " solarized
 set background=dark
