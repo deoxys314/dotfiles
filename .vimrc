@@ -44,6 +44,9 @@ Plugin 'scrooloose/nerdtree'
 " git integration
 Plugin 'tpope/vim-fugitive'
 
+" commenting
+Plugin 'tomtom/tcomment_vim'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -123,7 +126,18 @@ set foldmethod=indent
 set foldlevel=99
 nnoremap <space> za
 
-"##### Function Definitions #####
+" search options
+"set hlsearch   " show search result
+set incsearch  " go to results as you type
+set ignorecase " ignore case in search
+
+" ##### Editing Options #####
+
+" Breaking lines with \[enter] without having to go to insert mode (myself).
+nmap <leader><cr> i<cr><Esc>
+
+
+" ##### Function Definitions #####
 
 " remove trailing whitespace on <leader>w, thanks Scolby
 fun! TrimWhitespace()
