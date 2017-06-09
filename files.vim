@@ -24,5 +24,8 @@ au BufNewFile,BufRead *.js,*.css,*.htm,*.html,*.php
 
 
 " ##### journal files #####
-au BufNewFile,BufRead *.jo set wrap
+au BufNewFile,BufRead *.jo
+  \ set wrap | 
+  \ set cc=0 |
+  \ set nonumber
 
