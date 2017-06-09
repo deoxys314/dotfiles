@@ -166,6 +166,12 @@ set fileformat=unix
 " no sound, just flash the screen
 set visualbell
 
+" Makes diff easier to read
+" https://vi.stackexchange.com/a/626
+if &diff
+	    highlight! link DiffText MatchParen
+endif
+
 "##### Filetype Options #####
 source ~/deoxys314_dotfiles/files.vim
 
