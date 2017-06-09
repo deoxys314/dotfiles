@@ -67,6 +67,7 @@ filetype plugin indent on    " required
 
 "Vundle
 map <leader>U :PluginUpdate<CR>
+map <leader>I :PluginInstall<CR>
 
 " airline
 set laststatus=2
@@ -83,7 +84,7 @@ silent! colorscheme solarized
 map <C-n> :NERDTreeToggle<CR>
 
 " easymotion
-let g:EasyMotion_keys = 'asdfghjklqwertyuiopzxcvbnm;ASDFGHJKLQWERTYUIOPZXCVBNM'
+let g:EasyMotion_keys = 'asdfghjklqwertyuiopzxcvbnm;DFGHJKLQWERTYUIOPZXCVBNMAS'
 
 "##### Whitespace Options #####
 
