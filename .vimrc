@@ -47,6 +47,12 @@ Plugin 'tpope/vim-fugitive'
 " commenting
 Plugin 'tomtom/tcomment_vim'
 
+" better python folding
+Plugin 'mhedberg/SimpylFold'
+
+" Fast folding
+Plugin 'Konfekt/FastFold'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -82,9 +88,16 @@ silent! colorscheme solarized
 
 " NERDTree
 map <C-n> :NERDTreeToggle<CR>
+let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
 
 " easymotion
 let g:EasyMotion_keys = 'asdfghjklqwertyuiopzxcvbnm;DFGHJKLQWERTYUIOPZXCVBNMAS'
+
+" SimplyFOld
+let g:SimplyFold_docstring_preview = 1
+let g:SimplyFold_fold_import = 0
+let b:SimplyFold_fold_import = 0
+
 
 "##### Whitespace Options #####
 
@@ -112,6 +125,9 @@ set colorcolumn=100
 " ##### Navigation options #####
 
 " split navigations
+set splitright
+set splitbelow
+
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
