@@ -48,7 +48,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tomtom/tcomment_vim'
 
 " better python folding
-Plugin 'mhedberg/SimpylFold'
+Plugin 'tmhedberg/SimpylFold'
 
 " Fast folding
 Plugin 'Konfekt/FastFold'
