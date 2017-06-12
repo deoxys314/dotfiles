@@ -79,8 +79,9 @@ map <leader>I :PluginInstall<CR>
 set laststatus=2
 autocmd VimEnter * AirlineToggleWhitespace
 let g:airline_powerline_fonts = 0
-let g:airline_symbols_ascii = 1 " I don;t always have unicode available
+let g:airline_symbols_ascii = 1 " I don't always have unicode available
 nnoremap <Leader>a :AirlineToggleWhitespace<CR>
+set noshowmode " airline already does this
 
 " solarized
 set background=dark
@@ -185,7 +186,7 @@ set visualbell
 " Makes diff easier to read
 " https://vi.stackexchange.com/a/626
 if &diff
-	    highlight! link DiffText MatchParen
+	highlight! link DiffText MatchParen
 endif
 
 "##### Filetype Options #####

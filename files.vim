@@ -1,8 +1,8 @@
 " Cameron Rossington File definition vimscript
 " created 170605
 
-" ##### Python ##### 
-au BufNewFile,BufRead *.py,*.pyw     "PEP8 style settings
+" ##### Python #####
+au BufNewFile,BufRead *.py,*.pyw  "PEP8 style settings
   \ set tabstop=4       |
   \ set softtabstop=4   |
   \ set shiftwidth=4    |
@@ -10,7 +10,7 @@ au BufNewFile,BufRead *.py,*.pyw     "PEP8 style settings
   \ set autoindent      |
   \ set fileformat=unix |
   \ setlocal colorcolumn=100
-" Note: I do not limit bto 80 using textwidth because there is more
+" Note: I do not limit to 80 because there is more
 " to life than PEP8
 
 
@@ -35,7 +35,7 @@ au BufNewFile,BufRead *.c,*.h
 
 " ##### journal files #####
 au BufNewFile,BufRead *.jo
-  \ set wrap | 
+  \ set wrap |
   \ set cc=0 |
   \ set nonumber
 
