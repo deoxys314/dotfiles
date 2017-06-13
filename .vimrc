@@ -16,43 +16,27 @@ endif
 set rtp+=~/vimfiles/bundle/Vundle.vim
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
-
-"let g:vundle#bundle_dir=
-
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-
 " Airline, a nicer statusline
 Plugin 'vim-airline/vim-airline'
-
 " adds a new verb
 Plugin 'tpope/vim-surround'
-
 " more motions, activated by <leader><leader>w
 Plugin 'easymotion/vim-easymotion'
-
 " nice colorscheme, if possible
 Plugin 'altercation/vim-colors-solarized'
-
 " secondary coloscheme option
 Plugin 'sickill/vim-monokai'
-
 " filesystem navigation
 Plugin 'scrooloose/nerdtree'
-
 " git integration
 Plugin 'tpope/vim-fugitive'
-
 " commenting
 Plugin 'tomtom/tcomment_vim'
-
 " better python folding
 Plugin 'tmhedberg/SimpylFold'
-
 " Fast folding
 Plugin 'Konfekt/FastFold'
 
