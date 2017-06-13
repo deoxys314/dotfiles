@@ -94,7 +94,7 @@ let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
 " easymotion
 let g:EasyMotion_keys = 'asdfghjklqwertyuiopzxcvbnm;DFGHJKLQWERTYUIOPZXCVBNMAS'
 
-" SimplyFOld
+" SimplyFold
 let g:SimplyFold_docstring_preview = 1
 let g:SimplyFold_fold_import = 0
 let b:SimplyFold_fold_import = 0
