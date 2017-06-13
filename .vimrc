@@ -38,6 +38,9 @@ Plugin 'easymotion/vim-easymotion'
 " nice colorscheme, if possible
 Plugin 'altercation/vim-colors-solarized'
 
+" secondary coloscheme option
+Plugin 'sickill/vim-monokai'
+
 " filesystem navigation
 Plugin 'scrooloose/nerdtree'
 
