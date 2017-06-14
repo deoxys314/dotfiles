@@ -48,5 +48,5 @@ au BufNewFile,BufRead *.txt
 " ##### logfiles #####
 au BufNewFile,BufRead *.log
   \ set cc=0
-  \ setlocal foldlevel = 1
+  \ set foldlevel = 1
 
