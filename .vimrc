@@ -110,6 +110,7 @@ set linebreak  " if I do turn on wrap, work breaks
 " to check line lengths
 set colorcolumn=100
 
+
 " ##### Navigation options #####
 
 " split navigations
@@ -130,6 +131,10 @@ set sidescroll=1
 set foldmethod=indent
 set foldlevel=99
 nnoremap <space> za
+
+" wraps h and l like modern editors
+set whichwrap+=h,l,<,>,[,]
+
 
 " search options
 "set hlsearch   " show search result
