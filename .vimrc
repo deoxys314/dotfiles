@@ -143,9 +143,11 @@ set ignorecase " ignore case in search
 
 " ##### Editing Options #####
 
-" Breaking lines with \[enter] without having to go to insert mode (myself).
+" Breaking lines with \[enter] without having to go to insert mode
 nmap <leader><cr> i<cr><Esc>
 
+" virtual edit in visual mode
+set virtualedit=block
 
 " ##### Function Definitions #####
 
