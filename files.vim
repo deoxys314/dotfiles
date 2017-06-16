@@ -41,12 +41,15 @@ au BufNewFile,BufRead *.jo
 
 " ##### test/status files #####
 au BufNewFile,BufRead *.txt
-  \ set cc=0    |
-  \ set autoread
-
+  \ set cc=0     |
+  \ set autoread |
+"  \ if @% =~ "status" | cd %:p:h | endif " changes cwd to current file
 
 " ##### logfiles #####
 au BufNewFile,BufRead *.log
-  \ set cc=0
-  \ set foldlevel = 1
-  \ if @% =~ "status" | cd %:p:h | endif " changes cwd to current file
+  \ set cc=0 |
+  \ cd %:p:h
+
+" ##### special cases #####
+au BufNewFile,BufRead !status*
+  \ cd %:p:h
