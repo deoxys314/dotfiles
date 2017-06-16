@@ -49,4 +49,4 @@ au BufNewFile,BufRead *.txt
 au BufNewFile,BufRead *.log
   \ set cc=0
   \ set foldlevel = 1
-
+  \ if @% =~ "status" | cd %:p:h | endif " changes cwd to current file
