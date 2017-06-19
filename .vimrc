@@ -19,26 +19,19 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-" Airline, a nicer statusline
-Plugin 'vim-airline/vim-airline'
-" adds a new verb
-Plugin 'tpope/vim-surround'
-" more motions, activated by <leader><leader>w
-Plugin 'easymotion/vim-easymotion'
-" nice colorscheme, if possible
-Plugin 'altercation/vim-colors-solarized'
-" secondary coloscheme option
-Plugin 'sickill/vim-monokai'
-" filesystem navigation
-Plugin 'scrooloose/nerdtree'
-" git integration
-Plugin 'tpope/vim-fugitive'
-" commenting
-Plugin 'tomtom/tcomment_vim'
-" better python folding
-Plugin 'tmhedberg/SimpylFold'
-" Fast folding
-Plugin 'Konfekt/FastFold'
+
+Plugin 'altercation/vim-colors-solarized' " nice colorscheme, if possible
+Plugin 'easymotion/vim-easymotion'        " more motions, activated by <leader><leader>w
+Plugin 'godlygeek/tabular'                " better alignment
+Plugin 'Konfekt/FastFold'                 " Fast folding
+Plugin 'scrooloose/nerdtree'              " filesystem navigation
+Plugin 'sickill/vim-monokai'              " secondary coloscheme option
+Plugin 'tmhedberg/matchit'                   " better matching for %
+Plugin 'tmhedberg/SimpylFold'             " better python folding
+Plugin 'tomtom/tcomment_vim'              " commenting
+Plugin 'tpope/vim-fugitive'               " git integration
+Plugin 'tpope/vim-surround'               " adds a new verb
+Plugin 'vim-airline/vim-airline'          " Airline, a nicer statusline
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
