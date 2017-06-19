@@ -45,11 +45,21 @@ au BufNewFile,BufRead *.txt
   \ set autoread |
 "  \ if @% =~ "status" | cd %:p:h | endif " changes cwd to current file
 
+
 " ##### logfiles #####
 au BufNewFile,BufRead *.log
   \ set cc=0 |
   \ cd %:p:h
 
+
+" ##### Markdown #####
+au BufNewFile,BufRead *.md
+  \ set wrap |
+  \ set cc=0 |
+
+
 " ##### special cases #####
 au BufNewFile,BufRead !status*
   \ cd %:p:h
+
+
