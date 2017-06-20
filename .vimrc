@@ -23,10 +23,11 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'altercation/vim-colors-solarized' " nice colorscheme, if possible
 Plugin 'easymotion/vim-easymotion'        " more motions, activated by <leader><leader>w
 Plugin 'godlygeek/tabular'                " better alignment
+Plugin 'junegunn/vim-easy-align'          " aligns md and similar
 Plugin 'Konfekt/FastFold'                 " Fast folding
 Plugin 'scrooloose/nerdtree'              " filesystem navigation
 Plugin 'sickill/vim-monokai'              " secondary coloscheme option
-Plugin 'tmhedberg/matchit'                   " better matching for %
+Plugin 'tmhedberg/matchit'                " better matching for %
 Plugin 'tmhedberg/SimpylFold'             " better python folding
 Plugin 'tomtom/tcomment_vim'              " commenting
 Plugin 'tpope/vim-fugitive'               " git integration
@@ -69,7 +70,9 @@ silent! colorscheme solarized
 
 " NERDTree
 map <C-n> :NERDTreeToggle<CR>
-let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
+let NERDTreeIgnore=['\.pyc$', '\~$']          " ignore files in NERDTree
+let g:nerdtree_tabs_open_on_gui_startup=2     " only opens if directory passed as arg
+let g:nerdtree_tabs_open_on_console_startup=2 " same as above
 
 " easymotion
 let g:EasyMotion_keys = 'asdfghjklqwertyuiopzxcvbnm;DFGHJKLQWERTYUIOPZXCVBNMAS'
@@ -79,6 +82,8 @@ let g:SimplyFold_docstring_preview = 1
 let g:SimplyFold_fold_import = 0
 let b:SimplyFold_fold_import = 0
 
+" Tabularize
+com Tabu Tabularize
 
 "##### Whitespace Options #####
 
@@ -129,15 +134,13 @@ nnoremap <space> za
 set whichwrap+=h,l,<,>,[,]
 
 
-" search options
+" ##### Search options #####
 "set hlsearch   " show search result
 set incsearch  " go to results as you type
 set ignorecase " ignore case in search
 
-" ##### Editing Options #####
 
-" Breaking lines with \[enter] without having to go to insert mode
-nmap <leader><cr> i<cr><Esc>
+" ##### Editing Options #####
 
 " virtual edit in visual mode
 set virtualedit=block
@@ -151,6 +154,11 @@ fun! TrimWhitespace()
 	call winrestview(l:save)
 endfun
 nnoremap <Leader>w :call TrimWhitespace()<CR>
+
+
+" ##### Key Mappings #####
+
+nnoremap <Leader>cd :cd %:p:h<CR>
 
 
 " ##### Misc Options #####
