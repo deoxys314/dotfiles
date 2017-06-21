@@ -33,6 +33,7 @@ Plugin 'tomtom/tcomment_vim'              " commenting
 Plugin 'tpope/vim-fugitive'               " git integration
 Plugin 'tpope/vim-surround'               " adds a new verb
 Plugin 'vim-airline/vim-airline'          " Airline, a nicer statusline
+Plugin 'vim-airline/vim-airline-themes'   " Nice themes for above
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
