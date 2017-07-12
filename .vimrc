@@ -22,6 +22,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'altercation/vim-colors-solarized' " nice colorscheme, if possible
 Plugin 'easymotion/vim-easymotion'        " more motions, activated by <leader><leader>w
+Plugin 'gabrielelana/vim-markdown'        " even better github markdown
 Plugin 'godlygeek/tabular'                " better alignment
 Plugin 'junegunn/vim-easy-align'          " aligns md and similar
 Plugin 'Konfekt/FastFold'                 " Fast folding
@@ -85,6 +86,7 @@ let b:SimplyFold_fold_import = 0
 
 " Tabularize
 com Tabu Tabularize
+
 
 "##### Whitespace Options #####
 
