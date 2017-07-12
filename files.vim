@@ -29,7 +29,7 @@ au BufNewFile,BufRead *.c,*.h
   \ set shiftwidth=4  |
   \ set noexpandtab   |
   \ set filetype=c    |
-  \ set colorcolumn=100
+  \ set colorcolumn=110
 
 
 " ##### journal files #####
