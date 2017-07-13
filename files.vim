@@ -36,7 +36,7 @@ au BufNewFile,BufRead *.c,*.h
 au BufNewFile,BufRead *.jo
   \ set wrap |
   \ set cc=0 |
-  \ set nonumber
+  \ set spell
 
 
 " ##### test/status files #####
