@@ -16,3 +16,4 @@
 | Toggle fold        | `<space>`
 | Trim Whitespace    | `<leader>w`
 | Unfold all         | `zR`
+| [ ] -> [x]         | `<space>` [.md only]
