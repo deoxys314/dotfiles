@@ -35,6 +35,8 @@ Plugin 'tpope/vim-fugitive'               " git integration
 Plugin 'tpope/vim-surround'               " adds a new verb
 Plugin 'vim-airline/vim-airline'          " Airline, a nicer statusline
 Plugin 'vim-airline/vim-airline-themes'   " Nice themes for above
+Plugin 'reedes/vim-colors-pencil'         " pencil coloscheme
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
