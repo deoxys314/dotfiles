@@ -21,11 +21,13 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'altercation/vim-colors-solarized' " nice colorscheme, if possible
+Plugin 'dag/vim-fish'                     " editing fish scripts
 Plugin 'easymotion/vim-easymotion'        " more motions, activated by <leader><leader>w
 Plugin 'gabrielelana/vim-markdown'        " even better github markdown
 Plugin 'godlygeek/tabular'                " better alignment
 Plugin 'junegunn/vim-easy-align'          " aligns md and similar
 Plugin 'Konfekt/FastFold'                 " Fast folding
+Plugin 'reedes/vim-colors-pencil'         " pencil coloscheme
 Plugin 'scrooloose/nerdtree'              " filesystem navigation
 Plugin 'sickill/vim-monokai'              " secondary coloscheme option
 Plugin 'tmhedberg/matchit'                " better matching for %
@@ -35,8 +37,6 @@ Plugin 'tpope/vim-fugitive'               " git integration
 Plugin 'tpope/vim-surround'               " adds a new verb
 Plugin 'vim-airline/vim-airline'          " Airline, a nicer statusline
 Plugin 'vim-airline/vim-airline-themes'   " Nice themes for above
-Plugin 'reedes/vim-colors-pencil'         " pencil coloscheme
-
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
