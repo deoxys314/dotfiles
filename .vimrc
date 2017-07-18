@@ -89,6 +89,9 @@ let b:SimplyFold_fold_import = 0
 " Tabularize
 com Tabu Tabularize
 
+" vim-markdown
+let g:markdown_enable_spell_checking = 0
+
 
 "##### Whitespace Options #####
 
