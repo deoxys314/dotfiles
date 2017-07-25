@@ -70,7 +70,6 @@ set noshowmode " airline already does this
 
 " solarized
 set background=dark
-silent! colorscheme solarized
 
 " NERDTree
 map <C-n> :NERDTreeToggle<CR>
@@ -198,5 +197,4 @@ source ~/deoxys314_dotfiles/files.vim
 "##### Windows Compatability #####
 if has("win32") || has("win16")
 	set lines=48 columns=160
-	colorscheme industry
 endif
