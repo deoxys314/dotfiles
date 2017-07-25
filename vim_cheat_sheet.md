@@ -9,6 +9,7 @@
 | NERDTree           | `<ctrl-N>`
 | Number Decrement   | `<ctrl-X>`
 | Number Increment   | `<ctrl-A>`
+| re-wrap file       | `gq<motion>`
 | Tabular            | `:Tabu <expression>`
 | tcomment           | `gc<motion>`
 | tcomment           | `gcc` [current line]
