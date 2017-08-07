@@ -20,13 +20,16 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-Plugin 'altercation/vim-colors-solarized' " nice colorscheme, if possible
+" Plugin 'altercation/vim-colors-solarized' " nice colorscheme, if possible
+" Plugin 'gregsexton/MatchTag'              " highlight matching html tags [experimental]
+Plugin 'colepeters/spacemacs-theme.vim'   " spacemacs theme
 Plugin 'dag/vim-fish'                     " editing fish scripts
 Plugin 'easymotion/vim-easymotion'        " more motions, activated by <leader><leader>w
 Plugin 'gabrielelana/vim-markdown'        " even better github markdown
 Plugin 'godlygeek/tabular'                " better alignment
 Plugin 'junegunn/vim-easy-align'          " aligns md and similar
 Plugin 'Konfekt/FastFold'                 " Fast folding
+Plugin 'liuchengxu/space-vim-dark'        " terminal spacemacs
 Plugin 'reedes/vim-colors-pencil'         " pencil coloscheme
 Plugin 'scrooloose/nerdtree'              " filesystem navigation
 Plugin 'sickill/vim-monokai'              " secondary coloscheme option
@@ -114,6 +117,14 @@ set linebreak  " if I do turn on wrap, work breaks
 
 " to check line lengths
 set colorcolumn=100
+
+" colorscheme
+if has("gui_running")
+    colorscheme spacemacs-theme
+else
+    colorscheme space-vim-dark
+    hi Comment cterm=italic
+endif
 
 
 " ##### Navigation options #####
