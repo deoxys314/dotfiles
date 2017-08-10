@@ -21,20 +21,21 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " Plugin 'altercation/vim-colors-solarized' " nice colorscheme, if possible
+" Plugin 'colepeters/spacemacs-theme.vim'   " spacemacs theme
 " Plugin 'gregsexton/MatchTag'              " highlight matching html tags [experimental]
-Plugin 'colepeters/spacemacs-theme.vim'   " spacemacs theme
+" Plugin 'liuchengxu/space-vim-dark'        " terminal spacemacs
+" Plugin 'reedes/vim-colors-pencil'         " pencil coloscheme
+Plugin 'Konfekt/FastFold'                 " Fast folding
+Plugin 'chriskempson/base16-vim'          " Base16 themes (compatible with airline)
 Plugin 'dag/vim-fish'                     " editing fish scripts
 Plugin 'easymotion/vim-easymotion'        " more motions, activated by <leader><leader>w
 Plugin 'gabrielelana/vim-markdown'        " even better github markdown
 Plugin 'godlygeek/tabular'                " better alignment
 Plugin 'junegunn/vim-easy-align'          " aligns md and similar
-Plugin 'Konfekt/FastFold'                 " Fast folding
-Plugin 'liuchengxu/space-vim-dark'        " terminal spacemacs
-Plugin 'reedes/vim-colors-pencil'         " pencil coloscheme
 Plugin 'scrooloose/nerdtree'              " filesystem navigation
 Plugin 'sickill/vim-monokai'              " secondary coloscheme option
-Plugin 'tmhedberg/matchit'                " better matching for %
 Plugin 'tmhedberg/SimpylFold'             " better python folding
+Plugin 'tmhedberg/matchit'                " better matching for %
 Plugin 'tomtom/tcomment_vim'              " commenting
 Plugin 'tpope/vim-fugitive'               " git integration
 Plugin 'tpope/vim-surround'               " adds a new verb
@@ -120,9 +121,9 @@ set colorcolumn=100
 
 " colorscheme
 if has("gui_running")
-    colorscheme spacemacs-theme
+    colorscheme base16-google-dark
 else
-    colorscheme space-vim-dark
+    colorscheme slate
     hi Comment cterm=italic
 endif
 
