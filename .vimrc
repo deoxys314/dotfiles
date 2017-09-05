@@ -102,8 +102,15 @@ set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 
-set listchars=eol:$,tab:>\ ,nbsp:#,trail:_,extends:>,precedes:<
+" show wrapped lines
+set showbreak = '+++\ '
+
 set list
+if has('gui_running')
+	set listchars=eol:¬,tab:│\ ,extends:⟩,precedes:⟨,nbsp:•,trail:_
+else
+	set listchars=eol:$,tab:>\ ,nbsp:#,trail:_,extends:>,precedes:<
+endif
 
 
 "##### Display Options #####
@@ -209,4 +216,17 @@ source ~/deoxys314_dotfiles/files.vim
 "##### Windows Compatability #####
 if has("win32") || has("win16")
 	set lines=48 columns=160
+endif
+
+if has('gui_running')
+
+	" ###FONT###
+	set guifont=Source\ Code\ Pro\ Light:h13
+
+	" ### GUIOPTIONS
+	set guioptions-=l
+	set guioptions-=R
+	set guioptions-=L
+	set guioptions-=r
+
 endif
