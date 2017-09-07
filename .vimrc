@@ -103,7 +103,7 @@ set softtabstop=4
 set shiftwidth=4
 
 " show wrapped lines
-set showbreak = '+++\ '
+set showbreak=+++\ 
 
 set list
 if has('gui_running')
