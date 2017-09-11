@@ -43,6 +43,7 @@ au BufNewFile,BufRead *.jo
 au BufNewFile,BufRead *.txt
   \ set cc=0     |
   \ set autoread |
+  \ set wrap
 "  \ if @% =~ "status" | cd %:p:h | endif " changes cwd to current file
 
 
