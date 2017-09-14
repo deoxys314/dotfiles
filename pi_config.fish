@@ -22,20 +22,6 @@ else
 end
 
 
-function fish_prompt
-  set -l lastexit $status  # we need to do this first or we will clobber it
-  echo -n (set_color green)(prompt_pwd)(set_color normal)
-  echo -n ' > '
-  if not test $lastexit -eq 0
-    echo -n (set_color red)$lastexit(set_color normal)
-    echo -n ' > '
-  end
-  set -l git_dir (git rev-parse --git-dir 2> /dev/null)
-  if test -n "$git_dir"
-    echo -n (parse_git_branch)
-    echo -n (set_color normal) '> '
-  end
-end
 
 function fish_right_prompt -d "exit code (if not zero"
 end
@@ -91,7 +77,6 @@ alias pb '/home/pi/docs/files/scripts/pushbullet/pb.sh'
 #alias j 'nano -cm -\$ /home/pi/docs/files/journal/(date +%Y)/(date +%m).jo'
 source /home/pi/docs/files/scripts/journal/journal.fish # a more expanded journal solution
 alias gcal 'gcalcli'
-alias lsa 'ls -aBhsl'
 
 alias fortunes 'fortune suq | fold -s -w (tput cols)'
 

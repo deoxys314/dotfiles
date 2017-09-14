@@ -103,14 +103,10 @@ set softtabstop=4
 set shiftwidth=4
 
 " show wrapped lines
-set showbreak=+++\ 
+set showbreak=>>>\ 
 
 set list
-if has('gui_running')
-	set listchars=eol:¬,tab:│\ ,extends:⟩,precedes:⟨,nbsp:•,trail:_
-else
-	set listchars=eol:$,tab:>\ ,nbsp:#,trail:_,extends:>,precedes:<
-endif
+set listchars=eol:$,tab:>\ ,nbsp:#,trail:_,extends:>,precedes:<
 
 
 "##### Display Options #####

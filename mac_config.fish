@@ -3,20 +3,6 @@
 # Sets up path for rust
 set -gx PATH "$HOME/.cargo/bin" $PATH;
 
-set -g __fish_prompt_hostname (hostname | sed -e 's/\.local//')
-
-function parse_git_branch
-
-  set -l branch (git branch 2> /dev/null | grep -e '\* ' | sed 's/^..\(.*\)/\1/')
-  set -l git_diff (git diff)
-
-  if test -n "$git_diff"
-    echo -n "$branch"
-  else
-    echo -n "$branch"
-  end
-
-end
 
 function git_prompt_seg
 
