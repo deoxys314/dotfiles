@@ -17,14 +17,8 @@ set rtp+=~/vimfiles/bundle/Vundle.vim
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+Plugin 'VundleVim/Vundle.vim'             " let Vundle manage Vundle, required
 
-" Plugin 'altercation/vim-colors-solarized' " nice colorscheme, if possible
-" Plugin 'colepeters/spacemacs-theme.vim'   " spacemacs theme
-" Plugin 'gregsexton/MatchTag'              " highlight matching html tags [experimental]
-" Plugin 'liuchengxu/space-vim-dark'        " terminal spacemacs
-" Plugin 'reedes/vim-colors-pencil'         " pencil coloscheme
 Plugin 'Konfekt/FastFold'                 " Fast folding
 Plugin 'chriskempson/base16-vim'          " Base16 themes (compatible with airline)
 Plugin 'dag/vim-fish'                     " editing fish scripts
@@ -33,7 +27,6 @@ Plugin 'gabrielelana/vim-markdown'        " even better github markdown
 Plugin 'godlygeek/tabular'                " better alignment
 Plugin 'junegunn/vim-easy-align'          " aligns md and similar
 Plugin 'scrooloose/nerdtree'              " filesystem navigation
-Plugin 'sickill/vim-monokai'              " secondary coloscheme option
 Plugin 'tmhedberg/SimpylFold'             " better python folding
 Plugin 'tmhedberg/matchit'                " better matching for %
 Plugin 'tomtom/tcomment_vim'              " commenting
