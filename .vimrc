@@ -160,6 +160,9 @@ set ignorecase " ignore case in search
 " virtual edit in visual mode
 set virtualedit=block
 
+" no swap file
+set noswapfile
+
 " ##### Function Definitions #####
 
 " remove trailing whitespace on <leader>w, thanks Scolby
