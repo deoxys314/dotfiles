@@ -24,13 +24,10 @@ Plugin 'chriskempson/base16-vim'          " Base16 themes (compatible with airli
 Plugin 'dag/vim-fish'                     " editing fish scripts
 Plugin 'easymotion/vim-easymotion'        " more motions, activated by <leader><leader>w
 Plugin 'gabrielelana/vim-markdown'        " even better github markdown
-Plugin 'godlygeek/tabular'                " better alignment
-Plugin 'junegunn/vim-easy-align'          " aligns md and similar
 Plugin 'scrooloose/nerdtree'              " filesystem navigation
 Plugin 'tmhedberg/SimpylFold'             " better python folding
 Plugin 'tmhedberg/matchit'                " better matching for %
 Plugin 'tomtom/tcomment_vim'              " commenting
-Plugin 'tpope/vim-fugitive'               " git integration
 Plugin 'tpope/vim-surround'               " adds a new verb
 Plugin 'vim-airline/vim-airline'          " Airline, a nicer statusline
 Plugin 'vim-airline/vim-airline-themes'   " Nice themes for above
@@ -216,9 +213,10 @@ if has('gui_running')
 	set guifont=Source\ Code\ Pro\ Light:h13
 
 	" ### GUIOPTIONS
-	set guioptions-=l
-	set guioptions-=R
-	set guioptions-=L
-	set guioptions-=r
+	set guioptions-=e " text tabs
+	set guioptions-=l " no left scrollbar
+	set guioptions-=L " no left scrollbar when vertical split active
+	set guioptions-=r " no right scrollbar
+	set guioptions-=R " no right scrollbar when vertical split active
 
 endif
