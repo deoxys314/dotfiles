@@ -10,10 +10,7 @@
 | Number Decrement   | `<ctrl-X>`
 | Number Increment   | `<ctrl-A>`
 | re-wrap file       | `gq<motion>`
-| Tabular            | `:Tabu <expression>`
 | tcomment           | `gc<motion>`
-| tcomment           | `gcc` [current line]
 | Toggle fold        | `<space>`
 | Trim Whitespace    | `<leader>w`
 | Unfold all         | `zR`
-| [ ] -> [x]         | `<space>` [.md only]
