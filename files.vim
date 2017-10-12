@@ -55,8 +55,9 @@ au BufNewFile,BufRead *.log
 
 " ##### Markdown #####
 au BufNewFile,BufRead *.md
-  \ set wrap |
-  \ set cc=0 |
+  \ set cc=0  |
+  \ set spell |
+  \ set wrap
 
 
 " ##### special cases #####
