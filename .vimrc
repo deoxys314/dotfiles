@@ -32,6 +32,8 @@ Plugin 'tpope/vim-surround'               " adds a new verb
 Plugin 'vim-airline/vim-airline'          " Airline, a nicer statusline
 Plugin 'vim-airline/vim-airline-themes'   " Nice themes for above
 
+Plugin 'fcpg/vim-farout'                  " theme emulating late 70's colors
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
