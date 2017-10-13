@@ -64,9 +64,6 @@ let g:airline_symbols_ascii = 1 " I don't always have unicode available
 nnoremap <Leader>a :AirlineToggleWhitespace<CR>
 set noshowmode " airline already does this
 
-" solarized
-set background=dark
-
 " NERDTree
 map <C-n> :NERDTreeToggle<CR>
 let NERDTreeIgnore=['\.pyc$', '\~$']          " ignore files in NERDTree
@@ -115,13 +112,22 @@ set linebreak  " if I do turn on wrap, work breaks
 set colorcolumn=100
 
 " colorscheme
+set background=dark
+set termguicolors
+
 if has("gui_running")
     colorscheme base16-google-dark
 else
-    colorscheme slate
-    hi Comment cterm=italic
+	" 256 colors in terminal
+	set t_Co=265
+	set term=xterm-256color
 endif
 
+" if exists('$TMUX')
+" 	" color in tmux
+" 	let &t_8f = "<Esc>[38;2;%lu;%lu;%lum"
+" 	let &t_8b = "<Esc>[48;2;%lu;%lu;%lum"
+" endif
 
 " ##### Navigation options #####
 
