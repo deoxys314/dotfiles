@@ -1,6 +1,8 @@
 " Cameron Rossington File definition vimscript
 " created 170605
 
+" TODO: add support for rust
+
 " ##### Python #####
 au BufNewFile,BufRead *.py,*.pyw  "PEP8 style settings
   \ set tabstop=4       |
