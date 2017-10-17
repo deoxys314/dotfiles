@@ -47,3 +47,10 @@ function prompt {
 Function Edit-Profile {
 	gvim $profile
 }
+
+Function Reload-Profile {
+	if (!(Test-Path -Path $profile )) { 
+		New-Item -Type File -Path $profile -Force
+	}
+	. $profile
+}
