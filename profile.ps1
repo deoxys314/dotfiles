@@ -1,4 +1,4 @@
-function prompt {
+Function prompt {
     # Script based on examples provided by Rikard Ronnkvist / snowland.se
     # Multicolored prompt with marker for windows started as Admin and marker for providers outside filesystem
 
@@ -53,4 +53,20 @@ Function Reload-Profile {
 		New-Item -Type File -Path $profile -Force
 	}
 	. $profile
+}
+
+Function Set-FileTimeStamps {
+	Param (
+	# [Parameter(mandatory=$true)]
+	[string[]]$path,
+	[datetime]$date = (Get-Date))
+
+	if (-not ($path)) {
+		Throw "Must supply a value for -Path"
+	}
+
+	Get-ChildItem -Path $path |
+	ForEach-Object {
+		$_.CreationTime = $_.LastAccessTime =  $_.LastWriteTime = $date
+	}
 }
