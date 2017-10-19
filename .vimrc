@@ -37,18 +37,11 @@ Plugin 'vim-airline/vim-airline-themes'   " Nice themes for above
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
+
 " :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
 " :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
 "
 " see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
-
 
 "##### Plugin Settings #####
 
@@ -77,9 +70,6 @@ let g:EasyMotion_keys = 'asdfghjklqwertyuiopzxcvbnm;DFGHJKLQWERTYUIOPZXCVBNMAS'
 let g:SimplyFold_docstring_preview = 1
 let g:SimplyFold_fold_import = 0
 let b:SimplyFold_fold_import = 0
-
-" Tabularize
-com Tabu Tabularize
 
 " vim-markdown
 let g:markdown_enable_spell_checking = 0
@@ -123,11 +113,6 @@ else
 	set term=xterm-256color
 endif
 
-" if exists('$TMUX')
-" 	" color in tmux
-" 	let &t_8f = "<Esc>[38;2;%lu;%lu;%lum"
-" 	let &t_8b = "<Esc>[48;2;%lu;%lu;%lum"
-" endif
 
 " ##### Navigation options #####
 
@@ -207,14 +192,12 @@ if &diff
 	highlight! link DiffText MatchParen
 endif
 
+
 "##### Filetype Options #####
 source ~/deoxys314_dotfiles/files.vim
 
-"##### Windows Compatability #####
-if has("win32") || has("win16")
-	set lines=48 columns=160
-endif
 
+"##### GUI Options #####
 if has('gui_running')
 
 	" ###FONT###
