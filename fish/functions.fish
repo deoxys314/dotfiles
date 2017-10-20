@@ -49,16 +49,4 @@ set -x __fish_git_prompt_showcolorhints 1
 
 function fish_right_prompt -d "git branch, if applicable"
 	__fish_git_prompt
-	# set -l git_dir (git rev-parse --git-dir 2> /dev/null)
-	# # set -l git_dirty (git diff --shortstat 2> /dev/null | tail -n1)
-	# if test -n "$git_dir"
-	# 	if test -n (git diff --shortstat 2> /dev/null | tail -n1)
-	# 		# if string is nonzero, raise alarm
-	# 		echo -n (set_color red)
-	# 	else
-	# 		echo -n (set_color green)
-	# 	end
-	# 	echo -n (parse_git_branch)
-	# 	echo -n (set_color normal)
-	# end
 end
