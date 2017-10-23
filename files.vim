@@ -59,6 +59,10 @@ au BufNewFile,BufRead *.md
   \ setlocal spell |
   \ setlocal wrap
 
+" ##### gitcommit #####
+au BufNewFile,BufRead COMMIT_EDITMSG
+  \ setlocal spell |
+  \ colo base16-solarized-light
 
 " ##### special cases #####
 au BufNewFile,BufRead !status*
