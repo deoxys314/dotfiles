@@ -5,7 +5,7 @@ set -g __fish_prompt_hostname (hostname | sed -e 's/\.local//')
 
 # The command-line prompt
 # sections are as follows:
-# hostname > exit code (if not 0) > truncated directory > git branch (if any)
+# hostname > exit code (if not 0) > tmux pane(if any) > truncated directory
 function fish_prompt
 	# we need to do this first or we will clobber it
 	set -l lastexit $status
@@ -15,19 +15,39 @@ function fish_prompt
 		set -g __fish_prompt_hostname (hostname | cut -d . -f 1)
 	end
 
-	# echos user@hostname
-	echo -n (set_color yellow)"$USER@$__fish_prompt_hostname"(set_color normal)
-	echo -n ' > '
+	# user@hostname, to make ssh sessions more clear
+	set -l __prompt_host (set_color yellow)"$USER@$__fish_prompt_hostname"(set_color normal)
 
-	# prints exit status, if not 0
+	# exit status, if not 0
 	if not test $lastexit -eq 0
-		echo -n (set_color red)$lastexit(set_color normal)
-		echo -n ' > '
+		set __prompt_status (set_color red)$lastexit(set_color normal)
+	else
+		# IF this is not erased, the last error will be "sticky"
+		set --erase __prompt_status
 	end
 
-	# prints working directory
-	echo -n (set_color green)(prompt_pwd)(set_color normal)
-	echo -n ' > '
+	# CHeck if we are in a tmux prompt, display position if so
+	if test -n "$TMUX"
+		set -l n_tmux (tmux display-message -p '#{session_windows}')
+		set -g __prompt_tmux (set_color blue)(tmux display-message -p '#I')/$n_tmux(set_color normal)
+	else
+		set --erase __prompt_tmux
+	end
+
+
+	# working directory
+	set -l __prompt_pwd (set_color green)(prompt_pwd)(set_color normal)
+
+	# this sets an array with no "extra" elements because unset variables expand to nothing
+	set -l __prompt_array $__prompt_host $__prompt_status $__prompt_tmux $__prompt_pwd
+
+
+	for section in $__prompt_array
+		echo -n $section
+		echo -n " > "
+	end
+
+
 end
 
 # settings for __fish_git_prompt
