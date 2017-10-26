@@ -9,6 +9,7 @@
 | NERDTree           | `<ctrl-N>`
 | Number Decrement   | `<ctrl-X>`
 | Number Increment   | `<ctrl-A>`
+| Open file new tab  | `<ctrl-W> gf`
 | re-wrap file       | `gq<motion>`
 | tcomment           | `gc<motion>`
 | Toggle fold        | `<space>`
