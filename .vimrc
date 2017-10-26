@@ -21,6 +21,7 @@ Plugin 'VundleVim/Vundle.vim'             " let Vundle manage Vundle, required
 
 Plugin 'alvan/vim-closetag'               " Closes (x)html tags as you type
 Plugin 'chriskempson/base16-vim'          " Base16 themes (compatible with airline)
+Plugin 'christoomey/vim-tmux-navigator'   " navigate vim and tmux panes seamlessly
 Plugin 'dag/vim-fish'                     " editing fish scripts
 Plugin 'easymotion/vim-easymotion'        " more motions, activated by <leader><leader>w
 Plugin 'fcpg/vim-farout'                  " theme emulating late 70's colors
