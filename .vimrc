@@ -27,7 +27,6 @@ Plugin 'fcpg/vim-farout'                  " theme emulating late 70's colors
 Plugin 'gabrielelana/vim-markdown'        " even better github markdown
 Plugin 'Konfekt/FastFold'                 " Fast folding
 Plugin 'PProvost/vim-ps1'                 " powershell syntax and formatting
-Plugin 'scrooloose/nerdtree'              " filesystem navigation
 Plugin 'tmhedberg/matchit'                " better matching for %
 Plugin 'tmhedberg/SimpylFold'             " better python folding
 Plugin 'tomtom/tcomment_vim'              " commenting
@@ -57,12 +56,6 @@ let g:airline_powerline_fonts = 0
 let g:airline_symbols_ascii = 1 " I don't always have unicode available
 nnoremap <Leader>a :AirlineToggleWhitespace<CR>
 set noshowmode " airline already does this
-
-" NERDTree
-map <C-n> :NERDTreeToggle<CR>
-let NERDTreeIgnore=['\.pyc$', '\~$']          " ignore files in NERDTree
-let g:nerdtree_tabs_open_on_gui_startup=2     " only opens if directory passed as arg
-let g:nerdtree_tabs_open_on_console_startup=2 " same as above
 
 " easymotion
 let g:EasyMotion_keys = 'asdfghjklqwertyuiopzxcvbnm;DFGHJKLQWERTYUIOPZXCVBNMAS'
