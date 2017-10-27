@@ -22,7 +22,7 @@ function fish_prompt
 	if not test $lastexit -eq 0
 		set __prompt_status (set_color red)$lastexit(set_color normal)
 	else
-		# IF this is not erased, the last error will be "sticky"
+		# If this is not erased, the last error will be "sticky"
 		set --erase __prompt_status
 	end
 
