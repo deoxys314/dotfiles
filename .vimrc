@@ -46,11 +46,11 @@ filetype plugin indent on    " required
 
 "##### Plugin Settings #####
 
-"Vundle
+" Vundle
 map <leader>U :PluginUpdate<CR>
 map <leader>I :PluginInstall<CR>
 
-" airline
+" Airline
 set laststatus=2
 autocmd VimEnter * AirlineToggleWhitespace
 let g:airline_powerline_fonts = 0
@@ -58,7 +58,7 @@ let g:airline_symbols_ascii = 1 " I don't always have unicode available
 nnoremap <Leader>a :AirlineToggleWhitespace<CR>
 set noshowmode " airline already does this
 
-" easymotion
+" Easymotion
 let g:EasyMotion_keys = 'asdfghjklqwertyuiopzxcvbnm;DFGHJKLQWERTYUIOPZXCVBNMAS'
 
 " SimplyFold
@@ -66,7 +66,7 @@ let g:SimplyFold_docstring_preview = 1
 let g:SimplyFold_fold_import = 0
 let b:SimplyFold_fold_import = 0
 
-" vim-markdown
+" Vim-markdown
 let g:markdown_enable_spell_checking = 0
 
 
@@ -86,7 +86,7 @@ set listchars=eol:$,tab:>\ ,nbsp:#,trail:_,extends:>,precedes:<
 "##### Display Options #####
 
 set number     " line numbers
-syntax on      " syntax hilighting
+syntax on      " syntax highlighting
 
 set showcmd    " show incomplete commands
 
@@ -137,7 +137,6 @@ set whichwrap+=h,l,<,>,[,]
 
 
 " ##### Search options #####
-"set hlsearch   " show search result
 set incsearch  " go to results as you type
 set ignorecase " ignore case in search
 
@@ -177,7 +176,7 @@ set encoding=utf-8
 " store a lot of history
 set history=1000
 
-" unix line endings
+" Unix line endings
 set fileformat=unix
 
 " no sound, just flash the screen
