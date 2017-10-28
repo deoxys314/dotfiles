@@ -93,6 +93,8 @@ set showcmd    " show incomplete commands
 set nowrap     " don't wrap lines
 set linebreak  " if I do turn on wrap, work breaks
 
+set wildmenu   " better tab-completion
+
 " to check line lengths
 set colorcolumn=100
 
