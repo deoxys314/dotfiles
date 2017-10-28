@@ -182,10 +182,13 @@ set fileformat=unix
 " no sound, just flash the screen
 set visualbell
 
-" Makes diff easier to read
-" https://vi.stackexchange.com/a/626
 if &diff
+	" Makes diff easier to read
+	" https://vi.stackexchange.com/a/626
 	highlight! link DiffText MatchParen
+
+	" easier to quit both at once in diff mode
+	command Q qall
 endif
 
 
