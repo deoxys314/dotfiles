@@ -122,6 +122,14 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+" tab is easier to type than %
+nnoremap <tab> %
+vnoremap <tab> %
+
+" j and k by lines on screen, as with modern editors
+nnoremap j gj
+nnoremap k gk
+
 " scrolling
 set scrolloff=4
 set sidescrolloff=8
@@ -138,7 +146,12 @@ set whichwrap+=h,l,<,>,[,]
 
 " ##### Search options #####
 set incsearch  " go to results as you type
-set ignorecase " ignore case in search
+set ignorecase " ignore case in search . . .
+set smartcase  " unless I type a capital letter
+
+" automatically make searches "more magic" aka sane
+nnoremap / /\v
+vnoremap / /\v
 
 
 " ##### Editing Options #####
@@ -181,6 +194,9 @@ set fileformat=unix
 
 " no sound, just flash the screen
 set visualbell
+
+" no modelines: potential security issue
+set modelines=0
 
 if &diff
 	" Makes diff easier to read
