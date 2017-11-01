@@ -44,11 +44,8 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 
-"##### Plugin Settings #####
 
-" Vundle
-map <leader>U :PluginUpdate<CR>
-map <leader>I :PluginInstall<CR>
+"##### Plugin Settings #####
 
 " Airline
 set laststatus=2
