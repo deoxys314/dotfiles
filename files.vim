@@ -62,7 +62,9 @@ au BufNewFile,BufRead *.md
 " ##### gitcommit #####
 au BufNewFile,BufRead COMMIT_EDITMSG
   \ setlocal spell |
+  \ setlocal cc=72 |
   \ colo base16-solarized-light
+
 
 " ##### special cases #####
 au BufNewFile,BufRead !status*
