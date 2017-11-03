@@ -63,11 +63,10 @@ au BufNewFile,BufRead *.md
 au BufNewFile,BufRead COMMIT_EDITMSG
   \ setlocal spell |
   \ setlocal cc=72 |
-  \ colo base16-solarized-light
+  \ if empty("$SSH") | colo base16-solarized-light | else | colo blue | endif
 
 
 " ##### special cases #####
 au BufNewFile,BufRead !status*
-  \ cd %:p:h
-
-
+  \ cd %:p:h |
+  \ setlocal spell
