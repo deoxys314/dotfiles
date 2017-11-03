@@ -63,4 +63,4 @@ end
 # sourcing plugins
 
 # Getopts
-source plugins/getopts/getopts.fish
+source (pwd)/plugins/getopts/getopts.fish
