@@ -59,3 +59,11 @@ set -x __fish_git_prompt_showcolorhints 1
 function fish_right_prompt -d "git branch, if applicable"
 	__fish_git_prompt
 end
+
+function tm -d "Easier tmux usage."
+	if test (count $argv) -eq 0
+		tmux attach; or tmux new
+	else
+		tmux $argv
+	end
+end
