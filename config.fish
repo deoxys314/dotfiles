@@ -4,6 +4,8 @@ source ~/deoxys314_dotfiles/fish/aliases.fish
 
 source ~/deoxys314_dotfiles/fish/functions.fish
 
+mkdir -pv ~/bin
+
 set PATH $PATH ~/bin
 
 # important environmental variables
