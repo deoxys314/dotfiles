@@ -172,7 +172,11 @@ nnoremap <Leader>w :call TrimWhitespace()<CR>
 
 " ##### Key Mappings #####
 
+" cd to :head of :path
 nnoremap <Leader>cd :cd %:p:h<CR>
+
+" go to next misspelled word and suggest
+nnoremap <Leader>s ]sz=
 
 
 " ##### Misc Options #####
