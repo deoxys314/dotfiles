@@ -1,4 +1,4 @@
-#!/usr/local/bin/bash
+#!/usr/bin/env bash
 
 # Preview how the colors accessible to tmux will look in your terminal
 

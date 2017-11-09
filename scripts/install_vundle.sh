@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env sh
 
 echo "This script will install vundle and start vim to install all plugins."
 echo "It assumes you have git installed and will fail otherwise."
