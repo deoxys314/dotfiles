@@ -67,3 +67,8 @@ function tm -d "Easier tmux usage."
 		tmux $argv
 	end
 end
+
+function gi -d "Uses gitignore.io to create .gitignore files"
+	curl -L -s https://www.gitignore.io/api/$argv
+end
+
