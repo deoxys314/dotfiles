@@ -63,7 +63,7 @@ au BufNewFile,BufRead *.md
 au BufNewFile,BufRead COMMIT_EDITMSG
   \ setlocal spell |
   \ setlocal cc=72 |
-  \ if empty("$SSH") | colo base16-solarized-light | else | colo industry | endif
+  \  colo industry
 
 
 " ##### special cases #####
