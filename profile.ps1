@@ -70,3 +70,12 @@ Function Set-FileTimeStamps {
 		$_.CreationTime = $_.LastAccessTime =  $_.LastWriteTime = $date
 	}
 }
+
+Function List-Directory {
+	$directoiry = Read-Host -Prompt 'Please paste or type in the path you wish to examine'
+
+	cd $directory
+
+	dir | ForEach-Object { $_.name } | Tee-Object -FilePath "directory_listing.txt"
+}
+
