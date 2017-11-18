@@ -28,6 +28,7 @@ Plugin 'fcpg/vim-farout'                  " theme emulating late 70's colors
 Plugin 'gabrielelana/vim-markdown'        " even better github markdown
 Plugin 'Konfekt/FastFold'                 " Fast folding
 Plugin 'PProvost/vim-ps1'                 " powershell syntax and formatting
+Plugin 'rust-lang/rust.vim'               " rust-lang
 Plugin 'tmhedberg/matchit'                " better matching for %
 Plugin 'tmhedberg/SimpylFold'             " better python folding
 Plugin 'tomtom/tcomment_vim'              " commenting
