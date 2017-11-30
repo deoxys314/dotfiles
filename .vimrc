@@ -77,6 +77,9 @@ set shiftwidth=4
 " show wrapped lines
 set showbreak=>>>\ 
 
+" keep indent same when wrapping
+set breakindent
+
 set list
 set listchars=eol:$,tab:>\ ,nbsp:#,trail:_,extends:>,precedes:<,nbsp:#
 
