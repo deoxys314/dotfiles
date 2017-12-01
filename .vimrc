@@ -163,6 +163,9 @@ set virtualedit=block
 " no swap file
 set noswapfile
 
+" don't automatically insert comment characters when <CR> in insert mode
+set formatoptions-=r
+
 " ##### Function Definitions #####
 
 " remove trailing whitespace on <leader>w, thanks Scolby
