@@ -185,6 +185,9 @@ nnoremap <Leader>cd :cd %:p:h<CR>
 " go to next misspelled word and suggest
 nnoremap <Leader>s ]sz=
 
+" using mouse
+set mouse=a
+
 
 " ##### Misc Options #####
 
