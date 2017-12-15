@@ -231,6 +231,7 @@ if has('gui_running')
 
 	" ### GUIOPTIONS
 	set guioptions-=e " text tabs
+	set guioptions-=T " no toolbar icons
 	set guioptions-=l " no left scrollbar
 	set guioptions-=L " no left scrollbar when vertical split active
 	set guioptions-=r " no right scrollbar
