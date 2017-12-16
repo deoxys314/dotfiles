@@ -186,7 +186,7 @@ nnoremap <Leader>cd :cd %:p:h<CR>
 nnoremap <Leader>s ]sz=
 
 " insert "ok" at the end of the line
-nnoremap <Leader>o Aok<Esc>
+nnoremap <Leader>o Aok<Esc>j$
 
 " using mouse
 set mouse=a
