@@ -164,7 +164,7 @@ set virtualedit=block
 set noswapfile
 
 " don't automatically insert comment characters when <CR> in insert mode
-set formatoptions-=r
+set formatoptions-=cro
 
 " ##### Function Definitions #####
 
