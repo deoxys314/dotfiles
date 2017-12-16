@@ -185,6 +185,9 @@ nnoremap <Leader>cd :cd %:p:h<CR>
 " go to next misspelled word and suggest
 nnoremap <Leader>s ]sz=
 
+" insert "ok" at the end of the line
+nnoremap <Leader>o Aok<Esc>
+
 " using mouse
 set mouse=a
 
