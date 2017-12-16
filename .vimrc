@@ -101,7 +101,7 @@ set colorcolumn=100
 
 " colorscheme
 set background=dark
-set termguicolors
+silent! set termguicolors
 
 if has("gui_running")
     colorscheme base16-google-dark
@@ -177,6 +177,16 @@ endfun
 nnoremap <Leader>w :call TrimWhitespace()<CR>
 
 
+" insert "ok" at the end of the line
+function! InsertOkAtLineEnd()
+	call setline('.', getline('.') . "ok")
+endfunction
+
+command -range OK <line1>,<line2>call InsertOkAtLineEnd()
+nnoremap <Leader>o :OK<CR>
+vnoremap <Leader>o :OK<CR>
+
+
 " ##### Key Mappings #####
 
 " cd to :head of :path
@@ -185,8 +195,6 @@ nnoremap <Leader>cd :cd %:p:h<CR>
 " go to next misspelled word and suggest
 nnoremap <Leader>s ]sz=
 
-" insert "ok" at the end of the line
-nnoremap <Leader>o Aok<Esc>j$
 
 " using mouse
 set mouse=a
