@@ -180,6 +180,7 @@ nnoremap <Leader>w :call TrimWhitespace()<CR>
 " insert "ok" at the end of the line
 function! InsertOkAtLineEnd()
 	call setline('.', getline('.') . "ok")
+	normal! $
 endfunction
 
 command -range OK <line1>,<line2>call InsertOkAtLineEnd()
