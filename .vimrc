@@ -103,6 +103,20 @@ set colorcolumn=100
 set background=dark
 silent! set termguicolors
 
+" I don't like how subdued some tablines are
+function! FixTabLine()
+	highlight TabLine guifg=Black guibg=LightGrey ctermfg=Black ctermbg=LightGrey
+	highlight TabLineFill guifg=Black guibg=LightGrey ctermfg=Black ctermbg=LightGrey
+	highlight TabLineSel  guifg=LightGrey guibg=Black ctermfg=LightGrey ctermbg=Black
+endfunction
+
+"otherwise the changes made above would be clobbered every time I switch colorschemes
+augroup on_change_colorschema
+  autocmd!
+  autocmd ColorScheme * call FixTabLine()
+augroup END
+
+
 if has("gui_running")
     colorscheme base16-google-dark
 else
