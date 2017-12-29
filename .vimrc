@@ -108,7 +108,7 @@ if has("gui_running")
 else
 	" 256 colors in terminal
 	set t_Co=265
-	set term=xterm-256color
+	silent! set term=xterm-256color
 endif
 
 
