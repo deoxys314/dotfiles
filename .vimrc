@@ -22,19 +22,19 @@ Plugin 'VundleVim/Vundle.vim'             " let Vundle manage Vundle, required
 Plugin 'alvan/vim-closetag'               " Closes (x)html tags as you type
 Plugin 'chriskempson/base16-vim'          " Base16 themes (compatible with airline)
 Plugin 'christoomey/vim-tmux-navigator'   " navigate vim and tmux panes seamlessly
-Plugin 'dag/vim-fish'                     " editing fish scripts
 Plugin 'easymotion/vim-easymotion'        " more motions, activated by <leader><leader>w
-Plugin 'fcpg/vim-farout'                  " theme emulating late 70's colors
-Plugin 'gabrielelana/vim-markdown'        " even better github markdown
 Plugin 'Konfekt/FastFold'                 " Fast folding
-Plugin 'PProvost/vim-ps1'                 " powershell syntax and formatting
-Plugin 'rust-lang/rust.vim'               " rust-lang
-Plugin 'tmhedberg/matchit'                " better matching for %
 Plugin 'tmhedberg/SimpylFold'             " better python folding
 Plugin 'tomtom/tcomment_vim'              " commenting
-Plugin 'tpope/vim-surround'               " adds a new verb
+Plugin 'tpope/vim-surround'               " adds a new verb, surround
 Plugin 'vim-airline/vim-airline'          " Airline, a nicer statusline
 Plugin 'vim-airline/vim-airline-themes'   " Nice themes for above
+
+" Languages
+Plugin 'dag/vim-fish'                     " editing fish scripts
+Plugin 'gabrielelana/vim-markdown'        " even better github markdown
+Plugin 'PProvost/vim-ps1'                 " powershell syntax and formatting
+Plugin 'rust-lang/rust.vim'               " rust-lang
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
