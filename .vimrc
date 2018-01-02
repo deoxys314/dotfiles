@@ -36,6 +36,9 @@ Plugin 'gabrielelana/vim-markdown'        " even better github markdown
 Plugin 'PProvost/vim-ps1'                 " powershell syntax and formatting
 Plugin 'rust-lang/rust.vim'               " rust-lang
 
+" Testing
+Plugin 'airblade/vim-gitgutter'           " git info in sign gutter
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -67,6 +70,8 @@ let b:SimplyFold_fold_import = 0
 " Vim-markdown
 let g:markdown_enable_spell_checking = 0
 
+" GitGutter
+set updatetime=1000
 
 "##### Whitespace Options #####
 
