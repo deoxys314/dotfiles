@@ -14,18 +14,13 @@ It is generally intended that you will browse these files to get ideas for your 
    
    `git clone https://github.com/deoxys314/deoxys314_dotfiles/ /path/to/where/you/want/these`
 
-2. Some guides have you create symlinks to these files from where they normally are to the git repository.  I find that while I can share about 90% of my configuration between machines, there's always that last 10%. So instead, I have each configuration file source these files, and add the machine-specific settings after that.  Some examples are below.
+2. Some guides have you create symlinks to these files from where they normally are to the git repository.  I find that while I can share about 90% of my configuration between machines, there's always that last 10%. So instead, I have each configuration file source these files, and add the machine-specific settings after that.
 
-   My `~/.vimrc`:
-   ```vimscript
-   " Cameron Rossington .vimrc
-   " created 170420
+   Instructions for sourcing files follow, as well as the usual location of configuration files
 
+   `~/.vimrc`:
+   ```vim
    source ~/deoxys314_dotfiles/.vimrc
-
-   " ###WHITESPACE###
-   set listchars=eol:¬,tab:»\ ,extends:>,precedes:<,nbsp:#,trail:_
-   [SNIP]
    ```
  
    `~/.tmux.conf`:
@@ -35,17 +30,21 @@ It is generally intended that you will browse these files to get ideas for your 
  
    `~/.config/fish/config.fish`:
    ```fish
-   
-   #!/usr/local/bin/fish
- 
-   # Sources global configuration files
    source ~/deoxys314_dotfiles/config.fish
- 
-   # Sets up path for rust
-   set -gx PATH "$HOME/.cargo/bin" $PATH
-
-   [SNIP]
    ```
+
+   `$profile`:
+   Powershell is a little different - there is no powershell prompt file by default, you must create it. If the `test-path $profile` cmdlet returns `False`, then there has not been one created yet.
+
+   To create a profile, type `new-item -path $profile -itemtype file -force`.
+
+   To edit this file, type `notepad $profile` (or similar).
+
+   And finally, PowerShell uses dot-sourcing, so the following should be included in your profile:
+   ```powershell
+   . C:\Path\to\deoxys314_dotfiles\profile.ps1
+   ```
+
 
    I find this allows me to avoid duplicating work while still allowing my to tweak settings for each machine fairly easily.
 
