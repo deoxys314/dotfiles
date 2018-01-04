@@ -72,6 +72,7 @@ Function Set-FileTimeStamps {
 }
 
 Function List-Directory {
+	# This function does a lot of the work for you - it was developed for a specific use-case
 	$directoiry = Read-Host -Prompt 'Please paste or type in the path you wish to examine'
 
 	cd $directory
