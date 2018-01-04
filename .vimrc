@@ -19,6 +19,7 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'             " let Vundle manage Vundle, required
 
+Plugin 'airblade/vim-gitgutter'           " git info in sign gutter
 Plugin 'alvan/vim-closetag'               " Closes (x)html tags as you type
 Plugin 'chriskempson/base16-vim'          " Base16 themes (compatible with airline)
 Plugin 'christoomey/vim-tmux-navigator'   " navigate vim and tmux panes seamlessly
@@ -36,8 +37,6 @@ Plugin 'gabrielelana/vim-markdown'        " even better github markdown
 Plugin 'PProvost/vim-ps1'                 " powershell syntax and formatting
 Plugin 'rust-lang/rust.vim'               " rust-lang
 
-" Testing
-Plugin 'airblade/vim-gitgutter'           " git info in sign gutter
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
