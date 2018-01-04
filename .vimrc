@@ -180,8 +180,16 @@ set virtualedit=block
 " no swap file
 set noswapfile
 
-" don't automatically insert comment characters when <CR> in insert mode
-set formatoptions-=cro
+" formatting options, mostly dealing with comment characters
+set formatoptions-=c
+set formatoptions-=o
+set formatoptions-=r
+set formatoptions+=j
+set formatoptions+=1
+
+" automagically load changes from disk
+set autoread
+
 
 " ##### Function Definitions #####
 
