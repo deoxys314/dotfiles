@@ -75,9 +75,9 @@ augroup END
 augroup filetype_markdown
 	autocmd!
 	autocmd BufNewFile,BufRead *.md
-	  \ set cc=0  |
+	  \ set cc=0       |
 	  \ setlocal spell |
-	  \ setlocal wrap
+	  \ setlocal textwidth=80
 augroup END
 
 " ##### gitcommit #####
