@@ -111,7 +111,7 @@ silent! set termguicolors
 function! FixTabLine()
 	highlight TabLine guifg=Black guibg=LightGrey gui=italic,underline ctermfg=Black ctermbg=LightGrey cterm=italic,underline
 	highlight TabLineFill guifg=Black guibg=DarkGrey ctermfg=Black ctermbg=LightGrey
-	highlight TabLineSel guifg=LightGrey guibg=Black gui=bold ctermfg=LightGrey ctermbg=Black cterm=bold
+	highlight TabLineSel guifg=LightBlue guibg=Black gui=bold ctermfg=LightBlue ctermbg=Black cterm=bold
 endfunction
 
 "otherwise the changes made above would be clobbered every time I switch colorschemes
