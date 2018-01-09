@@ -9,3 +9,9 @@ git push --set-upstream origin new_branch   # Push the new branch, set local bra
 ```
 
 [source](https://gist.github.com/lttlrck/9628955)
+
+
+And deleting a branch locally:
+```shell
+git branch -d old_branch
+```
