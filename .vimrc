@@ -193,12 +193,24 @@ set autoread
 " ##### Function Definitions #####
 
 " remove trailing whitespace on <leader>w, thanks Scolby
-fun! TrimWhitespace()
+function! TrimWhitespace()
 	let l:save = winsaveview()
 	%s/\s\+$//e
 	call winrestview(l:save)
-endfun
+endfunction
 nnoremap <Leader>w :call TrimWhitespace()<CR>
+
+" Open file under cursor in new tab
+function! OpenUnderTab()
+	let curfile = expand("<cfile>")
+	if filereadable(curfile)
+		execute(":tabe " . curfile)
+	else
+		echo "The file \"" . curfile . "\" is not readable."
+	endif
+endfunction
+
+map <Leader>t :call OpenUnderTab()<CR>
 
 
 " insert "ok" at the end of the line
