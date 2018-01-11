@@ -5,6 +5,9 @@
 "##### Vundle Plugins #####
 filetype off " required
 
+" vim has worked around all the POSIX oddities that fish doesn't have
+" so when it tries to use fish things get very confused
+" (this must be done before vundle is initialized)
 if &shell =~# 'fish$'
     set shell=sh
 endif
@@ -12,8 +15,8 @@ endif
 
 " set the runtime path to include Vundle and initialize
 " Includes possible paths for win and *nix
-set rtp+=~/vimfiles/bundle/Vundle.vim
-set rtp+=~/.vim/bundle/Vundle.vim
+set runtimepath+=~/vimfiles/bundle/Vundle.vim
+set runtimepath+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'             " let Vundle manage Vundle, required
