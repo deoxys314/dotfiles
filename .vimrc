@@ -215,7 +215,7 @@ function! OpenUnderTab() abort
 	endif
 endfunction
 
-map <Leader>t :call OpenUnderTab()<CR>
+nnoremap <Leader>t :call OpenUnderTab()<CR>
 
 
 " insert "ok" at the end of the line
