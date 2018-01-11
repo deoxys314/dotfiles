@@ -3,8 +3,7 @@
 
 
 "##### Vundle Plugins #####
-set nocompatible              " be iMproved, required
-filetype off                  " required
+filetype off " required
 
 if &shell =~# 'fish$'
     set shell=sh
