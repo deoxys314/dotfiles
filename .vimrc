@@ -54,7 +54,11 @@ filetype plugin indent on    " required
 
 " Airline
 set laststatus=2
-autocmd VimEnter * AirlineToggleWhitespace
+augroup airline_whitespace
+	autocmd!
+	autocmd VimEnter * AirlineToggleWhitespace
+augroup END
+
 let g:airline_powerline_fonts = 0
 let g:airline_symbols_ascii = 1 " I don't always have unicode available
 nnoremap <Leader>a :AirlineToggleWhitespace<CR>
