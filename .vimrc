@@ -198,7 +198,7 @@ set autoread
 " ##### Function Definitions #####
 
 " remove trailing whitespace on <leader>w, thanks Scolby
-function! TrimWhitespace()
+function! TrimWhitespace() abort
 	let l:save = winsaveview()
 	%s/\s\+$//e
 	call winrestview(l:save)
@@ -206,7 +206,7 @@ endfunction
 nnoremap <Leader>w :call TrimWhitespace()<CR>
 
 " Open file under cursor in new tab
-function! OpenUnderTab()
+function! OpenUnderTab() abort
 	let curfile = expand("<cfile>")
 	if filereadable(curfile)
 		execute(":tabe " . curfile)
@@ -219,7 +219,7 @@ map <Leader>t :call OpenUnderTab()<CR>
 
 
 " insert "ok" at the end of the line
-function! InsertOkAtLineEnd()
+function! InsertOkAtLineEnd() abort
 	call setline('.', getline('.') . "ok")
 	normal! $
 endfunction
