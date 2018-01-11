@@ -129,7 +129,6 @@ augroup END
 if !has("gui_running")
 	" 256 colors in terminal
 	set t_Co=265
-	silent! set term=xterm-256color
 endif
 
 
