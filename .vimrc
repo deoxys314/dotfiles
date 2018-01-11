@@ -41,20 +41,15 @@ Plugin 'rust-lang/rust.vim'               " rust-lang
 
 
 " All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
+call vundle#end()         " required
+filetype plugin indent on " required
 
 
 " ##### Plugin Settings ###
 
 " Airline
 set laststatus=2
-autocmd VimEnter * AirlineToggleWhitespace
+autocmd VimEnter * AirlineToggleWhitespace " This event only fires once so an augroup is not needed
 
 let g:airline_powerline_fonts = 0
 let g:airline_symbols_ascii = 1 " I don't always have unicode available
@@ -164,11 +159,10 @@ set virtualedit=block
 set noswapfile
 
 " formatting options, mostly dealing with comment characters
-set formatoptions-=c
-set formatoptions-=o
-set formatoptions-=r
-set formatoptions+=j
-set formatoptions+=1
+set formatoptions-=o " no autoinsert of comment char on o or O
+set formatoptions-=r " no autoinsert of comment char on <CR> in insert mode
+set formatoptions+=j " remove comment leader when Joining lines
+set formatoptions+=1 " if possible, break line before one letter word
 
 " automagically load changes from disk
 set autoread
@@ -268,5 +262,6 @@ if has('gui_running')
 	set guioptions-=L " no left scrollbar when vertical split active
 	set guioptions-=r " no right scrollbar
 	set guioptions-=R " no right scrollbar when vertical split active
+	set guioptions+=c " console dialogue for simple choices
 
 endif
