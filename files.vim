@@ -83,10 +83,9 @@ augroup END
 " ##### gitcommit #####
 augroup filetype_gitcommit
 	autocmd!
-	autocmd BufNewFile,BufRead COMMIT_EDITMSG
+	autocmd Filetype gitcommit
 	  \ setlocal spell |
-	  \ setlocal cc=72 |
-	  \  colo industry
+	  \ setlocal cc=72
 augroup END
 
 
