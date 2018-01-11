@@ -54,10 +54,7 @@ filetype plugin indent on    " required
 
 " Airline
 set laststatus=2
-augroup airline_whitespace
-	autocmd!
-	autocmd VimEnter * AirlineToggleWhitespace
-augroup END
+autocmd VimEnter * AirlineToggleWhitespace
 
 let g:airline_powerline_fonts = 0
 let g:airline_symbols_ascii = 1 " I don't always have unicode available
