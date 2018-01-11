@@ -138,6 +138,7 @@ endif
 set splitright
 set splitbelow
 
+" navigate splits with <Ctrl-hjkl>
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
