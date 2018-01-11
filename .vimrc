@@ -80,7 +80,6 @@ set updatetime=1000
 
 "##### Whitespace Options #####
 
-set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 
