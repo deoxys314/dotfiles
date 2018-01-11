@@ -121,8 +121,8 @@ endfunction
 
 "otherwise the changes made above would be clobbered every time I switch colorschemes
 augroup on_change_colorschema
-  autocmd!
-  autocmd ColorScheme * call FixTabLine()
+	autocmd!
+	autocmd ColorScheme * call FixTabLine()
 augroup END
 
 
