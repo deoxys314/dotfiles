@@ -2,7 +2,7 @@
 " created 170420
 
 
-"##### Vundle Plugins #####
+" ##### Vundle Plugins ###
 filetype off " required
 
 " vim has worked around all the POSIX oddities that fish doesn't have
@@ -50,7 +50,7 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 
 
-"##### Plugin Settings #####
+" ##### Plugin Settings ###
 
 " Airline
 set laststatus=2
@@ -70,7 +70,7 @@ let g:SimplyFold_docstring_preview = 1
 " GitGutter
 set updatetime=1000
 
-"##### Whitespace Options #####
+" ##### Whitespace Options ###
 
 set softtabstop=4
 set shiftwidth=4
@@ -85,7 +85,7 @@ set list
 set listchars=eol:$,tab:>\ ,nbsp:#,trail:_,extends:>,precedes:<
 
 
-"##### Display Options #####
+" ##### Display Options ###
 
 set number     " line numbers
 syntax on      " syntax highlighting
@@ -118,7 +118,7 @@ augroup on_change_colorschema
 augroup END
 
 
-" ##### Navigation options #####
+" ##### Navigation options ###
 
 " split navigations
 set splitright
@@ -148,7 +148,7 @@ nnoremap <space> za
 set whichwrap+=h,l,<,>,[,]
 
 
-" ##### Search options #####
+" ##### Search options ###
 set incsearch  " go to results as you type
 set ignorecase " ignore case in search . . .
 set smartcase  " unless I type a capital letter
@@ -158,7 +158,7 @@ nnoremap / /\v
 vnoremap / /\v
 
 
-" ##### Editing Options #####
+" ##### Editing Options ###
 
 " virtual edit in visual mode
 set virtualedit=block
@@ -177,7 +177,7 @@ set formatoptions+=1
 set autoread
 
 
-" ##### Function Definitions #####
+" ##### Function Definitions ###
 
 " remove trailing whitespace on <leader>w, thanks Scolby
 function! TrimWhitespace() abort
@@ -211,7 +211,7 @@ nnoremap <Leader>o :OK<CR>
 vnoremap <Leader>o :OK<CR>
 
 
-" ##### Key Mappings #####
+" ##### Key Mappings ###
 
 " cd to :head of :path
 nnoremap <Leader>cd :cd %:p:h<CR>
@@ -224,7 +224,7 @@ nnoremap <Leader>s ]sz=
 set mouse=a
 
 
-" ##### Misc Options #####
+" ##### Misc Options ###
 
 " make backspace work the way it dos in most editors
 set backspace=indent,eol,start
@@ -254,11 +254,11 @@ if &diff
 endif
 
 
-"##### Filetype Options #####
+" ##### Filetype Options ###
 source ~/deoxys314_dotfiles/files.vim
 
 
-"##### GUI Options #####
+" ##### GUI Options ###
 if has('gui_running')
 
 	" ###FONT###
