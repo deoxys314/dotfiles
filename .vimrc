@@ -64,16 +64,8 @@ let g:airline_symbols_ascii = 1 " I don't always have unicode available
 nnoremap <Leader>a :AirlineToggleWhitespace<CR>
 set noshowmode " airline already does this
 
-" Easymotion
-let g:EasyMotion_keys = 'asdfghjklqwertyuiopzxcvbnm;DFGHJKLQWERTYUIOPZXCVBNMAS'
-
 " SimplyFold
 let g:SimplyFold_docstring_preview = 1
-let g:SimplyFold_fold_import = 0
-let b:SimplyFold_fold_import = 0
-
-" Vim-markdown
-let g:markdown_enable_spell_checking = 0
 
 " GitGutter
 set updatetime=1000
@@ -143,10 +135,6 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
-
-" tab is easier to type than %
-nnoremap <tab> %
-vnoremap <tab> %
 
 " j and k by lines on screen, as with modern editors
 nnoremap j gj
