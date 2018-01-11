@@ -118,12 +118,6 @@ augroup on_change_colorschema
 augroup END
 
 
-if !has("gui_running")
-	" 256 colors in terminal
-	set t_Co=265
-endif
-
-
 " ##### Navigation options #####
 
 " split navigations
