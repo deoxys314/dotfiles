@@ -1,6 +1,4 @@
 " Cameron Rossington .vimrc
-" created 170420
-
 
 " ##### Vundle Plugins ###
 filetype off " required
@@ -11,7 +9,6 @@ filetype off " required
 if &shell =~# 'fish$'
     set shell=sh
 endif
-
 
 " set the runtime path to include Vundle and initialize
 " Includes possible paths for win and *nix
@@ -61,6 +58,7 @@ let g:SimplyFold_docstring_preview = 1
 
 " GitGutter
 set updatetime=1000
+
 
 " ##### Whitespace Options ###
 
