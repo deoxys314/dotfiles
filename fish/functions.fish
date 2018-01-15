@@ -3,14 +3,13 @@
 # Prompt hostname
 set -g __fish_prompt_hostname (hostname | sed -e 's/\.local//')
 
-# The command-line prompt
-# sections are as follows:
-# hostname > exit code (if not 0) > tmux pane(if any) > truncated directory
+# The command prompt sections are as follows:
+# hostname > exit code (if not 0) > tmux pane (if any) > truncated directory
 function fish_prompt
-	# we need to do this first or we will clobber it
+	# we need to do this first or we will clobber it with other exit codes
 	set -l lastexit $status
 
-	# calculates fish hostname once
+	# calculates fish hostname once as it will not change
 	if not set -q __fish_prompt_hostname
 		set -g __fish_prompt_hostname (hostname | cut -d . -f 1)
 	end
@@ -26,7 +25,7 @@ function fish_prompt
 		set --erase __prompt_status
 	end
 
-	# CHeck if we are in a tmux prompt, display position if so
+	# Check if we are in a tmux prompt, display position if so
 	if test -n "$TMUX"
 		set -l n_tmux (tmux display-message -p '#{session_windows}')
 		set -g __prompt_tmux (set_color blue)(tmux display-message -p '#I')/$n_tmux(set_color normal)
@@ -46,7 +45,6 @@ function fish_prompt
 		echo -n $section
 		echo -n " > "
 	end
-
 
 end
 
