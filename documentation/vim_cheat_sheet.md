@@ -7,8 +7,6 @@
 | Edit Block (md)    | `<leader>e`
 | Fold All           | `zM`
 | Go to tag          | `<ctrl-]`
-| Number Decrement   | `<ctrl-X>`
-| Number Increment   | `<ctrl-A>`
 | Open File in Tab   | `<leader>t`
 | Open file new tab  | `<ctrl-W> gf`
 | Quick Spelling     | `<leader>s`
