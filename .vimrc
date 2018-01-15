@@ -177,16 +177,7 @@ endfunction
 nnoremap <Leader>w :call TrimWhitespace()<CR>
 
 " Open file under cursor in new tab
-function! OpenUnderTab() abort
-	let curfile = expand("<cfile>")
-	if filereadable(curfile)
-		execute(":tabe " . curfile)
-	else
-		echo "The file \"" . curfile . "\" is not readable."
-	endif
-endfunction
-
-nnoremap <Leader>t :call OpenUnderTab()<CR>
+nnoremap <Leader>t <C-W>gf
 
 
 " insert "ok" at the end of the line
