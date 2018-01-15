@@ -62,8 +62,9 @@ set updatetime=1000
 
 " ##### Whitespace Options ###
 
-set softtabstop=4
 set shiftwidth=4
+set softtabstop=4
+set tabstop=4
 
 " show wrapped lines
 set showbreak=>>>\ 
