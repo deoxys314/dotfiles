@@ -59,6 +59,8 @@ let g:SimplyFold_docstring_preview = 1
 " GitGutter
 set updatetime=1000
 
+" Closetag
+let g:closetag_filenames='*.html,*.htm,*.xml'
 
 " ##### Whitespace Options ###
 
@@ -198,7 +200,7 @@ vnoremap <Leader>o :OK<CR>
 nnoremap <Leader>cd :cd %:p:h<CR>
 
 " go to next misspelled word and suggest
-nnoremap <Leader>s ]sz=
+nnoremap <Leader>s ]Sz=
 
 
 " using mouse
