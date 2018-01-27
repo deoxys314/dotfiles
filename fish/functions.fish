@@ -41,9 +41,14 @@ function fish_prompt
 	set -l __prompt_array $__prompt_host $__prompt_status $__prompt_tmux $__prompt_pwd
 
 
+	# if this isn't set by a per-system customization
+	if not set -q __fish_prompt_joiner
+		set -g __fish_prompt_joiner " > "
+	end
+
 	for section in $__prompt_array
 		echo -n $section
-		echo -n " > "
+		echo -n $__fish_prompt_joiner
 	end
 
 end
