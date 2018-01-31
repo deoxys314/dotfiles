@@ -140,6 +140,9 @@ nnoremap <space> za
 " wraps h and l like modern editors
 set whichwrap+=h,l,<,>,[,]
 
+" let % bounch between angle brackets as well
+set matchpairs+=<:>
+
 
 " ##### Search options ###
 set incsearch  " go to results as you type
