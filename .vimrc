@@ -23,6 +23,8 @@ Plugin 'alvan/vim-closetag'               " Closes (x)html tags as you type
 Plugin 'chriskempson/base16-vim'          " Base16 themes (compatible with airline)
 Plugin 'christoomey/vim-tmux-navigator'   " navigate vim and tmux panes seamlessly
 Plugin 'easymotion/vim-easymotion'        " more motions, activated by <leader><leader>w
+Plugin 'junegunn/goyo.vim'                " for writing prose
+Plugin 'junegunn/limelight.vim'           " also for writing prose
 Plugin 'Konfekt/FastFold'                 " Fast folding
 Plugin 'tmhedberg/SimpylFold'             " better python folding
 Plugin 'tomtom/tcomment_vim'              " commenting
@@ -61,6 +63,27 @@ set updatetime=1000
 
 " Closetag
 let g:closetag_filenames='*.html,*.htm,*.xml'
+
+" Prose (Goyo and LimeLight)
+function! s:goyo_enter()
+	let g:temp_colo_store = g:colors_name
+	silent! colorscheme base16-solarized-light
+	Limelight
+	setlocal scrolloff=999
+	setlocal statusline=%m
+	hi StatusLine ctermfg=red guifg=red gui=NONE cterm=NONE
+endfunction
+
+function! s:goyo_leave()
+	set scrolloff=4
+	Limelight!
+	execute "colorscheme " . g:temp_colo_store
+	unlet g:temp_colo_store
+endfunction
+
+autocmd! User GoyoEnter nested call <SID>goyo_enter()
+autocmd! User GoyoLeave nested call <SID>goyo_leave()
+
 
 " ##### Whitespace Options ###
 
