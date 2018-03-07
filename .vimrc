@@ -59,6 +59,7 @@ set noshowmode " airline already does this
 let g:SimplyFold_docstring_preview = 1
 
 " GitGutter
+let g:gitgutter_enabled = 0 " off by default
 set updatetime=1000
 
 " Closetag
