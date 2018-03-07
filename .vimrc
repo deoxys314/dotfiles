@@ -216,7 +216,7 @@ function! InsertOkAtLineEnd() abort
 	normal! $
 endfunction
 
-command -range OK <line1>,<line2>call InsertOkAtLineEnd()
+command! -range OK <line1>,<line2>call InsertOkAtLineEnd()
 nnoremap <Leader>o :OK<CR>
 vnoremap <Leader>o :OK<CR>
 
@@ -260,7 +260,7 @@ if &diff
 	highlight! link DiffText MatchParen
 
 	" easier to quit both at once in diff mode
-	command Q qall
+	command! Q qall
 endif
 
 
