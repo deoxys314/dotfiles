@@ -229,6 +229,8 @@ nnoremap <Leader>cd :cd %:p:h<CR>
 " go to next misspelled word and suggest
 nnoremap <Leader>s ]Sz=
 
+" I don'y like Ex mode
+nnoremap Q <nop>
 
 " using mouse
 set mouse=a
