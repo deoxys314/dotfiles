@@ -253,6 +253,9 @@ set fileformat=unix
 " no sound, just flash the screen
 set visualbell
 
+" Make spell not take over entire screen
+set spellsuggest=15
+
 " no modelines: potential security issue
 set modelines=0
 
