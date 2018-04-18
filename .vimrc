@@ -31,6 +31,7 @@ Plugin 'tomtom/tcomment_vim'              " commenting
 Plugin 'tpope/vim-surround'               " adds a new verb, surround
 Plugin 'vim-airline/vim-airline'          " Airline, a nicer statusline
 Plugin 'vim-airline/vim-airline-themes'   " Nice themes for above
+Plugin 'vim-syntastic/syntastic'          " error checking
 
 " Languages
 Plugin 'dag/vim-fish'                     " editing fish scripts
@@ -64,6 +65,9 @@ set updatetime=1000
 
 " Closetag
 let g:closetag_filenames='*.html,*.htm,*.xml'
+
+" Syntastic
+
 
 " Prose (Goyo and LimeLight)
 function! s:goyo_enter()
