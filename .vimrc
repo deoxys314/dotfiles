@@ -214,17 +214,6 @@ nnoremap <Leader>w :call TrimWhitespace()<CR>
 nnoremap <Leader>t <C-W>gf
 
 
-" insert "ok" at the end of the line
-function! InsertOkAtLineEnd() abort
-	call setline('.', getline('.') . "ok")
-	normal! $
-endfunction
-
-command! -range OK <line1>,<line2>call InsertOkAtLineEnd()
-nnoremap <Leader>o :OK<CR>
-vnoremap <Leader>o :OK<CR>
-
-
 " ##### Key Mappings ###
 
 " cd to :head of :path
