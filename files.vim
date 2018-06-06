@@ -67,7 +67,7 @@ augroup filetype_log
 	autocmd!
 	autocmd BufNewFile,BufRead *.log
 	  \ set cc=0 |
-	  \ cd %:p:h
+	  \ set hlsearch
 augroup END
 
 

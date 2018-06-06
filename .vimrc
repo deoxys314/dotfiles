@@ -64,7 +64,7 @@ let g:gitgutter_enabled = 0 " off by default
 set updatetime=1000
 
 " Closetag
-let g:closetag_filenames='*.html,*.htm,*.xml'
+let g:closetag_filenames='*.html,*.htm,*.xml,*.php'
 
 " Syntastic
 
