@@ -22,12 +22,11 @@ Plugin 'airblade/vim-gitgutter'           " git info in sign gutter
 Plugin 'alvan/vim-closetag'               " Closes (x)html tags as you type
 Plugin 'chriskempson/base16-vim'          " Base16 themes (compatible with airline)
 Plugin 'christoomey/vim-tmux-navigator'   " navigate vim and tmux panes seamlessly
-Plugin 'easymotion/vim-easymotion'        " more motions, activated by <leader><leader>w
 Plugin 'junegunn/goyo.vim'                " for writing prose
 Plugin 'junegunn/limelight.vim'           " also for writing prose
 Plugin 'Konfekt/FastFold'                 " Fast folding
 Plugin 'tmhedberg/SimpylFold'             " better python folding
-Plugin 'tomtom/tcomment_vim'              " commenting
+Plugin 'tpope/vim-commentary'             " commenting
 Plugin 'tpope/vim-surround'               " adds a new verb, surround
 Plugin 'vim-airline/vim-airline'          " Airline, a nicer statusline
 Plugin 'vim-airline/vim-airline-themes'   " Nice themes for above
@@ -67,6 +66,7 @@ set updatetime=1000
 let g:closetag_filenames='*.html,*.htm,*.xml,*.php'
 
 " Syntastic
+let g:syntastic_always_populate_loc_list = 1
 
 
 " Prose (Goyo and LimeLight)
@@ -82,7 +82,7 @@ endfunction
 function! s:goyo_leave()
 	set scrolloff=4
 	Limelight!
-	execute "colorscheme " . g:temp_colo_store
+	execute 'colorscheme ' . g:temp_colo_store
 	unlet g:temp_colo_store
 endfunction
 
