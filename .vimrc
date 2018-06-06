@@ -55,19 +55,12 @@ let g:airline_symbols_ascii = 1 " I don't always have unicode available
 nnoremap <Leader>a :AirlineToggleWhitespace<CR>
 set noshowmode " airline already does this
 
-" SimplyFold
-let g:SimplyFold_docstring_preview = 1
+" Closetag
+let g:closetag_filenames='*.html,*.htm,*.xml,*.php'
 
 " GitGutter
 let g:gitgutter_enabled = 0 " off by default
 set updatetime=1000
-
-" Closetag
-let g:closetag_filenames='*.html,*.htm,*.xml,*.php'
-
-" Syntastic
-let g:syntastic_always_populate_loc_list = 1
-
 
 " Prose (Goyo and LimeLight)
 function! s:goyo_enter()
@@ -88,6 +81,13 @@ endfunction
 
 autocmd! User GoyoEnter nested call <SID>goyo_enter()
 autocmd! User GoyoLeave nested call <SID>goyo_leave()
+
+" SimplyFold
+let g:SimplyFold_docstring_preview = 1
+
+" Syntastic
+let g:syntastic_always_populate_loc_list = 1
+
 
 
 " ##### Whitespace Options ###
@@ -114,7 +114,7 @@ syntax on      " syntax highlighting
 set showcmd    " show incomplete commands
 
 set nowrap     " don't wrap lines
-set linebreak  " if I do turn on wrap, work breaks
+set linebreak  " if I do turn on wrap, breaks work
 
 set wildmenu   " better tab-completion
 
