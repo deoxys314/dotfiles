@@ -8,8 +8,5 @@ mkdir -pv ~/bin
 
 set PATH $PATH ~/bin
 
-# important environmental variables
-# set -g -x TERM screen-256color-bce
-
 set -gx VISUAL vi
 set -gx EDITOR vi
