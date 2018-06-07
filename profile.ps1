@@ -45,14 +45,35 @@ Function prompt {
 }
 
 Function Edit-Profile {
-	gvim $profile
+    gvim $profile
 }
 
 Function Reload-Profile {
-	if (!(Test-Path -Path $profile )) { 
-		New-Item -Type File -Path $profile -Force
-	}
-	. $profile
+    if (!(Test-Path -Path $profile )) { 
+        New-Item -Type File -Path $profile -Force
+    }
+    . $profile
+}
+
+Function List-EmptyDirectories {
+    <#
+    .SYNOPSIS
+    Lists empty directories recursively.
+
+    #>
+    Param (
+        $path
+    )
+
+    if ( -not ($path) ) {
+        $path = Get-Location # if no path supplied, default to current
+    }
+
+    Get-ChildItem $path -Directory -Recurse -ErrorAction 'ignore' `
+     | Where-Object { 
+         ($_.GetFileSystemInfos().Count -eq 0) -and ($_.FullName -notmatch '\\\.')
+         } `
+     | ForEach-Object { $_.FullName }
 }
 
 Function List-EmptyDirectories {
@@ -70,27 +91,27 @@ Function List-EmptyDirectories {
 
 
 Function Set-FileTimeStamps {
-	Param (
-	# [Parameter(mandatory=$true)]
-	[string[]]$path,
-	[datetime]$date = (Get-Date))
+    Param (
+    # [Parameter(mandatory=$true)]
+    [string[]]$path,
+    [datetime]$date = (Get-Date))
 
-	if (-not ($path)) {
-		Throw "Must supply a value for -Path"
-	}
+    if (-not ($path)) {
+        Throw "Must supply a value for -Path"
+    }
 
-	Get-ChildItem -Path $path |
-	ForEach-Object {
-		$_.CreationTime = $_.LastAccessTime =  $_.LastWriteTime = $date
-	}
+    Get-ChildItem -Path $path |
+    ForEach-Object {
+        $_.CreationTime = $_.LastAccessTime =  $_.LastWriteTime = $date
+    }
 }
 
 Function List-Directory {
-	# This function does a lot of the work for you - it was developed for a specific use-case
-	$directoiry = Read-Host -Prompt 'Please paste or type in the path you wish to examine'
+    # This function does a lot of the work for you - it was developed for a specific use-case
+    $directoiry = Read-Host -Prompt 'Please paste or type in the path you wish to examine'
 
-	cd $directory
+    cd $directory
 
-	dir | ForEach-Object { $_.name } | Tee-Object -FilePath "directory_listing.txt"
+    dir | ForEach-Object { $_.name } | Tee-Object -FilePath "directory_listing.txt"
 }
 

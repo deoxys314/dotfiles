@@ -80,6 +80,17 @@ augroup filetype_markdown
 	  \ setlocal textwidth=80
 augroup END
 
+
+" ##### Powershell #####
+augroup filetype_powershell
+	autocmd!
+	autocmd BufNewFile,Bufread *.ps1
+	  \ setlocal cc=115       |
+	  \ setlocal tabstop=4    |
+	  \ setlocal shiftwidth=4 |
+	  \ setlocal expandtab
+augroup END
+
 " ##### gitcommit #####
 augroup filetype_gitcommit
 	autocmd!
