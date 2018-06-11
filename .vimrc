@@ -28,6 +28,7 @@ Plugin 'Konfekt/FastFold'                 " Fast folding
 Plugin 'tmhedberg/SimpylFold'             " better python folding
 Plugin 'tpope/vim-commentary'             " commenting
 Plugin 'tpope/vim-surround'               " adds a new verb, surround
+Plugin 'tpope/vim-vinegar'                " beter netrw
 Plugin 'vim-airline/vim-airline'          " Airline, a nicer statusline
 Plugin 'vim-airline/vim-airline-themes'   " Nice themes for above
 Plugin 'vim-syntastic/syntastic'          " error checking
