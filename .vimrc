@@ -84,7 +84,7 @@ autocmd! User GoyoEnter nested call <SID>goyo_enter()
 autocmd! User GoyoLeave nested call <SID>goyo_leave()
 
 " SimplyFold
-let g:SimplyFold_docstring_preview = 1
+let g:SimpylFold_docstring_preview = 1
 
 " Syntastic
 let g:syntastic_always_populate_loc_list = 1
