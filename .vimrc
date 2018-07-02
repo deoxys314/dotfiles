@@ -56,6 +56,7 @@ autocmd VimEnter * AirlineToggleWhitespace " This event only fires once so an au
 
 let g:airline_powerline_fonts = 0
 let g:airline_symbols_ascii = 1 " I don't always have unicode available
+let g:airline_section_z='%3p%% [l:%2l c:%2v]'
 nnoremap <Leader>a :AirlineToggleWhitespace<CR>
 set noshowmode " airline already does this
 
