@@ -39,6 +39,9 @@ Plugin 'gabrielelana/vim-markdown'        " even better github markdown
 Plugin 'PProvost/vim-ps1'                 " powershell syntax and formatting
 Plugin 'rust-lang/rust.vim'               " rust-lang
 
+" Testing
+Plugin 'ambv/black'                       " python formatting
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()         " required
@@ -55,6 +58,9 @@ let g:airline_powerline_fonts = 0
 let g:airline_symbols_ascii = 1 " I don't always have unicode available
 nnoremap <Leader>a :AirlineToggleWhitespace<CR>
 set noshowmode " airline already does this
+
+" Black
+let g:black_linelength=120
 
 " Closetag
 let g:closetag_filenames='*.html,*.htm,*.xml,*.php'
