@@ -40,7 +40,9 @@ Plugin 'PProvost/vim-ps1'                 " powershell syntax and formatting
 Plugin 'rust-lang/rust.vim'               " rust-lang
 
 " Testing
-Plugin 'ambv/black'                       " python formatting
+if exists("g:load_black")
+	Plugin 'ambv/black'                   " python formatting
+endif
 
 
 " All of your Plugins must be added before the following line
