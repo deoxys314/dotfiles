@@ -40,7 +40,7 @@ Plugin 'PProvost/vim-ps1'                 " powershell syntax and formatting
 Plugin 'rust-lang/rust.vim'               " rust-lang
 
 " Testing
-if exists("g:load_black")
+if exists("g:load_black_vimrc")
 	Plugin 'ambv/black'                   " python formatting
 endif
 
