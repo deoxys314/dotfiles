@@ -1,7 +1,6 @@
 " Cameron Rossington .vimrc
 
-" ##### Vundle Plugins ###
-filetype off " required
+" ##### Plugins ###
 
 " vim has worked around all the POSIX oddities that fish doesn't have
 " so when it tries to use fish things get very confused
@@ -10,44 +9,37 @@ if &shell =~# 'fish$'
     set shell=sh
 endif
 
-" set the runtime path to include Vundle and initialize
-" Includes possible paths for win and *nix
-set runtimepath+=~/vimfiles/bundle/Vundle.vim
-set runtimepath+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin('~/.vim/plugged')
 
-Plugin 'VundleVim/Vundle.vim'             " let Vundle manage Vundle, required
-
-Plugin 'airblade/vim-gitgutter'           " git info in sign gutter
-Plugin 'alvan/vim-closetag'               " Closes (x)html tags as you type
-Plugin 'chriskempson/base16-vim'          " Base16 themes (compatible with airline)
-Plugin 'christoomey/vim-tmux-navigator'   " navigate vim and tmux panes seamlessly
-Plugin 'junegunn/goyo.vim'                " for writing prose
-Plugin 'junegunn/limelight.vim'           " also for writing prose
-Plugin 'Konfekt/FastFold'                 " Fast folding
-Plugin 'tmhedberg/SimpylFold'             " better python folding
-Plugin 'tpope/vim-commentary'             " commenting
-Plugin 'tpope/vim-surround'               " adds a new verb, surround
-Plugin 'tpope/vim-vinegar'                " beter netrw
-Plugin 'vim-airline/vim-airline'          " Airline, a nicer statusline
-Plugin 'vim-airline/vim-airline-themes'   " Nice themes for above
-Plugin 'vim-syntastic/syntastic'          " error checking
+Plug 'airblade/vim-gitgutter'           " git info in sign gutter
+Plug 'alvan/vim-closetag'               " Closes (x)html tags as you type
+Plug 'chriskempson/base16-vim'          " Base16 themes (compatible with airline)
+Plug 'christoomey/vim-tmux-navigator'   " navigate vim and tmux panes seamlessly
+Plug 'junegunn/goyo.vim'                " for writing prose
+Plug 'junegunn/limelight.vim'           " also for writing prose
+Plug 'Konfekt/FastFold'                 " Fast folding
+Plug 'tmhedberg/SimpylFold'             " better python folding
+Plug 'tpope/vim-commentary'             " commenting
+Plug 'tpope/vim-surround'               " adds a new verb, surround
+Plug 'tpope/vim-vinegar'                " beter netrw
+Plug 'vim-airline/vim-airline'          " Airline, a nicer statusline
+Plug 'vim-airline/vim-airline-themes'   " Nice themes for above
+Plug 'vim-syntastic/syntastic'          " error checking
 
 " Languages
-Plugin 'dag/vim-fish'                     " editing fish scripts
-Plugin 'gabrielelana/vim-markdown'        " even better github markdown
-Plugin 'PProvost/vim-ps1'                 " powershell syntax and formatting
-Plugin 'rust-lang/rust.vim'               " rust-lang
+Plug 'dag/vim-fish'                     " editing fish scripts
+Plug 'gabrielelana/vim-markdown'        " even better github markdown
+Plug 'PProvost/vim-ps1'                 " powershell syntax and formatting
+Plug 'rust-lang/rust.vim'               " rust-lang
 
 " Testing
 if exists("g:load_black_vimrc")
-	Plugin 'ambv/black'                   " python formatting
+	Plug 'ambv/black'                   " python formatting
 endif
 
 
-" All of your Plugins must be added before the following line
-call vundle#end()         " required
-filetype plugin indent on " required
+" All plugins must be added before the following line
+call plug#end()
 
 
 " ##### Plugin Settings ###
