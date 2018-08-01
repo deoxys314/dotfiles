@@ -11,32 +11,28 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'airblade/vim-gitgutter'           " git info in sign gutter
-Plug 'alvan/vim-closetag'               " Closes (x)html tags as you type
-Plug 'chriskempson/base16-vim'          " Base16 themes (compatible with airline)
-Plug 'christoomey/vim-tmux-navigator'   " navigate vim and tmux panes seamlessly
-Plug 'junegunn/goyo.vim'                " for writing prose
-Plug 'junegunn/limelight.vim'           " also for writing prose
-Plug 'Konfekt/FastFold'                 " Fast folding
-Plug 'tmhedberg/SimpylFold'             " better python folding
-Plug 'tpope/vim-commentary'             " commenting
-Plug 'tpope/vim-surround'               " adds a new verb, surround
-Plug 'tpope/vim-vinegar'                " beter netrw
-Plug 'vim-airline/vim-airline'          " Airline, a nicer statusline
-Plug 'vim-airline/vim-airline-themes'   " Nice themes for above
-Plug 'vim-syntastic/syntastic'          " error checking
-Plug 'takac/vim-hardtime'               " Train self not to use arrows or spam j/k
+Plug 'airblade/vim-gitgutter'                    " git info in sign gutter
+Plug 'alvan/vim-closetag'                        " Closes (x)html tags as you type
+Plug 'chriskempson/base16-vim'                   " Base16 themes (compatible with airline)
+Plug 'christoomey/vim-tmux-navigator'            " navigate vim and tmux panes seamlessly
+Plug 'junegunn/goyo.vim'                         " for writing prose
+Plug 'junegunn/limelight.vim'                    " also for writing prose
+Plug 'Konfekt/FastFold'                          " Fast folding
+Plug 'tmhedberg/SimpylFold', { 'for': 'python' } " better python folding
+Plug 'tpope/vim-commentary'                      " commenting
+Plug 'tpope/vim-surround'                        " adds a new verb, surround
+Plug 'tpope/vim-vinegar'                         " beter netrw
+Plug 'vim-airline/vim-airline'                   " Airline, a nicer statusline
+Plug 'vim-airline/vim-airline-themes'            " Nice themes for above
+Plug 'vim-syntastic/syntastic'                   " error checking
+Plug 'takac/vim-hardtime'                        " Train self not to use arrows or spam j/k
 
 " Languages
-Plug 'dag/vim-fish'                     " editing fish scripts
-Plug 'gabrielelana/vim-markdown'        " even better github markdown
-Plug 'PProvost/vim-ps1'                 " powershell syntax and formatting
-Plug 'rust-lang/rust.vim'               " rust-lang
-
-" Testing
-if exists("g:load_black_vimrc")
-	Plug 'ambv/black'                   " python formatting
-endif
+Plug 'ambv/black',                { 'on': 'Black' , 'for': 'python' } " python formatting
+Plug 'dag/vim-fish',              { 'for': 'fish' }                   " editing fish scripts
+Plug 'gabrielelana/vim-markdown', { 'for': 'markdown' }               " even better github markdown
+Plug 'PProvost/vim-ps1',          { 'for': 'powershell' }             " powershell syntax and formatting
+Plug 'rust-lang/rust.vim',        { 'for': 'rust' }                   " rust-lang
 
 
 " All plugins must be added before the following line
@@ -64,6 +60,9 @@ let g:closetag_filenames='*.html,*.htm,*.xml,*.php'
 " GitGutter
 let g:gitgutter_enabled = 0 " off by default
 set updatetime=1000
+
+" Hardtime
+let g:hardtime_default_on = 1
 
 " Prose (Goyo and LimeLight)
 function! s:goyo_enter()
