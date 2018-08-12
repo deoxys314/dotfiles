@@ -100,6 +100,14 @@ augroup filetype_gitcommit
 augroup END
 
 
+" ##### LaTeX #####
+augroup filetype_latex
+	autocmd!
+	autocmd BufNewFile,Bufread *.tex
+	  \ setlocal foldmethod=marker |
+	  \ setlocal spell
+augroup END
+
 " ##### special cases #####
 augroup filetype_special
 	autocmd!
