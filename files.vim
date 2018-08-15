@@ -108,6 +108,13 @@ augroup filetype_latex
 	  \ setlocal spell
 augroup END
 
+" ##### Autohotkey #####
+augroup filetype_ahk
+	autocmd!
+	autocmd BufnewFile,Bufread *.ahk
+	  \ setlocal commentstring=;\ %s |
+augroup END
+
 " ##### special cases #####
 augroup filetype_special
 	autocmd!
