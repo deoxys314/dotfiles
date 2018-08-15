@@ -25,7 +25,6 @@ Plug 'tpope/vim-vinegar'                         " beter netrw
 Plug 'vim-airline/vim-airline'                   " Airline, a nicer statusline
 Plug 'vim-airline/vim-airline-themes'            " Nice themes for above
 Plug 'vim-syntastic/syntastic'                   " error checking
-Plug 'takac/vim-hardtime'                        " Train self not to use arrows or spam j/k
 
 " Languages
 Plug 'ambv/black',                { 'on': 'Black' , 'for': 'python' } " python formatting
