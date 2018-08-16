@@ -55,26 +55,6 @@ Function Reload-Profile {
     . $profile
 }
 
-Function List-EmptyDirectories {
-    <#
-    .SYNOPSIS
-    Lists empty directories recursively.
-
-    #>
-    Param (
-        $path
-    )
-
-    if ( -not ($path) ) {
-        $path = Get-Location # if no path supplied, default to current
-    }
-
-    Get-ChildItem $path -Directory -Recurse -ErrorAction 'ignore' `
-     | Where-Object { 
-         ($_.GetFileSystemInfos().Count -eq 0) -and ($_.FullName -notmatch '\\\.')
-         } `
-     | ForEach-Object { $_.FullName }
-}
 
 Function List-EmptyDirectories {
 	# Assumes you are in the correct directory unless told otherwise
@@ -105,13 +85,3 @@ Function Set-FileTimeStamps {
         $_.CreationTime = $_.LastAccessTime =  $_.LastWriteTime = $date
     }
 }
-
-Function List-Directory {
-    # This function does a lot of the work for you - it was developed for a specific use-case
-    $directoiry = Read-Host -Prompt 'Please paste or type in the path you wish to examine'
-
-    cd $directory
-
-    dir | ForEach-Object { $_.name } | Tee-Object -FilePath "directory_listing.txt"
-}
-
