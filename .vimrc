@@ -30,7 +30,7 @@ Plug 'vim-syntastic/syntastic'                   " error checking
 Plug 'ambv/black',                { 'on': 'Black' , 'for': 'python' } " python formatting
 Plug 'dag/vim-fish',              { 'for': 'fish' }                   " editing fish scripts
 Plug 'gabrielelana/vim-markdown', { 'for': 'markdown' }               " even better github markdown
-Plug 'PProvost/vim-ps1',          { 'for': 'powershell' }             " powershell syntax and formatting
+Plug 'PProvost/vim-ps1',          { 'for': 'ps1' }                    " powershell syntax and formatting
 Plug 'rust-lang/rust.vim',        { 'for': 'rust' }                   " rust-lang
 
 
