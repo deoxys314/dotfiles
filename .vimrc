@@ -18,6 +18,7 @@ Plug 'christoomey/vim-tmux-navigator'            " navigate vim and tmux panes s
 Plug 'junegunn/goyo.vim'                         " for writing prose
 Plug 'junegunn/limelight.vim'                    " also for writing prose
 Plug 'Konfekt/FastFold'                          " Fast folding
+Plug 'lifepillar/vim-mucomplete'                 " smoother completions
 Plug 'tmhedberg/SimpylFold', { 'for': 'python' } " better python folding
 Plug 'tpope/vim-commentary'                      " commenting
 Plug 'tpope/vim-surround'                        " adds a new verb, surround
@@ -62,6 +63,17 @@ set updatetime=1000
 
 " Hardtime
 let g:hardtime_default_on = 1
+
+" mucomplete
+set completeopt+=menuone
+set completeopt+=noinsert
+set belloff+=ctrlg
+set shortmess+=c
+let g:mucomplete#chains = { 'default':  ['path', 'omni', 'keyn', 'dict', 'uspl'] }
+let g:mucomplete#chains.vim =      ['path', 'cmd', 'keyn']
+let g:mucomplete#chains.markdown = ['uspl', 'dict', 'path', 'omni']
+let g:mucomplete#chains.text = g:mucomplete#chains.markdown
+let g:mucomplete#spel#max = 10
 
 " Prose (Goyo and LimeLight)
 function! s:goyo_enter()
