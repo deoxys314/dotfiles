@@ -25,7 +25,7 @@ Plug 'tpope/vim-surround'                        " adds a new verb, surround
 Plug 'tpope/vim-vinegar'                         " beter netrw
 Plug 'vim-airline/vim-airline'                   " Airline, a nicer statusline
 Plug 'vim-airline/vim-airline-themes'            " Nice themes for above
-Plug 'vim-syntastic/syntastic'                   " error checking
+Plug 'w0rp/ale'                                  " linting and LSP support
 
 " Languages
 Plug 'ambv/black',                { 'on': 'Black' , 'for': 'python' } " python formatting
