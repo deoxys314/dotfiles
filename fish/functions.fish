@@ -1,8 +1,5 @@
 # Here are functions which are useful for all instances of fish
 
-# Prompt hostname
-set -g __fish_prompt_hostname (hostname | sed -e 's/\.local//')
-
 # The command prompt sections are as follows:
 # hostname > exit code (if not 0) > tmux pane (if any) > truncated directory
 function fish_prompt
@@ -46,10 +43,14 @@ function fish_prompt
 		set -g __fish_prompt_joiner " > "
 	end
 
-	for section in $__prompt_array
-		echo -n $section
-		echo -n $__fish_prompt_joiner
-	end
+	# for section in $__prompt_array
+	# 	echo -n $section
+	# 	echo -n $__fish_prompt_joiner
+	# end
+
+	# we used to do a for loop, but a brace expansion works as well
+	# the -s argument suppresses extra spaces between arguments
+	echo -n -s $__prompt_array{$__fish_prompt_joiner}
 
 end
 
