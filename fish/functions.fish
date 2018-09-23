@@ -72,11 +72,43 @@ function tm -d "Easier tmux usage."
 	end
 end
 
+function rename_tab --description="Renames current Tmux tab"
+	# if we are not in tmux, exit
+	if test -z "$TMUX"
+		echo "Tmux is not running." 1>&2
+		return 1
+	end
+
+	# if nothing was passed, exit
+	if test (count $argv) -eq 0
+		echo "No arguments passed."
+		return 2
+	end
+
+	tmux rename-window "$argv"
+end
+
+function rename-session --description="Renames current Tmux session"
+	# if we are not in tmux, exit
+	if test -z "$TMUX"
+		echo "Tmux is not running." 1>&2
+		return 1
+	end
+
+	# if nothing was passed, exit
+	if test (count $argv) -eq 0
+		echo "No arguments passed."
+		return 2
+	end
+
+	tmux rename-session "$argv"
+end
+
 function gi -d "Uses gitignore.io to create .gitignore files" --argument-names 'tags'
 	if test -z $tags
 		echo "No arguments provided."
 		return 1
 	end
-	curl -L -s https://www.gitignore.io/api/$tags
+	curl -L -s "https://www.gitignore.io/api/$tags"
 end
 
