@@ -2,11 +2,13 @@
 	aliases = !git config --get-regexp 'alias.*' | colrm 1 6 |sed 's/[ ]/ = /'| sort
 	com = commit
 	dt = difftool
+	gud = !"echo skrub"
+	last = log -1 HEAD
 	lg = !"git lg1"
 	lg1 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
 	lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+	lg3 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)%an, %ar%C(reset)%C(bold yellow)%d%C(reset)%n%C(bold white)%s%C(reset)%n%n%C(bold white)%b%C(reset)' --all
 	st = status
-	gud = !"echo skrub"
 [core]
 	editor = vim
 	pager = less
