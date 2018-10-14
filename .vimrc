@@ -15,6 +15,7 @@ Plug 'airblade/vim-gitgutter'                    " git info in sign gutter
 Plug 'alvan/vim-closetag'                        " Closes (x)html tags as you type
 Plug 'chriskempson/base16-vim'                   " Base16 themes (compatible with airline)
 Plug 'christoomey/vim-tmux-navigator'            " navigate vim and tmux panes seamlessly
+Plug 'cormacrelf/vim-colors-github'              " a light theme based on github
 Plug 'junegunn/goyo.vim'                         " for writing prose
 Plug 'junegunn/limelight.vim'                    " also for writing prose
 Plug 'Konfekt/FastFold'                          " Fast folding
