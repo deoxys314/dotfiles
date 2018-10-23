@@ -34,6 +34,9 @@ Plug 'dag/vim-fish',              { 'for': 'fish' }                   " editing 
 Plug 'gabrielelana/vim-markdown', { 'for': 'markdown' }               " even better github markdown
 Plug 'PProvost/vim-ps1',          { 'for': 'ps1' }                    " powershell syntax and formatting
 Plug 'rust-lang/rust.vim',        { 'for': 'rust' }                   " rust-lang
+if executable('racer')
+	Plug 'racer-rust/vim-racer',  { 'for': 'rust' }                   " completions
+endif
 
 
 " All plugins must be added before the following line
