@@ -72,7 +72,7 @@ function tm -d "Easier tmux usage."
 	end
 end
 
-function rename_tab --description="Renames current Tmux tab"
+function rename-tab --description="Renames current Tmux tab"
 	# if we are not in tmux, exit
 	if test -z "$TMUX"
 		echo "Tmux is not running." 1>&2
