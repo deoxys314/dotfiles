@@ -55,6 +55,10 @@ let g:airline_section_z='%3p%% [l:%2l c:%2v]'
 nnoremap <Leader>a :AirlineToggleWhitespace<CR>
 set noshowmode " airline already does this
 
+" ALE
+let g:ale_fixers = {}
+let g:ale_fixers['*'] = ['remove_trailing_lines']
+
 " Black
 let g:black_linelength=120
 
