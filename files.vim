@@ -12,6 +12,9 @@ augroup filetype_python
 	  \ set autoindent      |
 	  \ set fileformat=unix |
 	  \ setlocal colorcolumn=100
+	" These lines close the preview window when a completion is chosen.
+	autocmd CursorMovedI * if pumvisible() == 0 | pclose | endif
+	autocmd InsertLeave * if pumvisible() == 0 | pclose | endif
 augroup END
 
 
