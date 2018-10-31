@@ -4,7 +4,6 @@
 
 " vim has worked around all the POSIX oddities that fish doesn't have
 " so when it tries to use fish things get very confused
-" (this must be done before vundle is initialized)
 if &shell =~# 'fish$'
     set shell=sh
 endif
