@@ -145,19 +145,6 @@ set colorcolumn=100
 set background=dark
 silent! set termguicolors
 
-" I don't like how subdued some tablines are
-function! FixTabLine()
-	highlight TabLine guifg=Black guibg=LightGrey gui=italic,underline ctermfg=Black ctermbg=LightGrey cterm=italic,underline
-	highlight TabLineFill guifg=Black guibg=DarkGrey ctermfg=Black ctermbg=LightGrey
-	highlight TabLineSel guifg=LightBlue guibg=Black gui=bold ctermfg=LightBlue ctermbg=Black cterm=bold
-endfunction
-
-"otherwise the changes made above would be clobbered every time I switch colorschemes
-augroup on_change_colorschema
-	autocmd!
-	autocmd ColorScheme * call FixTabLine()
-augroup END
-
 
 " ##### Navigation options ###
 
