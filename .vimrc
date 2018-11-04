@@ -29,6 +29,10 @@ Plug 'w0rp/ale'                                  " linting and LSP support
 
 " Languages
 Plug 'ambv/black',                { 'on': 'Black' , 'for': 'python' } " python formatting
+if has('nvim')
+	Plug 'numirias/semshi', { 'do': ':UpdateRemotePlugins',
+				\ 'for': 'python' } "Semantic python highlights
+endif
 Plug 'dag/vim-fish',              { 'for': 'fish' }                   " editing fish scripts
 Plug 'gabrielelana/vim-markdown', { 'for': 'markdown' }               " even better github markdown
 Plug 'PProvost/vim-ps1',          { 'for': 'ps1' }                    " powershell syntax and formatting
