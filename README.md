@@ -1,9 +1,12 @@
-# deoxys314_dotfiles
+deoxys314_dotfiles
+==================
+
 These are a collection of dotfiles I use on the majority of my machines.
 
 Initially created 170308.
 
-### Usage
+Usage
+-----
 
 It is generally intended that you will browse these files to get ideas for your
 own collection of dotfiles.  However, if you are truly set on running things
@@ -13,7 +16,7 @@ exactly as I do, then instructions are included below.
    `$ git clone https://github.com/deoxys314/deoxys314_dotfiles/`
 
    -- OR --
-   
+
    `git clone https://github.com/deoxys314/deoxys314_dotfiles/ /path/to/where/you/want/these`
 
 2. Some guides have you create symlinks to these files from where they normally
@@ -26,16 +29,19 @@ exactly as I do, then instructions are included below.
    configuration files
 
    `~/.vimrc`:
+
    ```vim
    source ~/deoxys314_dotfiles/.vimrc
    ```
- 
+
    `~/.tmux.conf`:
+
    ```
    source ~/deoxys314_dotfiles/.tmux.conf
    ```
- 
+
    `~/.config/fish/config.fish`:
+
    ```fish
    source ~/deoxys314_dotfiles/config.fish
    ```
@@ -51,14 +57,15 @@ exactly as I do, then instructions are included below.
 
    And finally, PowerShell uses dot-sourcing, so the following should be
    included in your profile:
+
    ```powershell
    . C:\Path\to\deoxys314_dotfiles\profile.ps1
    ```
 
-
    I find this allows me to avoid duplicating work while still allowing my to
      tweak settings for each machine fairly easily.
 
+Licence
+-------
 
-### Licence
 Released under the MIT License. See [here](LICENSE) for more info.
