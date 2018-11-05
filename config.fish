@@ -1,8 +1,10 @@
 # Here is the configuration for the fish shell
 
-source ~/deoxys314_dotfiles/fish/aliases.fish
+set --local SCRIPTDIR (dirname (status --current-filename))
 
-source ~/deoxys314_dotfiles/fish/functions.fish
+source $SCRIPTDIR/fish/aliases.fish
+
+source $SCRIPTDIR/fish/functions.fish
 
 mkdir -pv ~/bin
 
