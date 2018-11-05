@@ -270,7 +270,7 @@ endif
 
 
 " ##### Filetype Options ###
-source ~/deoxys314_dotfiles/files.vim
+source <sfile>:p:h/files.vim
 
 
 " ##### GUI Options ###
