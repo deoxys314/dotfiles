@@ -12,3 +12,7 @@ line.
 
 Note: in tmux, you will have to add an extra `%` as the string is passed through
 `date`.
+
+## Git change remote URL
+
+`git remote set url [remote name] [new url]`
