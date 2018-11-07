@@ -3,7 +3,8 @@
 A collection of useful one-liners or the like which don't merit an entire file
 to themselves.
 
-### OSX battery
+## OSX battery
+
 This one liner will extract the current battery level for use at the OSX command
 line.
 
