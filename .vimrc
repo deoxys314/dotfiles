@@ -10,7 +10,9 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'airblade/vim-gitgutter'                    " git info in sign gutter
+if executable('git')
+	Plug 'airblade/vim-gitgutter'                " git info in sign gutter
+end
 Plug 'alvan/vim-closetag'                        " Closes (x)html tags as you type
 Plug 'chriskempson/base16-vim'                   " Base16 themes (compatible with airline)
 Plug 'christoomey/vim-tmux-navigator'            " navigate vim and tmux panes seamlessly
@@ -65,8 +67,10 @@ let g:black_linelength=120
 let g:closetag_filenames='*.html,*.htm,*.xml,*.php'
 
 " GitGutter
-let g:gitgutter_enabled = 0 " off by default
-set updatetime=1000
+if executable('git')
+	let g:gitgutter_enabled = 0 " off by default
+	set updatetime=1000
+end
 
 " Hardtime
 let g:hardtime_default_on = 1
