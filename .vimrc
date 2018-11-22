@@ -57,7 +57,7 @@ nnoremap <Leader>a :AirlineToggleWhitespace<CR>
 set noshowmode " airline already does this
 
 " ALE
-let g:ale_fixers = {}
+let g:ale_fixers = get(g:, 'ale_fixers', {})
 let g:ale_fixers['*'] = ['remove_trailing_lines']
 
 " Black
