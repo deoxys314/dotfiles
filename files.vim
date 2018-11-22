@@ -5,13 +5,14 @@
 augroup filetype_python
 	autocmd!
 	autocmd BufNewFile,BufRead *.py,*.pyw  "PEP8 style settings
-	  \ set tabstop=4       |
-	  \ set softtabstop=4   |
-	  \ set shiftwidth=4    |
-	  \ set expandtab       |
-	  \ set autoindent      |
-	  \ set fileformat=unix |
-	  \ setlocal colorcolumn=100
+	  \ set tabstop=4           |
+	  \ set softtabstop=4       |
+	  \ set shiftwidth=4        |
+	  \ set expandtab           |
+	  \ set autoindent          |
+	  \ set fileformat=unix     |
+	  \ setlocal textwidth=120  |
+	  \ setlocal colorcolumn=120
 	" These lines close the preview window when a completion is chosen.
 	autocmd InsertLeave * if pumvisible() == 0 && winnr('$') > 1 | pclose | endif
 augroup END
