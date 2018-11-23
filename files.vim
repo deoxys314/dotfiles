@@ -107,7 +107,7 @@ augroup filetype_gitcommit_clear
 	autocmd CursorMovedI COMMIT_EDITMSG |
 				\ if getcurpos()[1] >= 2 |
 					\ setlocal cc=72 |
-					\ augroup! filetype_gitcommit_clear |
+					\ augroup filetype_gitcommit_clear | autocmd! | augroup END!
 				\ endif
 augroup END
 
