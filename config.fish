@@ -89,6 +89,6 @@ set -x __fish_git_prompt_showstashstate 1
 set -x __fish_git_prompt_showuntrackedfiles 1
 set -x __fish_git_prompt_showcolorhints 1
 
-function fish_right_prompt -d "git branch, if applicable"
+function fish_right_prompt --description="Shows the git status, if applicable."
 	__fish_git_prompt
 end
