@@ -102,6 +102,11 @@ augroup filetype_gitcommit
 	  \ setlocal cc=72
 augroup END
 
+augroup filetype_gitcommit_clear
+	autocmd!
+	autocmd CursorMovedI gitcommit if getcurpos()[1] >= 2 | setlocal cc=80 | augroup! filetype_gitcommit_clear | endif
+augroup END
+
 
 " ##### LaTeX #####
 augroup filetype_latex
