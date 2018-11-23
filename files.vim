@@ -14,7 +14,7 @@ augroup filetype_python
 	  \ setlocal textwidth=120  |
 	  \ setlocal colorcolumn=120
 	" These lines close the preview window when a completion is chosen.
-	autocmd InsertLeave * if pumvisible() == 0 && winnr('$') > 1 | pclose | endif
+	autocmd InsertLeave *.py,*.pyw if pumvisible() == 0 && winnr('$') > 1 | pclose | endif
 augroup END
 
 
