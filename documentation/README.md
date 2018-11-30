@@ -62,3 +62,46 @@ And deleting a branch locally:
 ```shell
 git branch -d old_branch
 ```
+
+## Adding formatted text in a Windows Forms RichTextBox
+
+Some overloaded extension methods which may be useful.
+
+```c#
+namespace ExtensionMethods {
+
+    using System.Windows.Forms;
+    using System.Drawing;
+
+    public static class RichTextBoxExtensions {
+        public static void AppendText(this RichTextBox box, string text, Color color) {
+            box.SelectionStart = box.TextLength;
+            box.SelectionLength = 0;
+
+            box.SelectionColor = color;
+            box.AppendText(text);
+            box.SelectionColor = box.ForeColor;
+        }
+
+        public static void AppendText(this RichTextBox box, string text, FontStyle style) {
+            box.SelectionStart = box.TextLength;
+            box.SelectionLength = 0;
+
+            box.SelectionFont = new Font(box.Font, style);
+            box.AppendText(text);
+            box.SelectionFont = new Font(box.Font, FontStyle.Regular);
+        }
+
+        public static void AppendText(this RichTextBox box, string text, Color color, FontStyle style) {
+            box.SelectionStart = box.TextLength;
+            box.SelectionLength = 0;
+
+            box.SelectionColor = color;
+            box.SelectionFont = new Font(box.Font, style);
+            box.AppendText(text);
+            box.SelectionFont = new Font(box.Font, FontStyle.Regular);
+            box.SelectionColor = box.ForeColor;
+        }
+    }
+}
+```
