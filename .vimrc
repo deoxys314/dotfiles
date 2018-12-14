@@ -142,7 +142,7 @@ set linebreak  " if I do turn on wrap, breaks work
 set wildmenu   " better tab-completion
 
 " to check line lengths
-set colorcolumn=100
+set colorcolumn=+0
 
 " colorscheme
 set background=dark
