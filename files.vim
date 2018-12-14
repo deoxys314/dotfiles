@@ -100,9 +100,10 @@ augroup END
 augroup filetype_gitcommit_clear
 	autocmd!
 	autocmd CursorMovedI COMMIT_EDITMSG |
-				\ if getcurpos()[1] >= 2 |
+				\ let b:linen = line('.') | echom b:linen |
+				\ if b:linen > 2 |
 					\ setlocal cc=72 |
-					\ augroup filetype_gitcommit_clear | autocmd! | augroup END!
+					\ execute 'autocmd! filetype_gitcommit_clear' | augroup! filetype_gitcommit_clear |
 				\ endif
 augroup END
 
