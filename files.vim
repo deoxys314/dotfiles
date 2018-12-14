@@ -11,8 +11,7 @@ augroup filetype_python
 	  \ set expandtab           |
 	  \ set autoindent          |
 	  \ set fileformat=unix     |
-	  \ setlocal textwidth=120  |
-	  \ setlocal colorcolumn=120
+	  \ setlocal textwidth=120
 	" These lines close the preview window when a completion is chosen.
 	autocmd InsertLeave *.py,*.pyw if pumvisible() == 0 && winnr('$') > 1 | pclose | endif
 augroup END
@@ -39,8 +38,7 @@ augroup filetype_c
 	  \ set softtabstop=4 |
 	  \ set shiftwidth=4  |
 	  \ set noexpandtab   |
-	  \ set filetype=c    |
-	  \ set colorcolumn=110
+	  \ set filetype=c
 augroup END
 
 
@@ -49,7 +47,7 @@ augroup filetype_journal
 	autocmd!
 	autocmd BufNewFile,BufRead *.jo
 	  \ set wrap |
-	  \ set cc=0 |
+	  \ setlocal cc=0 |
 	  \ set spell
 augroup END
 
@@ -58,8 +56,8 @@ augroup END
 augroup filetype_text_status
 	autocmd!
 	autocmd BufNewFile,BufRead *.txt
-	  \ set cc=0     |
-	  \ set autoread |
+	  \ setlocal cc=0 |
+	  \ set autoread  |
 	  \ set wrap
 	"  \ if @% =~ "status" | cd %:p:h | endif " changes cwd to current file
 augroup END
@@ -69,7 +67,7 @@ augroup END
 augroup filetype_log
 	autocmd!
 	autocmd BufNewFile,BufRead *.log
-	  \ set cc=0 |
+	  \ setlocal cc=0 |
 	  \ set hlsearch
 augroup END
 
@@ -78,7 +76,6 @@ augroup END
 augroup filetype_markdown
 	autocmd!
 	autocmd BufNewFile,BufRead *.md
-	  \ set cc=0       |
 	  \ setlocal spell |
 	  \ setlocal textwidth=80
 augroup END
@@ -88,7 +85,6 @@ augroup END
 augroup filetype_powershell
 	autocmd!
 	autocmd BufNewFile,Bufread *.ps1
-	  \ setlocal cc=115       |
 	  \ setlocal tabstop=4    |
 	  \ setlocal shiftwidth=4 |
 	  \ setlocal expandtab
@@ -98,8 +94,7 @@ augroup END
 augroup filetype_gitcommit
 	autocmd!
 	autocmd Filetype gitcommit
-	  \ setlocal spell |
-	  \ setlocal cc=72
+	  \ setlocal spell
 augroup END
 
 
