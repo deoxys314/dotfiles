@@ -12,6 +12,7 @@ call plug#begin('~/.vim/plugged')
 
 if executable('git')
 	Plug 'airblade/vim-gitgutter'                " git info in sign gutter
+	Plug 'tpope/vim-fugitive'                    " better git manipulation
 end
 Plug 'alvan/vim-closetag'                        " Closes (x)html tags as you type
 Plug 'chriskempson/base16-vim'                   " Base16 themes (compatible with airline)
