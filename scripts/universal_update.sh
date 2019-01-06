@@ -94,6 +94,9 @@ universal_install_help() {
     echo "    at something else."
     echo "  - You use vim or neovim and use vim-plug to manage plugins for"
     echo "    that editor."
+    echo ""
+    echo "    The suggested way to suppress file creation is to set the"
+    echo '    $*_RECORD variables to "/dev/null".'
     debug_echo ""
     debug_echo 'If you can see this, the $DEBUG system variable is not null.'
 
