@@ -94,6 +94,8 @@ universal_install_help() {
     echo "    at something else."
     echo "  - You use vim or neovim and use vim-plug to manage plugins for"
     echo "    that editor."
+    debug_echo ""
+    debug_echo 'If you can see this, the $DEBUG system variable is not null.'
 
 }
 
