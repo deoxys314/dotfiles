@@ -84,10 +84,12 @@ function fish_prompt
 end
 
 # settings for __fish_git_prompt
-set -x __fish_git_prompt_showdirtystate 1
-set -x __fish_git_prompt_showstashstate 1
-set -x __fish_git_prompt_showuntrackedfiles 1
-set -x __fish_git_prompt_showcolorhints 1
+set --export __fish_git_prompt_describe_style branch
+set --export __fish_git_prompt_showcolorhints 1
+set --export __fish_git_prompt_showdirtystate 1
+set --export __fish_git_prompt_showstashstate 1
+set --export __fish_git_prompt_showuntrackedfiles 1
+set --export __fish_git_prompt_showupstream informative
 
 function fish_right_prompt --description="Shows the git status, if applicable."
 	__fish_git_prompt
