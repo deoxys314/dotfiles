@@ -89,16 +89,17 @@ universal_install_help() {
     echo '    family of variables control this, and default to $HOME'
     echo "  - You have some dotfiles you want to keep up to date, and use git"
     echo '    to do so. This is controlled by the $DOTFILES_DIR variable, and'
-    echo '    will default to $HOME.'
+    echo '    will default to $HOME/dotfiles/.'
     echo "    (Note: this will work with any git repo, if you want to point it"
-    echo "    at something else."
+    echo "    at something else.)"
     echo "  - You use vim or neovim and use vim-plug to manage plugins for"
     echo "    that editor."
     echo ""
     echo "    The suggested way to suppress file creation is to set the"
     echo '    $*_RECORD variables to "/dev/null".'
     debug_echo ""
-    debug_echo 'If you can see this, the $DEBUG system variable is not null.'
+    debug_echo 'If you can see this sentence, the $DEBUG system variable is'
+    debug_echo "not null."
 
 }
 
