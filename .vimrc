@@ -270,6 +270,9 @@ if &diff
 
 	" easier to quit both at once in diff mode
 	command! Q qall
+
+	" disable linting
+	ALEDisable
 endif
 
 
