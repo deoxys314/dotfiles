@@ -2,7 +2,7 @@
 
 debug_echo() {
     if [ "$DEBUG" ]; then
-        echo "$@"
+        echo "DEBUG INFO: [$@]"
     fi
 }
 
