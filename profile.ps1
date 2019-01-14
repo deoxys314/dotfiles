@@ -35,7 +35,11 @@ Function prompt {
     # Split path and write \ in a gray
     $currpath = $pwd.Path.Split("\")
     foreach ( $dir in $($currpath -ne $currpath[-1]) ) {
-        Write-Host $dir[0] -nonewline -foregroundcolor Yellow
+        if ($dir[0] -eq ".") {
+            Write-Host $($dir[0] + $dir[1]) -nonewline -foregroundcolor Yellow
+        } else {
+            Write-Host $dir[0] -nonewline -foregroundcolor Yellow
+        }
         Write-Host "\" -nonewline -foregroundcolor Gray
     }
     Write-Host $currpath[-1] -nonewline -foregroundcolor Yellow
