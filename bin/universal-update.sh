@@ -33,7 +33,7 @@ brew_update() {
         brew cleanup
         brew list > "$BREW_RECORD"/brew-list.txt
         brew leaves > "$BREW_RECORD"/brew-leaves.txt
-        brew cask lift > "$BREW_RECORD"/brew-cask-list.txt
+        brew cask list > "$BREW_RECORD"/brew-cask-list.txt
     else
         stderr_echo "\`brew\` not found. You should probably install it, it's very useful!"
     fi
