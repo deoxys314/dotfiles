@@ -278,21 +278,3 @@ endif
 
 " ##### Filetype Options ###
 source <sfile>:p:h/files.vim
-
-
-" ##### GUI Options ###
-if has('gui_running')
-
-	" ###FONT###
-	set guifont=Source\ Code\ Pro\ Light:h13
-
-	" ### GUIOPTIONS
-	set guioptions-=e " text tabs
-	set guioptions-=T " no toolbar icons
-	set guioptions-=l " no left scrollbar
-	set guioptions-=L " no left scrollbar when vertical split active
-	set guioptions-=r " no right scrollbar
-	set guioptions-=R " no right scrollbar when vertical split active
-	set guioptions+=c " console dialogue for simple choices
-
-endif
