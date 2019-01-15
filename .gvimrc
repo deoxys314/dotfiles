@@ -1,6 +1,6 @@
 " Cameron Rossington .gvimrc
 "
-" #### Font Options ###
+" #### Font Options
 set guifont=Consolas:h13:cANSI:qDEFAULT
 
 " #### Window Options
