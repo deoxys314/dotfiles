@@ -13,6 +13,7 @@ call plug#begin('~/.vim/plugged')
 if executable('git')
 	Plug 'airblade/vim-gitgutter'                " git info in sign gutter
 end
+Plug 'airblade/vim-rooter'
 Plug 'alvan/vim-closetag'                        " Closes (x)html tags as you type
 Plug 'chriskempson/base16-vim'                   " Base16 themes (compatible with airline)
 Plug 'christoomey/vim-tmux-navigator'            " navigate vim and tmux panes seamlessly
@@ -104,6 +105,9 @@ endfunction
 
 autocmd! User GoyoEnter nested call <SID>goyo_enter()
 autocmd! User GoyoLeave nested call <SID>goyo_leave()
+
+" Rooter
+let g:rooter_silent_chdir = 1
 
 " SimplyFold
 let g:SimpylFold_docstring_preview = 1
