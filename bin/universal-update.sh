@@ -10,6 +10,48 @@ stderr_echo() {
     echo "$@" 1>&2
 }
 
+universal_install_help() { # {{{
+	width="72"
+	if command -v tput > /dev/null 2>&1; then
+		if [ "$(tput cols)" -lt "$width" ]; then
+			width=$(tput cols)
+		fi
+	fi
+
+
+	help_text=$(cat <<EOF
+$0
+
+This script makes a best-effort attempt to keep your system up to date and \
+record things such that you can recover more easily from a system crash.
+
+A few assumptions:
+
+- The system is sufficiently unix-y to have sh running on it.  This output \
+is printing, so the script is already running.
+- You do, in fact, want things recorded somewhere. If the environmental \
+variable \$UNIVERSAL_RECORD is set, files will be written there. \
+Otherwise, \$XDG_DATA_HOME will be used. If this is unset, a default \
+value of \$HOME/.local/share is used. In all cases, a folder \
+\`universal\` will be used to store the data, and created if necessary.
+EOF
+)
+
+	debug_help_text=$( cat <<-'EOF'
+	If you can see this sentence, the $DEBUG system variable is not null.
+	EOF
+	)
+
+	if command -v fold >/dev/null 2>&1; then
+		echo "$help_text" | fold -s -w "$width"
+		debug_echo "$debug_help_text" | fold -s -w "$width"
+	else
+		echo "$help_text"
+		debug_echo "$debug_help_text"
+	fi
+
+} # }}}
+
 vim_plugin_update() { # {{{
     debug_echo "Updating (n)vim plguins."
     VIM_EXECUTABLE=vim
@@ -73,49 +115,6 @@ apt_update() { # {{{
 
     # gotta do something here, need a debian system to check
 } #}}}
-
-universal_install_help() { # {{{
-	width="72"
-	if command -v tput > /dev/null 2>&1; then
-		if [ "$(tput cols)" -lt "$width" ]; then
-			width=$(tput cols)
-		fi
-	fi
-
-
-	help_text=$(cat <<EOF
-$0
-
-This script makes a best-effort attempt to keep your system up to date and \
-record things such that you can recover more easily from a system crash.
-
-A few assumptions:
-
-- The system is sufficiently unix-y to have sh running on it.  This output \
-is printing, so the script is already running.
-- You do, in fact, want things recorded somewhere. If the environmental \
-variable \$UNIVERSAL_RECORD is set, files will be written there. \
-Otherwise, \$XDG_DATA_HOME will be used. If this is unset, a default \
-value of \$HOME/.local/share is used. In all cases, a folder \
-\`universal\` will be used to store the data, and created if necessary.
-EOF
-)
-
-	debug_help_text=$( cat <<-'EOF'
-	If you can see this sentence, the $DEBUG system variable is not null.
-	EOF
-	)
-
-	if command -v fold >/dev/null 2>&1; then
-		echo "$help_text" | fold -s -w "$width"
-		debug_echo "$debug_help_text" | fold -s -w "$width"
-	else
-		echo "$help_text"
-		debug_echo "$debug_help_text"
-	fi
-
-} # }}}
-
 
 # no arguments needed means any argument is a cry for help
 if [ $# -ne 0 ]; then
