@@ -84,6 +84,7 @@ let g:mucomplete#chains = { 'default':  ['path', 'omni', 'keyn', 'dict', 'uspl']
 let g:mucomplete#chains.vim =      ['path', 'cmd', 'keyn']
 let g:mucomplete#chains.markdown = ['uspl', 'dict', 'path', 'omni']
 let g:mucomplete#chains.text = g:mucomplete#chains.markdown
+let g:mucomplete#chains.fish = ['omni', 'incl', 'file']
 let g:mucomplete#spel#max = 10
 
 " Prose (Goyo and LimeLight)
