@@ -2,7 +2,7 @@
 
 debug_echo() {
     if [ "$DEBUG" ]; then
-        echo "DEBUG INFO: [$@]"
+        echo "DEBUG INFO: [$*]"
     fi
 }
 
@@ -121,14 +121,3 @@ if [ $# -ne 0 ]; then
     universal_install_help
     exit
 fi
-
-case $(uname -s) in
-    Darwin*)
-        brew_update;;
-    Linux*)
-        apt_update;;
-esac
-
-git_update
-
-vim_plugin_update
