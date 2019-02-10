@@ -10,7 +10,7 @@ stderr_echo() {
     echo "$@" 1>&2
 }
 
-vim_plugin_update() {
+vim_plugin_update() { # {{{
     debug_echo "Updating (n)vim plguins."
     VIM_EXECUTABLE=vim
     nvim_path=$(command -v nvim)
@@ -21,9 +21,9 @@ vim_plugin_update() {
     debug_echo "Executable path: $VIM_EXECUTABLE"
 
     $VIM_EXECUTABLE "+PlugUpdate!" "+qall"
-}
+} # }}}
 
-brew_update() {
+brew_update() { # {{{
     debug_echo "Updating brew."
     BREW_RECORD=${BREW_RECORD:="$HOME"}
     debug_echo "Brew record location: $BREW_RECORD"
@@ -37,9 +37,9 @@ brew_update() {
     else
         stderr_echo "\`brew\` not found. You should probably install it, it's very useful!"
     fi
-}
+} # }}}
 
-git_update() {
+git_update() { # {{{
     debug_echo "Updating git repo."
     DOTFILES_DIR=${DOTFILES_DIR:="$HOME/dotfiles/"}
     debug_echo "Directory: $DOTFILES_DIR"
@@ -53,9 +53,9 @@ git_update() {
     else
         stderr_echo "Dotfiles not found."
     fi
-}
+} # }}}
 
-apt_update() {
+apt_update() { # {{{
     debug_echo "Updating apt-get"
     APT_RECORD=${APT_RECORD:="$HOME"}
     debug_echo "apt record location: $APT_RECORD"
@@ -72,36 +72,49 @@ apt_update() {
     apt-mark showmanual > "$APT_RECORD"/apt-manual.txt
 
     # gotta do something here, need a debian system to check
-}
+} #}}}
 
-universal_install_help() {
-    echo "$0"
-    echo ""
-    echo "This script makes a best-effort attempt to keep your system up to"
-    echo "date and record things such that you can recover more easily from"
-    echo "a system crash."
-    echo ""
-    echo "A few assumptions:"
-    echo ""
-    echo "  - The system is sufficiently unix-y to have sh running on it."
-    echo "    This output is printing, so you're probably fine."
-    echo '  - You do, in fact, want things recorded somewhere. The $*_RECORD'
-    echo '    family of variables control this, and default to $HOME'
-    echo "  - You have some dotfiles you want to keep up to date, and use git"
-    echo '    to do so. This is controlled by the $DOTFILES_DIR variable, and'
-    echo '    will default to $HOME/dotfiles/.'
-    echo "    (Note: this will work with any git repo, if you want to point it"
-    echo "    at something else.)"
-    echo "  - You use vim or neovim and use vim-plug to manage plugins for"
-    echo "    that editor."
-    echo ""
-    echo "    The suggested way to suppress file creation is to set the"
-    echo '    $*_RECORD variables to "/dev/null".'
-    debug_echo ""
-    debug_echo 'If you can see this sentence, the $DEBUG system variable is'
-    debug_echo "not null."
+universal_install_help() { # {{{
+	width="72"
+	if command -v tput > /dev/null 2>&1; then
+		if [ "$(tput cols)" -lt "$width" ]; then
+			width=$(tput cols)
+		fi
+	fi
 
-}
+
+	help_text=$(cat <<EOF
+$0
+
+This script makes a best-effort attempt to keep your system up to date and \
+record things such that you can recover more easily from a system crash.
+
+A few assumptions:
+
+- The system is sufficiently unix-y to have sh running on it.  This output \
+is printing, so the script is already running.
+- You do, in fact, want things recorded somewhere. If the environmental \
+variable \$UNIVERSAL_RECORD is set, files will be written there. \
+Otherwise, \$XDG_DATA_HOME will be used. If this is unset, a default \
+value of \$HOME/.local/share is used. In all cases, a folder \
+\`universal\` will be used to store the data, and created if necessary.
+EOF
+)
+
+	debug_help_text=$( cat <<-'EOF'
+	If you can see this sentence, the $DEBUG system variable is not null.
+	EOF
+	)
+
+	if command -v fold >/dev/null 2>&1; then
+		echo "$help_text" | fold -s -w "$width"
+		debug_echo "$debug_help_text" | fold -s -w "$width"
+	else
+		echo "$help_text"
+		debug_echo "$debug_help_text"
+	fi
+
+} # }}}
 
 
 # no arguments needed means any argument is a cry for help
