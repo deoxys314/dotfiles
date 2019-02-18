@@ -103,6 +103,7 @@ augroup filetype_latex
 	autocmd!
 	autocmd BufNewFile,Bufread *.tex
 	  \ setlocal foldmethod=marker |
+	  \ setlocal textwidth=100     |
 	  \ setlocal spell
 augroup END
 
