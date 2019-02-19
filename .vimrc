@@ -168,7 +168,9 @@ nnoremap <C-H> <C-W><C-H>
 
 " j and k by lines on screen, as with modern editors
 nnoremap j gj
+nnoremap gj j
 nnoremap k gk
+nnoremap gk k
 
 " scrolling
 set scrolloff=4
