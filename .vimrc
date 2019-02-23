@@ -248,6 +248,9 @@ nnoremap <Leader>s ]Sz=
 " I don'y like Ex mode
 nnoremap Q <nop>
 
+" compliment to ZZ and ZQ
+nnoremap ZA :w<CR>
+
 " using mouse
 set mouse=a
 
