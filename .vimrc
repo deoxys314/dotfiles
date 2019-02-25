@@ -202,7 +202,7 @@ vnoremap / /\v
 " ##### Editing Options ###
 
 " virtual edit in visual mode
-set virtualedit=block
+set virtualedit+=block
 
 " swap file
 let s:swap = $HOME . '/vimswap'
