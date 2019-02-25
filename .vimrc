@@ -205,13 +205,13 @@ vnoremap / /\v
 set virtualedit=block
 
 " swap file
-let s:swap = $HOME . "/vimswap"
+let s:swap = $HOME . '/vimswap'
 if !isdirectory(s:swap)
-	call mkdir(s:swap, "p")
+	call mkdir(s:swap, 'p')
 endif
 set swapfile
 set directory-=.
-execute "set directory^=" . s:swap
+execute 'set directory^=' . s:swap
 
 " formatting options, mostly dealing with comment characters
 set formatoptions-=o " no autoinsert of comment char on o or O
