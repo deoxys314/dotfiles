@@ -194,6 +194,12 @@ set incsearch  " go to results as you type
 set ignorecase " ignore case in search . . .
 set smartcase  " unless I type a capital letter
 
+augroup vimrc-insearch-highlight
+	autocmd!
+	autocmd CmdLineEnter [/\?] :set hlsearch
+	autocmd CmdLineLeave [/\?] :set nohlsearch
+augroup END
+
 " automatically make searches "more magic" aka sane
 nnoremap / /\v
 vnoremap / /\v
