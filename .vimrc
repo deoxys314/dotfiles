@@ -18,6 +18,7 @@ Plug 'alvan/vim-closetag'                        " Closes (x)html tags as you ty
 Plug 'chriskempson/base16-vim'                   " Base16 themes (compatible with airline)
 Plug 'christoomey/vim-tmux-navigator'            " navigate vim and tmux panes seamlessly
 Plug 'cormacrelf/vim-colors-github'              " a light theme based on github
+Plug 'deoxys314/vim-rng'                         " exposes some RNG functions
 Plug 'junegunn/goyo.vim'                         " for writing prose
 Plug 'junegunn/limelight.vim'                    " also for writing prose
 Plug 'Konfekt/FastFold'                          " Fast folding
