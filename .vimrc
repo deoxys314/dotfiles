@@ -19,8 +19,6 @@ if executable('tmux')
 endif
 Plug 'cormacrelf/vim-colors-github'              " a light theme based on github
 Plug 'deoxys314/vim-rng'                         " exposes some RNG functions
-Plug 'junegunn/goyo.vim'                         " for writing prose
-Plug 'junegunn/limelight.vim'                    " also for writing prose
 Plug 'Konfekt/FastFold'                          " Fast folding
 Plug 'lifepillar/vim-mucomplete'                 " smoother completions
 Plug 'tmhedberg/SimpylFold', { 'for': 'python' } " better python folding
@@ -87,26 +85,6 @@ let g:mucomplete#chains.markdown = ['uspl', 'dict', 'path', 'omni']
 let g:mucomplete#chains.text = g:mucomplete#chains.markdown
 let g:mucomplete#chains.fish = ['omni', 'incl', 'file']
 let g:mucomplete#spel#max = 10
-
-" Prose (Goyo and LimeLight)
-function! s:goyo_enter()
-	let g:temp_colo_store = g:colors_name
-	silent! colorscheme base16-solarized-light
-	Limelight
-	setlocal scrolloff=999
-	setlocal statusline=%m
-	hi StatusLine ctermfg=red guifg=red gui=NONE cterm=NONE
-endfunction
-
-function! s:goyo_leave()
-	set scrolloff=4
-	Limelight!
-	execute 'colorscheme ' . g:temp_colo_store
-	unlet g:temp_colo_store
-endfunction
-
-autocmd! User GoyoEnter nested call <SID>goyo_enter()
-autocmd! User GoyoLeave nested call <SID>goyo_leave()
 
 " Rooter
 let g:rooter_silent_chdir = 1
