@@ -14,7 +14,9 @@ Plug 'airblade/vim-gitgutter'                    " git info in sign gutter
 Plug 'airblade/vim-rooter'
 Plug 'alvan/vim-closetag'                        " Closes (x)html tags as you type
 Plug 'chriskempson/base16-vim'                   " Base16 themes (compatible with airline)
-Plug 'christoomey/vim-tmux-navigator'            " navigate vim and tmux panes seamlessly
+if executable('tmux')
+	Plug 'christoomey/vim-tmux-navigator'        " navigate vim and tmux panes seamlessly
+endif
 Plug 'cormacrelf/vim-colors-github'              " a light theme based on github
 Plug 'deoxys314/vim-rng'                         " exposes some RNG functions
 Plug 'junegunn/goyo.vim'                         " for writing prose
