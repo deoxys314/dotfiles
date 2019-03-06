@@ -211,7 +211,7 @@ set autoread
 nnoremap <Leader>t <C-W>gf
 
 
-" ##### Key Mappings ###
+" ##### Key and Command Mappings ###
 
 " cd to :head of :path
 nnoremap <Leader>cd :cd %:p:h<CR>
@@ -230,6 +230,11 @@ nnoremap ZA :w<CR>
 
 " using mouse
 set mouse=a
+
+" color options
+command! RandomColorScheme call color#RandomColorScheme()
+
+command! NextColorScheme call color#NextColorScheme()
 
 
 " ##### Misc Options ###
