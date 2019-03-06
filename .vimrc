@@ -207,17 +207,6 @@ set formatoptions+=1 " if possible, break line before one letter word
 " automagically load changes from disk
 set autoread
 
-
-" ##### Function Definitions ###
-
-" remove trailing whitespace on <leader>w, thanks Scolby
-function! TrimWhitespace() abort
-	let l:save = winsaveview()
-	%s/\s\+$//e
-	call winrestview(l:save)
-endfunction
-nnoremap <Leader>w :call TrimWhitespace()<CR>
-
 " Open file under cursor in new tab
 nnoremap <Leader>t <C-W>gf
 
@@ -226,6 +215,9 @@ nnoremap <Leader>t <C-W>gf
 
 " cd to :head of :path
 nnoremap <Leader>cd :cd %:p:h<CR>
+
+" remove trailing whitespace
+nnoremap <Leader>w :call whitespace#TrimWhitespace()<CR>
 
 " go to next misspelled word and suggest
 nnoremap <Leader>s ]Sz=
@@ -278,3 +270,7 @@ endif
 
 " ##### Filetype Options ###
 source <sfile>:p:h/files.vim
+
+
+" ##### Autoload functions ###
+execute 'set runtimepath^=' . expand('<sfile>:p:h') . '/vimfiles'
