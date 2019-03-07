@@ -233,8 +233,8 @@ set mouse=a
 
 " color options
 command! RandomColorScheme call color#RandomColorScheme()
-
 command! NextColorScheme call color#NextColorScheme()
+command! PreviousColorScheme call color#PreviousColorScheme()
 
 
 " ##### Misc Options ###
