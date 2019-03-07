@@ -48,7 +48,7 @@ call plug#end()
 
 " Airline
 set laststatus=2
-autocmd VimEnter * AirlineToggleWhitespace " This event only fires once so an augroup is not needed
+let g:airline#extensions#whitespace#enabled = 0
 
 let g:airline_powerline_fonts = 0
 let g:airline_symbols_ascii = 1 " I don't always have unicode available
