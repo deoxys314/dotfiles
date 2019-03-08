@@ -175,13 +175,15 @@ set smartcase  " unless I type a capital letter
 
 augroup vimrc-insearch-highlight
 	autocmd!
-	autocmd CmdLineEnter [/\?] :set hlsearch
-	autocmd CmdLineLeave [/\?] :set nohlsearch
+	autocmd CmdLineEnter [/\?] call search#toggle_hls(1)
+	autocmd CmdLineLeave [/\?] call search#toggle_hls(0)
 augroup END
 
 " automatically make searches "more magic" aka sane
 nnoremap / /\v
 vnoremap / /\v
+nnoremap ? ?\v
+vnoremap ? ?\v
 
 
 " ##### Editing Options ###
