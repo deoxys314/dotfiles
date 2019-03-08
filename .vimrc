@@ -280,4 +280,4 @@ source <sfile>:p:h/files.vim
 
 
 " ##### Autoload functions ###
-execute 'set runtimepath^=' . expand('<sfile>:p:h') . '/vimfiles'
+execute 'set runtimepath+=' . expand('<sfile>:p:h') . '/vimfiles'
