@@ -121,7 +121,7 @@ syntax on      " syntax highlighting
 set showcmd    " show incomplete commands
 
 set nowrap     " don't wrap lines
-set linebreak  " if I do turn on wrap, breaks work
+set linebreak  " don't break in the middle of a word
 
 set wildmenu   " better tab-completion
 set wildmode=list,full
