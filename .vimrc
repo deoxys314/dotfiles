@@ -126,7 +126,6 @@ set nowrap     " don't wrap lines
 set linebreak  " don't break in the middle of a word
 
 set wildmenu   " better tab-completion
-set wildmode=list,full
 
 " to check line lengths
 set colorcolumn=+0
