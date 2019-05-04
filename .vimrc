@@ -58,7 +58,6 @@ let g:airline#extensions#whitespace#enabled = 0
 let g:airline_powerline_fonts = 0
 let g:airline_symbols_ascii = 1 " I don't always have unicode available
 let g:airline_section_z='%3p%% [l:%2l c:%2v]'
-nnoremap <Leader>a :AirlineToggleWhitespace<CR>
 set noshowmode " airline already does this
 
 " ALE
@@ -171,7 +170,7 @@ set foldlevel=99
 " wraps h and l like modern editors
 set whichwrap+=h,l,<,>,[,]
 
-" let % bounch between angle brackets as well
+" let % bounce between angle brackets as well
 set matchpairs+=<:>
 
 
@@ -231,7 +230,7 @@ nnoremap <Leader>w :call whitespace#TrimWhitespace()<CR>
 " go to next misspelled word and suggest
 nnoremap <Leader>s ]Sz=
 
-" I don'y like Ex mode
+" I don't like Ex mode
 nnoremap Q <nop>
 
 " compliment to ZZ and ZQ
