@@ -45,6 +45,9 @@ endif
 " All plugins must be added before the following line
 call plug#end()
 
+" must be set before mappings below
+let mapleader = ' '
+
 
 " ##### Plugin Settings ###
 
@@ -75,6 +78,9 @@ end
 
 " Hardtime
 let g:hardtime_default_on = 1
+
+" Markdown
+let g:markdown_mapping_switch_status = '<space><space>'
 
 " mucomplete
 set completeopt+=menuone
@@ -158,10 +164,9 @@ set scrolloff=4
 set sidescrolloff=8
 set sidescroll=1
 
-" Enable folding with spacebar
+" folding options
 set foldmethod=indent
 set foldlevel=99
-nnoremap <space> za
 
 " wraps h and l like modern editors
 set whichwrap+=h,l,<,>,[,]
