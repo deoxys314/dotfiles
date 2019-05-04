@@ -216,8 +216,8 @@ set formatoptions+=1 " if possible, break line before one letter word
 " automagically load changes from disk
 set autoread
 
-" Open file under cursor in new tab
-nnoremap <Leader>t <C-W>gf
+" make :find and friends better
+set path+=**
 
 
 " ##### Key and Command Mappings ###
