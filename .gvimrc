@@ -17,8 +17,11 @@ set lines=40 columns=120
 set listchars=eol:¬,tab:»\ ,extends:>,precedes:<,nbsp:#,trail:_
 
 " #### Color Options
-set background=dark
-colorscheme base16-solarflare
+if &diff
+	colorscheme github
+else
+	colorscheme base16-solarized-dark
+endif
 
 " #### GUI Options
 set guioptions-=e " text tabs
