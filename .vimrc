@@ -20,7 +20,6 @@ if executable('tmux')
 endif
 Plug 'cormacrelf/vim-colors-github'              " a light theme based on github
 Plug 'deoxys314/vim-rng'                         " exposes some RNG functions
-Plug 'Konfekt/FastFold'                          " Fast folding
 Plug 'lervag/vimtex'                             " motiuons, objects and compilation for LaTeX
 Plug 'lifepillar/vim-mucomplete'                 " smoother completions
 Plug 'tmhedberg/SimpylFold', { 'for': 'python' } " better python folding
