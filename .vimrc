@@ -22,6 +22,7 @@ Plug 'cormacrelf/vim-colors-github'              " a light theme based on github
 Plug 'deoxys314/vim-rng'                         " exposes some RNG functions
 Plug 'lervag/vimtex'                             " motiuons, objects and compilation for LaTeX
 Plug 'lifepillar/vim-mucomplete'                 " smoother completions
+Plug 'rhysd/git-messenger.vim'                   " git commit viewing
 Plug 'tmhedberg/SimpylFold', { 'for': 'python' } " better python folding
 Plug 'tpope/vim-commentary'                      " commenting
 Plug 'tpope/vim-surround'                        " adds a new verb, surround
@@ -73,6 +74,12 @@ let g:closetag_filenames='*.html,*.htm,*.xml,*.php'
 if executable('git')
 	set updatetime=1000
 end
+
+" git-messenger
+let g:git_messenger_include_diff = 'current'
+if !has('nvim')
+	let g:git_messenger_max_popup_height = 20
+endif
 
 " Hardtime
 let g:hardtime_default_on = 1
