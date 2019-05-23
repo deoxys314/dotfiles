@@ -221,6 +221,8 @@ set formatoptions-=o " no autoinsert of comment char on o or O
 set formatoptions-=r " no autoinsert of comment char on <CR> in insert mode
 set formatoptions+=j " remove comment leader when Joining lines
 set formatoptions+=1 " if possible, break line before one letter word
+set formatoptions+=c " auto-format comments
+set formatoptions-=t " but don't auto-format text
 
 " automagically load changes from disk
 set autoread
