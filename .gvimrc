@@ -30,4 +30,5 @@ set guioptions-=l " no left scrollbar
 set guioptions-=L " no left scrollbar when vertical split active
 set guioptions-=r " no right scrollbar
 set guioptions-=R " no right scrollbar when vertical split active
+set guioptions-=m " no menu
 set guioptions+=c " console dialogue for simple choices
