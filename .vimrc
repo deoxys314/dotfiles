@@ -23,7 +23,7 @@ Plug 'deoxys314/vim-rng'                         " exposes some RNG functions
 Plug 'lervag/vimtex'                             " motiuons, objects and compilation for LaTeX
 Plug 'lifepillar/vim-mucomplete'                 " smoother completions
 Plug 'rhysd/git-messenger.vim'                   " git commit viewing
-if &guifont =~# 'NF'
+if (has('gui_running') && &guifont =~# 'NF') || exists('g:do_load_devicons')
 	Plug 'ryanoasis/vim-devicons'                    " cool icons if font is also cool
 endif
 Plug 'tmhedberg/SimpylFold', { 'for': 'python' } " better python folding
