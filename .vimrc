@@ -23,6 +23,9 @@ Plug 'deoxys314/vim-rng'                         " exposes some RNG functions
 Plug 'lervag/vimtex'                             " motiuons, objects and compilation for LaTeX
 Plug 'lifepillar/vim-mucomplete'                 " smoother completions
 Plug 'rhysd/git-messenger.vim'                   " git commit viewing
+if &guifont =~# 'NF'
+	Plug 'ryanoasis/vim-devicons'                    " cool icons if font is also cool
+endif
 Plug 'tmhedberg/SimpylFold', { 'for': 'python' } " better python folding
 Plug 'tpope/vim-commentary'                      " commenting
 Plug 'tpope/vim-surround'                        " adds a new verb, surround
