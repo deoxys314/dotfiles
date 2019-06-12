@@ -99,9 +99,9 @@ let g:mucomplete#chains.text = g:mucomplete#chains.markdown
 let g:mucomplete#chains.fish = ['omni', 'incl', 'file']
 let g:mucomplete#spel#max = 10
 
-" netrw
-let g:netrw_dirhistmax = 0
-let g:netrw_liststyle = 3
+" netrw/vim-vinegar
+let g:netrw_dirhistmax = 0 " history is not needed
+let g:netrw_liststyle = 3  " tree style listing
 
 " Rooter
 let g:rooter_silent_chdir = 1
