@@ -14,6 +14,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'airblade/vim-gitgutter'                    " git info in sign gutter
 Plug 'airblade/vim-rooter'
 Plug 'alvan/vim-closetag'                        " Closes (x)html tags as you type
+Plug 'andymass/vim-matchup'                      " better matching
 Plug 'chriskempson/base16-vim'                   " Base16 themes (compatible with airline)
 if executable('tmux')
 	Plug 'christoomey/vim-tmux-navigator'        " navigate vim and tmux panes seamlessly
