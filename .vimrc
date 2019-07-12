@@ -26,6 +26,7 @@ Plug 'lifepillar/vim-mucomplete'                 " smoother completions
 Plug 'rhysd/git-messenger.vim'                   " git commit viewing
 Plug 'tmhedberg/SimpylFold', { 'for': 'python' } " better python folding
 Plug 'tpope/vim-commentary'                      " commenting
+Plug 'tpope/vim-scriptease'                      " misc vimscript utilities
 Plug 'tpope/vim-surround'                        " adds a new verb, surround
 Plug 'tpope/vim-vinegar'                         " beter netrw
 Plug 'vim-airline/vim-airline'                   " Airline, a nicer statusline
