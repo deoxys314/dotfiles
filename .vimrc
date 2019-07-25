@@ -111,10 +111,6 @@ let g:rooter_silent_chdir = 1
 " SimplyFold
 let g:SimpylFold_docstring_preview = 1
 
-" Syntastic
-let g:syntastic_always_populate_loc_list = 1
-
-
 
 " ##### Whitespace Options ###
 
