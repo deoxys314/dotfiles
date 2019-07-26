@@ -254,6 +254,10 @@ command! RandomColorScheme call color#RandomColorScheme()
 command! NextColorScheme call color#NextColorScheme()
 command! PreviousColorScheme call color#PreviousColorScheme()
 
+" comes in handy
+command! -bar -range OK <line1>,<line2>call insert#InsertAtLineEnd('OK')
+nnoremap <Leader>o :OK<CR>
+vnoremap <Leader>o :OK<CR>
 
 " ##### Misc Options ###
 
