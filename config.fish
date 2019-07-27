@@ -14,13 +14,6 @@ if not contains "$SCRIPTDIR/fish" $fish_function_path
 end
 
 
-## ALIASES
-
-# ls (a)ll (B) print unprintables (h) sizes in megabyte, et al
-#    (s) file block size (l) long format
-alias lsa 'ls -aBhsl'
-
-
 ## GLOBALS
 
 set -gx VISUAL vi
