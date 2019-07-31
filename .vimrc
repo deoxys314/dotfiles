@@ -65,6 +65,10 @@ set noshowmode " airline already does this
 " ALE
 let g:ale_fixers = get(g:, 'ale_fixers', {})
 let g:ale_fixers['*'] = ['remove_trailing_lines']
+let g:ale_fixers.python = ['add_blank_lines_for_python_control_statements',
+  \ 'black', 'remove_trailing_lines']
+let g:ale_markdown_mdl_options = '--rule ~MD029 --rule ~MD005'
+let g:ale_markdown_writegood_options = '--no-passive'
 
 " Black
 let g:black_linelength=120
