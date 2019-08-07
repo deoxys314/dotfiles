@@ -94,7 +94,7 @@ let g:hardtime_default_on = 1
 let g:markdown_mapping_switch_status = '<space><space>'
 
 " mucomplete
-set completeopt+=menuone
+set completeopt=menuone
 set completeopt+=noinsert
 set belloff+=ctrlg
 set shortmess+=c
