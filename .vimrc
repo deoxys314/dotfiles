@@ -241,6 +241,7 @@ nnoremap <Leader>w :call whitespace#TrimWhitespace()<CR>
 
 " go to next misspelled word and suggest
 nnoremap <Leader>s ]Sz=
+nnoremap <Leader>S [Sz=
 
 " I don't like Ex mode
 nnoremap Q <nop>
