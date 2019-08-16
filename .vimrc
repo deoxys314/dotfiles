@@ -25,6 +25,7 @@ Plug 'lervag/vimtex'                             " motiuons, objects and compila
 Plug 'lifepillar/vim-mucomplete'                 " smoother completions
 Plug 'rhysd/git-messenger.vim'                   " git commit viewing
 Plug 'tmhedberg/SimpylFold', { 'for': 'python' } " better python folding
+Plug 'tpope/vim-apathy'                          " set &path more nicely
 Plug 'tpope/vim-commentary'                      " commenting
 Plug 'tpope/vim-scriptease'                      " misc vimscript utilities
 Plug 'tpope/vim-surround'                        " adds a new verb, surround
@@ -228,9 +229,6 @@ set formatoptions-=t " but don't auto-format text
 
 " automagically load changes from disk
 set autoread
-
-" make :find and friends better
-set path+=**
 
 
 " ##### Key and Command Mappings ###
