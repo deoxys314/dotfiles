@@ -192,11 +192,13 @@ set incsearch  " go to results as you type
 set ignorecase " ignore case in search . . .
 set smartcase  " unless I type a capital letter
 
-augroup vimrc-insearch-highlight
-	autocmd!
-	autocmd CmdLineEnter [/\?] call search#toggle_hls(1)
-	autocmd CmdLineLeave [/\?] call search#toggle_hls(0)
-augroup END
+if has('patch-8.0.1206')
+	augroup vimrc-insearch-highlight
+		autocmd!
+		autocmd CmdLineEnter [/\?] call search#toggle_hls(1)
+		autocmd CmdLineLeave [/\?] call search#toggle_hls(0)
+	augroup END
+endif
 
 " automatically make searches "more magic" aka sane
 nnoremap / /\v
