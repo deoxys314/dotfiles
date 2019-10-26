@@ -130,7 +130,7 @@ set showbreak=>>>\
 set breakindent
 
 set list
-set listchars=eol:$,tab:>\ ,nbsp:#,trail:_,extends:>,precedes:<
+set listchars=eol:$,tab:>\ ,nbsp:#,trail:_,extends:>,precedes:<,nbsp:#
 
 
 " ##### Display Options ###
