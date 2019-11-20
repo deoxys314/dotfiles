@@ -11,6 +11,7 @@ augroup filetype_python
 	  \ set expandtab           |
 	  \ set autoindent          |
 	  \ set fileformat=unix     |
+	  \ set foldmethod=indent   |
 	  \ setlocal textwidth=120
 	" These lines close the preview window when a completion is chosen.
 	autocmd InsertLeave *.py,*.pyw if pumvisible() == 0 && winnr('$') > 1 | pclose | endif
