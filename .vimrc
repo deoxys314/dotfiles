@@ -186,6 +186,11 @@ set whichwrap+=h,l,<,>,[,]
 " let % bounce between angle brackets as well
 set matchpairs+=<:>
 
+" Mappings for work
+nnoremap <silent> ]b        /^.\{-}[:?]\s*$<CR>$
+nnoremap <silent> [b        ?^.\{-}[:?]\s*$<CR>$
+nnoremap <silent> <leader>b /^.\{-}[:?]\s*$<CR>$
+
 
 " ##### Search options ###
 set incsearch  " go to results as you type
