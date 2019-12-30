@@ -148,6 +148,10 @@ set wildmenu   " better tab-completion
 " to check line lengths
 set colorcolumn=+0
 
+" A single cursor is enough
+set nocursorline nocursorcolumn
+
+
 " colorscheme
 set background=dark
 silent! set termguicolors
