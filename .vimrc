@@ -287,6 +287,11 @@ set spellsuggest=15
 " no modelines: potential security issue
 set modelines=0
 
+" sensible printing defaults
+set printoptions+=header:0
+set printoptions+=syntax:y
+set printoptions+=wrap:y
+
 if &diff
 	" Makes diff easier to read
 	" https://vi.stackexchange.com/a/626
