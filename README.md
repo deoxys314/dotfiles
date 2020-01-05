@@ -9,7 +9,7 @@ Usage
 -----
 
 It is generally intended that you will browse these files to get ideas for your
-own collection of dotfiles.  However, if you are truly set on running things
+own collection of dotfiles. However, if you are truly set on running things
 exactly as I do, then instructions are included below.
 
 1. Clone the repository somewhere on your computer. (I use my home directory.)
@@ -20,7 +20,7 @@ exactly as I do, then instructions are included below.
    `git clone https://github.com/deoxys314/deoxys314_dotfiles/ /path/to/where/you/want/these`
 
 2. Some guides have you create symlinks to these files from where they normally
-   are to the git repository.  I find that while I can share about 90% of my
+   are to the git repository. I find that while I can share about 90% of my
    configuration between machines, there's always that last 10%. So instead, I
    have each configuration file source these files, and add the machine-specific
    settings after that.
