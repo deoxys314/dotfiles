@@ -181,7 +181,7 @@ set sidescrolloff=8
 set sidescroll=1
 
 " folding options
-set foldmethod=marker
+set foldmethod=indent
 set foldlevel=99
 
 " wraps h and l like modern editors
