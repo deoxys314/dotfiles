@@ -1,4 +1,6 @@
-" Cameron Rossington .vimrc
+" .vimrc
+" Maintainer: Cameron Rossington
+
 
 " ##### Plugins ###
 
