@@ -94,7 +94,7 @@ augroup END
 " ##### gitcommit #####
 augroup filetype_gitcommit
 	autocmd!
-	autocmd Filetype gitcommit
+	autocmd BufNewFile,BufRead gitcommit
 	  \ setlocal spell
 augroup END
 
