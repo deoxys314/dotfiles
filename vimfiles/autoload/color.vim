@@ -5,10 +5,14 @@ function! color#GetColorSchemes()
    \)))
 endfunction
 
+function! s:random(max) abort
+	return str2nr(matchstr(reltimestr(reltime()), '\v\.@<=\d+')[1:]) % a:max
+endfunction
+
 function! color#RandomColorScheme()
 	let l:schemes = color#GetColorSchemes()
 	let l:nums = len(l:schemes)
-	let l:scheme = l:schemes[RandomNumber(0, l:nums)]
+	let l:scheme = l:schemes[s:random(l:nums)]
 	execute 'colorscheme ' . l:scheme
 endfunction
 
