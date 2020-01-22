@@ -17,7 +17,7 @@ Plug 'airblade/vim-gitgutter'                    " git info in sign gutter
 Plug 'airblade/vim-rooter'
 Plug 'alvan/vim-closetag'                        " Closes (x)html tags as you type
 Plug 'andymass/vim-matchup'                      " better matching
-Plug 'chriskempson/base16-vim'                   " Base16 themes (compatible with airline)
+Plug 'chriskempson/base16-vim'                   " Base16 themes
 if executable('tmux')
 	Plug 'christoomey/vim-tmux-navigator'        " navigate vim and tmux panes seamlessly
 endif
@@ -33,8 +33,6 @@ Plug 'tpope/vim-obsession'                       " better session management
 Plug 'tpope/vim-scriptease'                      " misc vimscript utilities
 Plug 'tpope/vim-surround'                        " adds a new verb, surround
 Plug 'tpope/vim-vinegar'                         " beter netrw
-Plug 'vim-airline/vim-airline'                   " Airline, a nicer statusline
-Plug 'vim-airline/vim-airline-themes'            " Nice themes for above
 Plug 'w0rp/ale'                                  " linting and LSP support
 
 " Languages
@@ -56,15 +54,6 @@ let mapleader = ' '
 
 
 " ##### Plugin Settings ###
-
-" Airline
-set laststatus=2
-let g:airline#extensions#whitespace#enabled = 0
-
-let g:airline_powerline_fonts = 0
-let g:airline_symbols_ascii = 1 " I don't always have unicode available
-let g:airline_section_z='%3p%% [l:%2l c:%2v]'
-set noshowmode " airline already does this
 
 " ALE
 let g:ale_fixers = get(g:, 'ale_fixers', {})
@@ -137,6 +126,10 @@ set listchars=eol:$,tab:>\ ,nbsp:#,trail:_,extends:>,precedes:<,nbsp:#
 
 
 " ##### Display Options ###
+
+set laststatus=2
+set statusline=[%-2.2{mode(1)}]\ %f%m%r%=%y[%{&ff}][%3p%%][l:%2l\ c:%2c]%{ObsessionStatus()}
+set noshowmode
 
 set number     " line numbers
 syntax on      " syntax highlighting
