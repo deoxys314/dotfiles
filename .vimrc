@@ -29,6 +29,7 @@ Plug 'rhysd/git-messenger.vim'                   " git commit viewing
 Plug 'tmhedberg/SimpylFold', { 'for': 'python' } " better python folding
 Plug 'tpope/vim-apathy'                          " set &path more nicely
 Plug 'tpope/vim-commentary'                      " commenting
+Plug 'tpope/vim-obsession'                       " better session management
 Plug 'tpope/vim-scriptease'                      " misc vimscript utilities
 Plug 'tpope/vim-surround'                        " adds a new verb, surround
 Plug 'tpope/vim-vinegar'                         " beter netrw
