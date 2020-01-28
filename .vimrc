@@ -128,7 +128,16 @@ set listchars=eol:$,tab:>\ ,nbsp:#,trail:_,extends:>,precedes:<,nbsp:#
 " ##### Display Options ###
 
 set laststatus=2
-set statusline=[%-2.2{mode(1)}]\ %f%m%r%=%y[%{&ff}][%3p%%][l:%2l\ c:%2c]%{ObsessionStatus()}
+augroup StatusLineColor
+	autocmd!
+	autocmd ColorScheme,VimEnter * highlight! link User1 Directory
+	autocmd ColorScheme,VimEnter * highlight! link User2 ErrorMsg
+augroup END
+set statusline=[%-2.2{mode(1)}]
+set statusline+=%.64(%1*\ %f%h%2*%m%r%1*\ %)%0*
+set statusline+=%=
+set statusline+=%y[%{&ff}][%3p%%][l:%2l\ c:%2c]
+set statusline+=%{ObsessionStatus()}
 set noshowmode
 
 set number     " line numbers
@@ -149,7 +158,6 @@ set nocursorline nocursorcolumn
 
 
 " colorscheme
-set background=dark
 silent! set termguicolors
 
 
