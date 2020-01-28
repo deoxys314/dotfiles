@@ -19,8 +19,6 @@ set listchars=eol:¬,tab:»\ ,extends:>,precedes:<,nbsp:#,trail:_
 " #### Color Options
 if &diff
 	colorscheme github
-else
-	colorscheme base16-solarized-dark
 endif
 
 " #### GUI Options
