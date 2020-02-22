@@ -133,8 +133,8 @@ augroup StatusLineColor
 	autocmd ColorScheme,VimEnter * highlight! link User1 Directory
 	autocmd ColorScheme,VimEnter * highlight! link User2 ErrorMsg
 augroup END
-set statusline=[%-2.2{mode(1)}]
-set statusline+=%.64(%1*\ %f%h%2*%m%r%1*\ %)%0*
+set statusline=[%-2.{mode(1)}]
+set statusline+=%1*\ %.64(%f%h%2*%m%r%1*\ %)%0*
 set statusline+=%=
 set statusline+=%y[%{&ff}][%3p%%][l:%2l\ c:%2c]
 set statusline+=%{ObsessionStatus()}
