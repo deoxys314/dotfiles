@@ -314,7 +314,7 @@ if &diff
 	command! Q qall
 
 	" disable linting
-	ALEDisable
+	silent! ALEDisable
 endif
 
 
