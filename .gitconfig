@@ -11,5 +11,12 @@
 	lg3 = log --graph --abbrev-commit --decorate --format=format:'%C(blue)%h%C(reset) - %C(green)%an, %ar%C(reset)%C(yellow)%d%C(reset)%n%C(bold yellow)%s%C(reset)%n%b' --all
 	pullr = pull --rebase
 	st = status
+
+[commit]
+	verbose = true
+
+[diff]
+	mnemonicPrefix = true
+
 [difftool]
 	prompt = false
