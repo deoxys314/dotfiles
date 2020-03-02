@@ -11,7 +11,7 @@ if v:version < 705 && &shell =~# 'fish$'
     set shell=sh
 endif
 
-call plug#begin('~/.vim/plugged')
+call plug#begin()
 
 Plug 'airblade/vim-gitgutter'                    " git info in sign gutter
 Plug 'airblade/vim-rooter'
