@@ -52,6 +52,7 @@ call plug#end()
 
 " must be set before mappings below
 let mapleader = ' '
+let maplocalleader = mapleader
 
 
 " ##### Plugin Settings ###
