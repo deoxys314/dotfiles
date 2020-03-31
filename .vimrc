@@ -22,6 +22,7 @@ if executable('tmux')
 	Plug 'christoomey/vim-tmux-navigator'        " navigate vim and tmux panes seamlessly
 endif
 Plug 'cormacrelf/vim-colors-github'              " a light theme based on github
+Plug 'deoxys314/skel.vim'                        " simple templating engine
 Plug 'deoxys314/vim-rng'                         " exposes some RNG functions
 Plug 'lervag/vimtex'                             " motiuons, objects and compilation for LaTeX
 Plug 'lifepillar/vim-mucomplete'                 " smoother completions
