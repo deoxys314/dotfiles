@@ -1,8 +1,7 @@
 " .vimrc
 " Maintainer: Cameron Rossington
 
-
-" ##### Plugins ###
+" {{{ Plugins
 
 " vim has worked around all the POSIX oddities that fish doesn't have
 " so when it tries to use fish things get very confused.  Fortunately, this
@@ -54,9 +53,9 @@ call plug#end()
 " must be set before mappings below
 let mapleader = ' '
 let maplocalleader = mapleader
+" }}}
 
-
-" ##### Plugin Settings ###
+" {{{ Plugin Settings
 
 " ALE
 let g:ale_fixers = get(g:, 'ale_fixers', {})
@@ -110,9 +109,9 @@ let g:rooter_silent_chdir = 1
 
 " SimplyFold
 let g:SimpylFold_docstring_preview = 1
+" }}}
 
-
-" ##### Whitespace Options ###
+" {{{ Whitespace Options
 
 set shiftwidth=4
 set softtabstop=4
@@ -126,9 +125,9 @@ set breakindent
 
 set list
 set listchars=eol:$,tab:>\ ,nbsp:#,trail:_,extends:>,precedes:<,nbsp:#
+" }}}
 
-
-" ##### Display Options ###
+" {{{ Display Options
 
 set laststatus=2
 augroup StatusLineColor
@@ -162,9 +161,9 @@ set nocursorline nocursorcolumn
 
 " colorscheme
 silent! set termguicolors
+" }}}
 
-
-" ##### Navigation options ###
+" {{{ Navigation options
 
 " split navigations
 set splitright
@@ -188,8 +187,10 @@ set sidescrolloff=8
 set sidescroll=1
 
 " folding options
-set foldmethod=indent
-set foldlevel=99
+set foldmethod=marker
+set foldlevel=0
+set foldopen+=all
+set foldclose=all
 
 " wraps h and l like modern editors
 set whichwrap+=h,l,<,>,[,]
@@ -201,9 +202,9 @@ set matchpairs+=<:>
 nnoremap <silent> ]b        /^.\{-}[:?]\s*$<CR>$
 nnoremap <silent> [b        ?^.\{-}[:?]\s*$<CR>$
 nnoremap <silent> <leader>b /^.\{-}[:?]\s*$<CR>$
+" }}}
 
-
-" ##### Search options ###
+" {{{ Search options
 set incsearch  " go to results as you type
 set ignorecase " ignore case in search . . .
 set smartcase  " unless I type a capital letter
@@ -221,9 +222,9 @@ nnoremap / /\v
 vnoremap / /\v
 nnoremap ? ?\v
 vnoremap ? ?\v
+" }}}
 
-
-" ##### Editing Options ###
+" {{{ Editing Options
 
 " virtual edit in visual mode
 set virtualedit+=block
@@ -247,9 +248,9 @@ set formatoptions-=t " but don't auto-format text
 
 " automagically load changes from disk
 set autoread
+" }}}
 
-
-" ##### Key and Command Mappings ###
+" {{{ Key and Command Mappings
 
 " cd to :head of :path
 nnoremap <Leader>cd :cd %:p:h<CR>
@@ -270,6 +271,10 @@ nnoremap ZA :w<CR>
 " using mouse
 set mouse=a
 
+" adjust folds
+nnoremap <silent> <Leader>f :let &foldlevel = max([&foldlevel + 1, 99])<CR>
+nnoremap <silent> <Leader>F :let &foldlevel = min([&foldlevel - 1, 0])<CR>
+
 " color options
 command! RandomColorScheme call color#RandomColorScheme()
 command! NextColorScheme call color#NextColorScheme()
@@ -279,8 +284,9 @@ command! PreviousColorScheme call color#PreviousColorScheme()
 command! -bar -range OK <line1>,<line2>call insert#InsertAtLineEnd('OK')
 nnoremap <Leader>o :OK<CR>
 vnoremap <Leader>o :OK<CR>
+" }}}
 
-" ##### Misc Options ###
+" {{{ Misc Options
 
 " make backspace work the way it dos in most editors
 set backspace=indent,eol,start
@@ -319,11 +325,12 @@ if &diff
 	" disable linting
 	silent! ALEDisable
 endif
+" }}}
 
-
-" ##### Filetype Options ###
+" {{{ Filetype Options
 source <sfile>:p:h/files.vim
+" }}}
 
-
-" ##### Autoload functions ###
+" {{{ Autoload functions
 execute 'set runtimepath+=' . expand('<sfile>:p:h') . '/vimfiles'
+" }}}

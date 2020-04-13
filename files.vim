@@ -27,6 +27,7 @@ augroup filetype_web
 	  \ set shiftwidth=2  |
 	  \ set noexpandtab   |
 	  \ set autoindent    |
+	  \ set foldmethod=indent |
 	  \ set fileformat=unix
 augroup END
 
