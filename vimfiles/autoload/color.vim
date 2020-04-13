@@ -1,6 +1,6 @@
 function! color#GetColorSchemes()
 	return uniq(sort(map(
-   \  globpath(&runtimepath, "colors/*.vim", 0, 1),  
+   \  globpath(&runtimepath, "colors/*.vim", 0, 1),
    \  'fnamemodify(v:val, ":t:r")'
    \)))
 endfunction
