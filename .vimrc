@@ -324,6 +324,8 @@ if &diff
 
 	" disable linting
 	silent! ALEDisable
+
+	set nonumber signcolumn=no
 endif
 " }}}
 
