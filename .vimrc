@@ -272,8 +272,8 @@ nnoremap ZA :w<CR>
 set mouse=a
 
 " adjust folds
-nnoremap <silent> <Leader>f :let &foldlevel = max([&foldlevel + 1, 99])<CR>
-nnoremap <silent> <Leader>F :let &foldlevel = min([&foldlevel - 1, 0])<CR>
+nnoremap <silent> <Leader>f :let &foldlevel = min([&foldlevel + 1, 99])<CR>
+nnoremap <silent> <Leader>F :let &foldlevel = max([&foldlevel - 1, 0])<CR>
 
 " color options
 command! RandomColorScheme call color#RandomColorScheme()
