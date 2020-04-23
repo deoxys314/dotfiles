@@ -188,7 +188,7 @@ set sidescroll=1
 
 " folding options
 set foldmethod=marker
-set foldlevel=0
+set foldlevel=1
 set foldopen+=all
 set foldclose=all
 
@@ -270,10 +270,6 @@ nnoremap ZA :w<CR>
 
 " using mouse
 set mouse=a
-
-" adjust folds
-nnoremap <silent> <Leader>f :let &foldlevel = min([&foldlevel + 1, 99])<CR>
-nnoremap <silent> <Leader>F :let &foldlevel = max([&foldlevel - 1, 0])<CR>
 
 " color options
 command! RandomColorScheme call color#RandomColorScheme()
