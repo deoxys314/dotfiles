@@ -23,6 +23,7 @@ endif
 Plug 'cormacrelf/vim-colors-github'              " a light theme based on github
 Plug 'deoxys314/skel.vim'                        " simple templating engine
 Plug 'deoxys314/vim-rng'                         " exposes some RNG functions
+Plug 'junegunn/vader.vim'                        " testing framework
 Plug 'lervag/vimtex'                             " motiuons, objects and compilation for LaTeX
 Plug 'lifepillar/vim-mucomplete'                 " smoother completions
 Plug 'rhysd/git-messenger.vim'                   " git commit viewing
