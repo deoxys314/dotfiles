@@ -13,11 +13,11 @@ own collection of dotfiles. However, if you are truly set on running things
 exactly as I do, then instructions are included below.
 
 1. Clone the repository somewhere on your computer. (I use my home directory.)
-   `$ git clone https://github.com/deoxys314/deoxys314_dotfiles/`
+   `$ git clone https://github.com/deoxys314/dotfiles/`
 
    -- OR --
 
-   `git clone https://github.com/deoxys314/deoxys314_dotfiles/ /path/to/where/you/want/these`
+   `git clone https://github.com/deoxys314/dotfiles/ /path/to/where/you/want/these`
 
 2. Some guides have you create symlinks to these files from where they normally
    are to the git repository. I find that while I can share about 90% of my
@@ -31,19 +31,19 @@ exactly as I do, then instructions are included below.
    `~/.vimrc`:
 
    ```vim
-   source ~/deoxys314_dotfiles/.vimrc
+   source ~/dotfiles/vimfiles/vimrc
    ```
 
    `~/.tmux.conf`:
 
    ```
-   source ~/deoxys314_dotfiles/.tmux.conf
+   source ~/dotfiles/.tmux.conf
    ```
 
    `~/.config/fish/config.fish`:
 
    ```fish
-   source ~/deoxys314_dotfiles/config.fish
+   source ~/dotfiles/config.fish
    ```
 
    `$profile`:
@@ -59,7 +59,7 @@ exactly as I do, then instructions are included below.
    included in your profile:
 
    ```powershell
-   . C:\Path\to\deoxys314_dotfiles\profile.ps1
+   . C:\Path\to\dotfiles\profile.ps1
    ```
 
    I find this allows me to avoid duplicating work while still allowing my to

@@ -119,7 +119,7 @@ set softtabstop=4
 set tabstop=4
 
 " show wrapped lines
-set showbreak=>>>\ 
+set showbreak=>>>\
 
 " keep indent same when wrapping
 set breakindent
@@ -324,12 +324,26 @@ if &diff
 
 	set nonumber signcolumn=no
 endif
+
+" some settings that can't be done from a ftplugin (or it would be onerous to
+" do so)
+augroup virmc
+	autocmd!
+	autocmd BufNewFile,BufRead *.js,*.css,*.htm,*.html,*.php
+	  \ setlocal
+	  \   autoindent
+	  \   fileformat=unix
+	  \   foldmethod=indent
+	  \   noexpandtab
+	  \   shiftwidth=2
+	  \   softtabstop=2
+	  \   tabstop=2
+	autocmd BufNewFile,BufRead !status* cd %:p:h | setlocal spell
+	autocmd InsertLeave *.py,*.pyw
+	  \ if pumvisible() == 0 && winnr('$') > 1 | pclose | endif
+augroup END
 " }}}
 
-" {{{ Filetype Options
-source <sfile>:p:h/files.vim
-" }}}
-
-" {{{ Autoload functions
-execute 'set runtimepath+=' . expand('<sfile>:p:h') . '/vimfiles'
+" {{{ Add this location to the runtimepath
+let &runtimepath .= ',' . expand('<sfile>:p:h')
 " }}}
