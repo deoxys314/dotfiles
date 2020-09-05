@@ -87,7 +87,7 @@ endif
 let g:hardtime_default_on = 1
 
 " Markdown
-let g:markdown_mapping_switch_status = '<space><space>'
+let g:markdown_mapping_switch_status = '<space>,'
 
 " mucomplete
 set completeopt=menuone
