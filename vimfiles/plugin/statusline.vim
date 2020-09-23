@@ -56,22 +56,7 @@ function! ShortFilePath() abort
 	if &buftype ==# 'terminal'
 		return expand('%:t')
 	else
-		let l:path = fnamemodify(expand('%:p'), ':~:.')
-		" here we have some sort of magic numbers
-		"	 4 characters for the mode
-		"	 2 characters for the spaces I pad around the filetype section
-		"	 maybe 3 for the [+] modified flag
-		"	 maybe 4 for the [RO] flag
-		"	 2 + n for the filetype [&ft]
-		"	 2 + n for &ff
-		"	 6 for the % (fixed width)
-		" + 13 for potentially hundreds of columns and lines
-		" there's obviously some uncertianty here, but this should be good enough
-		if len(l:path) >= (&columns - (4 + 2 + (3 * &modified) + (4 * &readonly) + (2 + len(&filetype)) + (2 + len(&fileformat)) + 6 + 10))
-		" if len(l:path) >= (&columns - (4 + 2 + (3 * &modified) + (4 * &readonly) + (2 + len(&filetype)) + (2 + len(&fileformat)) + 6 + 13))
-			let l:path = pathshorten(l:path)
-		endif
-		return l:path
+		return pathshorten(fnamemodify(expand('%:p'), ':~:.'))
 	endif
 endfunction
 
