@@ -78,7 +78,7 @@ function! ActiveStatusLine() abort
 	let l:statusline .= '%=%(%y[%{&ff}]%)'
 	" Location:
 	" let l:statusline .= '%{StatuslineScrollbar(10)}'
-	let l:statusline .= '%([%3p%%]%)%([l:%2l c:%2c]%)'
+	let l:statusline .= '%([%3p%%]%)%([x:%2c y:%2l z:%{&foldlevel}]%)'
 	" Obsession:
 	let l:statusline .= '%)%{ObsessionStatusLine()}%)'
 	return l:statusline
