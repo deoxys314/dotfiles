@@ -21,12 +21,8 @@ if executable('tmux')
 	Plug 'christoomey/vim-tmux-navigator'        " navigate vim and tmux panes seamlessly
 endif
 Plug 'cormacrelf/vim-colors-github'              " a light theme based on github
-Plug 'deoxys314/skel.vim'                        " simple templating engine
-Plug 'deoxys314/vim-rng'                         " exposes some RNG functions
-Plug 'junegunn/vader.vim'                        " testing framework
-Plug 'lervag/vimtex'                             " motiuons, objects and compilation for LaTeX
+Plug 'lervag/vimtex'                             " motions, objects and compilation for LaTeX
 Plug 'lifepillar/vim-mucomplete'                 " smoother completions
-Plug 'rhysd/git-messenger.vim'                   " git commit viewing
 Plug 'tmhedberg/SimpylFold', { 'for': 'python' } " better python folding
 Plug 'tpope/vim-apathy'                          " set &path more nicely
 Plug 'tpope/vim-commentary'                      " commenting
@@ -35,7 +31,6 @@ Plug 'tpope/vim-scriptease'                      " misc vimscript utilities
 Plug 'tpope/vim-surround'                        " adds a new verb, surround
 Plug 'tpope/vim-vinegar'                         " beter netrw
 Plug 'w0rp/ale'                                  " linting and LSP support
-Plug 'easymotion/vim-easymotion'
 
 " Languages
 Plug 'ambv/black',                { 'on': 'Black' , 'for': 'python' } " python formatting
@@ -47,7 +42,6 @@ Plug 'rust-lang/rust.vim',        { 'for': 'rust' }                   " rust-lan
 if executable('racer')
 	Plug 'racer-rust/vim-racer',  { 'for': 'rust' }                   " completions
 endif
-
 
 " All plugins must be added before the following line
 call plug#end()
