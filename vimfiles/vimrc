@@ -263,6 +263,9 @@ command! PreviousColorScheme call color#PreviousColorScheme()
 command! -bar -range OK <line1>,<line2>call insert#InsertAtLineEnd('OK')
 nnoremap <Leader>o :OK<CR>
 vnoremap <Leader>o :OK<CR>
+
+" editing prose
+command! -bang Prose call prose#initialize()
 " }}}
 
 " {{{ Misc Options
