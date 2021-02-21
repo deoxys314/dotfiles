@@ -21,7 +21,7 @@ Plug 'christoomey/vim-tmux-navigator'            " navigate vim and tmux panes s
 Plug 'cormacrelf/vim-colors-github'              " a light theme based on github
 Plug 'lervag/vimtex'                             " motions, objects and compilation for LaTeX
 Plug 'lifepillar/vim-mucomplete'                 " smoother completions
-Plug 'tmhedberg/SimpylFold', { 'for': 'python' } " better python folding
+Plug 'tmhedberg/SimpylFold'                      " better python folding
 Plug 'tpope/vim-apathy'                          " set &path more nicely
 Plug 'tpope/vim-commentary'                      " commenting
 Plug 'tpope/vim-obsession'                       " better session management
@@ -31,11 +31,11 @@ Plug 'tpope/vim-vinegar'                         " beter netrw
 Plug 'w0rp/ale'                                  " linting and LSP support
 
 " Languages
-Plug 'dag/vim-fish',              { 'for': 'fish' }                   " editing fish scripts
+Plug 'dag/vim-fish'                                                   " editing fish scripts
 Plug 'freitass/todo.txt-vim'                                          " todo.txt format
-Plug 'gabrielelana/vim-markdown', { 'for': 'markdown' }               " even better github markdown
-Plug 'PProvost/vim-ps1',          { 'for': 'ps1' }                    " powershell syntax and formatting
-Plug 'rust-lang/rust.vim',        { 'for': 'rust' }                   " rust-lang
+Plug 'gabrielelana/vim-markdown'                                      " even better github markdown
+Plug 'PProvost/vim-ps1'                                               " powershell syntax and formatting
+Plug 'rust-lang/rust.vim'                                             " rust-lang
 
 " All plugins must be added before the following line
 call plug#end()
