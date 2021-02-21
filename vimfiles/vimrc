@@ -31,7 +31,6 @@ Plug 'tpope/vim-vinegar'                         " beter netrw
 Plug 'w0rp/ale'                                  " linting and LSP support
 
 " Languages
-Plug 'ambv/black',                { 'on': 'Black' , 'for': 'python' } " python formatting
 Plug 'dag/vim-fish',              { 'for': 'fish' }                   " editing fish scripts
 Plug 'freitass/todo.txt-vim'                                          " todo.txt format
 Plug 'gabrielelana/vim-markdown', { 'for': 'markdown' }               " even better github markdown
@@ -55,9 +54,6 @@ let g:ale_fixers.python = ['add_blank_lines_for_python_control_statements',
   \ 'black', 'remove_trailing_lines']
 let g:ale_markdown_mdl_options = '--rule ~MD029 --rule ~MD005'
 let g:ale_markdown_writegood_options = '--no-passive'
-
-" Black
-let g:black_linelength=120
 
 " Closetag
 let g:closetag_filenames='*.html,*.htm,*.xml,*.php'
