@@ -1,3 +1,2 @@
-setlocal
-  \ spell
-  \ textwidth=80
+setlocal spell
+setlocal textwidth=80

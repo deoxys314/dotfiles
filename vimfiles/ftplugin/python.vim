@@ -1,9 +1,9 @@
-setlocal " PEP8 style settings
-  \ autoindent
-  \ expandtab
-  \ fileformat=unix
-  \ foldmethod=indent
-  \ shiftwidth=4
-  \ softtabstop=4
-  \ tabstop=4
-  \ textwidth=120
+" PEP8+ style settings
+setlocal autoindent
+setlocal expandtab
+setlocal fileformat=unix
+setlocal foldmethod=indent
+setlocal shiftwidth=4
+setlocal softtabstop=4
+setlocal tabstop=4
+setlocal textwidth=120

@@ -1,4 +1,3 @@
-setlocal
-  \ autoread
-  \ colorcolumn=0
-  \ wrap
+setlocal autoread
+setlocal colorcolumn=0
+setlocal wrap

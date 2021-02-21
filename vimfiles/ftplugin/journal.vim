@@ -1,4 +1,3 @@
-setlocal
-  \ colorcolumn=0
-  \ spell
-  \ wrap
+setlocal colorcolumn=0
+setlocal spell
+setlocal wrap
