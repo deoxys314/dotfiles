@@ -19,8 +19,13 @@ Plug 'andymass/vim-matchup'                      " better matching
 Plug 'chriskempson/base16-vim'                   " Base16 themes
 Plug 'christoomey/vim-tmux-navigator'            " navigate vim and tmux panes seamlessly
 Plug 'cormacrelf/vim-colors-github'              " a light theme based on github
+Plug 'dag/vim-fish'                                                   " editing fish scripts
+Plug 'freitass/todo.txt-vim'                                          " todo.txt format
+Plug 'gabrielelana/vim-markdown'                                      " even better github markdown
 Plug 'lervag/vimtex'                             " motions, objects and compilation for LaTeX
 Plug 'lifepillar/vim-mucomplete'                 " smoother completions
+Plug 'PProvost/vim-ps1'                                               " powershell syntax and formatting
+Plug 'rust-lang/rust.vim'                                             " rust-lang
 Plug 'tmhedberg/SimpylFold'                      " better python folding
 Plug 'tpope/vim-apathy'                          " set &path more nicely
 Plug 'tpope/vim-commentary'                      " commenting
@@ -30,14 +35,6 @@ Plug 'tpope/vim-surround'                        " adds a new verb, surround
 Plug 'tpope/vim-vinegar'                         " beter netrw
 Plug 'w0rp/ale'                                  " linting and LSP support
 
-" Languages
-Plug 'dag/vim-fish'                                                   " editing fish scripts
-Plug 'freitass/todo.txt-vim'                                          " todo.txt format
-Plug 'gabrielelana/vim-markdown'                                      " even better github markdown
-Plug 'PProvost/vim-ps1'                                               " powershell syntax and formatting
-Plug 'rust-lang/rust.vim'                                             " rust-lang
-
-" All plugins must be added before the following line
 call plug#end()
 
 " must be set before mappings below
