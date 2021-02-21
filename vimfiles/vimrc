@@ -60,15 +60,6 @@ if executable('git')
 	set updatetime=1000
 end
 
-" git-messenger
-let g:git_messenger_include_diff = 'current'
-if !has('nvim')
-	let g:git_messenger_max_popup_height = 20
-endif
-
-" Hardtime
-let g:hardtime_default_on = 1
-
 " Markdown
 let g:markdown_mapping_switch_status = '<space>,'
 
