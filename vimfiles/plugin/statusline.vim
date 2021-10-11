@@ -72,15 +72,17 @@ function! ActiveStatusLine() abort
 	" Sections:
 	" Mode:
 	let l:statusline = '%([%-2{mode(1)}]%)'
-	" Location/Flags
+	" Location/Flags:
 	let l:statusline .= '%(%1* %{ShortFilePath()}%h%2*%m%r%1* %)%0*'
-	" split and file info
-	let l:statusline .= '%=%(%y[%{&ff}]%)'
+	" Split:
+	let l:statusline .= '%='
+	" File Info:
+	let l:statusline .= '%(%y[%{&ff}]%)'
 	" Location:
-	" let l:statusline .= '%{StatuslineScrollbar(10)}'
 	let l:statusline .= '%([%3p%%]%)%([x:%2c y:%2l z:%{&foldlevel}]%)'
 	" Obsession:
-	let l:statusline .= '%)%{ObsessionStatusLine()}%)'
+	let l:statusline .= '%(%{ObsessionStatusLine()}%)'
+
 	return l:statusline
 endfunction
 
