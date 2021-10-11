@@ -35,6 +35,8 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-vinegar' " better netrw
 Plug 'w0rp/ale'
 
+Plug 'junegunn/vader.vim'
+
 call plug#end()
 
 " must be set before mappings below
@@ -46,8 +48,8 @@ let maplocalleader = mapleader
 
 " ALE
 let g:ale_fixers = get(g:, 'ale_fixers', {})
-let g:ale_fixers['*'] = ['remove_trailing_lines']
-let g:ale_fixers.python = ['add_blank_lines_for_python_control_statements',
+let g:ale_fixers['*'] = ['remove_trailing_lines', 'trim_whitespace']
+let g:ale_fixers.python = ['isort', 'add_blank_lines_for_python_control_statements',
   \ 'black', 'remove_trailing_lines']
 let g:ale_markdown_mdl_options = '--rule ~MD029 --rule ~MD005'
 let g:ale_markdown_writegood_options = '--no-passive'
@@ -84,6 +86,10 @@ let g:rooter_silent_chdir = 1
 
 " SimplyFold
 let g:SimpylFold_docstring_preview = 1
+
+" WMGraphViz
+let g:WMGraphviz_dot = 'C:\Program Files\Graphviz\bin\dot.exe'
+
 " }}}
 
 " {{{ Whitespace Options
