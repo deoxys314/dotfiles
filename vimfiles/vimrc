@@ -12,30 +12,49 @@ endif
 
 call plug#begin()
 
-Plug 'airblade/vim-gitgutter'
+" Vim:
 Plug 'airblade/vim-rooter'
-Plug 'alvan/vim-closetag'
-Plug 'andymass/vim-matchup' " improvement on matchit
-Plug 'chriskempson/base16-vim' " colorschemes
-Plug 'christoomey/vim-tmux-navigator'
-Plug 'cormacrelf/vim-colors-github'
-Plug 'dag/vim-fish'
-Plug 'freitass/todo.txt-vim'
-Plug 'gabrielelana/vim-markdown'
-Plug 'lervag/vimtex'
-Plug 'lifepillar/vim-mucomplete'
-Plug 'PProvost/vim-ps1' " Powershell
-Plug 'rust-lang/rust.vim'
-Plug 'tmhedberg/SimpylFold' " better python folding
-Plug 'tpope/vim-apathy' " set &path
-Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-obsession' " session management
+Plug 'christoomey/vim-tmux-navigator'
 Plug 'tpope/vim-scriptease'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-vinegar' " better netrw
-Plug 'w0rp/ale'
-
+Plug 'lifepillar/vim-mucomplete'
 Plug 'junegunn/vader.vim'
+Plug 'tpope/vim-apathy' " set &path
+Plug 'andymass/vim-matchup' " improvement on matchit
+
+" Colors:
+Plug 'chriskempson/base16-vim'
+Plug 'cormacrelf/vim-colors-github'
+
+" Prose:
+Plug 'freitass/todo.txt-vim'
+Plug 'gabrielelana/vim-markdown'
+
+" Programming (general):
+Plug 'w0rp/ale'
+Plug 'tpope/vim-commentary'
+Plug 'alvan/vim-closetag'
+
+" Fish:
+Plug 'dag/vim-fish'
+
+" Latex:
+Plug 'lervag/vimtex'
+
+" Git:
+Plug 'airblade/vim-gitgutter'
+Plug 'rhysd/git-messenger.vim'
+
+" Powershell:
+Plug 'PProvost/vim-ps1'
+
+" Python:
+Plug 'tmhedberg/SimpylFold'
+
+" Rust:
+Plug 'rust-lang/rust.vim'
 
 call plug#end()
 
@@ -86,9 +105,6 @@ let g:rooter_silent_chdir = 1
 
 " SimplyFold
 let g:SimpylFold_docstring_preview = 1
-
-" WMGraphViz
-let g:WMGraphviz_dot = 'C:\Program Files\Graphviz\bin\dot.exe'
 
 " }}}
 
