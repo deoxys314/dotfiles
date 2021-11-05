@@ -15,3 +15,6 @@
 
 [difftool]
 	prompt = false
+
+[merge]
+	conflictstyle = diff3
