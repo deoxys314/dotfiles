@@ -33,12 +33,10 @@ Plug 'freitass/todo.txt-vim'
 Plug 'gabrielelana/vim-markdown'
 
 " Programming (general):
-Plug 'w0rp/ale'
-Plug 'tpope/vim-commentary'
 Plug 'alvan/vim-closetag'
-
-" Fish:
-Plug 'dag/vim-fish'
+Plug 'sheerun/vim-polyglot'
+Plug 'tpope/vim-commentary'
+Plug 'w0rp/ale'
 
 " Latex:
 Plug 'lervag/vimtex'
@@ -46,9 +44,6 @@ Plug 'lervag/vimtex'
 " Git:
 Plug 'airblade/vim-gitgutter'
 Plug 'rhysd/git-messenger.vim'
-
-" Powershell:
-Plug 'PProvost/vim-ps1'
 
 " Python:
 Plug 'tmhedberg/SimpylFold'
