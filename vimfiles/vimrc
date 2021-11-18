@@ -208,6 +208,16 @@ nnoremap / /\v
 vnoremap / /\v
 nnoremap ? ?\v
 vnoremap ? ?\v
+
+if executable('rg')
+	set grepprg=rg\ --vimgrep\ $*
+elseif executable('grep')
+	set grepprg=grep\ -Rn\ --\ $*
+else
+	" fall back to vimgrep, which is slower but functional
+	set grepprg=internal
+endif
+command! -nargs=+ -bar Grep silent! grep! <args> | cwindow | redraw!
 " }}}
 
 " {{{ Editing Options
