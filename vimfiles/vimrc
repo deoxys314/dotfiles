@@ -12,20 +12,6 @@ endif
 
 call plug#begin()
 
-" Vim:
-Plug 'airblade/vim-rooter'
-Plug 'tpope/vim-obsession' " session management
-Plug 'christoomey/vim-tmux-navigator'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-scriptease'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-vinegar' " better netrw
-Plug 'lifepillar/vim-mucomplete'
-Plug 'junegunn/vader.vim'
-Plug 'tpope/vim-apathy' " set &path
-Plug 'andymass/vim-matchup' " improvement on matchit
-
-
 call plug#end()
 
 " must be set before mappings below
