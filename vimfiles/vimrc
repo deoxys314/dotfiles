@@ -42,10 +42,6 @@ Plug 'w0rp/ale'
 " Latex:
 Plug 'lervag/vimtex'
 
-" Git:
-Plug 'airblade/vim-gitgutter'
-Plug 'rhysd/git-messenger.vim'
-
 " Python:
 Plug 'tmhedberg/SimpylFold'
 
