@@ -25,12 +25,6 @@ Plug 'junegunn/vader.vim'
 Plug 'tpope/vim-apathy' " set &path
 Plug 'andymass/vim-matchup' " improvement on matchit
 
-" Programming (general):
-Plug 'alvan/vim-closetag'
-Plug 'sheerun/vim-polyglot'
-Plug 'tpope/vim-commentary'
-Plug 'w0rp/ale'
-
 " Latex:
 Plug 'lervag/vimtex'
 
