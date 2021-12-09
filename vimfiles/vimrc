@@ -2,28 +2,6 @@
 " Maintainer: Cameron Rossington
 
 
-" {{{ Display Options
-
-set number     " line numbers
-syntax on      " syntax highlighting
-
-set showcmd    " show incomplete commands
-
-set nowrap     " don't wrap lines
-set linebreak  " don't break in the middle of a word
-
-set wildmenu   " better tab-completion
-
-" to check line lengths
-set colorcolumn=+0
-
-" A single cursor is enough
-set nocursorline nocursorcolumn
-
-
-" colorscheme
-silent! set termguicolors
-" }}}
 
 " {{{ Navigation options
 
