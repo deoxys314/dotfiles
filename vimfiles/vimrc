@@ -25,14 +25,6 @@ Plug 'junegunn/vader.vim'
 Plug 'tpope/vim-apathy' " set &path
 Plug 'andymass/vim-matchup' " improvement on matchit
 
-" Latex:
-Plug 'lervag/vimtex'
-
-" Python:
-Plug 'tmhedberg/SimpylFold'
-
-" Rust:
-Plug 'rust-lang/rust.vim'
 
 call plug#end()
 
