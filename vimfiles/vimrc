@@ -91,11 +91,18 @@ set completeopt=menuone
 set completeopt+=noinsert
 set belloff+=ctrlg
 set shortmess+=c
-let g:mucomplete#chains = { 'default':  ['path', 'omni', 'keyn', 'dict', 'uspl'] }
-let g:mucomplete#chains.vim =      ['path', 'cmd', 'keyn']
-let g:mucomplete#chains.markdown = ['uspl', 'dict', 'path', 'omni']
-let g:mucomplete#chains.text = g:mucomplete#chains.markdown
-let g:mucomplete#chains.fish = ['omni', 'incl', 'file']
+let s:text_chain = ['uspl', 'dict', 'path', 'omni']
+let g:mucomplete#chains = {
+			\ 'default': {
+			\              'default': ['omni', 'path', 'keyn', 'uspl'],
+			\              '.*[Ss]tring.*': ['uspl'],
+			\              '.*[Cc]omment.*': ['uspl'],
+			\            },
+			\ 'fish': ['omni', 'file', 'incl'],
+			\ 'markdown': s:text_chain,
+			\ 'text': s:text_chain,
+			\ 'vim': ['omni', 'path', 'cmd', 'keyn'],
+			\ }
 let g:mucomplete#spel#max = 10
 
 " netrw/vim-vinegar
