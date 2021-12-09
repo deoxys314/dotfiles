@@ -11,21 +11,6 @@ if v:version < 705 && &shell =~# 'fish$'
 endif
 " 
 
-" {{{ Whitespace Options
-
-set shiftwidth=4
-set softtabstop=4
-set tabstop=4
-
-" show wrapped lines
-let &showbreak = '--> '
-
-" keep indent same when wrapping
-set breakindent
-
-set list
-set listchars=eol:$,tab:>\ ,nbsp:#,trail:_,extends:>,precedes:<,nbsp:#
-" }}}
 
 " {{{ Display Options
 
