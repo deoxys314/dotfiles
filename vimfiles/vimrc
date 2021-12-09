@@ -1,39 +1,3 @@
-" .vimrc
-" Maintainer: Cameron Rossington
-
-
-
-
-" {{{ Search options
-set incsearch  " go to results as you type
-set ignorecase " ignore case in search . . .
-set smartcase  " unless I type a capital letter
-
-if has('patch-8.0.1206')
-	augroup vimrc-insearch-highlight
-		autocmd!
-		autocmd CmdLineEnter [/\?] call search#toggle_hls(1)
-		autocmd CmdLineLeave [/\?] call search#toggle_hls(0)
-	augroup END
-endif
-
-" automatically make searches "more magic" aka sane
-nnoremap / /\v
-vnoremap / /\v
-nnoremap ? ?\v
-vnoremap ? ?\v
-
-if executable('rg')
-	set grepprg=rg\ --vimgrep\ $*
-elseif executable('grep')
-	set grepprg=grep\ -Rn\ --\ $*
-else
-	" fall back to vimgrep, which is slower but functional
-	set grepprg=internal
-endif
-command! -nargs=+ -bar Grep silent! grep! <args> | cwindow | redraw!
-" }}}
-
 " {{{ Editing Options
 
 " virtual edit in visual mode
