@@ -94,16 +94,5 @@ function! NoFileStatusLine() abort
 	return '  %(%{ShortFilePath()}%)'
 endfunction
 
-augroup StatusLine
-	autocmd!
-	autocmd VimEnter             * call s:update_inactive_windows()
-	autocmd WinEnter,BufWinEnter * call s:set_status_line(s:true)
-	autocmd WinLeave             * call s:set_status_line(s:false)
-	if exists('##CmdLineEnter')
-		autocmd CmdlineEnter     * call s:set_status_line(s:true) | redraw
-	end
-	autocmd ColorScheme,VimEnter * call s:set_colors()
-augroup END
-
 set laststatus=2
 set noshowmode
