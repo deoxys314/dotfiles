@@ -1,32 +1,3 @@
-" {{{ Editing Options
-
-" virtual edit in visual mode
-set virtualedit+=block
-
-" swap file
-let s:swap = $HOME . '/vimswap'
-if !isdirectory(s:swap)
-	call mkdir(s:swap, 'p')
-endif
-set swapfile
-set directory-=.
-execute 'set directory^=' . s:swap
-
-" formatting options, mostly dealing with comment characters
-set formatoptions-=o " no autoinsert of comment char on o or O
-set formatoptions-=r " no autoinsert of comment char on <CR> in insert mode
-set formatoptions+=j " remove comment leader when Joining lines
-set formatoptions+=1 " if possible, break line before one letter word
-set formatoptions+=c " auto-format comments
-set formatoptions-=t " but don't auto-format text
-
-" automagically load changes from disk
-set autoread
-
-" set a default and good enough omnifunc
-set omnifunc=syntaxcomplete#Complete
-" }}}
-
 " {{{ Key and Command Mappings
 
 " cd to :head of :path
