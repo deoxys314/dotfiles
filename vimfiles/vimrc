@@ -11,47 +11,6 @@ if v:version < 705 && &shell =~# 'fish$'
 endif
 
 call plug#begin()
-
-" Vim:
-Plug 'airblade/vim-rooter'
-Plug 'tpope/vim-obsession' " session management
-Plug 'christoomey/vim-tmux-navigator'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-scriptease'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-vinegar' " better netrw
-Plug 'lifepillar/vim-mucomplete'
-Plug 'junegunn/vader.vim'
-Plug 'tpope/vim-apathy' " set &path
-Plug 'andymass/vim-matchup' " improvement on matchit
-
-" Colors:
-Plug 'chriskempson/base16-vim'
-Plug 'cormacrelf/vim-colors-github'
-
-" Prose:
-Plug 'freitass/todo.txt-vim'
-Plug 'gabrielelana/vim-markdown'
-
-" Programming (general):
-Plug 'alvan/vim-closetag'
-Plug 'sheerun/vim-polyglot'
-Plug 'tpope/vim-commentary'
-Plug 'w0rp/ale'
-
-" Latex:
-Plug 'lervag/vimtex'
-
-" Git:
-Plug 'airblade/vim-gitgutter'
-Plug 'rhysd/git-messenger.vim'
-
-" Python:
-Plug 'tmhedberg/SimpylFold'
-
-" Rust:
-Plug 'rust-lang/rust.vim'
-
 call plug#end()
 
 " must be set before mappings below
@@ -59,64 +18,7 @@ let mapleader = ' '
 let maplocalleader = mapleader
 " }}}
 
-" {{{ Plugin Settings
-
-" ALE
-let g:ale_fixers = get(g:, 'ale_fixers', {})
-let g:ale_fixers['*'] = ['remove_trailing_lines', 'trim_whitespace']
-let g:ale_fixers.python = ['isort', 'add_blank_lines_for_python_control_statements',
-  \ 'black', 'remove_trailing_lines']
-let g:ale_markdown_mdl_options = '--rule ~MD029 --rule ~MD005'
-let g:ale_markdown_writegood_options = '--no-passive'
-
-" Closetag
-let g:closetag_filenames='*.html,*.htm,*.xml,*.php'
-
-" GitGutter
-if executable('git')
-	set updatetime=1000
-end
-
-" git-messenger
-let g:git_messenger_always_into_popup = v:true
-let g:git_messenger_close_on_cursor_moved = v:false
-let g:git_messenger_date_format = '%F %H:%M:%S'
-let g:git_messenger_include_diff = 'current'
-let g:git_messenger_max_popup_height = 20
-
-" Markdown
-let g:markdown_mapping_switch_status = '<space>,'
-
-" mucomplete
-set completeopt=menuone
-set completeopt+=noinsert
-set belloff+=ctrlg
-set shortmess+=c
-let s:text_chain = ['uspl', 'dict', 'path', 'omni']
-let g:mucomplete#chains = {
-			\ 'default': {
-			\              'default': ['omni', 'path', 'keyn', 'uspl'],
-			\              '.*[Ss]tring.*': ['uspl'],
-			\              '.*[Cc]omment.*': ['uspl'],
-			\            },
-			\ 'fish': ['omni', 'file', 'incl'],
-			\ 'markdown': s:text_chain,
-			\ 'text': s:text_chain,
-			\ 'vim': ['omni', 'path', 'cmd', 'keyn'],
-			\ }
-let g:mucomplete#spel#max = 10
-
-" netrw/vim-vinegar
-let g:netrw_dirhistmax = 0 " history is not needed
-let g:netrw_liststyle = 3  " tree style listing
-
-" Rooter
-let g:rooter_silent_chdir = 1
-
-" SimplyFold
-let g:SimpylFold_docstring_preview = 1
-
-" }}}
+" 
 
 " {{{ Whitespace Options
 
