@@ -1,4 +1,0 @@
-
-" {{{ Add this location to the runtimepath
-let &runtimepath .= ',' . expand('<sfile>:p:h')
-" }}}
