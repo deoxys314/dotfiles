@@ -3,46 +3,6 @@
 
 
 
-" {{{ Navigation options
-
-" split navigations
-set splitright
-set splitbelow
-
-" navigate splits with <Ctrl-hjkl>
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
-
-" j and k by lines on screen, as with modern editors
-nnoremap j gj
-nnoremap gj j
-nnoremap k gk
-nnoremap gk k
-
-" scrolling
-set scrolloff=4
-set sidescrolloff=8
-set sidescroll=1
-
-" folding options
-set foldmethod=marker
-set foldlevel=1
-set foldopen+=all
-set foldclose=all
-
-" wraps h and l like modern editors
-set whichwrap+=h,l,<,>,[,]
-
-" let % bounce between angle brackets as well
-set matchpairs+=<:>
-
-" Mappings for work
-nnoremap <silent> ]b        /^.\{-}[:?]\s*$<CR>$
-nnoremap <silent> [b        ?^.\{-}[:?]\s*$<CR>$
-nnoremap <silent> <leader>b /^.\{-}[:?]\s*$<CR>$
-" }}}
 
 " {{{ Search options
 set incsearch  " go to results as you type
