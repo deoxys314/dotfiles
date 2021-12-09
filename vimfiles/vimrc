@@ -1,38 +1,3 @@
-" {{{ Key and Command Mappings
-
-" cd to :head of :path
-nnoremap <Leader>cd :cd %:p:h<CR>
-
-" remove trailing whitespace
-nnoremap <Leader>w :call whitespace#TrimWhitespace()<CR>
-
-" go to next misspelled word and suggest
-nnoremap <Leader>s ]Sz=
-nnoremap <Leader>S [Sz=
-
-" I don't like Ex mode
-nnoremap Q <nop>
-
-" compliment to ZZ and ZQ
-nnoremap ZA :w<CR>
-
-" using mouse
-set mouse=a
-
-" color options
-command! RandomColorScheme call color#RandomColorScheme()
-command! NextColorScheme call color#NextColorScheme()
-command! PreviousColorScheme call color#PreviousColorScheme()
-
-" comes in handy
-command! -bar -range OK <line1>,<line2>call insert#InsertAtLineEnd('OK')
-nnoremap <Leader>o :OK<CR>
-vnoremap <Leader>o :OK<CR>
-
-" editing prose
-command! -bang Prose call prose#initialize()
-" }}}
-
 " {{{ Misc Options
 
 " make backspace work the way it dos in most editors
