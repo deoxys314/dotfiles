@@ -105,3 +105,16 @@ namespace ExtensionMethods {
     }
 }
 ```
+
+## sparse git checkout
+
+```shell
+git clone <URL> --no-checkout --depth 1 <directory>
+cd <directory>
+git sparse-checkout init --cone # to fetch only root files
+git sparse-checkout set apps/my_app libs/my_lib # etc, to list sub-folders to checkout
+# they are checked out immediately after this command, no need to run git pull
+```
+Adjust value of `--depth` for more or less history.
+
+[See here for more discussion.](https://stackoverflow.com/a/60729017)
