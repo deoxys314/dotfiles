@@ -251,6 +251,9 @@ set formatoptions-=t " but don't auto-format text
 
 " automagically load changes from disk
 set autoread
+
+" set a default and good enough omnifunc
+set omnifunc=syntaxcomplete#Complete
 " }}}
 
 " {{{ Key and Command Mappings
