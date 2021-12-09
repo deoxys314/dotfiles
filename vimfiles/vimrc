@@ -26,25 +26,6 @@ if executable('git')
 	set updatetime=1000
 end
 
-" mucomplete
-set completeopt=menuone
-set completeopt+=noinsert
-set belloff+=ctrlg
-set shortmess+=c
-let s:text_chain = ['uspl', 'dict', 'path', 'omni']
-let g:mucomplete#chains = {
-			\ 'default': {
-			\              'default': ['omni', 'path', 'keyn', 'uspl'],
-			\              '.*[Ss]tring.*': ['uspl'],
-			\              '.*[Cc]omment.*': ['uspl'],
-			\            },
-			\ 'fish': ['omni', 'file', 'incl'],
-			\ 'markdown': s:text_chain,
-			\ 'text': s:text_chain,
-			\ 'vim': ['omni', 'path', 'cmd', 'keyn'],
-			\ }
-let g:mucomplete#spel#max = 10
-
 " }}}
 
 " {{{ Whitespace Options
