@@ -9,15 +9,6 @@
 if v:version < 705 && &shell =~# 'fish$'
     set shell=sh
 endif
-
-call plug#begin()
-call plug#end()
-
-" must be set before mappings below
-let mapleader = ' '
-let maplocalleader = mapleader
-" }}}
-
 " 
 
 " {{{ Whitespace Options
