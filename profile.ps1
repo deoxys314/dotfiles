@@ -46,16 +46,12 @@ Function prompt {
 
     # if posh-git is available, run the relevant bit here.
     if (Get-Command Write-VcsStatus -errorAction SilentlyContinue) {
-        $prompt = Write-VcsStatus
+         Write-VcsStatus
     }
 
     Write-Host " >" -nonewline -foregroundcolor Gray
 
-    if ($prompt) {
-        return " "
-    } else {
-        return " "
-    }
+    return " "
 }
 
 Function Edit-Profile {
