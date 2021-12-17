@@ -34,6 +34,8 @@ Plug 'gabrielelana/vim-markdown'
 
 " Programming (general):
 Plug 'alvan/vim-closetag'
+" you have to set this before the plugin is loaded
+let g:polyglot_disabled = ['markdown']
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-commentary'
 Plug 'w0rp/ale'
