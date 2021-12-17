@@ -1,0 +1,5 @@
+Execute (NOP):
+  :
+
+Then (Asserts are working):
+  Assert 1, 'Asserts are failing'

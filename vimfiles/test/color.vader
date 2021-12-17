@@ -1,0 +1,9 @@
+Execute (changing color scheme):
+  colorscheme default
+  let all_color_schemes = color#GetColorSchemes()
+  let starting_color = g:colors_name
+  call color#NextColorScheme()
+
+Then (Color scheme is changed):
+  Assert index(all_color_schemes, g:colors_name), 'Colorscheme is not found in list'
+  Assert (starting_color !=? g:colors_name), 'Colorscheme did not change'
