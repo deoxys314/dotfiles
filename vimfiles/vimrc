@@ -16,7 +16,6 @@ call plug#begin()
 Plug 'airblade/vim-rooter'
 Plug 'tpope/vim-obsession' " session management
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-scriptease'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-vinegar' " better netrw
@@ -44,6 +43,7 @@ Plug 'lervag/vimtex'
 
 " Git:
 Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
 Plug 'rhysd/git-messenger.vim'
 
 " Python:
