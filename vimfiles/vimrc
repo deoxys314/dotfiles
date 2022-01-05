@@ -314,8 +314,8 @@ set visualbell
 " Make spell not take over entire screen
 set spellsuggest=15
 
-" no modelines: potential security issue
-set modelines=0
+" enable modelines
+set modeline modelines=5 nomodelineexpr
 
 " sensible printing defaults
 set printoptions+=header:0
