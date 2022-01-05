@@ -107,6 +107,7 @@ let g:mucomplete#chains = {
 			\ 'vim': ['omni', 'path', 'cmd', 'keyn'],
 			\ }
 let g:mucomplete#spel#max = 10
+:MUcompleteNotify 2
 
 " netrw/vim-vinegar
 let g:netrw_dirhistmax = 0 " history is not needed
