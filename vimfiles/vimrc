@@ -97,9 +97,9 @@ set shortmess+=c
 let s:text_chain = ['uspl', 'dict', 'path', 'omni']
 let g:mucomplete#chains = {
 			\ 'default': {
-			\              'default': ['omni', 'path', 'keyn', 'uspl'],
+			\              'default': ['keyn', 'omni', 'path', 'uspl', 'defs'],
 			\              '.*[Ss]tring.*': ['uspl'],
-			\              '.*[Cc]omment.*': ['uspl'],
+			\              '.*[Cc]omment.*': ['uspl', 'keyn', 'defs'],
 			\            },
 			\ 'fish': ['omni', 'file', 'incl'],
 			\ 'markdown': s:text_chain,
@@ -107,7 +107,7 @@ let g:mucomplete#chains = {
 			\ 'vim': ['omni', 'path', 'cmd', 'keyn'],
 			\ }
 let g:mucomplete#spel#max = 10
-:MUcompleteNotify 2
+call mucomplete#msg#set_notifications(2)
 
 " netrw/vim-vinegar
 let g:netrw_dirhistmax = 0 " history is not needed
