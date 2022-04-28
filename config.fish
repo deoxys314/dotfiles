@@ -53,11 +53,14 @@ function fish_prompt
 	end
 
 
+	# time of last prompt
+	set -l __prompt_time (set_color white)(date '+%m/%d %H:%M')(set_color normal)
+
 	# working directory
 	set -l __prompt_pwd (set_color green)(prompt_pwd)(set_color normal)
 
 	# this sets an array with no "extra" elements because unset variables expand to nothing
-	set -l __prompt_array $__prompt_host $__prompt_status $__prompt_tmux $__prompt_pwd
+	set -l __prompt_array $__prompt_host $__prompt_status $__prompt_tmux $__prompt_time $__prompt_pwd
 
 
 	# if this isn't set by a per-system customization
