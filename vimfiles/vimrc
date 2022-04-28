@@ -23,6 +23,7 @@ Plug 'tpope/vim-obsession' " session management
 Plug 'tpope/vim-scriptease'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-vinegar' " better netrw
+Plug 'Yggdroot/indentLine'
 
 " Colors:
 Plug 'chriskempson/base16-vim'
@@ -134,7 +135,7 @@ let &showbreak = '--> '
 set breakindent
 
 set list
-set listchars=eol:$,tab:>\ ,nbsp:#,trail:_,extends:>,precedes:<,nbsp:#
+set listchars=eol:$,tab:\|\ ,nbsp:#,trail:_,extends:>,precedes:<,nbsp:#
 " }}}
 
 " {{{ Display Options
