@@ -185,7 +185,7 @@ set sidescroll=1
 
 " folding options
 set foldmethod=marker
-set foldlevel=1
+set foldlevelstart=99
 set foldopen+=all
 set foldclose=all
 
