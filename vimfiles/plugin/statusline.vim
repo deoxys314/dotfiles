@@ -68,6 +68,14 @@ function! ObsessionStatusLine() abort
 	endif
 endfunction
 
+function! FugitiveStatusLine() abort
+	if !exists('g:loaded_fugitive')
+		return ''
+	else
+		return FugitiveStatusline()
+	endif
+endfunction
+
 function! ActiveStatusLine() abort
 	" Sections:
 	" Mode:
@@ -80,6 +88,8 @@ function! ActiveStatusLine() abort
 	let l:statusline .= '%(%y[%{&ff}]%)'
 	" Location:
 	let l:statusline .= '%([%3p%%]%)%([x:%2c y:%2l z:%{&foldlevel}]%)'
+	" Fugitive:
+	let l:statusline .= '%(%{FugitiveStatusLine()}%)'
 	" Obsession:
 	let l:statusline .= '%(%{ObsessionStatusLine()}%)'
 
