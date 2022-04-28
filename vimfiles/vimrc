@@ -14,15 +14,15 @@ call plug#begin()
 
 " Vim:
 Plug 'airblade/vim-rooter'
-Plug 'tpope/vim-obsession' " session management
+Plug 'andymass/vim-matchup' " improvement on matchit
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'junegunn/vader.vim'
+Plug 'lifepillar/vim-mucomplete'
+Plug 'tpope/vim-apathy' " set &path
+Plug 'tpope/vim-obsession' " session management
 Plug 'tpope/vim-scriptease'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-vinegar' " better netrw
-Plug 'lifepillar/vim-mucomplete'
-Plug 'junegunn/vader.vim'
-Plug 'tpope/vim-apathy' " set &path
-Plug 'andymass/vim-matchup' " improvement on matchit
 
 " Colors:
 Plug 'chriskempson/base16-vim'
