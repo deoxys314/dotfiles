@@ -18,6 +18,7 @@ Plug 'andymass/vim-matchup' " improvement on matchit
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'junegunn/vader.vim'
 Plug 'lifepillar/vim-mucomplete'
+Plug 'preservim/tagbar'
 Plug 'tpope/vim-apathy' " set &path
 Plug 'tpope/vim-obsession' " session management
 Plug 'tpope/vim-scriptease'
@@ -119,6 +120,21 @@ let g:rooter_silent_chdir = 1
 
 " SimplyFold
 let g:SimpylFold_docstring_preview = 1
+
+" Tagbar
+nnoremap <silent> <F8> :TagbarToggle<CR>
+nnoremap <silent> TT :TagbarToggle<CR>
+let g:tagbar_position = 'topleft vertical'
+let g:tagbar_zoomwidth = 0
+let g:tagbar_autofocus = 1
+let g:tagbar_sort = 0
+let g:tagbar_compact = 1
+let g:tagbar_indent = 1
+let g:tagbar_show_data_type = 1
+let g:tagbar_show_visibility = 1
+let g:tagbar_show_tag_linenumbers = 1
+let g:tagbar_show_tag_count = 1
+let g:tagbar_autoshowtag = 1
 
 " }}}
 
