@@ -87,7 +87,7 @@ function! ActiveStatusLine() abort
 	" File Info:
 	let l:statusline .= '%(%y[%{&ff}]%)'
 	" Location:
-	let l:statusline .= '%([%3p%%]%)%([x:%2c y:%2l z:%{&foldlevel}]%)'
+	let l:statusline .= '%([%3p%%]%)%([x:%2c y:%2l]%)'
 	" Fugitive:
 	let l:statusline .= '%(%{FugitiveStatusLine()}%)'
 	" Obsession:
