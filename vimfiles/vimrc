@@ -357,7 +357,7 @@ endif
 
 " some settings that can't be done from a ftplugin (or it would be onerous to
 " do so)
-augroup virmc
+augroup vimrc
 	autocmd!
 	autocmd BufNewFile,BufRead *.js,*.css,*.htm,*.html,*.php
 	  \ setlocal
