@@ -20,6 +20,9 @@ Plug 'junegunn/vader.vim'
 Plug 'lifepillar/vim-mucomplete'
 Plug 'preservim/tagbar'
 Plug 'tpope/vim-apathy' " set &path
+Plug 'tpope/vim-characterize' " hacks ga for better character information
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-eunuch' " helpers for common UNIX-y operations
 Plug 'tpope/vim-obsession' " session management
 Plug 'tpope/vim-projectionist' " per-project settings
 Plug 'tpope/vim-scriptease'
