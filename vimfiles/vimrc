@@ -37,6 +37,7 @@ Plug 'cormacrelf/vim-colors-github'
 " Prose:
 Plug 'freitass/todo.txt-vim'
 Plug 'gabrielelana/vim-markdown'
+Plug 'junegunn/goyo.vim'
 
 " Programming (general):
 Plug 'alvan/vim-closetag'
@@ -91,6 +92,24 @@ let g:git_messenger_close_on_cursor_moved = v:false
 let g:git_messenger_date_format = '%F %H:%M:%S'
 let g:git_messenger_include_diff = 'current'
 let g:git_messenger_max_popup_height = 20
+
+" Goyo
+function! s:goyo_enter() abort
+	if executable('tmux') && strlen($TMUX)
+		silent !tmux set status off
+	endif
+	set noshowcmd
+endfunction
+
+function! s:goyo_leave() abort
+	if executable('tmux') && strlen($TMUX)
+		silent !tmux set status on
+	endif
+	set showcmd
+endfunction
+
+autocmd! User GoyoEnter nested call <SID>goyo_enter()
+autocmd! User GoyoLeave nested call <SID>goyo_leave()
 
 " Markdown
 let g:markdown_mapping_switch_status = '<space>,'
