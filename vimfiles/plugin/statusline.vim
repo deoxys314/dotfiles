@@ -1,11 +1,5 @@
 scriptencoding utf-8
 
-" Constants
-let s:true = 1
-let s:false = 0
-let s:filled = '█'
-let s:empty = '░'
-
 " Private functions
 function! s:set_colors() abort
 	highlight! link User1 Directory
@@ -35,22 +29,6 @@ function! s:update_inactive_windows() abort
 endfunction
 
 " Public Functions
-
-function! StatuslineScrollbar(width) abort
-	" The various calls to round() are to make Numbers into Floats, otherwise
-	" Vim just drops the remainder because a Number/Number -> Number.
-	let l:pos = line('.') / round(line('$'))
-
-	let l:scrollbar = map(range(a:width), '"' . s:empty . '"')
-	for l:n in range(a:width)
-		if (((l:n + 1) / round(a:width)) > l:pos)
-			break
-		endif
-	endfor
-	let l:scrollbar[l:n] = s:filled
-
-	return join(l:scrollbar, '')
-endfunction
 
 function! ShortFilePath() abort
 	if &buftype ==# 'terminal'
