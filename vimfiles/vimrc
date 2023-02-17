@@ -335,6 +335,9 @@ vnoremap <Leader>o :OK<CR>
 
 " editing prose
 command! -bang Prose call prose#initialize()
+
+" Show location of file
+command! -bang Location call location#show()
 " }}}
 
 " {{{ Misc Options
