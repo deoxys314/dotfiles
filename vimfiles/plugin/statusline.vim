@@ -85,8 +85,8 @@ endfunction
 augroup StatusLine
 	autocmd!
 	autocmd VimEnter             * call s:update_inactive_windows()
-	autocmd WinEnter,BufWinEnter * call s:set_status_line(s:true)
-	autocmd WinLeave             * call s:set_status_line(s:false)
+	autocmd WinEnter,BufWinEnter * call s:set_status_line(v:true)
+	autocmd WinLeave             * call s:set_status_line(v:false)
 	autocmd ColorScheme,VimEnter * call s:set_colors()
 augroup END
 
