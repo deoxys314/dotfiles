@@ -48,9 +48,6 @@ Plug 'tpope/vim-commentary'
 let g:ale_completion_enabled = 1
 Plug 'w0rp/ale', { 'tag': '*' }
 
-" Latex:
-Plug 'lervag/vimtex'
-
 " Git:
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
