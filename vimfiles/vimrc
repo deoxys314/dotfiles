@@ -45,7 +45,8 @@ Plug 'alvan/vim-closetag'
 let g:polyglot_disabled = ['markdown']
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-commentary'
-Plug 'w0rp/ale'
+let g:ale_completion_enabled = 1
+Plug 'w0rp/ale', { 'tag': '*' }
 
 " Latex:
 Plug 'lervag/vimtex'
