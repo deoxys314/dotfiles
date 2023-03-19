@@ -21,9 +21,6 @@ endif
 Plug 'airblade/vim-rooter'
 Plug 'andymass/vim-matchup' " improvement on matchit
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'junegunn/vader.vim'
-Plug 'lifepillar/vim-mucomplete'
-Plug 'preservim/tagbar'
 Plug 'tpope/vim-apathy' " set &path
 Plug 'tpope/vim-characterize' " hacks ga for better character information
 Plug 'tpope/vim-endwise'
@@ -33,7 +30,6 @@ Plug 'tpope/vim-projectionist' " per-project settings
 Plug 'tpope/vim-scriptease'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-vinegar' " better netrw
-Plug 'Yggdroot/indentLine'
 
 " Colors:
 Plug 'chriskempson/base16-vim'
