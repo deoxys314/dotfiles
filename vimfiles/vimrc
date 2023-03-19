@@ -78,6 +78,12 @@ let g:ale_fixers.lua = ['remove_trailing_lines', 'trim_whitespace', 'lua-format'
 let g:ale_markdown_mdl_options = '--rule ~MD029 --rule ~MD005'
 let g:ale_markdown_writegood_options = '--no-passive'
 
+let g:ale_linters = get(g:, 'ale_linters', {})
+let g:ale_linters.python = ['pylsp', 'mypy', 'ruff']
+let g:ale_linters.markdown = ['markdownlint']
+let g:ale_virtualtext_prefix = ' -> '
+let g:ale_virtualtext_cursor = 'current'
+
 " Closetag
 let g:closetag_filenames='*.html,*.htm,*.xml,*.php'
 
