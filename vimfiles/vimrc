@@ -333,7 +333,7 @@ set formatoptions-=t " but don't auto-format text
 set autoread
 
 " set a default and good enough omnifunc
-set omnifunc=syntaxcomplete#Complete
+set omnifunc=ale#completion#OmniFunc
 " }}}
 
 " {{{ Key and Command Mappings
