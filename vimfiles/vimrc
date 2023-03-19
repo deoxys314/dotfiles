@@ -139,7 +139,6 @@ let g:mucomplete#chains = {
 			\ }
 let g:mucomplete#spel#max = 10
 let g:mucomplete#enable_auto_at_startup = 0
-call mucomplete#msg#set_notifications(2)
 
 " netrw/vim-vinegar
 let g:netrw_dirhistmax = 0 " history is not needed
