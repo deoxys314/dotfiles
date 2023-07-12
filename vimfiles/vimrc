@@ -185,7 +185,6 @@ if has('nvim')
 			"dockerfile",
 			"fish",
 			"go",
-			"help",
 			"html",
 			"json",
 			"json5",
