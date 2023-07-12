@@ -14,9 +14,13 @@
 
 [diff]
 	mnemonicPrefix = true
+	tool = nvimdiff
 
 [difftool]
 	prompt = false
+
+[difftool "nvimdiff"]
+	cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
 
 [merge]
 	conflictstyle = diff3
