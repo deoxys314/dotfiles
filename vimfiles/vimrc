@@ -432,6 +432,7 @@ augroup vimrc
 	autocmd BufNewFile,BufRead !status* cd %:p:h | setlocal spell
 	autocmd InsertLeave *.py,*.pyw
 	  \ if pumvisible() == 0 && winnr('$') > 1 | pclose | endif
+	autocmd BufNewFile,BufRead *.prototxt set filetype=prototxt
 augroup END
 " }}}
 
