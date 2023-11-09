@@ -200,7 +200,16 @@ if has('nvim')
 		},
 		auto_install = true,
 		highlight = {
-			enaable = true,
+			enable = true,
+			disable = {
+				"git", -- the included runtime files are more than sufficient
+				"gitattributes",
+				"gitcommit",
+				"gitconfig",
+				"gitignore",
+				"gitrebase",
+				"gitsendmail",
+			},
 		},
 		indent = {
 			enable = true,
