@@ -76,9 +76,10 @@ let g:ale_fixers.python = ['isort', 'add_blank_lines_for_python_control_statemen
   \ 'black', 'remove_trailing_lines']
 let g:ale_fixers.lua = ['remove_trailing_lines', 'trim_whitespace', 'lua-format']
 let g:ale_fixers.cpp = ['remove_trailing_lines', 'trim_whitespace', 'clang-format']
-let g:ale_fixers.fish = ['fish_indent']
+let g:ale_fixers.fish = ['fish_indent', 'trim_whitespace', 'remove_trailing_lines']
 let g:ale_fixers.json = ['jq']
 let g:ale_fixers.lua = ['luafmt']
+let g:ale_fixers.rust = ['rustfmt']
 let g:ale_fixers.markdown = ['mdl', 'pandoc', 'write-good']
 let g:ale_markdown_mdl_options = '--rule ~MD029 --rule ~MD005'
 let g:ale_markdown_writegood_options = '--no-passive'
