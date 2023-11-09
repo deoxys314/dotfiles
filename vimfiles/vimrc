@@ -132,26 +132,6 @@ autocmd! User GoyoLeave nested call <SID>goyo_leave()
 " Markdown
 let g:markdown_mapping_switch_status = '<space>,'
 
-" mucomplete
-set completeopt=menuone
-set completeopt+=noinsert
-set belloff+=ctrlg
-set shortmess+=c
-let s:text_chain = ['uspl', 'dict', 'path', 'omni']
-let g:mucomplete#chains = {
-			\ 'default': {
-			\              'default': ['keyn', 'omni', 'path', 'uspl', 'defs'],
-			\              '.*[Ss]tring.*': ['uspl'],
-			\              '.*[Cc]omment.*': ['uspl', 'keyn', 'defs'],
-			\            },
-			\ 'fish': ['omni', 'file', 'incl'],
-			\ 'markdown': s:text_chain,
-			\ 'text': s:text_chain,
-			\ 'vim': ['omni', 'path', 'cmd', 'keyn'],
-			\ }
-let g:mucomplete#spel#max = 10
-let g:mucomplete#enable_auto_at_startup = 0
-
 " netrw/vim-vinegar
 let g:netrw_dirhistmax = 0 " history is not needed
 let g:netrw_liststyle = 3  " tree style listing
