@@ -42,6 +42,7 @@ Plug 'junegunn/goyo.vim'
 
 " Programming (general):
 Plug 'alvan/vim-closetag'
+Plug 'preservim/tagbar'
 " you have to set this before the plugin is loaded
 let g:polyglot_disabled = ['markdown']
 Plug 'sheerun/vim-polyglot'
