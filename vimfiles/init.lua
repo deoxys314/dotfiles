@@ -86,7 +86,7 @@ require('lazy').setup({
     {
         'preservim/tagbar',
         config = function()
-            g.tagbar_position = 'topleft_vertical'
+            g.tagbar_position = 'topleft vertical'
             g.tagbar_zoomwidth = 0
             g.tagbar_autofocus = 1
             g.tagbar_sort = 0
@@ -101,6 +101,9 @@ require('lazy').setup({
             vim.keymap.set('n', '<F8>', ':TagbarToggle<CR>', { silent = true })
             vim.keymap.set('n', 'TT', ':TagbarToggle<CR>', { silent = true })
         end,
+        enabled = vim.fn.executable('ctags'),
+        lazy = true,
+        keys = { '<F8>', 'TT' },
     },
     {
         'rhysd/git-messenger.vim',
