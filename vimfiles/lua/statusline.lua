@@ -37,6 +37,7 @@ local function short_file_path()
         return fn.pathshorten(fn.fnamemodify(fn.expand('%:p'), ':~:.'))
     end
 end
+module.short_file_path = short_file_path
 
 local function fugitive_status_line()
     if vim.g.loaded_fugitive ~= nil then
@@ -74,7 +75,7 @@ module.active_status_line = function()
     })
 end
 
-module.inactive_status_line = function() return '  %(' .. short_file_path() .. '%h%m%r%)' end
-module.no_file_status_line = function() return '  %(' .. short_file_path() .. '%)' end
+module.inactive_status_line = function() return [[  %(]] .. short_file_path() .. [[%)%(%h%)%(%m%)%(%r%)]] end
+module.no_file_status_line = function() return [[  %(]] .. short_file_path() .. [[%)]] end
 
 return module
