@@ -134,6 +134,19 @@ require('lazy').setup({
         end,
     },
     {
+        'williamboman/mason.nvim',
+        version = '*',
+        dependencies = { 'williamboman/mason-lspconfig.nvim', 'neovim/nvim-lspconfig' },
+        config = function()
+            require('mason').setup()
+            require('mason-lspconfig').setup({
+                ensure_installed = { 'clangd', 'jsonls', 'lua_ls', 'pylsp' },
+            })
+            require('lspconfig').clangd.setup({ filetypes = { 'c', 'cpp', 'h', 'hpp' } })
+        end,
+        enabled = false, -- this is experimental at best
+    },
+    {
         'w0rp/ale',
         version = '*',
         config = function()
