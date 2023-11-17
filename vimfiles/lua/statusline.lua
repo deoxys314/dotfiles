@@ -39,7 +39,7 @@ local function short_file_path()
 end
 
 local function fugitive_status_line()
-    if vim.g.laoded_fugitive ~= nil then
+    if vim.g.loaded_fugitive ~= nil then
         return vim.api.nvim_eval('FugitiveStatusLine()')
     else
         return ''
