@@ -278,7 +278,7 @@ opt.incsearch = true
 opt.ignorecase = true
 opt.smartcase = true
 
-local function toggle_seatch_hls(on_enter)
+local function toggle_search_hls(on_enter)
     if on_enter then
         _G.hls_on = opt.hlsearch:get()
     else
@@ -293,12 +293,12 @@ local VimrcIncsearchHighlight = vim.api.nvim_create_augroup('VimrcIncsearchHighl
                                                             { clear = true })
 vim.api.nvim_create_autocmd({ 'CmdLineEnter' }, {
     pattern = [=[[/\?]]=],
-    callback = function() toggle_seatch_hls(true) end,
+    callback = function() toggle_search_hls(true) end,
     group = VimrcIncsearchHighlight,
 })
 vim.api.nvim_create_autocmd({ 'CmdLineLeave' }, {
     pattern = [=[[/\?]]=],
-    callback = function() toggle_seatch_hls(false) end,
+    callback = function() toggle_search_hls(false) end,
     group = VimrcIncsearchHighlight,
 })
 
