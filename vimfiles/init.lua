@@ -418,10 +418,7 @@ vim.cmd.colorscheme('base16-solarized-dark')
 
 -- Gui Options
 
-if vim.fn.has('gui_running') ~= 0 then
+pcall(function()
     opt.guioptions:remove({ 'e', 'T', 'l', 'L', 'r', 'R', 'm' })
     opt.guioptions:append({ 'c' })
-    vim.o.guifont = 'Consolas:h13:cANSI:qDEFAULT'
-    opt.lines = 40
-    opt.columns = 120
-end
+end)
