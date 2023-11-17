@@ -69,7 +69,7 @@ module.active_status_line = function()
         '%)', -- fugitive
         '%(',
         obsession_status_line(),
-        '%0', -- obsession
+        '%)', -- obsession
 
     })
 end
