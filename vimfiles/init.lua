@@ -34,6 +34,16 @@ require('lazy').setup({
     { 'chriskempson/base16-vim' },
     { 'christoomey/vim-tmux-navigator' },
     {
+        'dcampos/nvim-snippy',
+        config = {
+            mappings = {
+                is = { ['<Tab>'] = 'expand_or_advance', ['<S-Tab>'] = 'previous' },
+                nx = { ['<leader>x'] = 'cut_text' },
+            },
+        },
+        dependencies = { 'honza/vim-snippets' },
+    },
+    {
         'gabrielelana/vim-markdown',
         config = function() g.markdown_mapping_switch_status = '<space>,' end,
     },
