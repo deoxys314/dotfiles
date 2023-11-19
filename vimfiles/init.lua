@@ -171,7 +171,7 @@ require('lazy').setup({
             vim.keymap.set('n', '<F8>', ':TagbarToggle<CR>', { silent = true })
             vim.keymap.set('n', 'TT', ':TagbarToggle<CR>', { silent = true })
         end,
-        enabled = vim.fn.executable('ctags'),
+        enabled = vim.fn.executable('ctags') == 1,
         lazy = true,
         keys = { '<F8>', 'TT' },
     },
