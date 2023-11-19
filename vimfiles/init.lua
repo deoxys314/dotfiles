@@ -44,15 +44,75 @@ require('lazy').setup({
         dependencies = { 'honza/vim-snippets' },
     },
     {
-        'gabrielelana/vim-markdown',
-        config = function() g.markdown_mapping_switch_status = '<space>,' end,
+        'folke/zen-mode.nvim',
+        opts = {
+            window = {
+                width = .85,
+                height = .85,
+                options = {
+                    signcolumn = 'no',
+                    number = false,
+                    relativenumber = false,
+                    cursorline = false,
+                    cursorcolumn = false,
+                    foldcolumn = '0',
+                    list = false,
+                },
+            },
+            plugins = {
+                -- disable some global vim options (vim.o...)
+                options = {
+                    enabled = true,
+                    ruler = false, -- disables the ruler text in the cmd line area
+                    showcmd = false, -- disables the command in the last line of the screen
+                    -- laststatus = 0, -- turn off the statusline in zen mode
+                },
+                twilight = { enabled = true }, -- enable to start Twilight when zen mode opens
+                gitsigns = { enabled = false }, -- disables git signs
+                tmux = { enabled = false }, -- disables the tmux statusline
+            },
+            on_open = function(win) end,
+            on_close = function() end,
+        },
+        config = function()
+            vim.api.nvim_create_user_command('Prose', function()
+                require('zen-mode').toggle({
+                    window = {
+                        width = .8,
+                        height = 1,
+                        options = {
+                            signcolumn = 'no',
+                            number = false,
+                            relativenumber = false,
+                            cursorline = false,
+                            cursorcolumn = false,
+                            foldcolumn = '0',
+                            list = false,
+                        },
+                    },
+                })
+            end, { force = false, desc = 'Setup neovim for writing prose' })
+        end,
+        dependencies = {
+            'folke/twilight.nvim',
+            opts = {
+                context = 5,
+                treesitter = false,
+                exclude = {
+                    'git',
+                    'gitattributes',
+                    'gitcommit',
+                    'gitconfig',
+                    'gitignore',
+                    'gitrebase',
+                    'gitsendmail',
+                },
+            },
+        },
     },
     {
-        'junegunn/goyo.vim',
-        config = function()
-            g.goyo_width = '90%'
-            g.goyo_height = '80%'
-        end,
+        'gabrielelana/vim-markdown',
+        config = function() g.markdown_mapping_switch_status = '<space>,' end,
     },
     {
         'nvim-treesitter/nvim-treesitter',
