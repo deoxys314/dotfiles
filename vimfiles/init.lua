@@ -117,7 +117,7 @@ require('lazy').setup({
     {
         'nvim-treesitter/nvim-treesitter',
         build = ':TSUpdate',
-        config = {
+        opts = {
             ensure_installed = {
                 'c',
                 'cmake',
