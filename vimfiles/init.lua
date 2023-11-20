@@ -3,6 +3,9 @@ local opt = vim.opt
 -- some setup before plugins run
 g.mapleader = ' '
 g.polyglot_disabled = { 'markdown' }
+local function is_executable(program_name)
+    return vim.fn.executable(program_name) == 1
+end
 
 -- Make sure Lazy is installed
 local lazypath = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
@@ -21,7 +24,7 @@ vim.opt.rtp:prepend(lazypath)
 require('lazy').setup({
     {
         'airblade/vim-gitgutter',
-        config = function() if vim.fn.executable('git') then vim.opt.updatetime = 100 end end,
+        config = function() if is_executable('git') then vim.opt.updatetime = 100 end end,
     },
     { 'airblade/vim-rooter', config = function() g.rooter_silent_chdir = 1 end },
     {
@@ -171,7 +174,7 @@ require('lazy').setup({
             vim.keymap.set('n', '<F8>', ':TagbarToggle<CR>', { silent = true })
             vim.keymap.set('n', 'TT', ':TagbarToggle<CR>', { silent = true })
         end,
-        enabled = vim.fn.executable('ctags') == 1,
+        enabled = is_executable('ctags'),
         lazy = true,
         keys = { '<F8>', 'TT' },
     },
@@ -391,9 +394,9 @@ vim.api.nvim_create_autocmd({ 'CmdLineLeave' }, {
 vim.keymap.set({ 'n', 'v' }, '/', '/\\v')
 vim.keymap.set({ 'n', 'v' }, '?', '?\\v')
 
-if vim.fn.executable('rg') then
+if is_executable('rg') then
     opt.grepprg = 'rg --vimgrep -- $*'
-elseif vim.fn.executable('grep') then
+elseif is_executable('grep') then
     opt.grepprg = 'grep -Rn -- $*'
 else
     opt.grepprg = internal
