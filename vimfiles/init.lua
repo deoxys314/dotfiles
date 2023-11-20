@@ -466,8 +466,6 @@ opt.encoding = 'utf-8'
 
 opt.history = 1000
 
-opt.fileformat = 'unix'
-
 opt.visualbell = true
 
 opt.spellsuggest = '15'
