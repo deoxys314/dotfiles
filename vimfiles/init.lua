@@ -443,6 +443,22 @@ vim.keymap.set('n', 'ZA', ':w<CR>')
 
 opt.mouse = 'a'
 
+vim.api.nvim_create_user_command('LPP', function(opts)
+    local args = opts.args
+    if args == nil then return end
+    local func, err = load('return ' .. args)
+    if func then
+        local ok, res = pcall(func)
+        if ok then
+            require('pprint').print(res)
+        else
+            print('Execution error: ', res)
+        end
+    else
+        print('Compilation error: ', err)
+    end
+end, { nargs = 1, complete = 'lua', bang = false, bar = false })
+
 -- Misc Options
 
 opt.backspace = { 'indent', 'eol', 'start' }
