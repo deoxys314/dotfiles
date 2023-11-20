@@ -3,9 +3,7 @@ local opt = vim.opt
 -- some setup before plugins run
 g.mapleader = ' '
 g.polyglot_disabled = { 'markdown' }
-local function is_executable(program_name)
-    return vim.fn.executable(program_name) == 1
-end
+local function is_executable(program_name) return vim.fn.executable(program_name) == 1 end
 
 -- Make sure Lazy is installed
 local lazypath = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
