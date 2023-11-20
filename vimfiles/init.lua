@@ -4,6 +4,7 @@ local opt = vim.opt
 g.mapleader = ' '
 g.polyglot_disabled = { 'markdown' }
 local function is_executable(program_name) return vim.fn.executable(program_name) == 1 end
+local USER_HOME = os.getenv('HOME') or (os.getenv('homedrive') .. os.getenv('homepath'))
 
 -- Make sure Lazy is installed
 local lazypath = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
@@ -247,7 +248,7 @@ require('lazy').setup({
     },
 
 }, {
-    performance = { rtp = { paths = { os.getenv('HOME') .. '/dotfiles/vimfiles' } } },
+    performance = { rtp = { paths = { USER_HOME .. '/dotfiles/vimfiles' } } },
     ui = {
         icons = {
             cmd = '⌘',
@@ -405,7 +406,7 @@ vim.cmd([[command! -nargs=+ -bar Grep silent! grep! <args> | cwindow | redraw!]]
 -- Editing
 opt.virtualedit:append('block')
 
-local swap = os.getenv('HOME') .. '/vimswap'
+local swap = USER_HOME .. '/vimswap'
 if not vim.fn.isdirectory(swap) then vim.fn.mkdir(swap, 'p') end
 opt.swapfile = true
 opt.directory:remove('.')
