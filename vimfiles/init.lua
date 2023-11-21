@@ -97,6 +97,7 @@ require('lazy').setup({
         end,
         dependencies = {
             'folke/twilight.nvim',
+            version = '*',
             opts = {
                 context = 5,
                 treesitter = false,
