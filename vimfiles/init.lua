@@ -215,7 +215,7 @@ require('lazy').setup({
     { 'tpope/vim-commentary', keys = 'gcc' },
     { 'tpope/vim-endwise' },
     { 'tpope/vim-eunuch' },
-    { 'tpope/vim-fugitive', version = '*', cmd = 'G' },
+    { 'tpope/vim-fugitive', version = '*' },
     { 'tpope/vim-obsession', cmd = 'Obsession' },
     { 'tpope/vim-projectionist' },
     {
