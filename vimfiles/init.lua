@@ -121,7 +121,7 @@ require('lazy').setup({
         'gabrielelana/vim-markdown',
         config = function() g.markdown_mapping_switch_status = '<space>,' end,
     },
-    { 'ggandor/leap.nvim' },
+    { 'ggandor/leap.nvim', config = function() require('leap').add_default_mappings() end },
     {
         'lukas-reineke/indent-blankline.nvim',
         main = 'ibl',
