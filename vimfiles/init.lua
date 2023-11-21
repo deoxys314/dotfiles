@@ -51,6 +51,7 @@ require('lazy').setup({
         'folke/zen-mode.nvim',
         version = '*',
         cmd = { 'ZenMode', 'Prose' },
+        ft = { 'markdown', 'rst' },
         opts = {
             window = {
                 width = .85,
@@ -125,6 +126,7 @@ require('lazy').setup({
     },
     {
         'gabrielelana/vim-markdown',
+        ft = { 'markdown' },
         config = function() g.markdown_mapping_switch_status = '<space>,' end,
     },
     { 'ggandor/leap.nvim', config = function() require('leap').add_default_mappings() end },
