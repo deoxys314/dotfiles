@@ -208,7 +208,7 @@ require('lazy').setup({
     { 'tpope/vim-endwise' },
     { 'tpope/vim-eunuch' },
     { 'tpope/vim-fugitive', version = '*', cmd = 'G' },
-    { 'tpope/vim-obsession' },
+    { 'tpope/vim-obsession', cmd = 'Obsession' },
     { 'tpope/vim-projectionist' },
     { 'tpope/vim-scriptease' },
     { 'tpope/vim-surround' },
