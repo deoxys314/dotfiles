@@ -117,6 +117,14 @@ require('lazy').setup({
         'gabrielelana/vim-markdown',
         config = function() g.markdown_mapping_switch_status = '<space>,' end,
     },
+    { 'ggandor/leap.nvim' },
+    {
+        'lukas-reineke/indent-blankline.nvim',
+        main = 'ibl',
+        opts = { indent = { char = { '▏' } } },
+        version = '*',
+        enabled = true,
+    },
     {
         'nvim-treesitter/nvim-treesitter',
         version = '*',
