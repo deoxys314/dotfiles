@@ -271,24 +271,29 @@ require('lazy').setup({
 }, {
     performance = { rtp = { paths = { USER_HOME .. '/dotfiles/vimfiles' } } },
     ui = {
+        border = 'shadow',
+        title = 'Lazy Plugin Manager',
+        title_pos = 'left',
         icons = {
-            cmd = '⌘',
+            cmd = ':',
             config = '¤',
             event = '%',
             ft = '&',
             init = '⚙',
             keys = '#',
-            plugin = '@',
-            runtime = '<=>',
+            plugin = '<-',
+            runtime = '@',
             require = '%',
             source = '{}',
-            start = '>',
+            start = '^',
             task = '*',
             lazy = '…',
         },
     },
     profiling = { loader = true, require = true },
 })
+vim.keymap.set('n', '<leader>l', function() require('lazy').home() end,
+               { desc = 'Open Lazy home window' })
 
 -- Statusline
 
