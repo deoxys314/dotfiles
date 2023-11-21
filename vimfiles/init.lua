@@ -210,7 +210,12 @@ require('lazy').setup({
     { 'tpope/vim-fugitive', version = '*', cmd = 'G' },
     { 'tpope/vim-obsession', cmd = 'Obsession' },
     { 'tpope/vim-projectionist' },
-    { 'tpope/vim-scriptease' },
+    {
+        'tpope/vim-scriptease',
+        version = '*',
+        keys = { 'zS', { 'K', ft = { 'vim' } } },
+        cmd = { 'Breakadd', 'Breakdel', 'Messages', 'PP', 'PPMsg', 'Scriptnames', 'Verbose' },
+    },
     { 'tpope/vim-surround' },
     {
         'tpope/vim-vinegar',
