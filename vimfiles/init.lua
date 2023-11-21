@@ -50,7 +50,7 @@ require('lazy').setup({
     {
         'folke/zen-mode.nvim',
         version = '*',
-        cmd = { 'ZenMode' },
+        cmd = { 'ZenMode', 'Prose' },
         opts = {
             window = {
                 width = .85,
@@ -77,8 +77,14 @@ require('lazy').setup({
                 gitsigns = { enabled = false }, -- disables git signs
                 tmux = { enabled = false }, -- disables the tmux statusline
             },
-            on_open = function(win) end,
-            on_close = function() end,
+            on_open = function(win)
+                _G.zen_mode_stored_scrolloff = opt.scrolloff:get()
+                opt.scrolloff = 99
+            end,
+            on_close = function()
+                opt.scrolloff = _G.zen_mode_stored_scrolloff or 4
+                _G.zen_mode_stored_scrolloff = nil
+            end,
         },
         config = function()
             vim.api.nvim_create_user_command('Prose', function()
