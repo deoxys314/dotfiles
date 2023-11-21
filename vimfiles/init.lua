@@ -31,12 +31,14 @@ require('lazy').setup({
         config = function()
             g.closetag_filenames = table.concat({ '*.html', '*.htm', '*.xml', '*.php' }, ',')
         end,
+        ft = { 'html', 'htm', 'xml', 'php' },
     },
     { 'andymass/vim-matchup' },
     { 'chriskempson/base16-vim' },
     { 'christoomey/vim-tmux-navigator' },
     {
         'dcampos/nvim-snippy',
+        event = 'InsertEnter',
         config = {
             mappings = {
                 is = { ['<Tab>'] = 'expand_or_advance', ['<S-Tab>'] = 'previous' },
@@ -47,6 +49,8 @@ require('lazy').setup({
     },
     {
         'folke/zen-mode.nvim',
+        version = '*',
+        cmd = { 'ZenMode' },
         opts = {
             window = {
                 width = .85,
@@ -197,19 +201,20 @@ require('lazy').setup({
             g.git_messenger_max_popup_height = 20
         end,
     },
-    { 'rust-lang/rust.vim' },
+    { 'rust-lang/rust.vim', ft = 'rust' },
     { 'sheerun/vim-polyglot' },
     { 'tpope/vim-apathy' },
-    { 'tpope/vim-commentary' },
+    { 'tpope/vim-commentary', keys = 'gcc' },
     { 'tpope/vim-endwise' },
     { 'tpope/vim-eunuch' },
-    { 'tpope/vim-fugitive', version = '*' },
+    { 'tpope/vim-fugitive', version = '*', cmd = 'G' },
     { 'tpope/vim-obsession' },
     { 'tpope/vim-projectionist' },
     { 'tpope/vim-scriptease' },
     { 'tpope/vim-surround' },
     {
         'tpope/vim-vinegar',
+        keys = { '-' },
         config = function()
             g.netrw_dirhistmax = 0
             g.netrw_liststyle = 3 -- tree style listing
