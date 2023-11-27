@@ -1,12 +1,11 @@
 [alias]
-	com = commit
 	dt = difftool
+	st = status
 	lg = !"git lg4"
 	lg1 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
 	lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
 	lg3 = log --graph --abbrev-commit --decorate --format=format:'%C(blue)%h%C(reset) - %C(green)%an, %ar%C(reset)%C(yellow)%d%C(reset)%n%C(bold yellow)%s%C(reset)%n%b' --all
-	st = status
-	lg4 = log --graph --decorate=short --all \
+	lg4 = log --graph --decorate=short \
 		--format=format:'%C(bold yellow)%h%C(reset) - %C(green)%an, %ar%C(red)%d%C(reset)%n%C(bold green)%s%C(reset)%n%n%b'
 
 [commit]
