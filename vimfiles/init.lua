@@ -34,7 +34,7 @@ require('lazy').setup({
         ft = { 'html', 'htm', 'xml', 'php' },
     },
     { 'andymass/vim-matchup' },
-    { 'chriskempson/base16-vim' },
+    { 'chriskempson/base16-vim', priority = 1000, enabled = true },
     { 'christoomey/vim-tmux-navigator' },
     {
         'dcampos/nvim-snippy',
