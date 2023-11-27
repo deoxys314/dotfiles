@@ -246,7 +246,7 @@ require('lazy').setup({
         end,
         enabled = false, -- this is experimental at best
     },
-    { 'windwp/nvim-autopairs', event = 'InsertEnter', opts = {} },
+    { 'windwp/nvim-autopairs', event = 'InsertEnter', opts = {}, enabled = false },
     {
         'w0rp/ale',
         version = '*',
