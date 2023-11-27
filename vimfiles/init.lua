@@ -38,7 +38,7 @@ require('lazy').setup({
     { 'christoomey/vim-tmux-navigator' },
     {
         'dcampos/nvim-snippy',
-        event = 'InsertEnter',
+        event = { 'InsertEnter' },
         config = {
             mappings = {
                 is = { ['<Tab>'] = 'expand_or_advance', ['<S-Tab>'] = 'previous' },
