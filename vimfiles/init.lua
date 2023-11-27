@@ -514,7 +514,7 @@ if opt.diff:get() then
     vim.cmd('silent! ALEDisable')
 
     opt.number = false
-    opt.signcolumn = false
+    opt.signcolumn = 'no'
     opt.foldopen:remove('all')
 end
 
