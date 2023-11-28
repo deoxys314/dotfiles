@@ -192,8 +192,10 @@ require('lazy').setup({
             g.tagbar_show_tag_count = 1
             g.tagbar_autoshowtag = 1
 
-            vim.keymap.set('n', '<F8>', ':TagbarToggle<CR>', { silent = true })
-            vim.keymap.set('n', 'TT', ':TagbarToggle<CR>', { silent = true })
+            vim.keymap.set('n', '<F8>', ':TagbarToggle<CR>',
+                           { silent = true, noremap = true, desc = 'Toggle Tagbar.' })
+            vim.keymap.set('n', 'TT', ':TagbarToggle<CR>',
+                           { silent = true, noremap = true, desc = 'Toggle Tagbar.' })
         end,
         enabled = is_executable('ctags'),
         lazy = true,
@@ -317,22 +319,25 @@ vim.api.nvim_create_autocmd({ 'VimEnter' }, {
     pattern = '*',
     callback = statusline.update_inactive_windows,
     group = StatusLine,
-    desc = 'set statuslines properly',
+    desc = 'Initialize statusline at startup.',
 })
 vim.api.nvim_create_autocmd({ 'WinEnter', 'BufWinEnter' }, {
     pattern = '*',
     callback = function() statusline.set_status_line(true) end,
     group = StatusLine,
+    desc = 'Set active window statusline.',
 })
 vim.api.nvim_create_autocmd({ 'WinLeave' }, {
     pattern = '*',
     callback = function() statusline.set_status_line(false) end,
     group = StatusLine,
+    desc = 'Set inactive window statusline.',
 })
 vim.api.nvim_create_autocmd({ 'ColorScheme', 'VimEnter' }, {
     pattern = '*',
     callback = statusline.set_colors,
     group = StatusLine,
+    desc = 'Fix statusline colors.',
 })
 
 -- Whitespace
@@ -379,7 +384,8 @@ vim.keymap.set('n', 'k', 'gk')
 vim.keymap.set('n', 'gk', 'k')
 
 for _, key in ipairs({ 'H', 'J', 'K', 'L' }) do
-    vim.keymap.set('n', string.format('<C-%s>', key), string.format('<C-W><C-%s>', key))
+    vim.keymap.set('n', string.format('<C-%s>', key), string.format('<C-W><C-%s>', key),
+                   { noremap = true, desc = string.format('Move across windows with %s', key) })
 end
 
 opt.scrolloff = 4
@@ -424,8 +430,8 @@ vim.api.nvim_create_autocmd({ 'CmdLineLeave' }, {
     group = VimrcIncsearchHighlight,
 })
 
-vim.keymap.set({ 'n', 'v' }, '/', '/\\v')
-vim.keymap.set({ 'n', 'v' }, '?', '?\\v')
+vim.keymap.set({ 'n', 'v' }, '/', '/\\v', { desc = 'Make searches more magic by default,' })
+vim.keymap.set({ 'n', 'v' }, '?', '?\\v', { desc = 'Make searches more magic by default,' })
 
 if is_executable('rg') then
     opt.grepprg = 'rg --vimgrep -- $*'
@@ -458,21 +464,22 @@ opt.omnifunc = 'ale#completion#OmniFunc'
 
 -- Key and Command Mappings
 
-vim.keymap.set('n', '<leader>cd', ':cd %:p:h<CR>')
+vim.keymap.set('n', '<leader>cd', ':cd %:p:h<CR>',
+               { noremap = true, desc = 'Switch to the directory of th current buffer.' })
 vim.keymap.set('n', '<leader>w', function()
     if not opt.binary:get() and vim.opt.filetype:get() ~= 'diff' then
         local save = vim.fn.winsaveview()
         vim.cmd([[%s/\s\+$//e]])
-        vim.cmd.winrestview(save)
+        vim.fn.winrestview(save)
     end
-end)
+end, { noremap = true, desc = 'Remove trailing whitespace.' })
 
-vim.keymap.set('n', '<leader>s', ']Sz=')
-vim.keymap.set('n', '<leader>S', '[Sz=')
+vim.keymap.set('n', '<leader>s', ']Sz=', { desc = 'Spellcheck forward.' })
+vim.keymap.set('n', '<leader>S', '[Sz=', { desc = 'Spellcheck backwards.' })
 
-vim.keymap.set('n', 'Q', '<nop>')
+vim.keymap.set('n', 'Q', '<nop>', { desc = 'Disable \'Q\'.' })
 
-vim.keymap.set('n', 'ZA', ':w<CR>')
+vim.keymap.set('n', 'ZA', ':w<CR>', { desc = 'Save and close.' })
 
 opt.mouse = 'a'
 
