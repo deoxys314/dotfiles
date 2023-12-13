@@ -214,7 +214,11 @@ require('lazy').setup({
     { 'rust-lang/rust.vim', ft = 'rust' },
     { 'sheerun/vim-polyglot' },
     { 'tpope/vim-apathy' },
-    { 'tpope/vim-commentary', keys = 'gcc' },
+    {
+        'tpope/vim-commentary',
+        keys = { 'gcc', 'gcu', 'gcgc', { 'gc', mode = { 'v', 'o' } } },
+        cmd = 'Commentary',
+    },
     { 'tpope/vim-endwise' },
     { 'tpope/vim-eunuch' },
     { 'tpope/vim-fugitive', version = '*' },
