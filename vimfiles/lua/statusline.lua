@@ -75,7 +75,7 @@ module.active_status_line = function()
     })
 end
 
-module.inactive_status_line = function() return [[  %(]] .. short_file_path() .. [[%)%(%h%)%(%m%)%(%r%)]] end
-module.no_file_status_line = function() return [[  %(]] .. short_file_path() .. [[%)]] end
+module.inactive_status_line = function() return [[  %(%{v:lua.require('statusline').short_file_path()}%)%(%h%)%(%m%)%(%r%)]] end
+module.no_file_status_line = function() return  [[  %(%{v:lua.require('statusline').short_file_path()}%)]] end
 
 return module
