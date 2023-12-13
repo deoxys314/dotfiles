@@ -46,8 +46,7 @@ function fish_prompt
 
 	# Check if we are in a tmux prompt, display position if so
 	if test -n "$TMUX"
-		set -l n_tmux (tmux display-message -p '#{session_windows}')
-		set -g __prompt_tmux (set_color blue)(tmux display-message -p '#I')/$n_tmux(set_color normal)
+		set -g __prompt_tmux (set_color blue)(tmux display-message -p '#I/#{session_windows}')(set_color normal)
 	else
 		set --erase __prompt_tmux
 	end
