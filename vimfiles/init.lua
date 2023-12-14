@@ -138,6 +138,14 @@ require('lazy').setup({
         enabled = true,
     },
     {
+        'norcalli/nvim-colorizer.lua',
+        config = function()
+            opt.termguicolors = true
+            require('colorizer').setup({ css = { css_fn = true }, 'javascript', 'html' },
+                                       { mode = 'background', names = false })
+        end,
+    },
+    {
         'nvim-treesitter/nvim-treesitter',
         version = '*',
         build = ':TSUpdate',
