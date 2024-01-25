@@ -39,7 +39,7 @@ require('lazy').setup({
     {
         'dcampos/nvim-snippy',
         event = { 'InsertEnter' },
-        config = {
+        opts = {
             mappings = {
                 is = { ['<Tab>'] = 'expand_or_advance', ['<S-Tab>'] = 'previous' },
                 nx = { ['<leader>x'] = 'cut_text' },
@@ -563,6 +563,8 @@ vim.api.nvim_create_autocmd({ 'BufNewFile', 'BufRead' }, {
     callback = function() opt.filetype = 'prototxt' end,
     group = Vimrc,
 })
+
+g.loaded_perl_provider = 0
 
 -- Color
 opt.termguicolors = true
