@@ -428,8 +428,8 @@ vim.api.nvim_create_autocmd({ 'CmdLineLeave' }, {
     group = VimrcIncsearchHighlight,
 })
 
-vim.keymap.set({ 'n', 'v' }, '/', '/\\v', { desc = 'Make searches more magic by default,' })
-vim.keymap.set({ 'n', 'v' }, '?', '?\\v', { desc = 'Make searches more magic by default,' })
+vim.keymap.set({ 'n', 'v' }, '/', '/\\v', { desc = 'Make searches more magic by default.' })
+vim.keymap.set({ 'n', 'v' }, '?', '?\\v', { desc = 'Make searches more magic by default.' })
 
 if is_executable('rg') then
     opt.grepprg = 'rg --vimgrep -- $*'
