@@ -79,12 +79,26 @@ function fish_prompt
 end
 
 # settings for __fish_git_prompt
+set --export __fish_git_prompt_show_informative_status 1
 set --export __fish_git_prompt_describe_style branch
 set --export __fish_git_prompt_showcolorhints 1
 set --export __fish_git_prompt_showdirtystate 1
 set --export __fish_git_prompt_showstashstate 1
 set --export __fish_git_prompt_showuntrackedfiles 1
 set --export __fish_git_prompt_showupstream informative
+set --export __fish_git_prompt_char_stateseparator ' '
+set --export __fish_git_prompt_char_cleanstate 'ok'
+set --export __fish_git_prompt_color_cleanstate 'cyan'
+set --export __fish_git_prompt_color_cleanstate_done 'normal'
+set --export __fish_git_prompt_char_dirtystate '*'
+set --export __fish_git_prompt_char_invalidstate '#'
+set --export __fish_git_prompt_char_stagedstate '+'
+set --export __fish_git_prompt_char_stashstate '$'
+set --export __fish_git_prompt_char_untrackedfiles '%'
+set --export __fish_git_prompt_char_upstream_ahead '>'
+set --export __fish_git_prompt_char_upstream_behind '<'
+set --export __fish_git_prompt_char_upstream_diverged '<>'
+set --export __fish_git_prompt_char_upstream_equal '='
 
 function fish_right_prompt --description="Shows the git status, if applicable."
 	__fish_git_prompt
