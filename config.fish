@@ -53,7 +53,7 @@ function fish_prompt
 
 
 	# time of last prompt
-	set -l __prompt_time (set_color white)(date '+%m/%d %H:%M')(set_color normal)
+	set -l __prompt_time (set_color normal)(date '+%m/%d %H:%M')(set_color normal)
 
 	# working directory
 	set -l __prompt_pwd (set_color green)(prompt_pwd)(set_color normal)
