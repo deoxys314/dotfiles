@@ -513,6 +513,31 @@ vim.api.nvim_create_user_command('LPP', function(opts)
     end
 end, { nargs = 1, complete = 'lua', bang = false, bar = false })
 
+local function backup_plugins()
+    local lockfile_path = vim.fn.stdpath('config') .. '/lazy-lock.json'
+    local backup_directory = os.getenv('LOCAL_BACKUP_LOCATION')
+    if not backup_directory then backup_directory = os.getenv('HOME') .. '/.backup' end
+    local backup_path = backup_directory .. '/' ..
+                            vim.fn.strftime([[nvim-plugins-%Y-%m-%d.json]])
+    if vim.fn.filereadable(backup_path) == 0 then
+        -- we're reading here, checking for well-formed JSON and writing it out to the backup location
+        local lock = assert(io.open(lockfile_path, 'r'),
+                            'Cannot open lockfile at "' .. lockfile_path .. '"')
+        local locks = vim.json.decode(lock:read('*all'))
+        local backup = assert(io.open(backup_path, 'w'),
+                              'Cannot open file for writing at "' .. backup_path .. '"')
+        backup:write(vim.json.encode(locks))
+        backup:close()
+    end
+end
+
+vim.api.nvim_create_user_command('BackupPlugins', backup_plugins, { bang = true })
+
+if os.date('%A') == 'Monday' or os.date('%A') == 'Thursday' then
+    print('Backing up plugin configuration')
+    backup_plugins()
+end
+
 -- Misc Options
 
 opt.backspace = { 'indent', 'eol', 'start' }
