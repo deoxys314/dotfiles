@@ -26,15 +26,15 @@ set -gx EDITOR vi
 # hostname > exit code (if not 0) > tmux pane (if any) > truncated directory
 function fish_prompt
 	# we need to do this first or we will clobber it with other exit codes
-	set -l lastexit $status
+	set --function lastexit $status
 
 	# calculates fish hostname once as it will not change
-	if not set -q __fish_prompt_hostname
-		set -g __fish_prompt_hostname (hostname | cut -d . -f 1)
+	if not set --query __fish_prompt_hostname
+		set --global --export __fish_prompt_hostname (hostname | cut -d . -f 1)
 	end
 
 	# user@hostname, to make ssh sessions more clear
-	set -l __prompt_host (set_color yellow)"$USER@$__fish_prompt_hostname"(set_color normal)
+	set --function __prompt_host (set_color yellow)"$USER@$__fish_prompt_hostname"(set_color normal)
 
 	# exit status, if not 0
 	if not test $lastexit -eq 0
@@ -46,33 +46,29 @@ function fish_prompt
 
 	# Check if we are in a tmux prompt, display position if so
 	if test -n "$TMUX"
-		set -g __prompt_tmux (set_color blue)(tmux display-message -p '#I/#{session_windows}')(set_color normal)
+		set --function __prompt_tmux \
+			(set_color blue)(tmux display-message -p '#I/#{session_windows}')(set_color normal)
 	else
 		set --erase __prompt_tmux
 	end
 
 
 	# time of last prompt
-	set -l __prompt_time (set_color normal)(date '+%m/%d %H:%M')(set_color normal)
+	set --function __prompt_time (set_color normal)(date '+%m/%d %H:%M')(set_color normal)
 
 	# working directory
-	set -l __prompt_pwd (set_color green)(prompt_pwd)(set_color normal)
+	set --function __prompt_pwd (set_color green)(prompt_pwd)(set_color normal)
 
 	# this sets an array with no "extra" elements because unset variables expand to nothing
-	set -l __prompt_array $__prompt_host $__prompt_status $__prompt_tmux $__prompt_time $__prompt_pwd
+	set --function __prompt_array \
+		$__prompt_host $__prompt_status $__prompt_tmux $__prompt_time $__prompt_pwd
 
 
 	# if this isn't set by a per-system customization
-	if not set -q __fish_prompt_joiner
-		set -g __fish_prompt_joiner " > "
+	if not set --query __fish_prompt_joiner
+		set --global --export __fish_prompt_joiner " > "
 	end
 
-	# for section in $__prompt_array
-	# 	echo -n $section
-	# 	echo -n $__fish_prompt_joiner
-	# end
-
-	# we used to do a for loop, but a brace expansion works as well
 	# the -s argument suppresses extra spaces between arguments
 	echo -n -s $__prompt_array{$__fish_prompt_joiner}
 
