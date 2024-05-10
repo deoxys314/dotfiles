@@ -36,20 +36,21 @@ require('lazy').setup({
     { 'andymass/vim-matchup' },
     { 'chriskempson/base16-vim', priority = 1000, enabled = true },
     {
-        'alexghergh/nvim-tmux-navigation',
-        config = function()
-            require('nvim-tmux-navigation').setup {
-                disable_when_zoomed = true,
-                keybindings = {
-                    left = '<C-h>',
-                    down = '<C-j>',
-                    up = '<C-k>',
-                    right = '<C-l>',
-                    last_active = '<C-\\>',
-                    next = '<C-Space>',
-                },
-            }
-        end,
+        'christoomey/vim-tmux-navigator',
+        cmd = {
+            'TmuxNavigateLeft',
+            'TmuxNavigateDown',
+            'TmuxNavigateUp',
+            'TmuxNavigateRight',
+            'TmuxNavigatePrevious',
+        },
+        keys = {
+            { '<c-h>', '<cmd><C-U>TmuxNavigateLeft<cr>' },
+            { '<c-j>', '<cmd><C-U>TmuxNavigateDown<cr>' },
+            { '<c-k>', '<cmd><C-U>TmuxNavigateUp<cr>' },
+            { '<c-l>', '<cmd><C-U>TmuxNavigateRight<cr>' },
+            { '<c-\\>', '<cmd><C-U>TmuxNavigatePrevious<cr>' },
+        },
     },
     {
         'dcampos/nvim-snippy',
