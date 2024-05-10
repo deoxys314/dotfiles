@@ -503,7 +503,7 @@ vim.keymap.set('n', '<leader>S', '[Sz=', { desc = 'Spellcheck backwards.' })
 
 vim.keymap.set('n', 'Q', '<nop>', { desc = 'Disable \'Q\'.' })
 
-vim.keymap.set('n', 'ZA', ':w<CR>', { desc = 'Save and close.' })
+vim.keymap.set('n', 'ZA', ':w<CR>', { desc = 'Write if needed.' })
 
 opt.mouse = 'a'
 
