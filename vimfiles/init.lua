@@ -271,6 +271,7 @@ require('lazy').setup({
                 ['*'] = { 'remove_trailing_lines', 'trim_whitespace' },
                 cpp = { 'remove_trailing_lines', 'trim_whitespace', 'clang-format' },
                 fish = { 'fish_indent', 'trim_whitespace', 'remove_trailing_lines' },
+                js = { 'clang-format', 'trim_whitespace', 'remove_trailing_lines' },
                 json = { 'jq' },
                 lua = { 'remove_trailing_lines', 'trim_whitespace', 'lua-format', 'luafmt' },
                 markdown = { 'mdl', 'pandoc', 'write-good' },
