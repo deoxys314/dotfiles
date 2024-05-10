@@ -487,6 +487,17 @@ vim.keymap.set('n', '<leader>w', function()
     end
 end, { noremap = true, desc = 'Remove trailing whitespace.' })
 
+vim.api.nvim_create_user_command('RemoveNonbreakingSpaces', function(opts)
+    local args = opt.args
+    vim.cmd([[:%s/ //g]])
+end, {
+    bang=false,
+    bar=false,
+    desc='Removes non-breaking spaces from the current buffer',
+    force=true
+    nargs = 0,
+})
+
 vim.keymap.set('n', '<leader>s', ']Sz=', { desc = 'Spellcheck forward.' })
 vim.keymap.set('n', '<leader>S', '[Sz=', { desc = 'Spellcheck backwards.' })
 
