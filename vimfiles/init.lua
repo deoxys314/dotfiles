@@ -493,10 +493,10 @@ vim.api.nvim_create_user_command('RemoveNonbreakingSpaces', function(opts)
     local args = opt.args
     vim.cmd([[:%s/ //g]])
 end, {
-    bang=false,
-    bar=false,
-    desc='Removes non-breaking spaces from the current buffer',
-    force=true
+    bang = false,
+    bar = false,
+    desc = 'Removes non-breaking spaces from the current buffer',
+    force = true,
     nargs = 0,
 })
 
@@ -528,10 +528,11 @@ end, { nargs = 1, complete = 'lua', bang = false, bar = false })
 local function backup_plugins()
     local lockfile_path = vim.fn.stdpath('config') .. '/lazy-lock.json'
     local backup_directory = os.getenv('LOCAL_BACKUP_LOCATION')
-    if not backup_directory then backup_directory = (os.getenv('HOME') or
-        (os.getenv('homedrive') .. os.getenv('homepath'))) .. '/.backup' end
-    local backup_path = backup_directory .. '/' ..
-                            vim.fn.strftime([[nvim-plugins-%Y-%m-%d.json]])
+    if not backup_directory then
+        backup_directory =
+            (os.getenv('HOME') or (os.getenv('homedrive') .. os.getenv('homepath'))) .. '/.backup'
+    end
+    local backup_path = backup_directory .. '/' .. vim.fn.strftime([[nvim-plugins-%Y-%m-%d.json]])
     if vim.fn.filereadable(backup_path) == 0 then
         -- we're reading here, checking for well-formed JSON and writing it out to the backup location
         local lock = assert(io.open(lockfile_path, 'r'),
