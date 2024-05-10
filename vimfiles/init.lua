@@ -526,7 +526,8 @@ end, { nargs = 1, complete = 'lua', bang = false, bar = false })
 local function backup_plugins()
     local lockfile_path = vim.fn.stdpath('config') .. '/lazy-lock.json'
     local backup_directory = os.getenv('LOCAL_BACKUP_LOCATION')
-    if not backup_directory then backup_directory = os.getenv('HOME') .. '/.backup' end
+    if not backup_directory then backup_directory = (os.getenv('HOME') or
+        (os.getenv('homedrive') .. os.getenv('homepath'))) .. '/.backup' end
     local backup_path = backup_directory .. '/' ..
                             vim.fn.strftime([[nvim-plugins-%Y-%m-%d.json]])
     if vim.fn.filereadable(backup_path) == 0 then
