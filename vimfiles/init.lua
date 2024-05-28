@@ -30,7 +30,7 @@ require('lazy').setup({
         'alanfortlink/blackjack.nvim',
         cmd = { 'BlackJackNewGame', 'BlackJackResetScores', 'BlackJackQuit' },
         dependencies = { 'nvim-lua/plenary.nvim' },
-        opts = { card_style = 'mini', suit_style = 'black', },
+        opts = { card_style = 'mini', suit_style = 'black' },
     },
     {
         'alvan/vim-closetag',
@@ -137,11 +137,11 @@ require('lazy').setup({
     },
     {
         'jim-fx/sudoku.nvim',
-        cmd = "Sudoku",
+        cmd = 'Sudoku',
         config = function()
-            require("sudoku").setup({
-                    -- configuration ...
-                })
+            require('sudoku').setup({
+                -- configuration ...
+            })
         end,
     },
     {
