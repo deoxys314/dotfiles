@@ -27,6 +27,12 @@ require('lazy').setup({
     },
     { 'airblade/vim-rooter', config = function() g.rooter_silent_chdir = 1 end },
     {
+        'alanfortlink/blackjack.nvim',
+        cmd = { 'BlackJackNewGame', 'BlackJackResetScores', 'BlackJackQuit' },
+        dependencies = { 'nvim-lua/plenary.nvim' },
+        opts = { card_style = 'mini', suit_style = 'black', },
+    },
+    {
         'alvan/vim-closetag',
         config = function()
             g.closetag_filenames = table.concat({ '*.html', '*.htm', '*.xml', '*.php' }, ',')
@@ -144,6 +150,15 @@ require('lazy').setup({
         'gabrielelana/vim-markdown',
         ft = { 'markdown' },
         config = function() g.markdown_mapping_switch_status = '<space>,' end,
+    },
+    {
+        'jim-fx/sudoku.nvim',
+        cmd = "Sudoku",
+        config = function()
+            require("sudoku").setup({
+                    -- configuration ...
+                })
+        end,
     },
     {
         'lukas-reineke/indent-blankline.nvim',
