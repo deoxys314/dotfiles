@@ -522,7 +522,13 @@ vim.api.nvim_create_user_command('LPP', function(opts)
     else
         print('Compilation error: ', err)
     end
-end, { nargs = 1, complete = 'lua', bang = false, bar = false })
+end, {
+    bang = false,
+    bar = false,
+    complete = 'lua',
+    desc = 'Pretty-print provided lua object',
+    nargs = 1,
+})
 
 local function backup_plugins()
     local lockfile_path = vim.fn.stdpath('config') .. '/lazy-lock.json'
