@@ -28,9 +28,9 @@ require('lazy').setup({
     { 'airblade/vim-rooter', config = function() g.rooter_silent_chdir = 1 end },
     {
         'alanfortlink/blackjack.nvim',
-        cmd = { 'BlackJackNewGame', 'BlackJackResetScores', 'BlackJackQuit' },
+        cmd = { 'BlackJackNewGame' },
         dependencies = { 'nvim-lua/plenary.nvim' },
-        opts = { card_style = 'mini', suit_style = 'black' },
+        opts = { card_style = 'large', suit_style = 'black' },
     },
     {
         'alvan/vim-closetag',
@@ -137,11 +137,18 @@ require('lazy').setup({
     },
     {
         'jim-fx/sudoku.nvim',
-        cmd = 'Sudoku',
+        cmd = { 'Sudoku' },
         config = function()
-            require('sudoku').setup({
-                -- configuration ...
-            })
+            local faded_color = '#7d7d7d'
+            require('sudoku').setup {
+                persist_settings = true,
+                persist_games = true,
+                default_mappings = true,
+                custom_highlights = {
+                    board = { fg = faded_color },
+                    set_number = { fg = faded_color, gui = 'italic' },
+                },
+            }
         end,
     },
     {
