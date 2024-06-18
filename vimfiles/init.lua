@@ -191,6 +191,20 @@ require('lazy').setup({
         end,
     },
     {
+        'nvim-telescope/telescope.nvim',
+        version = '*',
+        dependencies = { 'nvim-lua/plenary.nvim' },
+        cmd = { 'Telescope' },
+        config = function()
+            local builtin = require 'telescope.builtin'
+            local actions = require 'telescope.actions'
+            vim.keymap.set('n', '<leaderff>', builtin.find_files, {})
+            require'telescope'.setup {
+                defaults = { mappings = { i = { ['<esc'] = actions.close, ['<C-u>'] = false } } },
+            }
+        end,
+    },
+    {
         'nvim-treesitter/nvim-treesitter',
         version = '*',
         build = ':TSUpdate',
