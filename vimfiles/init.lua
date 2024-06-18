@@ -337,7 +337,7 @@ require('lazy').setup({
 }, {
     performance = { rtp = { paths = { USER_HOME .. '/dotfiles/vimfiles' } } },
     ui = {
-        border = 'shadow',
+        border = 'rounded',
         title = 'Lazy Plugin Manager',
         title_pos = 'left',
         icons = {
