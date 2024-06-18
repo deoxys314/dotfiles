@@ -280,8 +280,19 @@ require('lazy').setup({
     {
         'tpope/vim-scriptease',
         version = '*',
-        keys = { 'zS', { 'K', ft = { 'vim' } } },
-        cmd = { 'Breakadd', 'Breakdel', 'Messages', 'PP', 'PPMsg', 'Scriptnames', 'Verbose' },
+        keys = { 'zS', { 'K', ft = { 'vim' } }, { 'g=', ft = { 'vim' } } },
+        cmd = {
+            'Breakadd',
+            'Breakdel',
+            'Disarm',
+            'Messages',
+            'PP',
+            'PPMsg',
+            'Runtime',
+            'Scriptnames',
+            'Time',
+            'Verbose',
+        },
     },
     { 'tpope/vim-surround' },
     {
