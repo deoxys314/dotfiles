@@ -43,7 +43,7 @@ require('lazy').setup({
         ft = { 'html', 'htm', 'xml', 'php' },
     },
     { 'andymass/vim-matchup' },
-    { 'chriskempson/base16-vim', priority = 1000, enabled = true },
+    { 'chriskempson/base16-vim', priority = 1000, enabled = false },
     { 'christoomey/vim-tmux-navigator' },
     {
         'dcampos/nvim-snippy',
@@ -55,6 +55,27 @@ require('lazy').setup({
             },
         },
         dependencies = { 'honza/vim-snippets' },
+    },
+    {
+        'folke/tokyonight.nvim',
+        enabled = true,
+        lazy = false,
+        priority = 99,
+        opts = {
+            style = 'moon',
+            light_style = 'day',
+            styles = {
+                comments = { italic = true },
+                keywords = { italic = false },
+                functions = {},
+                variables = {},
+                -- background styles
+                sidebars = 'dark',
+                floats = 'normal',
+            },
+            sidebars = { 'qf', 'help' },
+            dim_inactive = false,
+        },
     },
     {
         'folke/zen-mode.nvim',
@@ -620,7 +641,7 @@ g.loaded_perl_provider = 0
 
 -- Color
 opt.termguicolors = true
-vim.cmd.colorscheme('base16-solarized-dark')
+vim.cmd.colorscheme('tokyonight')
 
 -- Gui Options
 
