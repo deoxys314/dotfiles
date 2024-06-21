@@ -205,6 +205,11 @@ require('lazy').setup({
                 'tsakirist/telescope-lazy.nvim',
                 config = function() require'telescope'.load_extension 'lazy' end,
             },
+            {
+                'nvim-telescope/telescope-fzf-native.nvim',
+                build = [[cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build]],
+                enabled = is_executable 'cmake',
+            },
         },
         cmd = { 'Telescope' },
         keys = { '<leader>ff' },
