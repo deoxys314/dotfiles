@@ -55,6 +55,7 @@ require('lazy').setup({
             },
         },
         dependencies = { 'honza/vim-snippets' },
+        enabled = false,
     },
     {
         'folke/tokyonight.nvim',
