@@ -362,6 +362,7 @@ require('lazy').setup({
                 '--column-limit=99',
                 '--double-quote-to-single-quote',
                 '--extra-sep-at-table-end',
+                '--keep-simple-control-block-one-line',
                 '--spaces-inside-table-braces',
             }, ' ')
             g.ale_linters = { python = { 'pylsp', 'mypy', 'ruff' }, markdown = { 'markdownlint' } }
