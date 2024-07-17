@@ -643,6 +643,20 @@ if os.date('%A') == 'Monday' or os.date('%A') == 'Thursday' then
     backup_plugins()
 end
 
+local function manage_lazy(concurrent_jobs)
+    local n_jobs = concurrent_jobs or 3 -- this is tuned so that it's fast but I still see work being done
+    require'lazy'.sync { show = true, wait = true, concurrency = n_jobs }
+end
+
+local function maintainence()
+    print('Backing up plugin configuration')
+    backup_plugins()
+    print('Syncing Lazy plugin status')
+    manage_lazy()
+end
+
+vim.api.nvim_create_user_command('AutoMaintain', maintainence, { bang = true })
+
 -- Misc Options
 
 opt.backspace = { 'indent', 'eol', 'start' }
