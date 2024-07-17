@@ -352,6 +352,7 @@ require('lazy').setup({
                 ['*'] = { 'remove_trailing_lines', 'trim_whitespace' },
                 cpp = { 'remove_trailing_lines', 'trim_whitespace', 'clang-format' },
                 fish = { 'fish_indent', 'trim_whitespace', 'remove_trailing_lines' },
+                go = { 'gofmt' },
                 js = { 'clang-format', 'trim_whitespace', 'remove_trailing_lines' },
                 json = { 'jq' },
                 lua = { 'remove_trailing_lines', 'trim_whitespace', 'lua-format', 'luafmt' },
@@ -371,7 +372,11 @@ require('lazy').setup({
                 '--keep-simple-control-block-one-line',
                 '--spaces-inside-table-braces',
             }, ' ')
-            g.ale_linters = { python = { 'pylsp', 'mypy', 'ruff' }, markdown = { 'markdownlint' } }
+            g.ale_linters = {
+                go = { 'gofmt' },
+                markdown = { 'markdownlint' },
+                python = { 'pylsp', 'mypy', 'ruff' },
+            }
         end,
     },
 
