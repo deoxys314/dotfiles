@@ -601,7 +601,7 @@ opt.mouse = 'a'
 vim.api.nvim_create_user_command('LPP', function(opts)
     local args = opts.args
     if args == nil then return end
-    local func, err = load('return ' .. args)
+    local func, err = load('return (' .. args .. ')', '=lpp_chunk', 't', {})
     if func then
         local ok, res = pcall(func)
         if ok then
