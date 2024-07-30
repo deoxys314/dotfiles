@@ -44,7 +44,27 @@ require('lazy').setup({
     },
     { 'andymass/vim-matchup' },
     { 'chriskempson/base16-vim', priority = 1000, enabled = false },
-    { 'christoomey/vim-tmux-navigator' },
+    {
+        'christoomey/vim-tmux-navigator',
+        cmd = {
+            'TmuxNavigateLeft',
+            'TmuxNavigateDown',
+            'TmuxNavigateUp',
+            'TmuxNavigateRight',
+            'TmuxNavigatePrevious',
+        },
+        keys = {
+            { '<c-h>', '<cmd><C-U>TmuxNavigateLeft<cr>' },
+            { '<c-j>', '<cmd><C-U>TmuxNavigateDown<cr>' },
+            { '<c-k>', '<cmd><C-U>TmuxNavigateUp<cr>' },
+            { '<c-l>', '<cmd><C-U>TmuxNavigateRight<cr>' },
+            { '<c-\\>', '<cmd><C-U>TmuxNavigatePrevious<cr>' },
+        },
+        connfig = function()
+            -- when leaving vim, will :update
+            vim.g.tmux_navigator_save_on_switch = 2
+        end,
+    },
     {
         'dcampos/nvim-snippy',
         event = { 'InsertEnter' },
@@ -487,9 +507,13 @@ vim.keymap.set('n', 'gj', 'j')
 vim.keymap.set('n', 'k', 'gk')
 vim.keymap.set('n', 'gk', 'k')
 
-for _, key in ipairs({ 'H', 'J', 'K', 'L' }) do
-    vim.keymap.set('n', string.format('<C-%s>', key), string.format('<C-W><C-%s>', key),
-                   { noremap = true, desc = string.format('Move across windows with %s', key) })
+if not vim.fn.exists ':TmuxNavigatePrevious' then
+    for _, key in ipairs({ 'H', 'J', 'K', 'L' }) do
+        vim.keymap.set('n', string.format('<C-%s>', key), string.format('<C-W><C-%s>', key), {
+            noremap = true,
+            desc = string.format('Move across windows with %s', key),
+        })
+    end
 end
 
 opt.scrolloff = 4
