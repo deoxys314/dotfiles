@@ -668,7 +668,7 @@ if os.date('%A') == 'Monday' or os.date('%A') == 'Thursday' then
 end
 
 local function manage_lazy(concurrent_jobs)
-    local n_jobs = concurrent_jobs or 3 -- this is tuned so that it's fast but I still see work being done
+    local n_jobs = concurrent_jobs or 5 -- this is tuned so that it's fast but I still see work being done
     require'lazy'.sync { show = true, wait = true, concurrency = n_jobs }
 end
 
