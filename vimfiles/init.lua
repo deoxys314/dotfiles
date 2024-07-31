@@ -677,6 +677,7 @@ local function maintainence()
     backup_plugins()
     print('Syncing Lazy plugin status')
     manage_lazy()
+    vim.cmd.checkhealth()
 end
 
 vim.api.nvim_create_user_command('AutoMaintain', maintainence, { bang = true })
