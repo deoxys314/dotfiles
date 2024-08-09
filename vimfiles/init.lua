@@ -521,7 +521,7 @@ opt.sidescrolloff = 8
 opt.sidescroll = 1
 
 opt.foldmethod = 'indent'
-opt.foldcolumn='auto:3'
+opt.foldcolumn = 'auto:3'
 opt.foldlevelstart = 2
 opt.foldopen:append('jump')
 
