@@ -4,10 +4,9 @@ set --local SCRIPTDIR (dirname (status --current-filename))
 
 mkdir -pv ~/bin
 
-# only add ~/bin if it's not already in the PATH (reduces duplicate PATH entries)
-if not contains ~/bin $PATH
-	set PATH $PATH ~/bin
-end
+fish_add_path --global --path --move --append "$HOME/.local/bin"
+fish_add_path --global --path --move --append "$HOME/bin"
+fish_add_path --global --path "$HOME/.cargo/bin"
 
 if not contains "$SCRIPTDIR/fish" $fish_function_path
 	set fish_function_path $fish_function_path "$SCRIPTDIR/fish"
