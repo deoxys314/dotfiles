@@ -734,6 +734,15 @@ vim.api.nvim_create_autocmd({ 'BufNewFile', 'BufRead' }, {
     callback = function() opt.filetype = 'prototxt' end,
     group = Vimrc,
 })
+vim.api.nvim_create_autocmd({ 'WinResized', 'WinNew', 'WinEnter' }, {
+    pattern = '*',
+    callback = function()
+        local SCROLLOFF_PERCENTAGE = 0.25
+        opt.scrolloff = math.floor(vim.o.lines * SCROLLOFF_PERCENTAGE)
+    end,
+    desc = 'Set scrolloff automatically',
+    group = Vimrc,
+})
 
 g.loaded_perl_provider = 0
 
