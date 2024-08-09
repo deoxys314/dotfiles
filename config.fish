@@ -15,8 +15,8 @@ end
 
 ## GLOBALS
 
-set -gx VISUAL vi
-set -gx EDITOR vi
+set --global --export VISUAL vi
+set --global --export EDITOR vi
 
 
 ## FUNCTIONS
