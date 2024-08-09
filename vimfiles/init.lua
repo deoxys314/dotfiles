@@ -2,7 +2,6 @@ local g = vim.g
 local opt = vim.opt
 -- some setup before plugins run
 g.mapleader = ' '
-g.polyglot_disabled = { 'markdown' }
 local function is_executable(program_name)
     return function() return vim.fn.executable(program_name) == 1 end
 end
@@ -325,7 +324,6 @@ require('lazy').setup({
         end,
     },
     { 'rust-lang/rust.vim', ft = 'rust' },
-    { 'sheerun/vim-polyglot' },
     { 'tpope/vim-apathy' },
     {
         'tpope/vim-commentary',
