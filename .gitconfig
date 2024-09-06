@@ -9,6 +9,7 @@
 		--format=format:'%C(bold yellow)%h%C(reset) - %C(green)%an, %ar%C(red)%d%C(reset)%n%C(bold green)%s%C(reset)%n%n%b'
 	deepblame = blame -wnMCCC
 	deeplog = log -wnMCCC
+	root = rev-parse --show-toplevel
 	new-branch = checkout -b
 	delete-branch = branch -D
 	list-branches = branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate
