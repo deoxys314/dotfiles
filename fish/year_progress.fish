@@ -8,5 +8,5 @@ function year_progress --description "Prints a bar of progress through the curre
 	set --local before (math --scale 0 $width \* (date +%j) / $total_days)
 	set --local after  (math --scale 0 $width - $before)
 	# echo "DEBUG: before [$before] after [$after] sum [$(math $before + $after)] width [$width]"
-	echo "[$(string repeat --count (math $before - 1) '-')|$(string repeat --count $after '-')]"
+	echo "|$(string repeat --count (math $before - 1) '=')>$(string repeat --count $after '=')|"
 end
