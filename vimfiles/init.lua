@@ -215,6 +215,8 @@ require('lazy').setup({
         dependencies = { 'nvim-tree/nvim-web-devicons' },
         opts = {
             sections = {
+                lualine_a = { 'mode' },
+                lualine_b = { 'branch', 'diff' },
                 lualine_c = {
                     function()
                         local fn = vim.fn
@@ -243,7 +245,7 @@ require('lazy').setup({
                     'filetype',
                 },
                 lualine_y = { 'searchcount', 'selectioncount' },
-                lualine_z = { 'progress' },
+                lualine_z = { '%l:%c %p%%' },
             },
         },
     },
