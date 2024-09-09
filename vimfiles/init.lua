@@ -211,6 +211,43 @@ require('lazy').setup({
         end,
     },
     {
+        'nvim-lualine/lualine.nvim',
+        dependencies = { 'nvim-tree/nvim-web-devicons' },
+        opts = {
+            sections = {
+                lualine_c = {
+                    function()
+                        local fn = vim.fn
+                        if opt.buftype == 'terminal' then
+                            return fn.expand('%:t')
+                        else
+                            return fn.pathshorten(fn.fnamemodify(fn.expand('%:p'), ':~:.')) ..
+                                       '%h%m%r'
+                        end
+                    end,
+                },
+                lualine_x = {
+                    { 'diagnostics', sources = { 'ale' } },
+                    'ObsessionStatusLine',
+                    function()
+                        -- show encoding only if it's not utf-8
+                        local ret, _ = (vim.bo.fileencoding or vim.go.encoding):gsub([[^utf%-8$]],
+                                                                                     '')
+                        return ret
+                    end,
+                    function()
+                        -- don't display if this is unix
+                        local ret, _ = vim.bo.fileformat:gsub([[^unix$]], '')
+                        return ret
+                    end,
+                    'filetype',
+                },
+                lualine_y = { 'searchcount', 'selectioncount' },
+                lualine_z = { 'progress' },
+            },
+        },
+    },
+    {
         'nvim-telescope/telescope.nvim',
         version = '*',
         dependencies = {
@@ -333,7 +370,7 @@ require('lazy').setup({
     { 'tpope/vim-endwise' },
     { 'tpope/vim-eunuch' },
     { 'tpope/vim-fugitive', version = '*' },
-    { 'tpope/vim-obsession', cmd = 'Obsession' },
+    { 'tpope/vim-obsession' },
     { 'tpope/vim-projectionist' },
     {
         'tpope/vim-scriptease',
@@ -431,36 +468,6 @@ vim.keymap.set('n', '<leader>l', function() require('lazy').home() end,
 
 opt.laststatus = 2
 opt.showmode = false
-
-local statusline = require('statusline')
-
-vim.opt.statusline = [[%!v:lua.require('statusline').active_status_line()]]
-
-local StatusLine = vim.api.nvim_create_augroup('StatusLine', { clear = true })
-vim.api.nvim_create_autocmd({ 'VimEnter' }, {
-    pattern = '*',
-    callback = statusline.update_inactive_windows,
-    group = StatusLine,
-    desc = 'Initialize statusline at startup.',
-})
-vim.api.nvim_create_autocmd({ 'WinEnter', 'BufWinEnter' }, {
-    pattern = '*',
-    callback = function() statusline.set_status_line(true) end,
-    group = StatusLine,
-    desc = 'Set active window statusline.',
-})
-vim.api.nvim_create_autocmd({ 'WinLeave' }, {
-    pattern = '*',
-    callback = function() statusline.set_status_line(false) end,
-    group = StatusLine,
-    desc = 'Set inactive window statusline.',
-})
-vim.api.nvim_create_autocmd({ 'ColorScheme', 'VimEnter' }, {
-    pattern = '*',
-    callback = statusline.set_colors,
-    group = StatusLine,
-    desc = 'Fix statusline colors.',
-})
 
 -- Whitespace
 opt.shiftwidth = 4
