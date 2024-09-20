@@ -752,6 +752,7 @@ vim.api.nvim_create_autocmd({ 'WinResized', 'WinNew', 'WinEnter' }, {
 })
 
 g.loaded_perl_provider = 0
+g.loaded_ruby_provider = 0
 
 -- Color
 opt.termguicolors = true
