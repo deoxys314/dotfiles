@@ -352,6 +352,7 @@ require('lazy').setup({
         lazy = true,
         keys = { '<F8>', 'TT' },
     },
+    { 'prichrd/netrw.nvim', opts = {}, dependencies = { 'nvim-tree/nvim-web-devicons' } },
     {
         'rhysd/git-messenger.vim',
         config = function()
