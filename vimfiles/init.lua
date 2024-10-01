@@ -363,6 +363,18 @@ require('lazy').setup({
             g.git_messenger_max_popup_height = 20
         end,
     },
+    {
+        'rktjmp/playtime.nvim',
+        opts = { fps = 60 },
+        enabled = function()
+            local version = vim.version()
+            -- 0.10.0 or later
+            return version.major >= 1 or (version.major == 0 and version.minor >= 10)
+        end,
+        cmd = { 'Playtime' },
+        -- known good commit, this repo has no tags or versions supplied at this time
+        -- commit = 'e01f683',
+    },
     { 'rust-lang/rust.vim', ft = 'rust' },
     { 'tpope/vim-apathy' },
     {
