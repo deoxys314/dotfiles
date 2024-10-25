@@ -12,7 +12,6 @@
 	root = rev-parse --show-toplevel
 	new-branch = checkout -b
 	delete-branch = branch -D
-	list-branches = branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate
 
 [commit]
 	verbose = true
