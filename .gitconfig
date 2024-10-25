@@ -28,3 +28,10 @@
 
 [merge]
 	conflictstyle = diff3
+
+[blame]
+	coloring = highlightRecent
+	date = relative
+
+[color "blame"]
+	highlightRecent = 238, 120 month ago, 239, 108 month ago, 240, 96 month ago, 241, 84 month ago, 242, 72 month ago, 243, 60 month ago, 244, 48 month ago, 245, 36 month ago, 246, 24 month ago, 247, 21 month ago, 248, 18 month ago, 249, 15 month ago, 250, 12 month ago, 251, 10 month ago, 252, 8 month ago, 253, 6 month ago, 254, 5 month ago, 255, 4 month ago, 231, 3 month ago, 230, 2 month ago, 229, 1 month ago, 228, 2 week ago, 227, 1 week ago, 226, 1 minute ago, red
