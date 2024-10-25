@@ -7,8 +7,8 @@
 	lg3 = log --graph --abbrev-commit --decorate --format=format:'%C(blue)%h%C(reset) - %C(green)%an, %ar%C(reset)%C(yellow)%d%C(reset)%n%C(bold yellow)%s%C(reset)%n%b'
 	lg4 = log --graph --decorate=short \
 		--format=format:'%C(bold yellow)%h%C(reset) - %C(green)%an, %ar%C(red)%d%C(reset)%n%C(bold green)%s%C(reset)%n%n%b'
-	deepblame = blame -wnMCCC
-	deeplog = log -wnMCCC
+	deepblame = blame -w --find-renames --find-copies --find-copies --find-copies
+	deeplog   = log   -w --find-renames --find-copies --find-copies --find-copies
 	root = rev-parse --show-toplevel
 	new-branch = checkout -b
 	delete-branch = branch -D
