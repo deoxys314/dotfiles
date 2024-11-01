@@ -45,3 +45,7 @@
 
 [column]
 	ui = auto
+	status = never
+
+[push]
+	autoSetupRemote = true
