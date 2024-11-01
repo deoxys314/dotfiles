@@ -543,8 +543,8 @@ opt.sidescrolloff = 8
 opt.sidescroll = 1
 
 opt.foldmethod = 'indent'
-opt.foldcolumn = 'auto:3'
-opt.foldlevelstart = 2
+opt.foldcolumn = '0'
+opt.foldlevelstart = 99
 opt.foldopen:append('jump')
 
 vim.o.whichwrap = 'b,s,h,l,<,>,[,]'
