@@ -323,6 +323,8 @@ require('lazy').setup({
                     'gitignore',
                     'gitrebase',
                     'gitsendmail',
+                    'help',
+                    'vimdoc',
                 },
             },
             indent = { enable = true },
