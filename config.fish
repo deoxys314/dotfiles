@@ -21,11 +21,23 @@ set --global --export EDITOR vi
 
 ## FUNCTIONS
 
-# The command prompt sections are as follows:
-# hostname > exit code (if not 0) > tmux pane (if any) > truncated directory
+set --local powerline_right ''
+set --local powerline_left  ''
+set --local powerline_right_inverse ''
+set --local powerline_left_inverse ''
+set --global --export __fish_prompt_joiner "$powerline_right"
+# set --global --export __fish_prompt_joiner '▓▒░'
+if set --query __fish_prompt_use_ascii
+	set --global --export __fish_prompt_joiner ""
+end
+
 function fish_prompt
 	# we need to do this first or we will clobber it with other exit codes
 	set --function lastexit $status
+
+	set --function sections
+	set --function background_colors
+	set --function foreground_colors
 
 	# calculates fish hostname once as it will not change
 	if not set --query __fish_prompt_hostname
@@ -33,43 +45,46 @@ function fish_prompt
 	end
 
 	# user@hostname, to make ssh sessions more clear
-	set --function __prompt_host (set_color yellow)"$USER@$__fish_prompt_hostname"(set_color normal)
-
-	# exit status, if not 0
-	if not test $lastexit -eq 0
-		set __prompt_status (set_color red)$lastexit(set_color normal)
-	else
-		# If this is not erased, the last error will be "sticky"
-		set --erase __prompt_status
-	end
+	set sections $sections " $USER@$__fish_prompt_hostname"
+	set background_colors $background_colors magenta
+	set foreground_colors $foreground_colors black
 
 	# Check if we are in a tmux prompt, display position if so
 	if test -n "$TMUX"
-		set --function __prompt_tmux \
-			(set_color blue)(tmux display-message -p '#I/#{session_windows}')(set_color normal)
-	else
-		set --erase __prompt_tmux
+		set sections $sections (tmux display-message -p '#I/#{session_windows}')
+		set foreground_colors $foreground_colors black
+		set background_colors $background_colors blue
 	end
-
 
 	# time of last prompt
-	set --function __prompt_time (set_color normal)(date '+%m/%d %H:%M')(set_color normal)
+	set sections $sections (date '+%m/%d %H:%M')
+	set foreground_colors $foreground_colors black
+	set background_colors $background_colors white
 
 	# working directory
-	set --function __prompt_pwd (set_color green)(prompt_pwd)(set_color normal)
+	set sections $sections (prompt_pwd)
+	set foreground_colors $foreground_colors black
+	set background_colors $background_colors green
 
-	# this sets an array with no "extra" elements because unset variables expand to nothing
-	set --function __prompt_array \
-		$__prompt_host $__prompt_status $__prompt_tmux $__prompt_time $__prompt_pwd
-
-
-	# if this isn't set by a per-system customization
-	if not set --query __fish_prompt_joiner
-		set --global --export __fish_prompt_joiner " > "
+	# exit status, if not 0
+	if not test $lastexit -eq 0
+		set sections $sections "$lastexit"
+		set background_colors $background_colors red
+		set foreground_colors $foreground_colors black
 	end
 
-	# the -s argument suppresses extra spaces between arguments
-	echo -n -s $__prompt_array{$__fish_prompt_joiner}
+	set background_colors $background_colors normal # one extra so we don't have any access issues
+	for i in (seq (count $sections))
+		echo -n -s \
+			(set_color $foreground_colors[$i] --background $background_colors[$i])\
+			$sections[$i]" "\
+			(set_color $background_colors[$i] --background $background_colors[(math $i + 1)])\
+			"$__fish_prompt_joiner "
+	end
+	echo -s -n (set_color normal)
+	if set --query __fish_prompt_use_ascii
+		echo -s -n (set_color $background_colors[-2])'$ '(set_color normal)
+	end
 
 end
 
