@@ -72,16 +72,16 @@ Function Reload-Profile {
 
 
 Function List-EmptyDirectories {
-	# Assumes you are in the correct directory unless told otherwise
-	Param (
-		[Parameter(mandatory)] $path
-	)
+    # Assumes you are in the correct directory unless told otherwise
+    Param (
+        [Parameter(mandatory)] $path
+    )
 
-	Get-ChildItem $path -Directory -Recurse -ErrorAction 'ignore' `
-	 | Where-Object { 
-		 ($_.GetFileSystemInfos().Count -eq 0) -and ($_.FullName -notmatch '\\\.')
-		 } `
-	 | ForEach-Object { $_.FullName }
+    Get-ChildItem $path -Directory -Recurse -ErrorAction 'ignore' `
+     | Where-Object { 
+         ($_.GetFileSystemInfos().Count -eq 0) -and ($_.FullName -notmatch '\\\.')
+         } `
+     | ForEach-Object { $_.FullName }
 }
 
 
