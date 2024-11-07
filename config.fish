@@ -27,8 +27,8 @@ set --local powerline_right_inverse ''
 set --local powerline_left_inverse ''
 set --global --export __fish_prompt_joiner "$powerline_right"
 # set --global --export __fish_prompt_joiner '▓▒░'
-if set --query __fish_prompt_use_ascii
-	set --global --export __fish_prompt_joiner ""
+if set --query __fish_prompt_no_powerline
+	set --global --export __fish_prompt_joiner "▌"
 end
 
 function fish_prompt
@@ -82,7 +82,7 @@ function fish_prompt
 			"$__fish_prompt_joiner "
 	end
 	echo -s -n (set_color normal)
-	if set --query __fish_prompt_use_ascii
+	if set --query __fish_prompt_no_powerline
 		echo -s -n (set_color $background_colors[-2])'$ '(set_color normal)
 	end
 
