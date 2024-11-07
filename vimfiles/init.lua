@@ -327,7 +327,7 @@ require('lazy').setup({
                     'vimdoc',
                 },
             },
-            indent = { enable = true },
+            indent = { enable = true, disable = { 'help', 'vimdoc' } },
         },
     },
     {
