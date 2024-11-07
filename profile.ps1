@@ -54,8 +54,13 @@ Function prompt {
     return " "
 }
 
+if (Get-Command starship -ErrorAction SilentlyContinue) {
+    # if we have starship, ignore everything above and use it instead
+    Invoke-Expression (&starship init powershell)
+}
+
 Function Edit-Profile {
-    gvim $profile
+    nvim $profile
 }
 
 Function Reload-Profile {
