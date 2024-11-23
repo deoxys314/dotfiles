@@ -1,0 +1,1 @@
+setlocal makeprg=uiua\ run\ $%\ $*
