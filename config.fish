@@ -8,10 +8,7 @@ fish_add_path --global --path --move --append "$HOME/.local/bin"
 fish_add_path --global --path --move --append "$HOME/bin"
 fish_add_path --global --path "$HOME/.cargo/bin"
 
-if not contains "$SCRIPTDIR/fish" $fish_function_path
-	set fish_function_path $fish_function_path "$SCRIPTDIR/fish"
-end
-
+set fish_function_path "$SCRIPTDIR/fish.d" $fish_function_path 
 
 ## GLOBALS
 
