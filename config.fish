@@ -70,6 +70,12 @@ function fish_prompt
 		set foreground_colors $foreground_colors black
 	end
 
+	if fish_is_root_user
+		set sections $sections '#'
+		set background_colors $background_colors yellow
+		set foreground_colors $foreground_colors black
+	end
+
 	set background_colors $background_colors normal # one extra so we don't have any access issues
 	for i in (seq (count $sections))
 		echo -n -s \
