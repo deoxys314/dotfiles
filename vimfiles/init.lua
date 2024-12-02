@@ -699,7 +699,7 @@ local function maintainence()
     print('Backing up plugin configuration')
     backup_plugins()
     print('Syncing Lazy plugin status')
-    manage_lazy()
+    manage_lazy(8)
     vim.cmd.checkhealth()
 end
 
