@@ -24,6 +24,7 @@
 	prompt = false
 
 [difftool "nvimdiff"]
+	# LOCAL is pre-image, REMOTE is post-image
 	cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
 
 [merge]
