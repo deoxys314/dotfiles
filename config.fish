@@ -117,6 +117,13 @@ function fish_right_prompt --description="Shows the git status, if applicable."
 	__fish_git_prompt
 end
 
+# suggestions display
+set --universal --export fish_pager_color_completion normal
+set --universal --export fish_pager_color_description green
+set --universal --export fish_pager_color_prefix normal --underline
+set --universal --export fish_pager_color_progress green
+set --universal --export fish_pager_color_selected_background -r
+
 # I seem to use these a lot, so this is a handy ref
 function unicode_block_elements_table
 	set --function idx 0
