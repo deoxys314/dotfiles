@@ -1,96 +1,95 @@
-"The oldest and strongest emotion of mankind is fear, and the oldest and strongest kind of fear is fear of the unknown."	H.P. Lovecraft
-"The world is indeed comic, but the joke is on mankind."	H.P. Lovecraft
-MENTE ET MALLEO
-"Earth is ancient now, but all knowledge is stored up in her. She keeps a record of everything that has happened since time began. Of time before time, she says little, and in a language that no one has yet understood. Through time, her secret codes have gradually been broken. Her mud and lava is a message from the past. Of time to come, she says much, but who listens?"	Jeanette Winterson
-"Creative work, in geology and anywhere else, is interaction and synthesis: half-baked ideas from a bar room, rocks in the field, chains of thought from lonely walks, numbers squeezed from rocks in a laboratory, numbers from a calculator riveted to a desk, fancy equipment usually malfunctioning on expensive ships, cheap equipment in the human cranium, arguments before a road cut."	Stephen Jay Gould
-"If by some fiat, I had to restrict all this writing to one sentence, this is the one I would choose: the summit of Mount Everest is marine limestone."	John McPhee
-"To a naturalist nothing is indifferent; the humble moss that creeps upon the stone is equally interesting as the lofty pine which so beautifully adorns the valley or the mountain; but to a naturalist who is reading in the face of the rocks the annals of a former world, the mossy covering which obstructs his view, and renders indistinguishable the different species of stone, is no less than a serious subject of regret."	James Hutton
-"Nobody exists on purpose. Nobody belongs anywhere. Everybody's gonna die. . . . Come watch TV?"	Morty Smith
-"This is why you don't freeze time, you guys. It's incredibly irresponsible."	Rick Sanchez
-"The first rule of space travel, kids, is always check out distress beacons. 9 out of 10 times, it's a ship full of dead aliens and a bunch of free shit!"	Rick Sanchez
-"Like the famous mad philosopher said, when you stare into the void, the void stares also; but if you cast into the void, you get a type conversion error. (Which just goes to show Nietzsche wasn't a C++ programmer.)"	Bob Howard
-"I wish I was still an atheist. Believing I was born into a harsh, uncaring cosmos – in which my existence was a random roll of the dice and I was destined to die and rot and then be gone forever – was infinitely more comforting than the truth. Because the truth is that my God is coming back. When he arrives I'll be waiting for him with a shotgun. And I'm keeping the last shell for myself."	Bob Howard
-"I was raised thinking that moral and ethical standards are universals that apply equally to everyone. And these values aren't easily compatible with the kind of religion that posits a Creator. To my way of thinking, an omnipotent being who sets up a universe in which thinking beings proliferate, grow old, and die (usually in agony, alone, and in fear) is a cosmic sadist."	Bob Howard
-"The saddest aspect of life right now is that science gathers knowledge faster than society gathers wisdom."	Isaac Asimov
-"The most exciting phrase to hear in science, the one that heralds the most discoveries, is not "Eureka!" (I found it!) but 'That's funny..."	Isaac Asimov
-YOU ARE HAVING A NEAR DEATH EXPERIENCE, WHICH INESCAPABLY MEANS I MUST HAVE A NEAR VIMES EXPERIENCE. DON'T MIND ME. CARRY ON WITH WHATEVER YOU WERE DOING. I HAVE A BOOK.	Death
-"There's no justice." NO. THERE IS JUST ME.	Death
-"If we believe in nothing, if nothing has any meaning and if we can affirm no values whatsoever, then everything is possible and nothing has any importance."	Albert Camus
-"Life has no meaning a priori . . .  It is up to you to give it a meaning, and value is nothing but the meaning that you choose."	Jean-Paul Sartre
-"The world is, of course, nothing but our conception of it."	Anton Chekhov
-"How you humans survive so much experience is something I shall never understand. To do so much and react to it all in the way you do is as much a curse as a blessing. You never take time to digest and appreciate what happens to you."	Peter F. Hamilton
-"Perfection," Inigo said, "is what we strive for; it is never what we should achieve. There is no such thing as utopia. Life by its nature is a struggle. Take that away and you take away any reason to exist."	Peter F. Hamilton (The Evolutionary Void)
-"Computers aren't smart, just fast. Garbage in, garbage out."	Peter F. Hamilton
-"The trouble with writing fiction is that it has to make sense, whereas real life doesn't."	Iain M. Banks
-"Zakalwe, in all human societies we have ever reviewed, in every age and every state, there has seldom if ever been a shortage of eager young males prepared to kill and die to preserve the security, comfort and prejudices of their elders, and what you call heroism is just an expression of this simple fact: there is never a scarcity of idiots."	Iain M. Banks (Use of Weapons)
-"Any theory which causes solipsism to seem just as likely an explanation for the phenomena it seeks to describe ought to be held in the utmost suspicion."	Iain M. Banks
-"Easy. Intuition is the art, peculiar to the human mind, of working out the correct answer from data that is, in itself, incomplete, or even, perhaps, misleading."	Hari Seldon (Prelude to Foundation)
-"A learning experience is one of those things that say, 'You know that thing you just did? Don't do that'."	Douglas Adams
-"Two possibilities exist: either we are alone in the Universe or we are not. Both are equally terrifying."	Arthur C. Clarke
-"I don't believe in astrology; I'm a Sagittarius and we're skeptical."	Arthur C. Clarke
-"If you think this Universe is bad, you should see some of the others."	Philip K. Dick
-"listen; there’s a hell of a good universe next door; let’s go"	e.e. cummings
-"Progress isn't made by early risers. It's made by lazy men trying to find easier ways to do something."	Robert A. Heinlein
-"Show me a completely smooth operation and I'll show you someone who's covering mistakes. Real boats rock."	Frank Herbert
-"That's the thing about people who think they hate computers...What they really hate are lousy programmers."	Larry Niven
-"Science, my lad, is made up of mistakes, but they are mistakes which it is useful to make, because they lead little by little to the truth."	Jules Verne
-"Those who believe in telekinesis, raise my hand."	Kurt Vonnegut
-"Science is magic that works."	Kurt Vonnegut
- "Looking at these stars suddenly dwarfed my own troubles and all the gravities of terrestrial life."	H.G. Wells
-"It is often said that before you die your life passes before your eyes. This is in fact true. It's called living."	Terry Pratchett
-"Don't stop me now, I'm having such a good time, I'm having a ball."	Freddie Mercury
-"Treason doth never prosper: what's the reason?
-Why, if it prosper, non dare call it treason."	John Harrington
-"The most merciful thing in the world, I think, is the inability of the human mind to correlate all its contents."	H.P. Lovecraft
-"We live on a placid island of ignorance in the midst of black seas of infinity, and it was not meant that we should voyage far."	H.P. Lovecraft
-"Never memorize something that you can look up."	Albert Einstein
-"Money is a sign of poverty." Iain M. Banks
-"Lord Dorwin, gentlemen, in five days of discussion, didn't say one damned thing, and said it so you never noticed.  There are the assurances you had from your precious Empire."	Salvor Hardin
-"Violence is the last refuge of the incompetent."	Salvor Hardin
-"It pays to be obvious, especially if you have a reputation for subtlety."	Salvor Hardin
-"If I have seen further than others, it is by standing upon the shoulders of giants."	Isaac Newton
-"Our brains have just one scale, and we resize our experiences to fit."	Randall Munroe
-"I've never seen the Icarus story as a lesson about the limitations of humans. I see it as a lesson about the limitations of wax as an adhesive."	Randall Munroe
-"Rowing is the only sport that originated as a form of capital punishment."	Old Rowing Truism
-"Be proud, never satisfied."	Julia Evans
-"When one rows it is not the rowing which moves the ship: rowing is only a magical ceremony by means of which one compels a demon to move the ship."	Nietzsche
-"It's a great art, is rowing. It's the finest art there is. It's a symphony of motion. And when you're rowing well, why, it's nearing perfection - and when you reach perfection you're touching the divine. It touches the you of you's which is your soul."	George Pocock
-"Fossils have richer stories to tell - about the lub-dub of dinosaur life - than we have been willing to listen to."	Robert T. Bakker
-"You've sacrificed your entire life to be who you are today. Was it worth it?"	Richard Bach
-"Everything changes, but nothing is truly lost." (OMNIA MUTANTUR NIHIL INTERIT)	Neil Gaiman (Translated from Ovid)
-"The story so far: In the beginning the Universe was created. This has made a lot of people very angry and been widely regarded as a bad move."	Douglas Adams
-"Of course it is happening inside your head, Harry, but why on earth should that mean that it is not real?"	Dumbledore (Harry Potter and the Deathly Hallows)
-"You heard about Pluto? That's messed up, right?"	Burton Guster
-"You are your choices."	Seneca
-"There is nothing I value so much as those moments where you have nothing to do, and nowhere to go, and you sit with friends, and laugh."
-"Veetans have found countless successes as imperial scientists, administrators, and engineers. However, Veetans rarely (if ever) serve in military roles, as they are firm pacifists. This is, in part, attributable to their short lifespans; Veetans believe that conflict wastes life's preciously rare opportunities."	Enciclopedia Xenobiologia
-"Our minds tell us we are nothing, while our hearts insist we are everything. You must always err towards your heart."	Veetan Proverb
-"Close air support covereth a multitude of sins."	The Seventy Maxims of Maximally Effective Mercenaries, Maxim 4
-"If you can see the whites of their eyes, somebody's done something wrong."	The Seventy Maxims of Maximally Effective Mercenaries, Maxim 22
-"[...] Of course, we had expected a complete and utter disaster, so only a few major screwups was considered a wild success in our book."	The AGP and The Box
-"The map is not the territory."	Alfred Korzybski, Science and Sanity (1933, p. 58)
-"At my age there's only one big surprise left, and I'd just as soon leave it a mystery."	Uncle Iroh
-"Protection and power are overrated. I think you are very wise to choose happiness and love. "	Uncle Iroh
 "Good tea is its own reward."	Uncle Iroh
-"I find that sharing tea with a fascinating stranger is one of life's true delights."	Uncle Iroh
-"Perfection and power are overrated. I think you were very wise to choose happiness and love."	Uncle Iroh
-"That really rustles my jimmies."	James "Jamal" "Jame" "jamie" Brownie
-"And then there's the wizards.  Tinker, tinker, tinker.  Never think twice before grabbing a thread of the fabric of reality and giving it a pull."	Havelock Vetinari
-"If a problem is fixable, if a situation is such that you can do something about it, then there is no need to worry.If it's not fixable, then there is no help in worrying.  There is no benefit in worrying whatsoever."	Dali Lama XIV
-"There aren't any magical words, really. Words just hold the magic."	Harry Dresden
-"Death, therefore, the most awful of evils, is nothing to us, seeing that, when we are, death is not come, and, when death is come, we are not."	Epicurus
-"Well, how was it before you were born? It's the same, but with life in the middle."
-"My sister passed away last year.  If you think of time as another dimension, she still exists, and always will, from 1980 to 2015, but not before or after.  She's eternally pressed into the cosmic shale, just a little ways back there."
-"I am going to die, it will happen, and that's the way it will go. Until that time, I move forward."
-Kathleen Mirali Tagon was just one of thousands killed in the opening shots of the Terraforming War in the Celeschul System in 3069. The Terran Formation Front launched their first strikes in an attempt to decapitate their opposition by assassinating senior officers sympathetic to the Continuance faction. There are numerous narratives surrounding that conflict. Some people say that the TFF was doomed to failure the moment Colonel Karl Tagon survived. Karl Tagon is not one of those people, but late in the evening after a few drinks, Karl will concede that it is astonishingly poor tactical doctrine to make him your enemy.	Schlock Mercenary, 160930
-"Earth sucks, let's go get drunk at this bar in a black hole I heard about."	Peter Quill, probably
-If you ever code something that "feels like a hack but works", just remember that a CPU is literally a rock we tricked into thinking.	@daisyowl
-MELIOR VIA INVENIENDA EST (There must be a better way.)
-"All wars are civil wars, because all men are brothers."	Francois Fenelon
-Doing something is 85% better than doing nothing.
-"'Grok' means to understand so thoroughly that the observer becomes a part of the process being observed - to merge, to blend, to intermarry, to lose personal identity in group experience. It means almost everything that we mean by religion, philosophy, and science—and it means as little to us as color means to a blind man."	Robert A. Heinlein, Stranger in a Strange Land
-"And remember that bad times . . . are just times that are bad."
+"Money is a sign of poverty."	Culture Proverb (Iain M. Banks)
+"Everything changes, but nothing is truly lost." (OMNIA MUTANTUR NIHIL INTERIT)	Neil Gaiman (Translated from Ovid)
+"Those who believe in telekinesis, raise my hand."	Kurt Vonnegut
+"The world is indeed comic, but the joke is on mankind."	H.P. Lovecraft
+"If you think this Universe is bad, you should see some of the others."	Philip K. Dick
+"I don't believe in astrology; I'm a Sagittarius and we're skeptical."	Arthur C. Clarke
+"Computers aren't smart, just fast. Garbage in, garbage out."	Peter F. Hamilton
 "There is nothing noble in being superior to your fellow men. True nobility lies in being superior to your former self."	Ernest Hemmingway
-If nobody comes from the future to stop you doing it, how bad of an idea can it be?
+"Rowing is the only sport that originated as a form of capital punishment."	Old Rowing Truism
+"Close air support covereth a multitude of sins."	The Seventy Maxims of Maximally Effective Mercenaries, Maxim 4
+"I am going to die, it will happen, and that's the way it will go. Until that time, I move forward."
+"Treason doth never prosper: what's the reason? Why, if it prosper, non dare call it treason."	John Harrington
+"Protection and power are overrated. I think you are very wise to choose happiness and love. "	Uncle Iroh
+"Fossils have richer stories to tell - about the lub-dub of dinosaur life - than we have been willing to listen to."	Robert T. Bakker
+"Don't stop me now, I'm having such a good time, I'm having a ball."	Freddie Mercury
+"Never memorize something that you can look up."	Albert Einstein
+"The saddest aspect of life right now is that science gathers knowledge faster than society gathers wisdom."	Isaac Asimov
+"Progress isn't made by early risers. It's made by lazy men trying to find easier ways to do something."	Robert A. Heinlein
+"Our brains have just one scale, and we resize our experiences to fit."	Randall Munroe
+"You are your choices."	Seneca
+"All wars are civil wars, because all men are brothers."	Francois Fenelon
+"There's no justice." NO. THERE IS JUST ME.	Death
+"Well, how was it before you were born? It's the same, but with life in the middle."
+"If we believe in nothing, if nothing has any meaning and if we can affirm no values whatsoever, then everything is possible and nothing has any importance."	Albert Camus
+"If you can see the whites of their eyes, somebody's done something wrong."	The Seventy Maxims of Maximally Effective Mercenaries, Maxim 22
+"Like the famous mad philosopher said, when you stare into the void, the void stares also; but if you cast into the void, you get a type conversion error. (Which just goes to show Nietzsche wasn't a C++ programmer.)"	Bob Howard
+"The most merciful thing in the world, I think, is the inability of the human mind to correlate all its contents."	H.P. Lovecraft
+"The map is not the territory."	Alfred Korzybski, Science and Sanity (1933, p. 58)
+"I've never seen the Icarus story as a lesson about the limitations of humans. I see it as a lesson about the limitations of wax as an adhesive."	Randall Munroe
+"How you humans survive so much experience is something I shall never understand. To do so much and react to it all in the way you do is as much a curse as a blessing. You never take time to digest and appreciate what happens to you."	Peter F. Hamilton
+"That's the thing about people who think they hate computers...What they really hate are lousy programmers."	Larry Niven
+Kathleen Mirali Tagon was just one of thousands killed in the opening shots of the Terraforming War in the Celeschul System in 3069. The Terran Formation Front launched their first strikes in an attempt to decapitate their opposition by assassinating senior officers sympathetic to the Continuance faction. There are numerous narratives surrounding that conflict. Some people say that the TFF was doomed to failure the moment Colonel Karl Tagon survived. Karl Tagon is not one of those people, but late in the evening after a few drinks, Karl will concede that it is astonishingly poor tactical doctrine to make him your enemy.	Schlock Mercenary, 160930
+MELIOR VIA INVENIENDA EST (There must be a better way.)
+"There aren't any magical words, really. Words just hold the magic."	Harry Dresden
+"And then there's the wizards.  Tinker, tinker, tinker.  Never think twice before grabbing a thread of the fabric of reality and giving it a pull."	Havelock Vetinari
+"The world is, of course, nothing but our conception of it."	Anton Chekhov
+"'Grok' means to understand so thoroughly that the observer becomes a part of the process being observed - to merge, to blend, to intermarry, to lose personal identity in group experience. It means almost everything that we mean by religion, philosophy, and science—and it means as little to us as color means to a blind man."	Robert A. Heinlein, Stranger in a Strange Land
+"Science is magic that works."	Kurt Vonnegut
+"listen; there’s a hell of a good universe next door; let’s go"	e.e. cummings
+"The first rule of space travel, kids, is always check out distress beacons. 9 out of 10 times, it's a ship full of dead aliens and a bunch of free shit!"	Rick Sanchez
+"[...] Of course, we had expected a complete and utter disaster, so only a few major screwups was considered a wild success in our book."	The AGP and The Box
+If you ever code something that "feels like a hack but works", just remember that a CPU is literally a rock we tricked into thinking.	@daisyowl
+"When one rows it is not the rowing which moves the ship: rowing is only a magical ceremony by means of which one compels a demon to move the ship."	Nietzsche
+"You heard about Pluto? That's messed up, right?"	Burton Guster
+"Be proud, never satisfied."	Julia Evans
+"If by some fiat, I had to restrict all this writing to one sentence, this is the one I would choose: the summit of Mount Everest is marine limestone."	John McPhee
+"It is often said that before you die your life passes before your eyes. This is in fact true. It's called living."	Terry Pratchett
+"It pays to be obvious, especially if you have a reputation for subtlety."	Salvor Hardin
+"Creative work, in geology and anywhere else, is interaction and synthesis: half-baked ideas from a bar room, rocks in the field, chains of thought from lonely walks, numbers squeezed from rocks in a laboratory, numbers from a calculator riveted to a desk, fancy equipment usually malfunctioning on expensive ships, cheap equipment in the human cranium, arguments before a road cut."	Stephen Jay Gould
+"It's a great art, is rowing. It's the finest art there is. It's a symphony of motion. And when you're rowing well, why, it's nearing perfection - and when you reach perfection you're touching the divine. It touches the you of you's which is your soul."	George Pocock
+"Zakalwe, in all human societies we have ever reviewed, in every age and every state, there has seldom if ever been a shortage of eager young males prepared to kill and die to preserve the security, comfort and prejudices of their elders, and what you call heroism is just an expression of this simple fact: there is never a scarcity of idiots."	Iain M. Banks (Use of Weapons)
+"At my age there's only one big surprise left, and I'd just as soon leave it a mystery."	Uncle Iroh
+"A learning experience is one of those things that say, 'You know that thing you just did? Don't do that'."	Douglas Adams
+"Death, therefore, the most awful of evils, is nothing to us, seeing that, when we are, death is not come, and, when death is come, we are not."	Epicurus
+"Violence is the last refuge of the incompetent."	Salvor Hardin
+"Perfection," Inigo said, "is what we strive for; it is never what we should achieve. There is no such thing as utopia. Life by its nature is a struggle. Take that away and you take away any reason to exist."	Peter F. Hamilton (The Evolutionary Void)
+YOU ARE HAVING A NEAR DEATH EXPERIENCE, WHICH INESCAPABLY MEANS I MUST HAVE A NEAR VIMES EXPERIENCE. DON'T MIND ME. CARRY ON WITH WHATEVER YOU WERE DOING. I HAVE A BOOK.	Death
+"The most exciting phrase to hear in science, the one that heralds the most discoveries, is not "Eureka!" (I found it!) but 'That's funny..."	Isaac Asimov
+"To a naturalist nothing is indifferent; the humble moss that creeps upon the stone is equally interesting as the lofty pine which so beautifully adorns the valley or the mountain; but to a naturalist who is reading in the face of the rocks the annals of a former world, the mossy covering which obstructs his view, and renders indistinguishable the different species of stone, is no less than a serious subject of regret."	James Hutton
 Your boat will sink and you will feel foolish. You cannot swim to victory!	Ethan Curran
+"Earth sucks, let's go get drunk at this bar in a black hole I heard about."	Peter Quill, probably
+"I find that sharing tea with a fascinating stranger is one of life's true delights."	Uncle Iroh
+"Of course it is happening inside your head, Harry, but why on earth should that mean that it is not real?"	Dumbledore (Harry Potter and the Deathly Hallows)
+"Our minds tell us we are nothing, while our hearts insist we are everything. You must always err towards your heart."	Veetan Proverb
+"The trouble with writing fiction is that it has to make sense, whereas real life doesn't."	Iain M. Banks
+"Science, my lad, is made up of mistakes, but they are mistakes which it is useful to make, because they lead little by little to the truth."	Jules Verne
+"Any theory which causes solipsism to seem just as likely an explanation for the phenomena it seeks to describe ought to be held in the utmost suspicion."	Iain M. Banks
+"If I have seen further than others, it is by standing upon the shoulders of giants."	Isaac Newton
+"You've sacrificed your entire life to be who you are today. Was it worth it?"	Richard Bach
+"There is nothing I value so much as those moments where you have nothing to do, and nowhere to go, and you sit with friends, and laugh."
+ "Looking at these stars suddenly dwarfed my own troubles and all the gravities of terrestrial life."	H.G. Wells
+"Easy. Intuition is the art, peculiar to the human mind, of working out the correct answer from data that is, in itself, incomplete, or even, perhaps, misleading."	Hari Seldon (Prelude to Foundation)
 OK, try to imagine yourself in the Cretaceous Period. You get your first look at this "six foot turkey" as you enter a clearing. He moves like a bird, lightly, bobbing his head. And you keep still because you think that maybe his visual acuity is based on movement like T-Rex - he'll lose you if you don't move. But no, not Velociraptor. You stare at him, and he just stares right back. And that's when the attack comes. Not from the front, but from the side, from the other two raptors you didn't even know were there. Because Velociraptor's a pack hunter, you see, he uses coordinated attack patterns and he is out in force today. And he slashes at you with this, a six-inch retractable claw, like a razor, on the the middle toe. He doesn't bother to bite your jugular like a lion, say... no no. He slashes at you here, or here, or maybe across the belly, spilling your intestines. The point is, you are alive when they start to eat you. So you know, try to show a little respect.	Dr. Alan Grant
+"The oldest and strongest emotion of mankind is fear, and the oldest and strongest kind of fear is fear of the unknown."	H.P. Lovecraft
+If nobody comes from the future to stop you doing it, how bad of an idea can it be?
+"Two possibilities exist: either we are alone in the Universe or we are not. Both are equally terrifying."	Arthur C. Clarke
+"The story so far: In the beginning the Universe was created. This has made a lot of people very angry and been widely regarded as a bad move."	Douglas Adams
+"Lord Dorwin, gentlemen, in five days of discussion, didn't say one damned thing, and said it so you never noticed.  There are the assurances you had from your precious Empire."	Salvor Hardin
+"Perfection and power are overrated. I think you were very wise to choose happiness and love."	Uncle Iroh
+"Nobody exists on purpose. Nobody belongs anywhere. Everybody's gonna die. . . . Come watch TV?"	Morty Smith
+"Show me a completely smooth operation and I'll show you someone who's covering mistakes. Real boats rock."	Frank Herbert
+"That really rustles my jimmies."	James "Jamal" "Jame" "jamie" Brownie
+"Earth is ancient now, but all knowledge is stored up in her. She keeps a record of everything that has happened since time began. Of time before time, she says little, and in a language that no one has yet understood. Through time, her secret codes have gradually been broken. Her mud and lava is a message from the past. Of time to come, she says much, but who listens?"	Jeanette Winterson
+"My sister passed away last year.  If you think of time as another dimension, she still exists, and always will, from 1980 to 2015, but not before or after.  She's eternally pressed into the cosmic shale, just a little ways back there."
+"This is why you don't freeze time, you guys. It's incredibly irresponsible."	Rick Sanchez
+"I wish I was still an atheist. Believing I was born into a harsh, uncaring cosmos – in which my existence was a random roll of the dice and I was destined to die and rot and then be gone forever – was infinitely more comforting than the truth. Because the truth is that my God is coming back. When he arrives I'll be waiting for him with a shotgun. And I'm keeping the last shell for myself."	Bob Howard
+"And remember that bad times . . . are just times that are bad."
+"Veetans have found countless successes as imperial scientists, administrators, and engineers. However, Veetans rarely (if ever) serve in military roles, as they are firm pacifists. This is, in part, attributable to their short lifespans; Veetans believe that conflict wastes life's preciously rare opportunities."	Enciclopedia Xenobiologia
+"If a problem is fixable, if a situation is such that you can do something about it, then there is no need to worry.If it's not fixable, then there is no help in worrying.  There is no benefit in worrying whatsoever."	Dali Lama XIV
+Doing something is 85% better than doing nothing.
+"Life has no meaning a priori . . .  It is up to you to give it a meaning, and value is nothing but the meaning that you choose."	Jean-Paul Sartre
+MENTE ET MALLEO
+"I was raised thinking that moral and ethical standards are universals that apply equally to everyone. And these values aren't easily compatible with the kind of religion that posits a Creator. To my way of thinking, an omnipotent being who sets up a universe in which thinking beings proliferate, grow old, and die (usually in agony, alone, and in fear) is a cosmic sadist."	Bob Howard
+"We live on a placid island of ignorance in the midst of black seas of infinity, and it was not meant that we should voyage far."	H.P. Lovecraft

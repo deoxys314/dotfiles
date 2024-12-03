@@ -32,7 +32,9 @@ end
 
 
 function info
-    printf '%s%s%s: %s' (set_color --bold yellow) "$argv[1]" (set_color normal) "$argv[2]"
+    if test -n "$argv[2]"
+        printf '%s%s%s: %s' (set_color --bold yellow) "$argv[1]" (set_color normal) "$argv[2]"
+    end
 end
 
 function battery
