@@ -772,7 +772,7 @@ g.loaded_ruby_provider = 0
 
 -- Color
 opt.termguicolors = true
-vim.cmd.colorscheme('tokyonight')
+vim.cmd.colorscheme 'tokyonight'
 
 -- Gui Options
 
