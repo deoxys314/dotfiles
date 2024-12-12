@@ -379,6 +379,7 @@ require('lazy').setup({
         -- commit = 'e01f683',
     },
     { 'rust-lang/rust.vim', ft = 'rust' },
+    { 'sakhnik/nvim-gdb', enabled = function() return is_executable 'gdb' end },
     { 'tpope/vim-apathy' },
     {
         'tpope/vim-commentary',
