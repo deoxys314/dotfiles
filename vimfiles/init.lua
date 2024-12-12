@@ -722,6 +722,8 @@ opt.modeline = true
 opt.modelines = 5
 opt.modelineexpr = false
 
+local Vimrc = vim.api.nvim_create_augroup('Vimrc', { clear = true })
+
 if opt.diff:get() then
     vim.cmd.highlight({ args = { 'link', 'DiffText', 'MatchParen' }, bang = true })
     vim.cmd.command('Q qall')
@@ -730,9 +732,18 @@ if opt.diff:get() then
     opt.number = false
     opt.signcolumn = 'no'
     opt.foldopen:remove('all')
+    -- set statusline to something simple
+    opt.statusline = '%f %= %y'
+    -- hide lualine
+    vim.api.nvim_create_autocmd({ 'VimEnter' }, {
+        pattern = '*',
+        callback = function() require'lualine'.hide() end,
+        desc = 'Hide lualine while viewing diffs',
+        group = Vimrc,
+        once=true,
+    })
 end
 
-local Vimrc = vim.api.nvim_create_augroup('Vimrc', { clear = true })
 vim.api.nvim_create_autocmd({ 'BufNewFile', 'BufRead' }, {
     pattern = '*.js,*.css,*.htm,*.html,*.php',
     callback = function()
