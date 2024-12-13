@@ -422,6 +422,7 @@ require('lazy').setup({
         'w0rp/ale',
         version = '*',
         config = function()
+            local function args(tbl) return table.concat(tbl, ' ') end
             g.ale_fixers = {
                 ['*'] = { 'remove_trailing_lines', 'trim_whitespace' },
                 cpp = { 'remove_trailing_lines', 'trim_whitespace', 'clang-format' },
@@ -435,9 +436,9 @@ require('lazy').setup({
                 rust = { 'rustfmt' },
                 typescript = { 'tslint', 'prettier' },
             }
-            g.ale_markdown_mdl_options = '--rule ~MD029 --rule ~MD005'
-            g.ale_markdown_writegood_options = '--no-passive'
-            g.ale_lua_lua_format_options = table.concat({
+            g.ale_markdown_mdl_options = args { '--rule', '~MD029', '--rule', '~MD005' }
+            g.ale_markdown_writegood_options = args { '--no-passive' }
+            g.ale_lua_lua_format_options = args {
                 '--break-after-table-lb',
                 '--chop-down-table',
                 '--column-limit=99',
@@ -445,7 +446,7 @@ require('lazy').setup({
                 '--extra-sep-at-table-end',
                 '--keep-simple-control-block-one-line',
                 '--spaces-inside-table-braces',
-            }, ' ')
+            }
             g.ale_linters = {
                 go = { 'gofmt' },
                 markdown = { 'markdownlint' },
