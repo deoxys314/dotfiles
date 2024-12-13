@@ -741,7 +741,7 @@ if opt.diff:get() then
         callback = function() require'lualine'.hide() end,
         desc = 'Hide lualine while viewing diffs',
         group = Vimrc,
-        once=true,
+        once = true,
     })
 end
 
