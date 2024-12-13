@@ -119,6 +119,15 @@ function get_uptime
     echo "$days" "$hours" "$minutes"
 end
 
+function get_disk_usage --argument-names mode
+	if not command --query df
+		# we need this
+		print ''
+		return
+	end
+	set --function disk_data (string split "\n" (df -h))[2..]
+end
+
 function neofish
     set --function -x fish_trace true
 
