@@ -4,6 +4,11 @@ set --local SCRIPTDIR (dirname (status --current-filename))
 
 mkdir -pv ~/bin
 
+if command --query uname; and string match --ignore-case --quiet 'Darwin' (uname); and not test -e ~/.hushlogin
+	# removes an annoying message in new terminals in OSX
+	touch ~/.hushlogin
+end
+
 fish_add_path --global --path --move --append "$HOME/.local/bin"
 fish_add_path --global --path --move --append "$HOME/bin"
 fish_add_path --global --path "$HOME/.cargo/bin"
