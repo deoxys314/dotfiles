@@ -146,7 +146,7 @@ function unicode_block_elements_table
 			(printf (printf '\\\\u%x' "$char_id")) \
 			(set_color normal)
 
-		if test (math "$idx" '%' 4) -eq 0
+		if test (math "$idx % 4") -eq 0
 			echo
 		else
 			echo -n -s ' | '
