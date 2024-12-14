@@ -28,11 +28,11 @@ end
 
 ## FUNCTIONS
 
-set --local powerline_right ''
-set --local powerline_left  ''
-set --local powerline_right_inverse ''
-set --local powerline_left_inverse ''
-set --global --export __fish_prompt_joiner "$powerline_right"
+set --global --export __fish_prompt_powerline_right ''
+set --global --export __fish_prompt_powerline_left  ''
+set --global --export __fish_prompt_powerline_right_inverse ''
+set --global --export __fish_prompt_powerline_left_inverse ''
+set --global --export __fish_prompt_joiner "$__fish_prompt_powerline_right"
 # set --global --export __fish_prompt_joiner '▓▒░'
 if set --query __fish_prompt_no_powerline
 	set --global --export __fish_prompt_joiner "▌"
