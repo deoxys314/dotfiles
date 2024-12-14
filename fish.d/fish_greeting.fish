@@ -1,10 +1,9 @@
 function fish_greeting
 
-	set --function qotd_lines (
-		quote_of_the_day (git -C (status dirname) rev-parse --show-toplevel)'/qotd.txt' \
-			--width ( math "min( ($COLUMNS / 3), 48 )") --print-header \
-			| string split "\n"
-		)
+	set --function qotd_length (math "min( ($COLUMNS / 3), 48 )")
+	set --function qotd_file (git -C (status dirname) rev-parse --show-toplevel)'/qotd.txt'
+
+	set --function qotd_lines (quote_of_the_day $qotd_file --width $qotd_length --print-header | string split "\n")
 	# add just a touch more visual space
 	set --prepend qotd_lines ''
 
@@ -20,5 +19,5 @@ function fish_greeting
 	for i in (seq 1 $num_of_lines)
 		printf '%s %s   %s\n' (string pad --right --width $left_width $ascii_art[$i]) (set_color normal) $qotd_lines[$i]
 	end
-	year_progress (math "min( (0$COLUMNS - 6), ( min(($COLUMNS /3), 48) + $left_width) )")
+	year_progress (math "min((0$COLUMNS - 6), ( $qotd_length + $left_width))")
 end
