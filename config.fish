@@ -6,7 +6,7 @@ fish_add_path --global --path --move --append "$HOME/.local/bin"
 fish_add_path --global --path --move --append "$HOME/bin"
 fish_add_path --global --path "$HOME/.cargo/bin"
 
-set fish_function_path "$SCRIPTDIR/fish.d" $fish_function_path 
+set fish_function_path "$SCRIPTDIR/fish.d" $fish_function_path
 
 ## GLOBALS
 
