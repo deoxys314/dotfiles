@@ -1,5 +1,7 @@
 set --local SCRIPTDIR (dirname (status --current-filename))
 
+# SETUP
+
 mkdir -pv ~/bin
 
 fish_add_path --global --path --move --append "$HOME/.local/bin"
