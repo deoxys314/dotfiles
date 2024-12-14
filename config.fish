@@ -1,5 +1,3 @@
-# Here is the configuration for the fish shell
-
 set --local SCRIPTDIR (dirname (status --current-filename))
 
 mkdir -pv ~/bin
