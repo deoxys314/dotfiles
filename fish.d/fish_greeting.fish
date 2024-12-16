@@ -19,5 +19,7 @@ function fish_greeting
 	for i in (seq 1 $num_of_lines)
 		printf '%s %s   %s\n' (string pad --right --width $left_width $ascii_art[$i]) (set_color normal) $qotd_lines[$i]
 	end
-	year_progress (math "min((0$COLUMNS - 6), ( $qotd_length + $left_width))")
+
+	set --function yp_msg (set_color yellow --underline)'Year Progress'(set_color normal)': '
+	printf '%s%s\n' "$yp_msg" (year_progress (math "$qotd_length + $left_width - " (string length --visible $yp_msg)))
 end
