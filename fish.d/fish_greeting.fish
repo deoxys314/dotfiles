@@ -13,13 +13,13 @@ function fish_greeting
 
 	set --local left_width 0
 	for i in (seq 1 (count $ascii_art))
-		set left_width (math "max($left_width , " (string length --visible $ascii_art[$i]) ')' )
+		set left_width (math "max($left_width , $(string length --visible $ascii_art[$i]) )" )
 	end
 
 	for i in (seq 1 $num_of_lines)
 		printf '%s %s   %s\n' (string pad --right --width $left_width $ascii_art[$i]) (set_color normal) $qotd_lines[$i]
 	end
 
-	set --function yp_msg (set_color yellow --underline)'Year Progress'(set_color normal)': '
-	printf '%s%s\n' "$yp_msg" (year_progress (math "$qotd_length + $left_width - " (string length --visible $yp_msg)))
+	set --function yp_msg "$(set_color yellow --underline)Year Progress$(set_color normal): "
+	printf '%s%s\n' "$yp_msg" (year_progress (math "$qotd_length + $left_width -  $(string length --visible $yp_msg)"))
 end
