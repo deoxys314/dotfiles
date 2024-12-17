@@ -17,7 +17,14 @@ function fish_greeting
 	end
 
 	for i in (seq 1 $num_of_lines)
-		printf '%s %s   %s\n' (string pad --right --width $left_width $ascii_art[$i]) (set_color normal) $qotd_lines[$i]
+		printf '%s %s   %s\n' \
+		(string pad --right --width $left_width \
+		(if set -qf ascii_art[$i]
+			echo $ascii_art[$i]
+		else
+			echo ''
+		end)) \
+		(set_color normal) $qotd_lines[$i]
 	end
 
 	set --function yp_msg "$(set_color yellow --underline)Year Progress$(set_color normal): "
