@@ -5,8 +5,8 @@ function quote_of_the_day \
 		(fish_opt --short p --long print-header) \
 		(fish_opt --short c --long count --long-only) \
 		(fish_opt --short w --long width --required-val) \
-		(fish_opt --short i --long index --required-val)'!_validate_int --min 1' \
-		(fish_opt --short s --long seed --required-val)'!_validate_int --min 1'  \
+		"$(fish_opt --short i --long index --required-val)!_validate_int --min 1" \
+		"$(fish_opt --short s --long seed --required-val)!_validate_int --min 1"  \
 		-- $argv
 	or return
 
@@ -16,7 +16,7 @@ function quote_of_the_day \
 	end
 
 	if set -ql _flag_print_header
-		echo (set_color yellow --underline)'Quote of the Day'(set_color normal)
+		echo "$(set_color yellow --underline)Quote of the Day$(set_color normal)"
 	end
 
 	if set -ql _flag_width
