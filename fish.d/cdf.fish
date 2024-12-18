@@ -1,6 +1,6 @@
 function cdf --description="If on OSX, `cd` to the directory the front Finder window is open to."
 	# first we check if we're on OSX
-	if not test (uname -s) = "Darwin"
+	if not string match --ignore-case --quiet 'Darwin' (uname)
 		echo "We are not on OSX." >&2
 		return 3
 	end
