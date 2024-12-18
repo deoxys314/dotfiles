@@ -50,3 +50,6 @@
 
 [push]
 	autoSetupRemote = true
+
+[stash]
+	showPatch = true
