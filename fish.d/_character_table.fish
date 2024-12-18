@@ -10,7 +10,7 @@ function _character_table --argument-names start stop
 			(printf (printf '\\\\u%1x' "$char_id")) \
 			(set_color normal)
 
-		if test (math "$idx % 4") -eq 0
+		if test (math "$idx % 8") -eq 0
 			echo
 		else
 			echo -n -s ' | '
