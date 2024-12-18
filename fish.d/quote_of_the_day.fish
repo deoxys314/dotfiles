@@ -29,7 +29,7 @@ function quote_of_the_day \
 	set --function n_quotes (count $quotes)
 	if set -ql _flag_count; printf '%d' $n_quotes; return; end
 
-	set --function quote_idx (math (date '+%V') '*' (date '+%j') '%' "$n_quotes + 1")
+	set --function quote_idx (math "$(date '+%V') * $(date '+%j') % $n_quotes + 1")
 	if set -ql _flag_seed
 		set quote_idx (math "$quote_idx + $_flag_seed % $n_quotes")
 	else if set -ql _flag_index
