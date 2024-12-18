@@ -1,5 +1,10 @@
 function fish_greeting
 
+	if test -n "$TMUX"
+		and not test "$(tmux display-message -p '#{session_windows}')" -eq 1 -a "$(tmux display-message -p '#{window_panes}')" -eq 1
+		return
+	end
+
 	set --function qotd_length (math "min( ($COLUMNS / 3), 48 )")
 	set --function qotd_file (git -C (status dirname) rev-parse --show-toplevel)'/qotd.txt'
 
