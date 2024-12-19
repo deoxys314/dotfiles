@@ -10,7 +10,7 @@
 "Rowing is the only sport that originated as a form of capital punishment."	Old Rowing Truism
 "Close air support covereth a multitude of sins."	The Seventy Maxims of Maximally Effective Mercenaries, Maxim 4
 "I am going to die, it will happen, and that's the way it will go. Until that time, I move forward."
-"Treason doth never prosper: what's the reason? Why, if it prosper, non dare call it treason."	John Harrington
+"Treason doth never prosper: what's the reason? Why, if it prosper, none dare call it treason."	John Harrington
 "Protection and power are overrated. I think you are very wise to choose happiness and love. "	Uncle Iroh
 "Fossils have richer stories to tell - about the lub-dub of dinosaur life - than we have been willing to listen to."	Robert T. Bakker
 "Don't stop me now, I'm having such a good time, I'm having a ball."	Freddie Mercury
@@ -22,7 +22,6 @@
 "All wars are civil wars, because all men are brothers."	Francois Fenelon
 "There's no justice." NO. THERE IS JUST ME.	Death
 "Well, how was it before you were born? It's the same, but with life in the middle."
-"If we believe in nothing, if nothing has any meaning and if we can affirm no values whatsoever, then everything is possible and nothing has any importance."	Albert Camus
 "If you can see the whites of their eyes, somebody's done something wrong."	The Seventy Maxims of Maximally Effective Mercenaries, Maxim 22
 "Like the famous mad philosopher said, when you stare into the void, the void stares also; but if you cast into the void, you get a type conversion error. (Which just goes to show Nietzsche wasn't a C++ programmer.)"	Bob Howard
 "The most merciful thing in the world, I think, is the inability of the human mind to correlate all its contents."	H.P. Lovecraft
@@ -68,8 +67,7 @@ Your boat will sink and you will feel foolish. You cannot swim to victory!	Ethan
 "Any theory which causes solipsism to seem just as likely an explanation for the phenomena it seeks to describe ought to be held in the utmost suspicion."	Iain M. Banks
 "If I have seen further than others, it is by standing upon the shoulders of giants."	Isaac Newton
 "You've sacrificed your entire life to be who you are today. Was it worth it?"	Richard Bach
-"There is nothing I value so much as those moments where you have nothing to do, and nowhere to go, and you sit with friends, and laugh."
- "Looking at these stars suddenly dwarfed my own troubles and all the gravities of terrestrial life."	H.G. Wells
+"Looking at these stars suddenly dwarfed my own troubles and all the gravities of terrestrial life."	H.G. Wells
 "Easy. Intuition is the art, peculiar to the human mind, of working out the correct answer from data that is, in itself, incomplete, or even, perhaps, misleading."	Hari Seldon (Prelude to Foundation)
 OK, try to imagine yourself in the Cretaceous Period. You get your first look at this "six foot turkey" as you enter a clearing. He moves like a bird, lightly, bobbing his head. And you keep still because you think that maybe his visual acuity is based on movement like T-Rex - he'll lose you if you don't move. But no, not Velociraptor. You stare at him, and he just stares right back. And that's when the attack comes. Not from the front, but from the side, from the other two raptors you didn't even know were there. Because Velociraptor's a pack hunter, you see, he uses coordinated attack patterns and he is out in force today. And he slashes at you with this, a six-inch retractable claw, like a razor, on the the middle toe. He doesn't bother to bite your jugular like a lion, say... no no. He slashes at you here, or here, or maybe across the belly, spilling your intestines. The point is, you are alive when they start to eat you. So you know, try to show a little respect.	Dr. Alan Grant
 "The oldest and strongest emotion of mankind is fear, and the oldest and strongest kind of fear is fear of the unknown."	H.P. Lovecraft
@@ -84,13 +82,13 @@ If nobody comes from the future to stop you doing it, how bad of an idea can it 
 "Earth is ancient now, but all knowledge is stored up in her. She keeps a record of everything that has happened since time began. Of time before time, she says little, and in a language that no one has yet understood. Through time, her secret codes have gradually been broken. Her mud and lava is a message from the past. Of time to come, she says much, but who listens?"	Jeanette Winterson
 "My sister passed away last year.  If you think of time as another dimension, she still exists, and always will, from 1980 to 2015, but not before or after.  She's eternally pressed into the cosmic shale, just a little ways back there."
 "This is why you don't freeze time, you guys. It's incredibly irresponsible."	Rick Sanchez
-"I wish I was still an atheist. Believing I was born into a harsh, uncaring cosmos – in which my existence was a random roll of the dice and I was destined to die and rot and then be gone forever – was infinitely more comforting than the truth. Because the truth is that my God is coming back. When he arrives I'll be waiting for him with a shotgun. And I'm keeping the last shell for myself."	Bob Howard
 "And remember that bad times . . . are just times that are bad."
 "Veetans have found countless successes as imperial scientists, administrators, and engineers. However, Veetans rarely (if ever) serve in military roles, as they are firm pacifists. This is, in part, attributable to their short lifespans; Veetans believe that conflict wastes life's preciously rare opportunities."	Enciclopedia Xenobiologia
 "If a problem is fixable, if a situation is such that you can do something about it, then there is no need to worry.If it's not fixable, then there is no help in worrying.  There is no benefit in worrying whatsoever."	Dali Lama XIV
-Doing something is 85% better than doing nothing.
+Doing something is 85% better than doing nothing.	Jenn Kerry
 "Life has no meaning a priori . . .  It is up to you to give it a meaning, and value is nothing but the meaning that you choose."	Jean-Paul Sartre
 MENTE ET MALLEO
 "I was raised thinking that moral and ethical standards are universals that apply equally to everyone. And these values aren't easily compatible with the kind of religion that posits a Creator. To my way of thinking, an omnipotent being who sets up a universe in which thinking beings proliferate, grow old, and die (usually in agony, alone, and in fear) is a cosmic sadist."	Bob Howard
 "We live on a placid island of ignorance in the midst of black seas of infinity, and it was not meant that we should voyage far."	H.P. Lovecraft
 “It will,” Wit said, “but then it will get better. Then it will get worse again. Then better. This is life, and I will not lie by saying every day will be sunshine. But there will be sunshine again, and that is a very different thing to say. That is truth. I promise you, Kaladin: You will be warm again.”	Brandon Sanderson, Rhythm of War
+"Ten spears go to battle,” he whispered, “and nine shatter. Did that war forge the one that remained? No, Amaram. All the war did was identify the spear that would not break.”	Brandon Sanderson, Oathbringer
