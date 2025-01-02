@@ -15,8 +15,6 @@ fish_add_path --global --path "$HOME/.cargo/bin"
 
 set fish_function_path "$SCRIPTDIR/fish.d" $fish_function_path
 
-## GLOBALS
-
 if command --query nvim
 	set --global --export VISUAL nvim
 	set --global --export EDITOR nvim
@@ -24,9 +22,6 @@ else
 	set --global --export VISUAL vi
 	set --global --export EDITOR vi
 end
-
-
-## FUNCTIONS
 
 set --global --export __fish_prompt_powerline_right ''
 set --global --export __fish_prompt_powerline_left  ''
@@ -133,3 +128,12 @@ set --universal --export fish_pager_color_description green
 set --universal --export fish_pager_color_prefix normal --underline
 set --universal --export fish_pager_color_progress green
 set --universal --export fish_pager_color_selected_background -r
+
+# brew settings
+if command --query brew
+	set --universal --export HOMEBREW_AUTO_UPDATE_SECS (math "60 * 60 * 24 * 7")
+	set --universal --export HOMEBREW_NO_ANALYTICS
+	if command --query bat
+		set --universal --export HOMEBREW_BAT 1
+	end
+end
