@@ -42,6 +42,27 @@ require('lazy').setup({
         ft = { 'html', 'htm', 'xml', 'php' },
     },
     { 'andymass/vim-matchup' },
+    {
+        'Bekaboo/dropbar.nvim',
+        dependencies = {
+            'nvim-tree/nvim-web-devicons',
+            'nvim-telescope/telescope-fzf-native.nvim',
+            build = 'make',
+        },
+        enabled = function()
+            local version = vim.version()
+            return is_executable 'make' and
+                       (version.major >= 1 or (version.major == 0 and version.minor >= 10))
+        end,
+        config = function()
+            local dropbar_api = require('dropbar.api')
+            vim.keymap.set('n', '<Leader>;', dropbar_api.pick, { desc = 'Pick symbols in winbar' })
+            vim.keymap.set('n', '[;', dropbar_api.goto_context_start,
+                           { desc = 'Go to start of current context' })
+            vim.keymap.set('n', '];', dropbar_api.select_next_context,
+                           { desc = 'Select next context' })
+        end,
+    },
     { 'chriskempson/base16-vim', priority = 1000, enabled = false },
     {
         'christoomey/vim-tmux-navigator',
