@@ -32,6 +32,8 @@ function fish_greeting
 		(set_color normal) $qotd_lines[$i]
 	end
 
+	echo "$(set_color green --underline)Bird of the Day:$(set_color normal) $(bird_of_the_day)"
+
 	set --function yp_msg "$(set_color yellow --underline)Year Progress$(set_color normal): "
 	printf '%s%s\n' "$yp_msg" (year_progress (math "$qotd_length + $left_width -  $(string length --visible $yp_msg)"))
 end
