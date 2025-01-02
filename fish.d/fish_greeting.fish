@@ -6,7 +6,7 @@ function fish_greeting
 	end
 
 	set --function qotd_length (math "min( ($COLUMNS / 3), 48 )")
-	set --function qotd_file (git -C (status dirname) rev-parse --show-toplevel)'/qotd.txt'
+	set --function qotd_file (git -C (status dirname) rev-parse --show-toplevel)'/data/qotd.txt'
 
 	set --function qotd_lines (quote_of_the_day $qotd_file --width $qotd_length --print-header)
 	# add just a touch more visual space
