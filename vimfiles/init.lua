@@ -475,7 +475,11 @@ require('lazy').setup({
             }
         end,
     },
-
+    {
+        url = 'https://git.ari.lt/ari/wrapped.vim/',
+        name = 'vim-wrapped-2025',
+        enabled = function() return os.date('%Y') == '2025' end,
+    },
 }, {
     git = { cooldown = 3600 },
     install = { missing = true, colorscheme = { 'tokyonight', 'darkblue' } },
