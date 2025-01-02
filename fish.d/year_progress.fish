@@ -5,8 +5,8 @@ function year_progress --description "Prints a bar of progress through the curre
 		set width 52 # default because a year has 52 weeks
 	end
 
-	set --local before (math --scale 0 $width \* (date +%j) / $total_days)
-	set --local after  (math --scale 0 $width - $before)
+	set --local before (math --scale 0 "$width * $(date +%j) / $total_days")
+	set --local after  (math --scale 0 "$width - $before")
 	# echo "DEBUG: before [$before] after [$after] sum [$(math $before + $after)] width [$width]"
-	echo "|$(string repeat --count (math $before - 1) '=')>$(string repeat --count $after '=')|"
+	echo "|$(string repeat --no-newline --count (math "max($before - 1, 0)") '=')>$(string repeat --no-newline --count $after ' ')|"
 end
