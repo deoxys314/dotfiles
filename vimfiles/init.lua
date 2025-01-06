@@ -500,7 +500,6 @@ require('lazy').setup({
             lazy = '…',
         },
     },
-    profiling = { loader = true, require = true },
 })
 vim.keymap.set('n', '<leader>l', function() require('lazy').home() end,
                { desc = 'Open Lazy home window' })
