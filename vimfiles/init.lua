@@ -477,6 +477,7 @@ require('lazy').setup({
     },
 
 }, {
+    git = { cooldown = 3600 },
     ui = {
         size = { width = 0.7, height = 0.8 },
         border = 'rounded',
