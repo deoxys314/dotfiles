@@ -478,6 +478,7 @@ require('lazy').setup({
 
 }, {
     git = { cooldown = 3600 },
+    install = { missing = true, colorscheme = { 'tokyonight', 'darkblue' } },
     ui = {
         size = { width = 0.7, height = 0.8 },
         border = 'rounded',
