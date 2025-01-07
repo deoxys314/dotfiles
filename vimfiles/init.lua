@@ -500,6 +500,24 @@ require('lazy').setup({
             task = '*',
             lazy = '…',
         },
+        custom_keys = {
+            ['<localleader>l'] = false,
+            ['<localleader>i'] = false,
+            ['<localleader>t'] = false,
+            ['<leader>i'] = {
+                function(plugin)
+                    require'lazy.util'.notify(vim.inspect(plugin),
+                                              { title = 'Inspect ' .. plugin.name, lang = lua })
+                end,
+                desc = 'Inspect Plugin',
+            },
+            ['<leader>t'] = {
+                function(plugin)
+                    require'lazy.util'.float_term(nil, { cwd = plugin.dir })
+                end,
+                desc = 'Open terminal in plugin dir',
+            },
+        },
     },
     performance = { rtp = { paths = { USER_HOME .. '/dotfiles/vimfiles' } } },
 })
