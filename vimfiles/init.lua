@@ -264,9 +264,10 @@ require('lazy').setup({
                         return ret
                     end,
                     'filetype',
+                    'fileformat',
                 },
                 lualine_y = { 'searchcount', 'selectioncount' },
-                lualine_z = { '%l:%c %p%%' },
+                lualine_z = { '%l/%L:%c %p%%' },
             },
         },
     },
