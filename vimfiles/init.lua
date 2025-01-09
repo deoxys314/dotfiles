@@ -251,7 +251,6 @@ require('lazy').setup({
                 },
                 lualine_x = {
                     { 'diagnostics', sources = { 'ale' } },
-                    'ObsessionStatusLine',
                     function()
                         -- show encoding only if it's not utf-8
                         local ret, _ = (vim.bo.fileencoding or vim.go.encoding):gsub([[^utf%-8$]],
@@ -266,7 +265,7 @@ require('lazy').setup({
                     'filetype',
                     'fileformat',
                 },
-                lualine_y = { 'searchcount', 'selectioncount' },
+                lualine_y = { 'ObsessionStatus', 'searchcount', 'selectioncount' },
                 lualine_z = { '%l/%L:%c %p%%' },
             },
         },
