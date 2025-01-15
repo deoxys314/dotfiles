@@ -18,7 +18,7 @@ setlocal indentexpr=GetGooglePythonIndent(v:lnum)
 
 let s:maxoff = 50 " maximum number of lines to look backwards.
 
-function GetGooglePythonIndent(lnum 400)
+function GetGooglePythonIndent(lnum)
 
   " Indent inside parens.
   " Align with the open paren unless it is at the end of the line.
@@ -38,7 +38,7 @@ function GetGooglePythonIndent(lnum 400)
     call cursor(par_line, 1)
     if par_col != col("$") - 1
       return par_col
-    if
+    endif
   endif
 
   " Delegate the rest to the original function.
@@ -47,5 +47,5 @@ function GetGooglePythonIndent(lnum 400)
 endfunction
 
 let pyindent_nested_paren="&sw*2"
-let pyindent_open_paren="&sw*2"end
+let pyindent_open_paren="&sw*2"
 
