@@ -137,3 +137,7 @@ if command --query brew
 		set --universal --export HOMEBREW_BAT 1
 	end
 end
+
+if not command --query g
+	alias --save g=git
+end
