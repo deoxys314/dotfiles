@@ -29,12 +29,6 @@ require('lazy').setup({
     },
     { 'airblade/vim-rooter', config = function() g.rooter_silent_chdir = 1 end },
     {
-        'alanfortlink/blackjack.nvim',
-        cmd = { 'BlackJackNewGame' },
-        dependencies = { 'nvim-lua/plenary.nvim' },
-        opts = { card_style = 'large', suit_style = 'black' },
-    },
-    {
         'alvan/vim-closetag',
         config = function()
             g.closetag_filenames = table.concat({ '*.html', '*.htm', '*.xml', '*.php' }, ',')
@@ -42,28 +36,7 @@ require('lazy').setup({
         ft = { 'html', 'htm', 'xml', 'php' },
     },
     { 'andymass/vim-matchup' },
-    {
-        'Bekaboo/dropbar.nvim',
-        dependencies = {
-            'nvim-tree/nvim-web-devicons',
-            'nvim-telescope/telescope-fzf-native.nvim',
-            build = 'make',
-        },
-        enabled = function()
-            local version = vim.version()
-            return is_executable 'make' and
-                       (version.major >= 1 or (version.major == 0 and version.minor >= 10))
-        end,
-        config = function()
-            local dropbar_api = require('dropbar.api')
-            vim.keymap.set('n', '<Leader>;', dropbar_api.pick, { desc = 'Pick symbols in winbar' })
-            vim.keymap.set('n', '[;', dropbar_api.goto_context_start,
-                           { desc = 'Go to start of current context' })
-            vim.keymap.set('n', '];', dropbar_api.select_next_context,
-                           { desc = 'Select next context' })
-        end,
-    },
-    { 'chriskempson/base16-vim', priority = 1000, enabled = false },
+    { 'chriskempson/base16-vim', priority = 98, enabled = false },
     {
         'christoomey/vim-tmux-navigator',
         cmd = {
@@ -84,18 +57,6 @@ require('lazy').setup({
             -- when leaving vim, will :update
             vim.g.tmux_navigator_save_on_switch = 2
         end,
-    },
-    {
-        'dcampos/nvim-snippy',
-        event = { 'InsertEnter' },
-        opts = {
-            mappings = {
-                is = { ['<Tab>'] = 'expand_or_advance', ['<S-Tab>'] = 'previous' },
-                nx = { ['<leader>x'] = 'cut_text' },
-            },
-        },
-        dependencies = { 'honza/vim-snippets' },
-        enabled = false,
     },
     {
         'folke/tokyonight.nvim',
@@ -119,102 +80,9 @@ require('lazy').setup({
         },
     },
     {
-        'folke/zen-mode.nvim',
-        version = '*',
-        cmd = { 'ZenMode', 'Prose' },
-        ft = { 'markdown', 'rst' },
-        opts = {
-            window = {
-                width = .85,
-                height = .85,
-                options = {
-                    signcolumn = 'no',
-                    number = false,
-                    relativenumber = false,
-                    cursorline = false,
-                    cursorcolumn = false,
-                    foldcolumn = '0',
-                    list = false,
-                },
-            },
-            plugins = {
-                -- disable some global vim options (vim.o...)
-                options = {
-                    enabled = true,
-                    ruler = false, -- disables the ruler text in the cmd line area
-                    showcmd = false, -- disables the command in the last line of the screen
-                    -- laststatus = 0, -- turn off the statusline in zen mode
-                },
-                twilight = { enabled = true }, -- enable to start Twilight when zen mode opens
-                gitsigns = { enabled = false }, -- disables git signs
-                tmux = { enabled = false }, -- disables the tmux statusline
-            },
-            on_open = function(win)
-                _G.zen_mode_stored_scrolloff = opt.scrolloff:get()
-                opt.scrolloff = 99
-            end,
-            on_close = function()
-                opt.scrolloff = _G.zen_mode_stored_scrolloff or 4
-                _G.zen_mode_stored_scrolloff = nil
-            end,
-        },
-        config = function()
-            vim.api.nvim_create_user_command('Prose', function()
-                require('zen-mode').toggle({
-                    window = {
-                        width = .8,
-                        height = 1,
-                        options = {
-                            signcolumn = 'no',
-                            number = false,
-                            relativenumber = false,
-                            cursorline = false,
-                            cursorcolumn = false,
-                            foldcolumn = '0',
-                            list = false,
-                        },
-                    },
-                })
-            end, { force = false, desc = 'Setup neovim for writing prose' })
-        end,
-        dependencies = {
-            'folke/twilight.nvim',
-            version = '*',
-            opts = {
-                context = 5,
-                treesitter = false,
-                exclude = {
-                    'git',
-                    'gitattributes',
-                    'gitcommit',
-                    'gitconfig',
-                    'gitignore',
-                    'gitrebase',
-                    'gitsendmail',
-                },
-            },
-        },
-    },
-    {
         'gabrielelana/vim-markdown',
         ft = { 'markdown' },
         config = function() g.markdown_mapping_switch_status = '<space>,' end,
-    },
-    {
-        'jim-fx/sudoku.nvim',
-        cmd = { 'Sudoku' },
-        config = function()
-            local faded_color = '#7d7d7d'
-            require('sudoku').setup {
-                persist_settings = true,
-                persist_games = true,
-                default_mappings = true,
-                custom_highlights = {
-                    board = { fg = faded_color },
-                    set_number = { fg = faded_color, gui = 'italic' },
-                },
-            }
-        end,
     },
     {
         'lukas-reineke/indent-blankline.nvim',
@@ -310,49 +178,6 @@ require('lazy').setup({
         end,
     },
     {
-        'nvim-treesitter/nvim-treesitter',
-        version = '*',
-        build = ':TSUpdate',
-        enabled = false,
-        opts = {
-            ensure_installed = {
-                'c',
-                'cmake',
-                'cpp',
-                'css',
-                'dockerfile',
-                'fish',
-                'go',
-                'html',
-                'json',
-                'json5',
-                'latex',
-                'lua',
-                'python',
-                'rust',
-                'toml',
-                'typescript',
-                'vim',
-            },
-            auto_install = true,
-            highlight = {
-                enable = true,
-                disable = {
-                    'git',
-                    'gitattributes',
-                    'gitcommit',
-                    'gitconfig',
-                    'gitignore',
-                    'gitrebase',
-                    'gitsendmail',
-                    'help',
-                    'vimdoc',
-                },
-            },
-            indent = { enable = true, disable = { 'help', 'vimdoc' } },
-        },
-    },
-    {
         'preservim/tagbar',
         config = function()
             g.tagbar_position = 'topleft vertical'
@@ -400,7 +225,6 @@ require('lazy').setup({
         -- commit = 'e01f683',
     },
     { 'rust-lang/rust.vim', ft = 'rust' },
-    { 'sakhnik/nvim-gdb', enabled = function() return is_executable 'gdb' end },
     { 'tpope/vim-apathy' },
     {
         'tpope/vim-commentary',
@@ -411,7 +235,6 @@ require('lazy').setup({
     { 'tpope/vim-eunuch' },
     { 'tpope/vim-fugitive', version = '*' },
     { 'tpope/vim-obsession' },
-    { 'tpope/vim-projectionist' },
     {
         'tpope/vim-scriptease',
         version = '*',
@@ -438,7 +261,6 @@ require('lazy').setup({
             g.netrw_liststyle = 3 -- tree style listing
         end,
     },
-    { 'windwp/nvim-autopairs', event = 'InsertEnter', opts = {}, enabled = false },
     {
         'w0rp/ale',
         version = '*',
