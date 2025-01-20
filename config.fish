@@ -17,11 +17,10 @@ set fish_function_path "$SCRIPTDIR/fish.d" $fish_function_path
 
 if command --query nvim
 	set --global --export VISUAL nvim
-	set --global --export EDITOR nvim
 else
 	set --global --export VISUAL vi
-	set --global --export EDITOR vi
 end
+set --global --export EDITOR "$VISUAL"
 
 set --global --export __fish_prompt_powerline_right ''
 set --global --export __fish_prompt_powerline_left  ''
