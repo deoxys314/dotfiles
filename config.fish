@@ -118,7 +118,7 @@ set --export __fish_git_prompt_char_upstream_diverged '<>'
 set --export __fish_git_prompt_char_upstream_equal '='
 
 function fish_right_prompt --description="Shows the git status, if applicable."
-	__fish_git_prompt
+	fish_git_prompt
 end
 
 # suggestions display
