@@ -122,18 +122,18 @@ function fish_right_prompt --description="Shows the git status, if applicable."
 end
 
 # suggestions display
-set --universal --export fish_pager_color_completion normal
-set --universal --export fish_pager_color_description green
-set --universal --export fish_pager_color_prefix normal --underline
-set --universal --export fish_pager_color_progress green
-set --universal --export fish_pager_color_selected_background -r
+set --global --export fish_pager_color_completion normal
+set --global --export fish_pager_color_description green
+set --global --export fish_pager_color_prefix normal --underline
+set --global --export fish_pager_color_progress green
+set --global --export fish_pager_color_selected_background -r
 
 # brew settings
 if command --query brew
-	set --universal --export HOMEBREW_AUTO_UPDATE_SECS (math "60 * 60 * 24 * 7")
-	set --universal --export HOMEBREW_NO_ANALYTICS
+	set --global --export HOMEBREW_AUTO_UPDATE_SECS (math "60 * 60 * 24 * 7")
+	set --global --export HOMEBREW_NO_ANALYTICS
 	if command --query bat
-		set --universal --export HOMEBREW_BAT 1
+		set --global --export HOMEBREW_BAT 1
 	end
 end
 
