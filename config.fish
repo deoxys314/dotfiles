@@ -138,5 +138,5 @@ if command --query brew
 end
 
 if not command --query g
-	alias --save g=git
+	alias g=git
 end
