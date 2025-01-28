@@ -304,6 +304,7 @@ require('lazy').setup({
         enabled = function() return os.date('%Y') == '2025' end,
         config = function()
             g.wrapped_ignore_langs = { 'wrapped', 'tmp', 'bak', 'log', 'undotree', 'netrw' }
+            g.wrapped_ignore_globs = { 'NetrwTreeListing', '*NetrwTreeListing*' }
             g.wrapped_ignore_cmds = {
                 'call',
                 'close',
