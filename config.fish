@@ -140,3 +140,18 @@ end
 if not command --query g
 	alias g=git
 end
+
+# npm settings
+set --local npmrc_file "$HOME/.config/npmrc"
+if test -e "$npmrc_file"
+	set --local npmrc (cat "$npmrc_file")
+	if not string match --max-matches 1 --quiet --entire 'send-metrics="' "$npmrc"
+		echo 'send-metrics=false' >> "$npmrc"
+	end
+	if not string match --max-matches 1 --quiet --entire 'fund="' "$npmrc"
+		echo 'fund=false' >> "$npmrc"
+	end
+	if not string match --max-matches 1 --quiet --entire 'cache="' "$npmrc"
+		echo 'cache=~/.cache/npm' >> "$npmrc"
+	end
+end
