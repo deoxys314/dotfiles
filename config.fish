@@ -46,9 +46,11 @@ function fish_prompt
 	end
 
 	# user@hostname, to make ssh sessions more clear
-	set sections $sections " $USER@$__fish_prompt_hostname"
-	set background_colors $background_colors magenta
-	set foreground_colors $foreground_colors black
+	if test $COLUMNS -ge 100
+		set sections $sections "$USER@$__fish_prompt_hostname"
+		set background_colors $background_colors magenta
+		set foreground_colors $foreground_colors black
+	end
 
 	# Check if we are in a tmux prompt, display position if so
 	if test -n "$TMUX"
@@ -58,9 +60,11 @@ function fish_prompt
 	end
 
 	# time of last prompt
-	set sections $sections (date '+%m/%d %H:%M')
-	set foreground_colors $foreground_colors black
-	set background_colors $background_colors white
+	if test $COLUMNS -ge 80
+		set sections $sections (date '+%m/%d %H:%M')
+		set foreground_colors $foreground_colors black
+		set background_colors $background_colors white
+	end
 
 	# working directory
 	set sections $sections (prompt_pwd)
@@ -79,6 +83,8 @@ function fish_prompt
 		set background_colors $background_colors yellow
 		set foreground_colors $foreground_colors black
 	end
+
+	set sections[1] " $sections[1]"
 
 	set background_colors $background_colors normal # one extra so we don't have any access issues
 	for i in (seq (count $sections))
