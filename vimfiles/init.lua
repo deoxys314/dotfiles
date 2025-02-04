@@ -525,6 +525,13 @@ vim.keymap.set('n', '<leader>w', function()
         vim.fn.winrestview(save)
     end
 end, { noremap = true, desc = 'Remove trailing whitespace.' })
+vim.keymap.set('n', '<C-W>z', function()
+    if os.getenv('TMUX') then
+        vim.system { 'tmux', 'resize-pane', '-Z' }
+    else
+        vim.cmd.echom '"Not in a tmux environment!"'
+    end
+end, { noremap = true, desc = 'Zoom into tmux windows (if possible)' })
 
 vim.api.nvim_create_user_command('RemoveNonbreakingSpaces', function(opts)
     local args = opt.args
