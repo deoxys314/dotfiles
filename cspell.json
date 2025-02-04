@@ -1,0 +1,24 @@
+{
+    "version": "0.2",
+    "language": "en",
+    "words": [
+        "buildmode",
+        "unclick",
+        "unclcked"
+    ],
+    "flagWords": [
+        "teh",
+        "hte"
+    ],
+    "ignoreWords": [
+        "Razy"
+    ],
+    "ignorePaths": [
+        "Session.vim",
+        "session.vim",
+        "Sessionx.vim",
+        "sessionx.vim",
+        "node_modules/**",
+        "tags"
+    ]
+}

@@ -279,6 +279,11 @@ require('lazy').setup({
                 rust = { 'rustfmt' },
                 typescript = { 'tslint', 'prettier' },
             }
+            g.ale_cspell_options = args {
+                '--unique',
+                '--config',
+                '"' .. USER_HOME .. '/' .. 'dotfiles' .. '/' .. 'cspell.json' .. '"',
+            }
             g.ale_markdown_mdl_options = args { '--rule', '~MD029', '--rule', '~MD005' }
             g.ale_markdown_writegood_options = args { '--no-passive' }
             g.ale_lua_lua_format_options = args {
