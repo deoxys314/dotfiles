@@ -139,45 +139,6 @@ require('lazy').setup({
         },
     },
     {
-        'nvim-telescope/telescope.nvim',
-        version = '*',
-        dependencies = {
-            'nvim-lua/plenary.nvim',
-            'nvim-telescope/telescope-symbols.nvim',
-            {
-                'andrew-george/telescope-themes',
-                config = function() require'telescope'.load_extension 'themes' end,
-            },
-            {
-                'tsakirist/telescope-lazy.nvim',
-                config = function() require'telescope'.load_extension 'lazy' end,
-            },
-            {
-                'nvim-telescope/telescope-fzf-native.nvim',
-                build = [[cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build]],
-                enabled = is_executable 'cmake',
-            },
-        },
-        cmd = { 'Telescope' },
-        keys = { '<leader>ff' },
-        config = function()
-            local builtin = require 'telescope.builtin'
-            local actions = require 'telescope.actions'
-            vim.keymap.set('n', '<leader>ff', builtin.find_files,
-                           { desc = 'Open Telescope in file finding mode.' })
-            require'telescope'.setup {
-                defaults = { mappings = { i = { ['<esc>'] = actions.close, ['<C-u>'] = false } } },
-                pickers = {
-                    find_files = { theme = 'dropdown' },
-                    spell_suggest = { theme = 'dropdown' },
-                    pickers = { theme = 'dropdown' },
-                },
-                extensions = { lazy = { show_icon = false, theme = 'dropdown' } },
-            }
-
-        end,
-    },
-    {
         'preservim/tagbar',
         config = function()
             g.tagbar_position = 'topleft vertical'
