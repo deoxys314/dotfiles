@@ -53,7 +53,7 @@ require('lazy').setup({
             { '<c-l>', '<cmd><C-U>TmuxNavigateRight<cr>' },
             { '<c-\\>', '<cmd><C-U>TmuxNavigatePrevious<cr>' },
         },
-        connfig = function()
+        config = function()
             -- when leaving vim, will :update
             vim.g.tmux_navigator_save_on_switch = 2
         end,
