@@ -490,6 +490,9 @@ vim.api.nvim_create_autocmd({ 'CmdLineLeave' }, {
 vim.keymap.set({ 'n', 'v' }, '/', '/\\v', { desc = 'Make searches more magic by default.' })
 vim.keymap.set({ 'n', 'v' }, '?', '?\\v', { desc = 'Make searches more magic by default.' })
 
+vim.keymap.set({ 'n' }, '<c-l>', function() opt.hlsearch = not opt.hlsearch:get() end,
+               { desc = 'Toggle search highlighting.' })
+
 if vim.fn.executable('rg') then
     opt.grepprg = 'rg --vimgrep -- $*'
 elseif vim.fn.executable('grep') then
