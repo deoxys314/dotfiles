@@ -59,7 +59,7 @@ local next = next
 local function isempty(table_) return next(table_) == nil end
 
 function pprint.pprint(object, level, indent, seen)
-    -- The second two arguments are optional, and are mainly used internally
+    -- The last 3 arguments are optional, and are mainly used internally
 
     -- set defaults if not provided
     local level = level or 1
