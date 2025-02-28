@@ -11,18 +11,22 @@ local function is_identifier(str)
     return string.find(str, id_pattern)
 end
 
+local function quote_count(s)
+    local _, single_quote_count = string.gsub(s, '\'', '')
+    local _, double_quote_count = string.gsub(s, '"', '')
+    return single_quote_count, double_quote_count
+end
+
 local function display_key(key)
     if type(key) == 'string' then
         if is_identifier(key) then
             return key
         else
-            local _, double_quote_count = string.gsub(key, '"', '')
-            if double_quote_count == 0 then return '["' .. key .. '"]' end
-            local _, single_quote_count = string.gsub(key, '\'', '')
-            if double_quote_count >= single_quote_count then
-                return '[\'' .. key .. '\']'
-            else
+            local single_quote_count, double_quote_count = quote_count(key)
+            if double_quote_count == 0 or single_quote_count >= double_quote_count then
                 return '["' .. key .. '"]'
+            else
+                return '[\'' .. key .. '\']'
             end
         end
     end
@@ -151,7 +155,12 @@ function pprint.pprint(object, level, indent, seen)
         return s .. spaces((level - 1), indent) .. '}'
     else
         if type(object) == 'string' then
-            return '"' .. tostring(object) .. '"'
+            local single_quote_count, double_quote_count = quote_count(object)
+            if double_quote_count >= single_quote_count then
+                return '\'' .. object .. '\''
+            else
+                return '"' .. object .. '"'
+            end
         else
             return tostring(object)
         end
