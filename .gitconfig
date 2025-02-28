@@ -57,6 +57,11 @@
 [push]
 	autoSetupRemote = true
 
+[fetch]
+	print = true
+	reuneTags = true
+	all = true
+
 [stash]
 	showPatch = true
 
