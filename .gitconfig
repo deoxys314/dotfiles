@@ -43,6 +43,9 @@
 [rerere]
 	enabled = true
 
+[init]
+	defaultBranch = main
+
 [branch]
 	# most recent commits first
 	sort = -committerdate
