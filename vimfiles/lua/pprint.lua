@@ -70,7 +70,7 @@ function pprint.pprint(object, level, indent, seen)
     local s = ''
     if type(object) == 'table' then
         if seen[object] then
-            return '...'
+            return '{...}'
         else
             seen[object] = true
         end
