@@ -31,7 +31,7 @@
 	cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
 
 [merge]
-	conflictStyle = diff3
+	conflictStyle = zdiff3
 
 [blame]
 	coloring = highlightRecent
