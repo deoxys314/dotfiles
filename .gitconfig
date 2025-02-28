@@ -42,6 +42,7 @@
 
 [rerere]
 	enabled = true
+	autoupdate = true
 
 [init]
 	defaultBranch = main
