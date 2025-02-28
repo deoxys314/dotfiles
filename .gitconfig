@@ -17,7 +17,10 @@
 	verbose = true
 
 [diff]
+	algorithm = histogram
+	colorMoved = true
 	mnemonicPrefix = true
+	renames = true
 	tool = nvimdiff
 
 [difftool]
