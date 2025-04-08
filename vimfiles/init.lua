@@ -171,6 +171,7 @@ require('lazy').setup({
             g.git_messenger_date_format = '%F %H:%M:%S'
             g.git_messenger_include_diff = 'current'
             g.git_messenger_max_popup_height = 20
+            g.git_messenger_floating_win_opts = { border = 'rounded' }
         end,
     },
     {
