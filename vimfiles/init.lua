@@ -551,6 +551,7 @@ local function backup_plugins()
         local lock = assert(io.open(lockfile_path, 'r'),
                             'Cannot open lockfile at "' .. lockfile_path .. '"')
         local locks = vim.json.decode(lock:read('*all'))
+        locks['_version'] = vim.version()
         local backup = assert(io.open(backup_path, 'w'),
                               'Cannot open file for writing at "' .. backup_path .. '"')
         backup:write(vim.json.encode(locks))
