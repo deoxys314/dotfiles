@@ -85,6 +85,30 @@ require('lazy').setup({
         config = function() g.markdown_mapping_switch_status = '<space>,' end,
     },
     {
+        'github/copilot.vim',
+        enabled = function()
+            local res, hostname = pcall(function()
+                local f = io.popen('/bin/hostname')
+                local hostname = f:read('*a') or ''
+                f:close()
+                hostname = string.gsub(hostname, '\n$', '')
+                return hostname
+            end)
+            return (vim.fn.has('nvim-0.9.0') and vim.fn.executable('npm') == 1) and res and
+                       string.match(hostname, '%..*evinternal%..*')
+        end,
+        config = function()
+            g.copilot_filetypes = { ['*'] = true, markdown = false, gitcommit = false,
+                                    text = false }
+            g.copilot_workspace_folders = { '~/src/ev-image-processing' }
+            vim.api.nvim_create_autocmd({ 'BufEnter' }, {
+                pattern = 'copilot.*',
+                callback = function() vim.cmd('ALEDisableBuffer') end,
+            })
+        end,
+        tag = 'v1.45.0',
+    },
+    {
         'lukas-reineke/indent-blankline.nvim',
         main = 'ibl',
         opts = { indent = { char = { '▏' } } },
