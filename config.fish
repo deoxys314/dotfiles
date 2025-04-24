@@ -22,15 +22,23 @@ else
 end
 set --global --export EDITOR "$VISUAL"
 
-set --global --export __fish_prompt_powerline_right ''
-set --global --export __fish_prompt_powerline_left  ''
-set --global --export __fish_prompt_powerline_right_inverse ''
-set --global --export __fish_prompt_powerline_left_inverse ''
-set --global --export __fish_prompt_joiner "$__fish_prompt_powerline_right"
-# set --global --export __fish_prompt_joiner '▓▒░'
-if set --query __fish_prompt_no_powerline
-	set --global --export __fish_prompt_joiner "▌"
-end
+set --global --export __fish_prompt_fade_left "░▒▓"
+set --global --export __fish_prompt_fade_left_inverted "▓░▒"
+set --global --export __fish_prompt_fade_right "▓▒░"
+set --global --export __fish_prompt_fade_right_inverted "░▒▓"
+set --global --export __fish_prompt_powerline_arrow_left ""
+set --global --export __fish_prompt_powerline_arrow_left_inverted ""
+set --global --export __fish_prompt_powerline_arrow_right ""
+set --global --export __fish_prompt_powerline_arrow_right_inverted ""
+set --global --export __fish_prompt_powerline_rounded_left ""
+set --global --export __fish_prompt_powerline_rounded_left_line ""
+set --global --export __fish_prompt_powerline_rounded_right ""
+set --global --export __fish_prompt_powerline_rounded_right_line ""
+set --global --export __fish_prompt_powerline_triangle_left ""
+set --global --export __fish_prompt_powerline_triangle_left_swap ""
+set --global --export __fish_prompt_powerline_triangle_right ""
+set --global --export __fish_prompt_powerline_triangle_right_swap ""
+set --global --export __fish_prompt_joiner "$__fish_prompt_powerline_triangle_right"
 
 function fish_prompt
 	# we need to do this first or we will clobber it with other exit codes
