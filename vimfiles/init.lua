@@ -137,7 +137,17 @@ require('lazy').setup({
                     'filetype',
                     'fileformat',
                 },
-                lualine_y = { 'ObsessionStatus', 'searchcount', 'selectioncount' },
+                lualine_y = {
+                    function()
+                        if vim.fn['ObsessionStatus'] ~= nil then
+                            return vim.fn.ObsessionStatus('󱊈', '󱊍')
+                        else
+                            return ''
+                        end
+                    end,
+                    'searchcount',
+                    'selectioncount',
+                },
                 lualine_z = { '%l/%L:%c %p%%' },
             },
         },
