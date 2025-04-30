@@ -226,6 +226,7 @@ require('lazy').setup({
     },
     { 'rust-lang/rust.vim', ft = 'rust' },
     { 'tpope/vim-apathy' },
+    { 'tpope/vim-characterize', keys = { 'ga' }, cmd = { 'Characterize' } },
     {
         'tpope/vim-commentary',
         keys = { 'gcc', 'gcu', 'gcgc', { 'gc', mode = { 'v', 'o' } } },
