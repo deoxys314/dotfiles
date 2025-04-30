@@ -295,6 +295,8 @@ require('lazy').setup({
                 '--extra-sep-at-table-end',
                 '--keep-simple-control-block-one-line',
                 '--spaces-inside-table-braces',
+                '--no-spaces-inside-functiondef-parens',
+                '--no-spaces-inside-functioncall-parens',
             }
             g.ale_linters = {
                 go = { 'gofmt' },
