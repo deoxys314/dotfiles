@@ -253,6 +253,11 @@ require('lazy').setup({
             'Verbose',
         },
     },
+    {
+        'tpope/vim-speeddating',
+        keys = { '<C-A>', '<C-X>', 'd<C-A>', 'd<C-X>' },
+        cmd = { 'SpeedDatingFormat' },
+    },
     { 'tpope/vim-surround' },
     {
         'tpope/vim-vinegar',
