@@ -17,6 +17,7 @@ set fish_function_path "$SCRIPTDIR/fish.d" $fish_function_path
 
 if command --query nvim
 	set --global --export VISUAL nvim
+	set --global --export MANPAGER 'nvim +Man!'
 else
 	set --global --export VISUAL vi
 end
