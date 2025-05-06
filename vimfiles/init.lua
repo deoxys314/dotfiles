@@ -215,11 +215,7 @@ require('lazy').setup({
     {
         'rktjmp/playtime.nvim',
         opts = { fps = 60 },
-        enabled = function()
-            local version = vim.version()
-            -- 0.10.0 or later
-            return version.major >= 1 or (version.major == 0 and version.minor >= 10)
-        end,
+        enabled = function() return (vim.fn.has 'nvim-0.10.0' == 1) end,
         cmd = { 'Playtime' },
         -- known good commit, this repo has no tags or versions supplied at this time
         -- commit = 'e01f683',
@@ -231,6 +227,7 @@ require('lazy').setup({
         'tpope/vim-commentary',
         keys = { 'gcc', 'gcu', 'gcgc', { 'gc', mode = { 'v', 'o' } } },
         cmd = 'Commentary',
+        enabled = function() return not (vim.fn.has 'nvim-0.10.0' == 1) end,
     },
     { 'tpope/vim-endwise' },
     { 'tpope/vim-eunuch' },
