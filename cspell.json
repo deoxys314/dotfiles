@@ -13,6 +13,11 @@
     "ignoreWords": [
         "Razy"
     ],
+    "checks": {
+        "comments": true,
+        "identifiers": false,
+        "strings": true
+    },
     "ignorePaths": [
         "Session.vim",
         "session.vim",
