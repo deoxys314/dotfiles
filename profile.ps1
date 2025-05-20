@@ -163,3 +163,5 @@ Function Convert-Size {
         $stringBuilder.ToString()
     }
 }
+
+Set-Alias -Name g -Value git.exe
