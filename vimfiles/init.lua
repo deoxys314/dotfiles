@@ -59,6 +59,72 @@ require('lazy').setup({
         end,
     },
     {
+        'CopilotC-Nvim/CopilotChat.nvim',
+        enabled = function()
+            local res, hostname = pcall(function()
+                local f = io.popen('/bin/hostname')
+                local hostname = f:read('*a') or ''
+                f:close()
+                hostname = string.gsub(hostname, '\n$', '')
+                return hostname
+            end)
+            return (vim.fn.has('nvim-0.9.0') and vim.fn.executable('npm') == 1) and res and
+                       string.match(hostname, '%..*evinternal%..*')
+        end,
+        dependencies = {
+            {
+                'github/copilot.vim',
+                config = function()
+                    g.copilot_filetypes = {
+                        ['*'] = true,
+                        markdown = false,
+                        gitcommit = false,
+                        text = false,
+                        ['copilt-chat'] = false,
+                        ['copilot.*'] = false,
+                    }
+                    g.copilot_workspace_folders = { '~/src/ev-image-processing' }
+                    vim.api.nvim_create_autocmd({ 'BufEnter' }, {
+                        pattern = 'copilot.*',
+                        callback = function() vim.cmd('ALEDisableBuffer') end,
+                    })
+                end,
+                tag = 'v1.45.0',
+            },
+            { 'nvim-lua/plenary.nvim', branch = 'master' }, -- for curl, log and async functions
+        },
+        opts = {
+            prompts = {
+                Commit = {
+                    prompt = table.concat({
+                        'Write a commit message for the change with a',
+                        'short, single-clause, present-tense',
+                        'title no longer than 50 characters,',
+                        'and wrap the body at 72 characters.',
+                        'Always mention that the commit message was written by generative AI.',
+                    }, ' '),
+                    context = 'git:staged',
+                },
+                EvExplain = {
+                    prompt = table.concat({
+                        'Write an explanation for the selected code as paragraphs of text.',
+                    }, ' '),
+                    system_prompt = table.concat({
+                        'You are a helpful programming assistant with deep knowledge of',
+                        'C++, Javascript, AWS technologies, and the cmake build system.',
+                        '\n',
+                        'You are experienced in remote sensing, geographic information systems, and aerial triangulation.',
+                        '\n',
+                        'COPILOT_BASE',
+                        '\n',
+                        'When asked to explain code, you will provide a detailed explanation',
+                        'in an educational but not condescending tone.',
+                    }, ' '),
+                },
+            },
+        },
+    },
+    {
         'folke/tokyonight.nvim',
         enabled = true,
         lazy = false,
@@ -83,30 +149,6 @@ require('lazy').setup({
         'gabrielelana/vim-markdown',
         ft = { 'markdown' },
         config = function() g.markdown_mapping_switch_status = '<space>,' end,
-    },
-    {
-        'github/copilot.vim',
-        enabled = function()
-            local res, hostname = pcall(function()
-                local f = io.popen('/bin/hostname')
-                local hostname = f:read('*a') or ''
-                f:close()
-                hostname = string.gsub(hostname, '\n$', '')
-                return hostname
-            end)
-            return (vim.fn.has('nvim-0.9.0') and vim.fn.executable('npm') == 1) and res and
-                       string.match(hostname, '%..*evinternal%..*')
-        end,
-        config = function()
-            g.copilot_filetypes = { ['*'] = true, markdown = false, gitcommit = false,
-                                    text = false }
-            g.copilot_workspace_folders = { '~/src/ev-image-processing' }
-            vim.api.nvim_create_autocmd({ 'BufEnter' }, {
-                pattern = 'copilot.*',
-                callback = function() vim.cmd('ALEDisableBuffer') end,
-            })
-        end,
-        tag = 'v1.45.0',
     },
     {
         'lukas-reineke/indent-blankline.nvim',
