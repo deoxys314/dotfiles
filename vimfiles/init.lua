@@ -152,13 +152,6 @@ require('lazy').setup({
         config = function() g.markdown_mapping_switch_status = '<space>,' end,
     },
     {
-        'junegunn/goyo.vim',
-        config = function()
-            g.goyo_width = '80'
-            g.goyo_height = '95%'
-        end,
-    },
-    {
         'lukas-reineke/indent-blankline.nvim',
         main = 'ibl',
         opts = { indent = { char = { '▏' } } },
