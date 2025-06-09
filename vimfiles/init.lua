@@ -7,6 +7,8 @@ local function is_executable(program_name)
 end
 local USER_HOME = os.getenv('HOME') or (os.getenv('homedrive') .. os.getenv('homepath'))
 
+local vimrc_augroup = vim.api.nvim_create_augroup('vimrc', { clear = true })
+
 -- Make sure Lazy is installed
 local lazypath = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
 if not vim.loop.fs_stat(lazypath) then
@@ -87,6 +89,7 @@ require('lazy').setup({
                     vim.api.nvim_create_autocmd({ 'BufEnter' }, {
                         pattern = 'copilot.*',
                         callback = function() vim.cmd('ALEDisableBuffer') end,
+                        group = vimrc_augroup,
                     })
                 end,
                 tag = 'v1.45.0',
@@ -522,17 +525,16 @@ local function toggle_search_hls(on_enter)
     end
 end
 
-local VimrcIncsearchHighlight = vim.api.nvim_create_augroup('VimrcIncsearchHighlight',
-                                                            { clear = true })
 vim.api.nvim_create_autocmd({ 'CmdLineEnter' }, {
     pattern = [=[[/\?]]=],
     callback = function() toggle_search_hls(true) end,
-    group = VimrcIncsearchHighlight,
+    group = vimrc_augroup,
 })
-vim.api.nvim_create_autocmd({ 'CmdLineLeave' }, {
+vim.api.nvim_create_autocmd({ 'CmdLineLeave' },
+                            {
     pattern = [=[[/\?]]=],
     callback = function() toggle_search_hls(false) end,
-    group = VimrcIncsearchHighlight,
+    group = vimrc_augroup,
 })
 
 vim.keymap.set({ 'n', 'v' }, '/', '/\\v', { desc = 'Make searches more magic by default.' })
@@ -686,8 +688,6 @@ opt.modeline = true
 opt.modelines = 5
 opt.modelineexpr = false
 
-local Vimrc = vim.api.nvim_create_augroup('Vimrc', { clear = true })
-
 if opt.diff:get() then
     vim.cmd.highlight({ args = { 'link', 'DiffText', 'MatchParen' }, bang = true })
     vim.cmd.command('Q qall')
@@ -703,7 +703,7 @@ if opt.diff:get() then
         pattern = '*',
         callback = function() require'lualine'.hide() end,
         desc = 'Hide lualine while viewing diffs',
-        group = Vimrc,
+        group = vimrc_augroup,
         once = true,
     })
 end
@@ -719,19 +719,19 @@ vim.api.nvim_create_autocmd({ 'BufNewFile', 'BufRead' }, {
         opt.softtabstop = 2
         opt.tabstop = 2
     end,
-    group = Vimrc,
+    group = vimrc_augroup,
 })
 vim.api.nvim_create_autocmd({ 'InsertLeave' }, {
     pattern = '*.py,*.pyw',
     callback = function()
         if vim.fn.pumvisible() == 0 and vim.fn.winnr('$') > 1 then vim.cmd.pclose() end
     end,
-    group = Vimrc,
+    group = vimrc_augroup,
 })
 vim.api.nvim_create_autocmd({ 'BufNewFile', 'BufRead' }, {
     pattern = '*.prototxt',
     callback = function() opt.filetype = 'prototxt' end,
-    group = Vimrc,
+    group = vimrc_augroup,
 })
 vim.api.nvim_create_autocmd({ 'WinResized', 'WinNew', 'WinEnter' }, {
     pattern = '*',
@@ -740,7 +740,7 @@ vim.api.nvim_create_autocmd({ 'WinResized', 'WinNew', 'WinEnter' }, {
         opt.scrolloff = math.floor(vim.o.lines * SCROLLOFF_PERCENTAGE)
     end,
     desc = 'Set scrolloff automatically',
-    group = Vimrc,
+    group = vimrc_augroup,
 })
 
 g.loaded_perl_provider = 0
