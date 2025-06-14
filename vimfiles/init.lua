@@ -38,6 +38,12 @@ require('lazy').setup({
         ft = { 'html', 'htm', 'xml', 'php' },
     },
     { 'andymass/vim-matchup' },
+    {
+        'catgoose/nvim-colorizer.lua',
+        event = { 'BufReadPre' },
+        config = function() opt.termguicolors = true end,
+        opts = { user_default_options = { css_fn = true, mode = 'background' } },
+    },
     { 'chriskempson/base16-vim', priority = 98, enabled = false },
     {
         'christoomey/vim-tmux-navigator',
@@ -262,14 +268,6 @@ require('lazy').setup({
         opts = { indent = { char = { '▏' } } },
         version = '*',
         enabled = true,
-    },
-    {
-        'norcalli/nvim-colorizer.lua',
-        config = function()
-            opt.termguicolors = true
-            require('colorizer').setup({ css = { css_fn = true }, 'javascript', 'html' },
-                                       { mode = 'background', names = false })
-        end,
     },
     {
         'nvim-lualine/lualine.nvim',
