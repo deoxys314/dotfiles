@@ -690,7 +690,7 @@ opt.omnifunc = 'ale#completion#OmniFunc'
 -- Key and Command Mappings
 
 vim.keymap.set('n', '<leader>cd', ':cd %:p:h<CR>',
-               { noremap = true, desc = 'Switch to the directory of th current buffer.' })
+               { noremap = true, desc = 'Switch to the directory of the current buffer.' })
 vim.keymap.set('n', '<leader>w', function()
     if not opt.binary:get() and vim.opt.filetype:get() ~= 'diff' then
         local save = vim.fn.winsaveview()
