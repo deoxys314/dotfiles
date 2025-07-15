@@ -678,7 +678,7 @@ opt.directory:remove('.')
 opt.directory:prepend(swap)
 
 opt.formatoptions:remove('o') -- no autoinsert of comment char on o or O
-opt.formatoptions:remove('r') -- no autpinsert of comment char on <CR> in insert mode
+opt.formatoptions:remove('r') -- no autoinsert of comment char on <CR> in insert mode
 opt.formatoptions:append('j') -- remove comment leader when Joining lines
 opt.formatoptions:append('1') -- if possible, break lines before one letter words
 opt.formatoptions:append('c') -- auto-format comments
