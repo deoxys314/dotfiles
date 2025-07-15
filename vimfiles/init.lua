@@ -84,7 +84,7 @@ require('lazy').setup({
                 'github/copilot.vim',
                 config = function()
                     g.copilot_filetypes = {
-                        ['*'] = true,
+                        ['*'] = false,
                         markdown = false,
                         gitcommit = false,
                         text = false,
@@ -97,12 +97,13 @@ require('lazy').setup({
                         callback = function() vim.cmd('ALEDisableBuffer') end,
                         group = vimrc_augroup,
                     })
-                    vim.ui.select = require('mini.pick').ui_select
+                    require('telescope').load_extension('ui-select')
                 end,
                 tag = '*',
             },
             { 'nvim-lua/plenary.nvim', branch = 'master' }, -- for curl, log and async functions
-            { 'echasnovski/mini.pick' },
+            { 'nvim-telescope/telescope.nvim' },
+            { 'nvim-telescope/telescope-ui-select.nvim' },
         },
         version = '*',
         opts = {
