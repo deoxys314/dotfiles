@@ -511,7 +511,7 @@ require('lazy').setup({
     install = { missing = true, colorscheme = { 'tokyonight', 'darkblue' } },
     ui = {
         size = { width = 0.7, height = 0.8 },
-        border = 'rounded',
+        border = 'double',
         backdrop = 40,
         title = 'Lazy Plugin Manager',
         title_pos = 'left',
@@ -522,7 +522,7 @@ require('lazy').setup({
             ft = '&',
             init = '~',
             keys = '#',
-            plugin = '<-',
+            plugin = "dep of:",
             runtime = '@',
             require = '%',
             source = '{}',
