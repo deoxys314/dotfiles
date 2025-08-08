@@ -258,6 +258,7 @@ require('lazy').setup({
             dim_inactive = false,
         },
     },
+    { 'jeffkreeftmeijer/vim-dim' },
     {
         'gabrielelana/vim-markdown',
         ft = { 'markdown' },
