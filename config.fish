@@ -57,7 +57,7 @@ function fish_prompt
 	# user@hostname, to make ssh sessions more clear
 	if test $COLUMNS -ge 100
 		set sections $sections "$USER@$__fish_prompt_hostname"
-		set background_colors $background_colors magenta
+		set background_colors $background_colors "brmagenta"
 		set foreground_colors $foreground_colors black
 	end
 
