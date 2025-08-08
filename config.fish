@@ -93,15 +93,13 @@ function fish_prompt
 		set foreground_colors $foreground_colors black
 	end
 
-	set sections[1] " $sections[1]"
-
 	set background_colors $background_colors normal # one extra so we don't have any access issues
 	for i in (seq (count $sections))
 		echo -n -s \
-			(set_color $foreground_colors[$i] --background $background_colors[$i])\
-			$sections[$i]" "\
-			(set_color $background_colors[$i] --background $background_colors[(math $i + 1)])\
-			"$__fish_prompt_joiner "
+			(set_color $foreground_colors[$i] --background $background_colors[$i]) \
+			$sections[$i] \
+			(set_color $background_colors[$i] --background $background_colors[(math $i + 1)]) \
+			"$__fish_prompt_joiner"
 	end
 	echo -s -n (set_color normal)
 	if set --query __fish_prompt_no_powerline
