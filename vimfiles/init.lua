@@ -727,6 +727,9 @@ vim.keymap.set('n', 'ZA', function() vim.cmd.update() end, { desc = 'Write if ne
 
 opt.mouse = 'a'
 
+vim.keymap.set('i', [[\md]], [[<Char-0x200a><Char-0x2014><Char-0x200a>]],
+               { desc = 'Insert em dash with hair spaces.' })
+
 vim.api.nvim_create_user_command('LPP', function(opts)
     local args = opts.args
     if args == nil then return end
