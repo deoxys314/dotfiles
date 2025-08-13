@@ -523,7 +523,7 @@ require('lazy').setup({
             ft = '&',
             init = '~',
             keys = '#',
-            plugin = "dep of:",
+            plugin = 'dep of:',
             runtime = '@',
             require = '%',
             source = '{}',
