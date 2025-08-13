@@ -271,6 +271,7 @@ require('lazy').setup({
         version = '*',
         enabled = true,
     },
+    { 'lunarmodules/Penlight' },
     {
         'nvim-lualine/lualine.nvim',
         dependencies = { 'nvim-tree/nvim-web-devicons' },
