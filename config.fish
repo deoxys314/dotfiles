@@ -39,7 +39,11 @@ set --global --export __fish_prompt_powerline_triangle_left ""
 set --global --export __fish_prompt_powerline_triangle_left_swap ""
 set --global --export __fish_prompt_powerline_triangle_right ""
 set --global --export __fish_prompt_powerline_triangle_right_swap ""
-set --global --export __fish_prompt_joiner "$__fish_prompt_powerline_triangle_right"
+if set --query __fish_prompt_no_powerline
+	set --global --export __fish_prompt_joiner "$__fish_prompt_fade_right"
+else
+	set --global --export __fish_prompt_joiner "$__fish_prompt_powerline_triangle_right"
+end
 
 function fish_prompt
 	# we need to do this first or we will clobber it with other exit codes
@@ -102,10 +106,6 @@ function fish_prompt
 			"$__fish_prompt_joiner"
 	end
 	echo -s -n (set_color normal)
-	if set --query __fish_prompt_no_powerline
-		echo -s -n (set_color $background_colors[-2])'$ '(set_color normal)
-	end
-
 end
 
 # settings for __fish_git_prompt
