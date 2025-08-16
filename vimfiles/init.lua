@@ -249,6 +249,7 @@ require('lazy').setup({
         cmd = 'Commentary',
         enabled = function() return not (vim.fn.has 'nvim-0.10.0' == 1) end,
     },
+    { 'tpope/vim-dispatch' },
     { 'tpope/vim-eunuch' },
     { 'tpope/vim-fugitive', version = '*' },
     { 'tpope/vim-obsession' },
