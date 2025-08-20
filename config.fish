@@ -68,21 +68,21 @@ function fish_prompt
 	# Check if we are in a tmux prompt, display position if so
 	if test -n "$TMUX"
 		set sections $sections (tmux display-message -p '#I/#{session_windows}')
-		set foreground_colors $foreground_colors black
 		set background_colors $background_colors blue
+		set foreground_colors $foreground_colors black
 	end
 
 	# time of last prompt
 	if test $COLUMNS -ge 80
 		set sections $sections (date '+%m/%d %H:%M')
-		set foreground_colors $foreground_colors black
 		set background_colors $background_colors white
+		set foreground_colors $foreground_colors black
 	end
 
 	# working directory
 	set sections $sections (prompt_pwd)
-	set foreground_colors $foreground_colors black
 	set background_colors $background_colors green
+	set foreground_colors $foreground_colors black
 
 	# exit status, if not 0
 	if not test $lastexit -eq 0
