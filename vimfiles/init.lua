@@ -173,11 +173,6 @@ require('lazy').setup({
                                                                                      '')
                         return ret
                     end,
-                    function()
-                        -- don't display if this is unix
-                        local ret, _ = vim.bo.fileformat:gsub([[^unix$]], '')
-                        return ret
-                    end,
                     'filetype',
                     'fileformat',
                 },
