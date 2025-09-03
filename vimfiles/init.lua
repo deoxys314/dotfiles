@@ -116,6 +116,7 @@ require('lazy').setup({
         opts = {
             style = 'moon',
             light_style = 'day',
+            terminal_colors = true,
             styles = {
                 comments = { italic = true },
                 keywords = { italic = false },
@@ -125,8 +126,9 @@ require('lazy').setup({
                 sidebars = 'dark',
                 floats = 'normal',
             },
+            day_brightness = 0.2,
             sidebars = { 'qf', 'help' },
-            dim_inactive = false,
+            dim_inactive = true,
         },
     },
     { 'jeffkreeftmeijer/vim-dim' },
