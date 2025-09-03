@@ -144,6 +144,11 @@ require('lazy').setup({
     },
     { 'lunarmodules/Penlight' },
     {
+        'neovim/nvim-lspconfig',
+        config = function() vim.lsp.enable { 'clangd' } end,
+        enabled = function() return vim.fn.has 'nvim-0.11.0' end,
+    },
+    {
         'nvim-lualine/lualine.nvim',
         dependencies = { 'nvim-tree/nvim-web-devicons' },
         opts = {
