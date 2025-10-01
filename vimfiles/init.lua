@@ -297,7 +297,7 @@ require('lazy').setup({
                 fish = { 'fish_indent', 'trim_whitespace', 'remove_trailing_lines' },
                 go = { 'gofmt' },
                 js = { 'clang-format', 'trim_whitespace', 'remove_trailing_lines' },
-                json = { 'jq', 'prettier', 'json_pytool' },
+                json = { 'jq', 'prettier', 'json_pytool', 'clang-format' },
                 lua = { 'remove_trailing_lines', 'trim_whitespace', 'lua-format', 'luafmt' },
                 markdown = { 'mdl', 'pandoc', 'write-good' },
                 python = { 'isort', 'black' },
