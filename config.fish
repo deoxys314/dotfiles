@@ -12,6 +12,7 @@ end
 fish_add_path --global --path --move --append "$HOME/.local/bin"
 fish_add_path --global --path --move --append "$HOME/bin"
 fish_add_path --global --path "$HOME/.cargo/bin"
+fish_add_path --global --path "$HOME/.local/npm-packages/bin"
 
 set fish_function_path "$SCRIPTDIR/fish.d" $fish_function_path
 
@@ -164,13 +165,13 @@ end
 set --local npmrc_file "$HOME/.config/npmrc"
 if test -e "$npmrc_file"
 	set --local npmrc (cat "$npmrc_file")
-	if not string match --max-matches 1 --quiet --entire 'send-metrics="' "$npmrc"
-		echo 'send-metrics=false' >> "$npmrc"
+	if not string match --quiet --entire 'send-metrics="' "$npmrc"
+		echo 'send-metrics=false' >> "$npmrc_file"
 	end
-	if not string match --max-matches 1 --quiet --entire 'fund="' "$npmrc"
-		echo 'fund=false' >> "$npmrc"
+	if not string match --quiet --entire 'fund="' "$npmrc"
+		echo 'fund=false' >> "$npmrc_file"
 	end
-	if not string match --max-matches 1 --quiet --entire 'cache="' "$npmrc"
-		echo 'cache=~/.cache/npm' >> "$npmrc"
+	if not string match --quiet --entire 'cache="' "$npmrc"
+		echo 'cache=~/.cache/npm' >> "$npmrc_file"
 	end
 end

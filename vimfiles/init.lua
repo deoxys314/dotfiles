@@ -296,6 +296,7 @@ require('lazy').setup({
                 cpp = { 'remove_trailing_lines', 'trim_whitespace', 'clang-format' },
                 fish = { 'fish_indent', 'trim_whitespace', 'remove_trailing_lines' },
                 go = { 'gofmt' },
+                groovy = { 'npm-groovy-lint' },
                 js = { 'clang-format', 'trim_whitespace', 'remove_trailing_lines' },
                 json = { 'jq', 'prettier', 'json_pytool', 'clang-format' },
                 lua = { 'remove_trailing_lines', 'trim_whitespace', 'lua-format', 'luafmt' },
