@@ -59,6 +59,11 @@
 
 [merge]
 	conflictStyle = zdiff3
+	prompt = false
+	tool = nvimdiff
+
+[mergetool "nvimdiff"]
+	layout = "LOCAL,BASE,REMOTE / MERGED"
 
 [push]
 	autoSetupRemote = true
