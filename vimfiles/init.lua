@@ -144,7 +144,11 @@ require('lazy').setup({
         version = '*',
         enabled = true,
     },
-    { 'lunarmodules/Penlight' },
+    {
+        'lunarmodules/Penlight',
+        enabled = function() return (vim.fn.has 'win32' == 0) and is_executable 'luarocks' end,
+        lazy = true,
+    },
     {
         'neovim/nvim-lspconfig',
         config = function() vim.lsp.enable { 'clangd' } end,
