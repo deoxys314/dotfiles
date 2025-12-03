@@ -11,6 +11,7 @@ end
 
 fish_add_path --global --path --move --append "$HOME/.local/bin"
 fish_add_path --global --path --move --append "$HOME/bin"
+fish_add_path --global --path --move --append "$SCRIPTDIR/scripts"
 fish_add_path --global --path "$HOME/.cargo/bin"
 fish_add_path --global --path "$HOME/.local/npm-packages/bin"
 
