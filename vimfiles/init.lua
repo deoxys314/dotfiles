@@ -754,15 +754,6 @@ g.loaded_ruby_provider = 0
 opt.termguicolors = true
 vim.cmd.colorscheme 'tokyonight'
 
-vim.keymap.set('n', '<leader>lc', function()
-    require'pprint'.print(require'colorscheme_utils'.list_colorschemes())
-end, { desc = 'List available colorschemes' })
-
-vim.keymap.set('n', '<leader>rc', function()
-    local next_scheme = require('colorscheme_utils').rotate_colorschemes()
-    print('Colorscheme: ' .. next_scheme)
-end, { desc = 'Rotate to next colorscheme' })
-
 -- Gui Options
 
 pcall(function()
