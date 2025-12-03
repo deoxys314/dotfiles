@@ -21,12 +21,12 @@ if not vim.loop.fs_stat(lazypath) then
         lazypath,
     })
 end
-vim.opt.rtp:prepend(lazypath)
+opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
     {
         'airblade/vim-gitgutter',
-        config = function() vim.opt.updatetime = 100 end,
+        config = function() opt.updatetime = 100 end,
         enabled = is_executable('git'),
     },
     { 'airblade/vim-rooter', config = function() g.rooter_silent_chdir = 1 end },
@@ -578,7 +578,7 @@ opt.omnifunc = 'ale#completion#OmniFunc'
 vim.keymap.set('n', '<leader>cd', ':cd %:p:h<CR>',
                { noremap = true, desc = 'Switch to the directory of the current buffer.' })
 vim.keymap.set('n', '<leader>w', function()
-    if not opt.binary:get() and vim.opt.filetype:get() ~= 'diff' then
+    if not opt.binary:get() and opt.filetype:get() ~= 'diff' then
         local save = vim.fn.winsaveview()
         vim.cmd([[%s/\s\+$//e]])
         vim.fn.winrestview(save)
