@@ -430,7 +430,12 @@ require('lazy').setup({
             },
         },
     },
-    performance = { rtp = { paths = { USER_HOME .. '/dotfiles/vimfiles' } } },
+    performance = {
+        rtp = {
+            paths = { USER_HOME .. '/dotfiles/vimfiles' },
+            disabled_plugins = { 'gzip', 'tarPlugin', 'tohtml', 'tutor', 'zipPlugin' },
+        },
+    },
 })
 vim.keymap.set('n', '<leader>l', function() require('lazy').home() end,
                { desc = 'Open Lazy home window' })
