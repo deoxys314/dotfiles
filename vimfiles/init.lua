@@ -332,6 +332,7 @@ require('lazy').setup({
                 markdown = { 'markdownlint' },
                 python = { 'pylsp', 'mypy', 'ruff' },
             }
+            g.ale_python_auto_uv = true
         end,
     },
     {
