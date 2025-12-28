@@ -300,7 +300,6 @@ require('lazy').setup({
         url = 'https://git.ari.lt/ari/wrapped.vim/',
         name = 'vim-wrapped-2025',
         version = '*',
-        enabled = function() return os.date('%Y') == '2025' end,
         config = function()
             g.wrapped_ignore_langs = {
                 'bak',
