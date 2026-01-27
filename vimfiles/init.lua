@@ -153,7 +153,7 @@ require('lazy').setup({
     },
     {
         'neovim/nvim-lspconfig',
-        config = function() vim.lsp.enable { 'clangd' } end,
+        config = function() vim.lsp.enable { 'clangd', 'pylsp' } end,
         enabled = function() return vim.fn.has 'nvim-0.11.0' end,
     },
     {
