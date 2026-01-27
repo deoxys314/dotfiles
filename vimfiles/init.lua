@@ -93,6 +93,7 @@ require('lazy').setup({
                         ['copilot.*'] = false,
                     }
                     g.copilot_workspace_folders = { '~/src/ev-image-processing' }
+                    g.copilot_no_tab_map = true
                     vim.api.nvim_create_autocmd({ 'BufEnter' }, {
                         pattern = 'copilot.*',
                         callback = function() vim.cmd('ALEDisableBuffer') end,
