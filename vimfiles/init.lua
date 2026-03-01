@@ -205,6 +205,14 @@ require('lazy').setup({
         },
     },
     {
+        'Punity122333/hexinspector.nvim',
+        cmd = { 'HexEdit', 'HexInspect' },
+        keys = {
+            { '<leader>zx', function() require('hexinspector').open() end, desc = 'Hex Editor' },
+        },
+        opts = { bytes_per_line = 32, max_undo = 256, max_memory_file = 64 * 1024 * 1024 },
+    },
+    {
         'preservim/tagbar',
         config = function()
             g.tagbar_position = 'topleft vertical'
