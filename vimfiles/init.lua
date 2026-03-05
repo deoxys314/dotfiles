@@ -41,7 +41,13 @@ require('lazy').setup({
     { 'andymass/vim-matchup' },
     {
         'catgoose/nvim-colorizer.lua',
-        event = { 'BufReadPre' },
+        cmd = {
+            'ColorizerAttachToBuffer',
+            'ColorizerDetachFromBuffer',
+            'ColorizerReloadAllBuffers',
+            'ColorizerToggle',
+        },
+        event = { 'BufReadPre *.css,*.tcss,*.html' },
         config = function() opt.termguicolors = true end,
         opts = { user_default_options = { css_fn = true, mode = 'background' } },
     },
