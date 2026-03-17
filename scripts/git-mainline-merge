@@ -1,0 +1,34 @@
+#!/usr/bin/env sh
+
+# a script that attepmts to fetch the branches 'develop' and 'master' from the
+# primary remote and merge those changes into whatever branch we're currently
+# on, assuming it's not already one of those
+
+# Get the current branch name
+current_branch=$(git rev-parse --abbrev-ref HEAD)
+
+# Branches to merge from
+branches="develop master"
+
+# Fetch latest from origin
+git fetch origin
+
+for branch in $branches; do
+  if [ "$current_branch" = "$branch" ]; then
+    echo "Already on $branch, skipping merge from $branch."
+    continue
+  fi
+
+  # Check if the branch exists on remote
+  if git show-ref --verify --quiet "refs/remotes/origin/$branch"; then
+    echo "Merging changes from origin/$branch into $current_branch..."
+    if ! git merge "origin/$branch"; then
+      echo "Merge from $branch failed. Resolve conflicts and continue manually."
+      exit 1
+    fi
+  else
+    echo "Remote branch origin/$branch does not exist, skipping."
+  fi
+done
+
+echo "Merge(s) complete."
