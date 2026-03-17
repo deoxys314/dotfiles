@@ -51,6 +51,12 @@ require('lazy').setup({
         config = function() opt.termguicolors = true end,
         opts = { user_default_options = { css_fn = true, mode = 'background' } },
     },
+    {
+        'catppuccin/nvim',
+        name = 'catppuccin',
+        priority = 1000,
+        opts = { flavor = 'macchiato', dim_inactive = { enabled = true } },
+    },
     { 'chriskempson/base16-vim', priority = 98, enabled = false },
     {
         'christoomey/vim-tmux-navigator',
@@ -682,7 +688,7 @@ g.loaded_ruby_provider = 0
 
 -- Color
 opt.termguicolors = true
-vim.cmd.colorscheme 'tokyonight'
+vim.cmd.colorscheme 'catppuccin'
 
 -- Gui Options
 
