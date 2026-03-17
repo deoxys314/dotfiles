@@ -39,7 +39,7 @@ ale_config.config = function()
     g.ale_linters = {
         go = { 'gofmt' },
         markdown = { 'markdownlint' },
-        python = { 'pylsp', 'mypy', 'ruff' },
+        python = { 'mypy', 'ruff' },
     }
     g.ale_python_auto_uv = true
 end

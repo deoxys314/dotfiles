@@ -153,7 +153,15 @@ require('lazy').setup({
     },
     {
         'neovim/nvim-lspconfig',
-        config = function() vim.lsp.enable { 'clangd', 'pylsp' } end,
+        config = function()
+            vim.lsp.enable { 'clangd', 'pylsp' }
+            vim.keymap.set('n', 'grd', vim.lsp.buf.definition,
+                           { noremap = true, desc = 'Go to symbol definition' })
+            vim.keymap.set('n', '<C-w>grd', function()
+                vim.cmd.tabnew()
+                vim.lsp.buf.definition()
+            end, { noremap = true, desc = 'Go to symbol definition' })
+        end,
         enabled = function() return vim.fn.has 'nvim-0.11.0' end,
     },
     {
