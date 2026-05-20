@@ -14,7 +14,7 @@ ale_config.config = function()
         json = { 'jq', 'prettier', 'json_pytool', 'clang-format' },
         lua = { 'remove_trailing_lines', 'trim_whitespace', 'lua-format', 'luafmt' },
         markdown = { 'mdl', 'pandoc', 'write-good' },
-        python = { 'isort', 'black' },
+        python = { 'isort', 'black', 'ruff_format' },
         rust = { 'rustfmt' },
         typescript = { 'tslint', 'prettier' },
     }
@@ -36,11 +36,8 @@ ale_config.config = function()
         '--no-spaces-inside-functiondef-parens',
         '--no-spaces-inside-functioncall-parens',
     }
-    g.ale_linters = {
-        go = { 'gofmt' },
-        markdown = { 'markdownlint' },
-        python = { 'mypy', 'ruff' },
-    }
+    g.ale_linters =
+        { go = { 'gofmt' }, markdown = { 'markdownlint' }, python = { 'mypy', 'ruff' } }
     g.ale_python_auto_uv = true
 end
 
