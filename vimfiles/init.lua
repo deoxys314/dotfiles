@@ -612,6 +612,13 @@ end
 
 vim.api.nvim_create_user_command('AutoMaintain', maintainence, { bang = true })
 
+-- Filetype options
+
+vim.filetype.add {
+    pattern = { ['.*.prototxt'] = 'prototxt', ['.*[Jj]enkinsfile.*'] = 'groovy' },
+    -- filename = { something = 'something' },
+}
+
 -- Misc Options
 
 opt.backspace = { 'indent', 'eol', 'start' }
@@ -666,11 +673,6 @@ vim.api.nvim_create_autocmd({ 'InsertLeave' }, {
     callback = function()
         if vim.fn.pumvisible() == 0 and vim.fn.winnr('$') > 1 then vim.cmd.pclose() end
     end,
-    group = vimrc_augroup,
-})
-vim.api.nvim_create_autocmd({ 'BufNewFile', 'BufRead' }, {
-    pattern = '*.prototxt',
-    callback = function() opt.filetype = 'prototxt' end,
     group = vimrc_augroup,
 })
 vim.api.nvim_create_autocmd({ 'WinResized', 'WinNew', 'WinEnter' }, {
