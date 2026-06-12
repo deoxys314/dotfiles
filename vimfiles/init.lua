@@ -32,6 +32,22 @@ require('lazy').setup({
     },
     { 'airblade/vim-rooter', config = function() g.rooter_silent_chdir = 1 end },
     {
+        'alexghergh/nvim-tmux-navigation',
+        opts = { disable_when_zoomed = true },
+        keys = {
+            { '<c-h>', function() require'nvim-tmux-navigation'.NvimTmuxNavigateLeft() end },
+            { '<c-j>', function() require'nvim-tmux-navigation'.NvimTmuxNavigateDown() end },
+            { '<c-k>', function() require'nvim-tmux-navigation'.NvimTmuxNavigateUp() end },
+            { '<c-l>', function() require'nvim-tmux-navigation'.NvimTmuxNavigateRight() end },
+            { '<c-\\>', function()
+                require'nvim-tmux-navigation'.NvimTmuxNavigateLastActive()
+            end },
+            { '<c-space>', function()
+                require'nvim-tmux-navigation'.NvimTmuxNavigateNext()
+            end },
+        },
+    },
+    {
         'alvan/vim-closetag',
         config = function()
             g.closetag_filenames = table.concat({ '*.html', '*.htm', '*.xml', '*.php' }, ',')
@@ -59,25 +75,47 @@ require('lazy').setup({
     },
     { 'chriskempson/base16-vim', priority = 98, enabled = false },
     {
-        'christoomey/vim-tmux-navigator',
-        cmd = {
-            'TmuxNavigateLeft',
-            'TmuxNavigateDown',
-            'TmuxNavigateUp',
-            'TmuxNavigateRight',
-            'TmuxNavigatePrevious',
-        },
-        keys = {
-            { '<c-h>', '<cmd><C-U>TmuxNavigateLeft<cr>' },
-            { '<c-j>', '<cmd><C-U>TmuxNavigateDown<cr>' },
-            { '<c-k>', '<cmd><C-U>TmuxNavigateUp<cr>' },
-            { '<c-l>', '<cmd><C-U>TmuxNavigateRight<cr>' },
-            { '<c-\\>', '<cmd><C-U>TmuxNavigatePrevious<cr>' },
-        },
-        config = function()
-            -- when leaving vim, will :update
-            vim.g.tmux_navigator_save_on_switch = 2
+        'CopilotC-Nvim/CopilotChat.nvim',
+        enabled = function()
+            local res, hostname = pcall(function()
+                local f = io.popen('/bin/hostname')
+                local hostname = f:read('*a') or ''
+                f:close()
+                hostname = string.gsub(hostname, '\n$', '')
+                return hostname
+            end)
+            return (vim.fn.has('nvim-0.9.0') and vim.fn.executable('npm') == 1) and res and
+                       string.match(hostname, '%..*evinternal%..*')
         end,
+        dependencies = {
+            {
+                'github/copilot.vim',
+                config = function()
+                    g.copilot_filetypes = {
+                        ['*'] = false,
+                        markdown = false,
+                        gitcommit = false,
+                        text = false,
+                        ['copilt-chat'] = false,
+                        ['copilot.*'] = false,
+                    }
+                    g.copilot_workspace_folders = { '~/src/ev-image-processing' }
+                    g.copilot_no_tab_map = true
+                    vim.api.nvim_create_autocmd({ 'BufEnter' }, {
+                        pattern = 'copilot.*',
+                        callback = function() vim.cmd('ALEDisableBuffer') end,
+                        group = vimrc_augroup,
+                    })
+                    require('telescope').load_extension('ui-select')
+                end,
+                tag = '*',
+            },
+            { 'nvim-lua/plenary.nvim', branch = 'master' }, -- for curl, log and async functions
+            { 'nvim-telescope/telescope.nvim' },
+            { 'nvim-telescope/telescope-ui-select.nvim' },
+        },
+        version = '*',
+        opts = function(lz_plug, opts) return require 'copilot_config' end,
     },
     {
         'folke/tokyonight.nvim',
