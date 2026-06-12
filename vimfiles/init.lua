@@ -56,6 +56,10 @@ require('lazy').setup({
     },
     { 'andymass/vim-matchup' },
     {
+        'barrettruth/diffs.nvim',
+        init = function() g.diffs = { integrations = { fugitive = true } } end,
+    },
+    {
         'catgoose/nvim-colorizer.lua',
         cmd = {
             'ColorizerAttachToBuffer',
