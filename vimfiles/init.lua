@@ -79,49 +79,6 @@ require('lazy').setup({
     },
     { 'chriskempson/base16-vim', priority = 98, enabled = false },
     {
-        'CopilotC-Nvim/CopilotChat.nvim',
-        enabled = function()
-            local res, hostname = pcall(function()
-                local f = io.popen('/bin/hostname')
-                local hostname = f:read('*a') or ''
-                f:close()
-                hostname = string.gsub(hostname, '\n$', '')
-                return hostname
-            end)
-            return (vim.fn.has('nvim-0.9.0') and vim.fn.executable('npm') == 1) and res and
-                       string.match(hostname, '%..*evinternal%..*')
-        end,
-        dependencies = {
-            {
-                'github/copilot.vim',
-                config = function()
-                    g.copilot_filetypes = {
-                        ['*'] = false,
-                        markdown = false,
-                        gitcommit = false,
-                        text = false,
-                        ['copilt-chat'] = false,
-                        ['copilot.*'] = false,
-                    }
-                    g.copilot_workspace_folders = { '~/src/ev-image-processing' }
-                    g.copilot_no_tab_map = true
-                    vim.api.nvim_create_autocmd({ 'BufEnter' }, {
-                        pattern = 'copilot.*',
-                        callback = function() vim.cmd('ALEDisableBuffer') end,
-                        group = vimrc_augroup,
-                    })
-                    require('telescope').load_extension('ui-select')
-                end,
-                tag = '*',
-            },
-            { 'nvim-lua/plenary.nvim', branch = 'master' }, -- for curl, log and async functions
-            { 'nvim-telescope/telescope.nvim' },
-            { 'nvim-telescope/telescope-ui-select.nvim' },
-        },
-        version = '*',
-        opts = function(lz_plug, opts) return require 'copilot_config' end,
-    },
-    {
         'folke/tokyonight.nvim',
         enabled = true,
         lazy = false,
