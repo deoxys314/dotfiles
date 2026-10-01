@@ -27,10 +27,10 @@ opt.rtp:prepend(lazypath)
 require('lazy').setup({
     {
         'airblade/vim-gitgutter',
-        config = function() opt.updatetime = 100 end,
+        init = function() opt.updatetime = 100 end,
         enabled = is_executable('git'),
     },
-    { 'airblade/vim-rooter', config = function() g.rooter_silent_chdir = 1 end },
+    { 'airblade/vim-rooter', init = function() g.rooter_silent_chdir = 1 end },
     {
         'alexghergh/nvim-tmux-navigation',
         opts = { disable_when_zoomed = true },
@@ -49,14 +49,14 @@ require('lazy').setup({
     },
     {
         'alvan/vim-closetag',
-        config = function()
+        init = function()
             g.closetag_filenames = table.concat({ '*.html', '*.htm', '*.xml', '*.php' }, ',')
         end,
         ft = { 'html', 'htm', 'xml', 'php' },
     },
     { 'andymass/vim-matchup' },
     {
-        'barrettruth/diffs.nvim',
+        'https://forge.barrettruth.com/barrettruth/diffs.nvim',
         init = function() g.diffs = { integrations = { fugitive = true } } end,
     },
     {
@@ -68,7 +68,7 @@ require('lazy').setup({
             'ColorizerToggle',
         },
         event = { 'BufReadPre *.css,*.tcss,*.html' },
-        config = function() opt.termguicolors = true end,
+        init = function() opt.termguicolors = true end,
         opts = { user_default_options = { css_fn = true, mode = 'background' } },
     },
     {
@@ -78,6 +78,27 @@ require('lazy').setup({
         opts = { flavor = 'macchiato', dim_inactive = { enabled = true } },
     },
     { 'chriskempson/base16-vim', priority = 98, enabled = false },
+    {
+        'christoomey/vim-tmux-navigator',
+        cmd = {
+            'TmuxNavigateLeft',
+            'TmuxNavigateDown',
+            'TmuxNavigateUp',
+            'TmuxNavigateRight',
+            'TmuxNavigatePrevious',
+        },
+        keys = {
+            { '<c-h>', '<cmd><C-U>TmuxNavigateLeft<cr>' },
+            { '<c-j>', '<cmd><C-U>TmuxNavigateDown<cr>' },
+            { '<c-k>', '<cmd><C-U>TmuxNavigateUp<cr>' },
+            { '<c-l>', '<cmd><C-U>TmuxNavigateRight<cr>' },
+            { '<c-\\>', '<cmd><C-U>TmuxNavigatePrevious<cr>' },
+        },
+        init = function()
+            -- when leaving vim, will :update
+            vim.g.tmux_navigator_save_on_switch = 2
+        end,
+    },
     {
         'folke/tokyonight.nvim',
         enabled = true,
@@ -103,7 +124,7 @@ require('lazy').setup({
     },
     {
         'hoscarcito/cursor-nvim-plugin',
-        config = function() end,
+        config = true,
         enabled = function()
             local res, hostname = pcall(function()
                 local f = io.popen('/bin/hostname')
@@ -142,12 +163,12 @@ require('lazy').setup({
     {
         'gabrielelana/vim-markdown',
         ft = { 'markdown' },
-        config = function() g.markdown_mapping_switch_status = '<space>,' end,
+        init = function() g.markdown_mapping_switch_status = '<space>,' end,
     },
     {
         'lukas-reineke/indent-blankline.nvim',
         main = 'ibl',
-        opts = { indent = { char = { '╎', '┆', '┊' } } },
+        -- opts = { indent = { char = { '╎', '┆', '┊' } } },
         version = '*',
         enabled = true,
     },
@@ -225,7 +246,7 @@ require('lazy').setup({
     },
     {
         'preservim/tagbar',
-        config = function()
+        init = function()
             g.tagbar_position = 'topleft vertical'
             g.tagbar_zoomwidth = 0
             g.tagbar_autofocus = 1
@@ -250,7 +271,7 @@ require('lazy').setup({
     { 'prichrd/netrw.nvim', opts = {}, dependencies = { 'nvim-tree/nvim-web-devicons' } },
     {
         'rhysd/git-messenger.vim',
-        config = function()
+        init = function()
             g.git_messenger_always_into_popup = true
             g.git_messenger_close_on_cursor_moved = false
             g.git_messenger_date_format = '%F %H:%M:%S'
@@ -306,7 +327,7 @@ require('lazy').setup({
     {
         'tpope/vim-vinegar',
         keys = { '-' },
-        config = function()
+        init = function()
             g.netrw_dirhistmax = 0
             g.netrw_liststyle = 3 -- tree style listing
         end,
