@@ -44,7 +44,7 @@ set --global --export __fish_prompt_powerline_triangle_right_swap ""
 if set --query __fish_prompt_no_powerline
 	set --global --export __fish_prompt_joiner "$__fish_prompt_fade_right"
 else
-	set --global --export __fish_prompt_joiner "$__fish_prompt_powerline_triangle_right"
+	set --global --export __fish_prompt_joiner "$__fish_prompt_powerline_arrow_right"
 end
 
 function fish_prompt
