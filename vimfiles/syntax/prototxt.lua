@@ -1,64 +1,61 @@
 if vim.b.current_syntax then return end
 
-vim.api.nvim_create_augroup('PrototxtSyntax', { clear = false })
+-- Comments
+vim.cmd.syntax { 'match', 'prototxtComment', [[/#.*$/]] }
 
-vim.api.nvim_create_autocmd('BufEnter', {
-    group = 'PrototxtSyntax',
-    pattern = '*.prototxt',
-    callback = function()
-        -- Identifier: word followed by ':' or '{'
-        vim.fn.matchadd('prototxtIdentifier', [[\v\w+\s*(:|\{)@=]])
+-- Strings (double-quoted, with escaped quote support)
+vim.cmd.syntax { 'region', 'prototxtString', [[start=+"+ skip=+\\"+ end=+"+]] }
 
-        -- [bracket] region containing identifiers, foldable
-        -- there is no replacement for a region in lua yet
-        vim.cmd.syntax {
-            'region',
-            'prototxtIdBrackets',
-            [=[start='\[']=],
-            'end=\']\'',
-            'fold',
-            'contains=prototxtIdentifier',
-        }
+-- Booleans
+vim.cmd.syntax { 'keyword', 'prototxtBool', 'true', 'false' }
 
-        -- Dotted identifier
-        vim.fn.matchadd('prototxtIdentifier', [[\v[a-z_]+(\.[a-z_]+)+]], 10, -1, { contained = 1 })
+-- Hex numbers (must come before integer to take priority)
+vim.cmd.syntax { 'match', 'prototxtHex', [[/\v[-+]?0[xX][0-9A-Fa-f]+/]] }
 
-        -- Comment: #
-        vim.fn.matchadd('prototxtComment', [[\v#.*$]])
+-- Octal numbers
+vim.cmd.syntax { 'match', 'prototxtOctal', [[/\v<[-+]?0[0-7]+>/]] }
 
-        -- String: double quoted, skips escaped quote
-        vim.fn.matchadd('prototxtString', [[\v"(\\"|[^"])*"]], 15)
+-- Float (with decimal point)
+vim.cmd.syntax { 'match', 'prototxtFloat', [[/\v[-+]?(\d+\.\d*|\.\d+)([eE][-+]?\d+)?/]] }
 
-        -- Integer: optional sign, at least one digit
-        vim.fn.matchadd('prototxtInteger', [[[-+]?\\d\\+]], 9)
+-- Float (scientific notation without decimal point)
+vim.cmd.syntax { 'match', 'prototxtFloat', [[/\v[-+]?\d+[eE][-+]?\d+/]] }
 
-        -- Float: optional sign, digits, dot, digits
-        vim.fn.matchadd('prototxtFloat', [[[-+]?\\d+\\.\\d*]])
+-- Special float keywords
+vim.cmd.syntax { 'keyword', 'prototxtFloat', 'inf', '-inf', 'nan' }
 
-        -- Octal number: starts with 0, not followed by x or X, then digits 0-7
-        vim.fn.matchadd('prototxtOctal', [[\v<[-+]?0[0-7]+>]], 11)
+-- Integer (must come after float/hex/octal so those take priority)
+vim.cmd.syntax { 'match', 'prototxtInteger', [[/\v[-+]?\d+/]] }
 
-        -- Hex number: starts with 0x or 0X and hex digits
-        vim.fn.matchadd('prototxtHex', [[\v[-+]?0[xX][0-9A-Fa-f]+]], 12)
+-- Field name (word before colon)
+vim.cmd.syntax { 'match', 'prototxtFieldName', [[/\v\w+\ze\s*:/]] }
 
-        -- Boolean: true/false keyword
-        vim.fn.matchadd('prototxtBool', [[\<\(true\|false\)\>]])
+-- Message name (word before opening brace)
+vim.cmd.syntax { 'match', 'prototxtMessageName', [[/\v\w+\ze\s*\{/]] }
 
-        -- Enum value: trailing identifier
-        vim.fn.matchadd('prototxtEnumValue', [[[A-Za-z_]\+$]])
+-- Enum value (bare identifier as a value — after the colon, not followed by brace)
+vim.cmd.syntax { 'match', 'prototxtEnumValue', [[/\v:\s+\zs[A-Z][A-Za-z0-9_]*/]] }
 
-        -- Highlight links (use nvim_set_hl for modern Neovim)
-        vim.api.nvim_set_hl(0, 'prototxtIdBrackets', { link = 'Special' })
-        vim.api.nvim_set_hl(0, 'prototxtIdentifier', { link = 'Identifier' })
-        vim.api.nvim_set_hl(0, 'prototxtComment', { link = 'Comment' })
-        vim.api.nvim_set_hl(0, 'prototxtString', { link = 'String' })
-        vim.api.nvim_set_hl(0, 'prototxtInteger', { link = 'Number' })
-        vim.api.nvim_set_hl(0, 'prototxtFloat', { link = 'Float' })
-        vim.api.nvim_set_hl(0, 'prototxtOctal', { link = 'Number' })
-        vim.api.nvim_set_hl(0, 'prototxtHex', { link = 'Number' })
-        vim.api.nvim_set_hl(0, 'prototxtBool', { link = 'Boolean' })
-        vim.api.nvim_set_hl(0, 'prototxtEnumValue', { link = 'Function' })
+-- Extension identifier in brackets: [some.extension.name]
+vim.cmd.syntax { 'region', 'prototxtExtension', [[start='\[' end='\]']], 'contains=prototxtExtensionName' }
+vim.cmd.syntax { 'match', 'prototxtExtensionName', [[/\v[a-zA-Z_][a-zA-Z0-9_.]+/]], 'contained' }
 
-        vim.b.current_syntax = 'prototxt'
-    end,
-})
+-- Braces
+vim.cmd.syntax { 'match', 'prototxtBraces', [[/[{}]/]] }
+
+-- Highlight links
+vim.api.nvim_set_hl(0, 'prototxtComment', { link = 'Comment' })
+vim.api.nvim_set_hl(0, 'prototxtString', { link = 'String' })
+vim.api.nvim_set_hl(0, 'prototxtBool', { link = 'Boolean' })
+vim.api.nvim_set_hl(0, 'prototxtHex', { link = 'Number' })
+vim.api.nvim_set_hl(0, 'prototxtOctal', { link = 'Number' })
+vim.api.nvim_set_hl(0, 'prototxtFloat', { link = 'Float' })
+vim.api.nvim_set_hl(0, 'prototxtInteger', { link = 'Number' })
+vim.api.nvim_set_hl(0, 'prototxtFieldName', { link = 'Identifier' })
+vim.api.nvim_set_hl(0, 'prototxtMessageName', { link = 'Function' })
+vim.api.nvim_set_hl(0, 'prototxtEnumValue', { link = 'Constant' })
+vim.api.nvim_set_hl(0, 'prototxtExtension', { link = 'Special' })
+vim.api.nvim_set_hl(0, 'prototxtExtensionName', { link = 'Special' })
+vim.api.nvim_set_hl(0, 'prototxtBraces', { link = 'Delimiter' })
+
+vim.b.current_syntax = 'prototxt'
