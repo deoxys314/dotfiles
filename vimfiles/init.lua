@@ -81,13 +81,6 @@ require('lazy').setup({
         opts = { user_default_options = { css_fn = true, mode = 'background' } },
     },
     {
-        'catppuccin/nvim',
-        name = 'catppuccin',
-        priority = 1000,
-        opts = { flavor = 'macchiato', dim_inactive = { enabled = true } },
-    },
-    { 'chriskempson/base16-vim', priority = 98, enabled = false },
-    {
         'christoomey/vim-tmux-navigator',
         cmd = {
             'TmuxNavigateLeft',
@@ -108,30 +101,6 @@ require('lazy').setup({
             vim.g.tmux_navigator_save_on_switch = 2
         end,
     },
-    {
-        'folke/tokyonight.nvim',
-        enabled = true,
-        lazy = false,
-        priority = 99,
-        opts = {
-            style = 'moon',
-            light_style = 'day',
-            terminal_colors = true,
-            styles = {
-                comments = { italic = true },
-                keywords = { italic = false },
-                functions = {},
-                variables = {},
-                -- background styles
-                sidebars = 'dark',
-                floats = 'normal',
-            },
-            day_brightness = 0.2,
-            sidebars = { 'qf', 'help' },
-            dim_inactive = true,
-        },
-    },
-    { 'jeffkreeftmeijer/vim-dim' },
     {
         'gabrielelana/vim-markdown',
         ft = { 'markdown' },
@@ -209,6 +178,17 @@ require('lazy').setup({
                 lualine_z = { '%l/%L:%c %p%%' },
             },
         },
+    },
+    {
+        'Malick-Tammal/chroma.nvim',
+        opts = {
+            theme = 'default-dark',
+            transparancy = false,
+            persist = true,
+            overrides = nil,
+            lualine = { transparancy = nil, overrides = nil },
+        },
+        dependencies = { 'nvim-telescope/telescope.nvim' },
     },
     { 'nvim-mini/mini.nvim', version = '*' },
     {
@@ -683,7 +663,6 @@ g.loaded_ruby_provider = 0
 
 -- Color
 opt.termguicolors = true
-vim.cmd.colorscheme 'catppuccin'
 
 -- Gui Options
 
