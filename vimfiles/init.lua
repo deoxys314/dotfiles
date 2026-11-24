@@ -131,43 +131,6 @@ require('lazy').setup({
             dim_inactive = true,
         },
     },
-    {
-        'hoscarcito/cursor-nvim-plugin',
-        config = true,
-        enabled = function()
-            local res, hostname = pcall(function()
-                local f = io.popen('/bin/hostname')
-                local hostname = f:read('*a') or ''
-                f:close()
-                hostname = string.gsub(hostname, '\n$', '')
-                return hostname
-            end)
-            return (vim.fn.has('nvim-0.9.0') and vim.fn.executable('npm') == 1) and res and
-                       string.match(hostname, '%..*evinternal%..*')
-        end,
-        cmd = {
-            'CursorChat',
-            'CursorEdit',
-            'CursorGenerate',
-            'CursorExplain',
-            'CursorReview',
-            'CursorOptimize',
-            'CursorFix',
-            'CursorRefactor',
-            'CursorTest',
-            'CursorStatus',
-        },
-        keys = {
-            { '<leader>cc', ':CursorChat<CR>', desc = 'Cursor Chat' },
-            { '<leader>ce', ':CursorEdit<CR>', mode = { 'n', 'v' }, desc = 'Cursor Edit' },
-            { '<leader>cg', ':CursorGenerate<CR>', desc = 'Cursor Generate' },
-            { '<leader>cx', ':CursorExplain<CR>', mode = 'v', desc = 'Cursor Explain' },
-            { '<leader>cr', ':CursorReview<CR>', desc = 'Cursor Review' },
-            { '<leader>co', ':CursorOptimize<CR>', mode = 'v', desc = 'Cursor Optimize' },
-            { '<leader>cf', ':CursorFix<CR>', mode = 'v', desc = 'Cursor Fix' },
-            { '<leader>crf', ':CursorRefactor<CR>', mode = 'v', desc = 'Cursor Refactor' },
-        },
-    },
     { 'jeffkreeftmeijer/vim-dim' },
     {
         'gabrielelana/vim-markdown',
