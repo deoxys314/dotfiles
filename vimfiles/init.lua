@@ -415,7 +415,7 @@ opt.foldcolumn = '0'
 opt.foldlevelstart = 99
 opt.foldopen:append('jump')
 
-opt.whichwrap = 'b,s,h,l,<,>,[,]'
+opt.whichwrap = table.concat({ 'b', 's', 'h', 'l', '<', '>', '[', ']' }, ',')
 
 opt.matchpairs:append('<:>')
 
