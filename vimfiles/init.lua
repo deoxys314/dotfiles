@@ -125,9 +125,16 @@ require('lazy').setup({
             vim.keymap.set('n', 'grd', vim.lsp.buf.definition,
                            { noremap = true, desc = 'Go to symbol definition' })
             vim.keymap.set('n', '<C-w>grd', function()
-                vim.cmd.tabnew()
-                vim.lsp.buf.definition()
-            end, { noremap = true, desc = 'Go to symbol definition' })
+                vim.lsp.buf.definition {
+                    on_list = function(options)
+                        if options and options.items and #options.items > 0 then
+                            local item = options.items[1]
+                            vim.cmd.tabnew(item.filename)
+                            vim.api.nvim_win_set_cursor(0, { item.lnum, item.col - 1 })
+                        end
+                    end,
+                }
+            end, { noremap = true, desc = 'Go to symbol definition in new tab' })
         end,
         enabled = function() return vim.fn.has 'nvim-0.11.0' end,
     },
